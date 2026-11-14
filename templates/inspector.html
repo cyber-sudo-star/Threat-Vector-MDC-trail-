@@ -53,6 +53,12 @@
             Paste suspicious raw text, email headers, or URLs, or upload evidentiary documents (PDF, TXT, LOG, EML) and screenshots (PNG, JPG):
         </p>
 
+        {% if not ml_available %}
+        <div class="alert alert-danger" style="margin-bottom: 0.75rem; font-size: 0.85rem; padding: 0.75rem 1rem;">
+            <span>⚠️ <strong>AI Classification Engine Notice:</strong> The Scikit-learn model pipeline is currently unavailable. Statistical ML predictions require the trained model file (<code>model.pkl</code>).</span>
+        </div>
+        {% endif %}
+
         <form action="{{ url_for('inspector') }}" method="POST" enctype="multipart/form-data" id="inspect-form" class="flex flex-col space-y-3" style="display: flex; flex-direction: column; gap: 0.85rem; width: 100%;">
             
             <!-- File Upload Dropzone (Flex Column Layout to Prevent Collisions) -->
@@ -192,11 +198,19 @@
         {% else %}
             <!-- Initial Empty State -->
             <div style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
-                <div style="font-size: 3.2rem; margin-bottom: 1rem;">🤖</div>
-                <h4 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">Awaiting Artifact Telemetry</h4>
-                <p style="font-size: 0.88rem; max-width: 320px; margin: 0 auto; line-height: 1.6;">
-                    Upload a file (PDF, TXT, PNG, JPG) or paste any text/URL above to launch multi-modal analysis and generate a professional incident report.
-                </p>
+                {% if not ml_available %}
+                    <div style="font-size: 3.2rem; margin-bottom: 1rem;">⚠️</div>
+                    <h4 style="font-size: 1.15rem; color: var(--threat-warning); margin-bottom: 0.5rem;">AI Classifier Offline</h4>
+                    <p style="font-size: 0.88rem; max-width: 320px; margin: 0 auto; line-height: 1.6; color: var(--text-muted);">
+                        The Scikit-learn threat classifier (<code>model.pkl</code>) is not currently loaded. Please ensure dependencies are installed and the model is initialized.
+                    </p>
+                {% else %}
+                    <div style="font-size: 3.2rem; margin-bottom: 1rem;">🤖</div>
+                    <h4 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">Awaiting Artifact Telemetry</h4>
+                    <p style="font-size: 0.88rem; max-width: 320px; margin: 0 auto; line-height: 1.6;">
+                        Upload a file (PDF, TXT, PNG, JPG) or paste any text/URL above to launch multi-modal analysis and generate a professional incident report.
+                    </p>
+                {% endif %}
             </div>
         {% endif %}
     </div>

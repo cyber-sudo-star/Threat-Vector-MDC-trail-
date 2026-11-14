@@ -33,6 +33,19 @@
                 {% endif %}
             {% endwith %}
 
+            <!-- Quick Demo Login (Viva Demonstration) -->
+            <form action="{{ url_for('demo_login') }}" method="POST" style="margin-bottom: 1.25rem;">
+                <button type="submit" class="btn btn-secondary" style="width: 100%; padding: 0.75rem; border-color: rgba(56, 189, 248, 0.45); background: rgba(56, 189, 248, 0.08); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 700; font-size: 0.95rem; border-radius: var(--radius-sm); transition: all 0.2s ease;">
+                    <span>⚡</span> Quick Demo Login as Cadet
+                </button>
+            </form>
+
+            <div style="display: flex; align-items: center; margin-bottom: 1.25rem; text-align: center;">
+                <div style="flex: 1; height: 1px; background: var(--border-subtle);"></div>
+                <span style="padding: 0 0.75rem; font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.06em;">Or Standard Sign In</span>
+                <div style="flex: 1; height: 1px; background: var(--border-subtle);"></div>
+            </div>
+
             <!-- Auth Tabs -->
             <div class="auth-tabs">
                 <button type="button" class="auth-tab-btn active" id="tab-login-btn" onclick="switchTab('login')">Sign In</button>

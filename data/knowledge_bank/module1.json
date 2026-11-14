@@ -1,0 +1,1894 @@
+{
+    "module_id": 1,
+    "title": "Computer Fundamentals",
+    "description": "Understand the basic components of a computer, how hardware and software work, and the role of operating systems in managing computer resources.",
+    "topics": [
+        "Introduction to computers",
+        "Hardware and software",
+        "CPU and its functions",
+        "RAM and ROM",
+        "Storage devices",
+        "Input and output devices",
+        "Operating systems",
+        "Files and folders",
+        "Basic computer operations",
+        "Internet and cloud storage basics"
+    ],
+    "questions": [
+        {
+            "id": "m1_e_01",
+            "raw_id": 1,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which internal component of a computer is primarily responsible for executing software instructions and performing calculations?",
+            "type": "single",
+            "options": [
+                "Central Processing Unit (CPU)",
+                "Random Access Memory (RAM)",
+                "Hard Disk Drive (HDD)",
+                "Power Supply Unit (PSU)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the computer component that acts as the primary 'brain' executing software calculations and instructions.",
+                "why_correct": "The CPU (Central Processing Unit) interprets and executes instructions from programs, carrying out basic arithmetic, logic, controlling, and input/output operations.",
+                "options_breakdown": {
+                    "Central Processing Unit (CPU)": "Correct. The CPU is the central computation engine responsible for instruction decoding and execution.",
+                    "Random Access Memory (RAM)": "Incorrect. RAM is high-speed temporary working memory that holds active data for the CPU, but it does not perform calculations itself.",
+                    "Hard Disk Drive (HDD)": "Incorrect. An HDD is secondary permanent storage used for long-term file retention, not instruction execution.",
+                    "Power Supply Unit (PSU)": "Incorrect. The PSU converts electrical power from an outlet into steady direct-current voltages for internal components."
+                },
+                "key_term": "Central Processing Unit (CPU): The principal hardware microprocessor in a computer that fetches, decodes, and executes software instructions."
+            }
+        },
+        {
+            "id": "m1_e_02",
+            "raw_id": 2,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "RAM and ROM",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the key difference between RAM (Random Access Memory) and ROM (Read-Only Memory)?",
+            "type": "single",
+            "options": [
+                "RAM is volatile and loses its contents when power is turned off, while ROM is non-volatile",
+                "ROM is temporary working storage while RAM permanently stores the computer's startup code",
+                "RAM is only used for sound cards while ROM processes 3D graphics",
+                "ROM can be freely written to by normal user applications while RAM cannot"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish the primary volatility and persistence characteristics of RAM versus ROM.",
+                "why_correct": "RAM is volatile memory whose data is wiped when electrical power is cut, whereas ROM retains its recorded data (such as firmware/BIOS) permanently without power.",
+                "options_breakdown": {
+                    "RAM is volatile and loses its contents when power is turned off, while ROM is non-volatile": "Correct. Volatility is the defining distinction: RAM is temporary working memory; ROM is non-volatile permanent memory.",
+                    "ROM is temporary working storage while RAM permanently stores the computer's startup code": "Incorrect. This reverses their roles; ROM holds startup firmware, while RAM holds temporary workspace.",
+                    "RAM is only used for sound cards while ROM processes 3D graphics": "Incorrect. Neither memory type is dedicated exclusively to audio or graphics processing.",
+                    "ROM can be freely written to by normal user applications while RAM cannot": "Incorrect. Normal applications write to RAM continuously; ROM is read-only during standard operations."
+                },
+                "key_term": "Volatile Memory: Computer memory that requires electrical power to maintain its stored information; data is lost immediately when power is removed."
+            }
+        },
+        {
+            "id": "m1_e_03",
+            "raw_id": 3,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Hardware and software",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following items are classified as hardware rather than software? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Computer Motherboard",
+                "Optical Mouse",
+                "Web Browser",
+                "Solid-State Drive (SSD)"
+            ],
+            "correct": [
+                0,
+                1,
+                3
+            ],
+            "explanation": {
+                "asking": "This question asks you to select all physical, tangible electronic items classified as computer hardware.",
+                "why_correct": "Hardware refers to physical components you can touch: Motherboard, Optical Mouse, and SSD. A web browser is an application software program.",
+                "options_breakdown": {
+                    "Computer Motherboard": "Correct. The motherboard is the primary physical printed circuit board connecting all computer hardware.",
+                    "Optical Mouse": "Correct. An optical mouse is a tangible physical input device.",
+                    "Web Browser": "Incorrect. A web browser (like Chrome or Firefox) is an application software program composed of code, not physical hardware.",
+                    "Solid-State Drive (SSD)": "Correct. An SSD is physical semiconductor storage hardware."
+                },
+                "key_term": "Hardware: The physical, electronic, and mechanical parts of a computer system that you can physically see and touch."
+            }
+        },
+        {
+            "id": "m1_e_04",
+            "raw_id": 4,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary role of an Operating System (OS) in a computer?",
+            "type": "single",
+            "options": [
+                "Managing hardware resources and providing a common interface for software applications",
+                "Cleaning physical dust from internal cooling fans",
+                "Designing graphics for video games",
+                "Generating electrical current for the motherboard"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the core fundamental purpose of an operating system.",
+                "why_correct": "The Operating System acts as the bridge between computer hardware and user applications, allocating memory, managing CPU time, controlling file storage, and handling I/O devices.",
+                "options_breakdown": {
+                    "Managing hardware resources and providing a common interface for software applications": "Correct. The OS schedules CPU tasks, manages memory allocations, and provides user/program interfaces.",
+                    "Cleaning physical dust from internal cooling fans": "Incorrect. This is a physical maintenance task performed by a human, not software.",
+                    "Designing graphics for video games": "Incorrect. Game graphics are created by human artists using specialized graphics editing software.",
+                    "Generating electrical current for the motherboard": "Incorrect. Electrical power is supplied by the physical power supply unit (PSU), not software."
+                },
+                "key_term": "Operating System (OS): System software that manages computer hardware, software resources, and provides common services for computer programs."
+            }
+        },
+        {
+            "id": "m1_e_05",
+            "raw_id": 5,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Storage devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why are Solid-State Drives (SSDs) generally preferred over traditional Hard Disk Drives (HDDs) for fast system boot times?",
+            "type": "single",
+            "options": [
+                "SSDs use flash memory with no moving parts, enabling significantly faster read/write speeds",
+                "SSDs contain heavy magnetic spinning platters that spin at 100,000 RPM",
+                "SSDs are purely software programs downloaded from the internet",
+                "SSDs can only store text files, which makes them faster"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks why SSDs deliver much faster data access speeds compared to traditional mechanical hard drives.",
+                "why_correct": "SSDs use semiconductor flash memory chips with zero mechanical moving parts, eliminating the mechanical seek latency of spinning magnetic platters.",
+                "options_breakdown": {
+                    "SSDs use flash memory with no moving parts, enabling significantly faster read/write speeds": "Correct. Solid-state technology enables instant electronic data retrieval without waiting for moving heads or rotating disks.",
+                    "SSDs contain heavy magnetic spinning platters that spin at 100,000 RPM": "Incorrect. HDDs use spinning platters (typically 5,400 or 7,200 RPM); SSDs have no platters at all.",
+                    "SSDs are purely software programs downloaded from the internet": "Incorrect. An SSD is a physical hardware storage drive, not downloadable software.",
+                    "SSDs can only store text files, which makes them faster": "Incorrect. SSDs store all data types identically to HDDs, including executables, videos, and operating systems."
+                },
+                "key_term": "Solid-State Drive (SSD): A non-volatile storage device that uses integrated circuit assemblies (flash memory) to store data persistently."
+            }
+        },
+        {
+            "id": "m1_e_06",
+            "raw_id": 6,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Input and output devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following devices is strictly an OUTPUT device?",
+            "type": "single",
+            "options": [
+                "Computer Monitor",
+                "Microphone",
+                "Flatbed Scanner",
+                "Keyboard"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish devices that present processed data to the user (output) from devices that send data into the computer (input).",
+                "why_correct": "A computer monitor displays visual output generated by the computer's graphics processor. Keyboards, microphones, and scanners send user input into the machine.",
+                "options_breakdown": {
+                    "Computer Monitor": "Correct. A monitor receives video signals from the computer and displays them visually to the user as output.",
+                    "Microphone": "Incorrect. A microphone captures external audio and converts it into digital signals for the computer, making it an input device.",
+                    "Flatbed Scanner": "Incorrect. A scanner digitizes physical documents and sends image data into the computer, making it an input device.",
+                    "Keyboard": "Incorrect. A keyboard captures user keystrokes and inputs character data into the system, making it an input device."
+                },
+                "key_term": "Output Device: Any peripheral hardware that receives data from a computer and translates it into a human-perceptible form (visual, audio, or tactile)."
+            }
+        },
+        {
+            "id": "m1_e_07",
+            "raw_id": 7,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Files and folders",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In a modern operating system, what purpose does a file extension (such as .docx, .png, or .pdf) serve?",
+            "type": "single",
+            "options": [
+                "It indicates the file format and tells the OS which default program should open the file",
+                "It controls the physical brightness of the computer screen",
+                "It determines the electrical power consumption of the processor",
+                "It permanently prevents the file from ever being deleted"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the function of file extensions appended to the end of file names.",
+                "why_correct": "File extensions identify the format/encoding of the file and allow the operating system to associate it with the appropriate application (e.g. .pdf opens in a PDF reader).",
+                "options_breakdown": {
+                    "It indicates the file format and tells the OS which default program should open the file": "Correct. The extension informs the file manager and OS how the binary content is structured and what tool handles it.",
+                    "It controls the physical brightness of the computer screen": "Incorrect. Display brightness is managed by display drivers and monitor hardware, not file name extensions.",
+                    "It determines the electrical power consumption of the processor": "Incorrect. CPU power consumption depends on clock frequency, core utilization, and voltage scaling.",
+                    "It permanently prevents the file from ever being deleted": "Incorrect. File extensions do not lock or protect files against deletion; access control lists and read-only attributes do that."
+                },
+                "key_term": "File Extension: A suffix separated by a period at the end of a filename that indicates the format, encoding, and associated software for that file."
+            }
+        },
+        {
+            "id": "m1_e_08",
+            "raw_id": 8,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Basic computer operations",
+            "is_scenario": true,
+            "scenario": "A student needs to restart their unresponsive Windows computer safely without physically unplugging the power cord from the wall.",
+            "question": "Which basic operating system procedure or shortcut should the student attempt first?",
+            "type": "single",
+            "options": [
+                "Press Ctrl + Alt + Delete to access task options or restart cleanly from the power menu",
+                "Pour water onto the power supply unit to cool it down",
+                "Remove the computer's CPU while the machine is running",
+                "Delete the C:\\Windows folder using another computer"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the safe, standard operating system recovery shortcut when a system becomes unresponsive.",
+                "why_correct": "Pressing Ctrl + Alt + Delete interrupts execution and presents system security options, allowing the user to open Task Manager or initiate a clean restart.",
+                "options_breakdown": {
+                    "Press Ctrl + Alt + Delete to access task options or restart cleanly from the power menu": "Correct. This key combination sends a hardware interrupt that allows shutting down running frozen tasks or triggering a graceful restart.",
+                    "Pour water onto the power supply unit to cool it down": "Incorrect. Pouring liquids on electronics causes fatal short-circuits, electric shocks, and equipment destruction.",
+                    "Remove the computer's CPU while the machine is running": "Incorrect. Removing a CPU while powered on causes permanent hardware damage and electrical failure.",
+                    "Delete the C:\\Windows folder using another computer": "Incorrect. Deleting system files renders the OS permanently unbootable."
+                },
+                "key_term": "Graceful Restart: An orderly software-controlled reboot process that closes active programs, flushes cache to disk, and resets the system safely."
+            }
+        },
+        {
+            "id": "m1_e_09",
+            "raw_id": 9,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Internet and cloud storage basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does the term 'Cloud Storage' mean in modern computing?",
+            "type": "single",
+            "options": [
+                "Storing data on remote servers maintained by a provider and accessed over the internet",
+                "Storing files directly inside weather rain clouds using laser beams",
+                "Saving files only onto temporary memory sticks carried in your pocket",
+                "A feature that only works when the computer is completely disconnected from the internet"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the fundamental definition of cloud storage services.",
+                "why_correct": "Cloud storage refers to saving files on remote data center servers managed by cloud providers (e.g. Google Drive, OneDrive) accessible via the internet from any device.",
+                "options_breakdown": {
+                    "Storing data on remote servers maintained by a provider and accessed over the internet": "Correct. Cloud storage delivers persistent file hosting across distributed data centers accessible online.",
+                    "Storing files directly inside weather rain clouds using laser beams": "Incorrect. The word 'cloud' is a technical metaphor for networked remote servers, not atmospheric weather.",
+                    "Saving files only onto temporary memory sticks carried in your pocket": "Incorrect. Portable USB flash drives are local external storage devices, not cloud infrastructure.",
+                    "A feature that only works when the computer is completely disconnected from the internet": "Incorrect. Cloud storage fundamentally requires network connectivity to synchronize files."
+                },
+                "key_term": "Cloud Storage: A model of computer data storage where digital data is saved on logical pools across remote servers managed by hosting companies."
+            }
+        },
+        {
+            "id": "m1_e_10",
+            "raw_id": 10,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Introduction to computers",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What are the four fundamental steps of the Information Processing Cycle performed by all computers?",
+            "type": "single",
+            "options": [
+                "Input, Processing, Output, and Storage",
+                "Clicking, Printing, Painting, and Deleting",
+                "Heating, Cooling, Melting, and Freezing",
+                "Emailing, Browsing, Gaming, and Texting"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the four primary functional stages through which data passes in all general-purpose computing systems.",
+                "why_correct": "The four fundamental stages of computing are: Input (receiving data), Processing (manipulating data via CPU), Output (displaying results), and Storage (saving for later use).",
+                "options_breakdown": {
+                    "Input, Processing, Output, and Storage": "Correct. These four stages form the foundational computing architecture known as the Information Processing Cycle.",
+                    "Clicking, Printing, Painting, and Deleting": "Incorrect. These are specific user actions, not the core architectural stages of computing.",
+                    "Heating, Cooling, Melting, and Freezing": "Incorrect. These are thermodynamic physical phase changes, not computing data cycles.",
+                    "Emailing, Browsing, Gaming, and Texting": "Incorrect. These are high-level software application use cases, not fundamental processing cycles."
+                },
+                "key_term": "Information Processing Cycle: The sequence of operations (input, processing, output, and storage) through which raw data is transformed into meaningful information."
+            }
+        },
+        {
+            "id": "m1_e_11",
+            "raw_id": 11,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Hardware and software",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following is categorized as System Software rather than Application Software?",
+            "type": "single",
+            "options": [
+                "Microsoft Windows Operating System",
+                "Adobe Photoshop",
+                "Microsoft Word",
+                "Google Chrome Web Browser"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish system-level foundation software from user-facing end-application software.",
+                "why_correct": "Microsoft Windows is system software because it directly controls hardware and provides the runtime environment for user applications. Photoshop, Word, and Chrome are application software.",
+                "options_breakdown": {
+                    "Microsoft Windows Operating System": "Correct. Operating systems are the core category of system software managing hardware resources.",
+                    "Adobe Photoshop": "Incorrect. Photoshop is end-user application software designed for image editing.",
+                    "Microsoft Word": "Incorrect. Word is application software designed for document creation and word processing.",
+                    "Google Chrome Web Browser": "Incorrect. Chrome is an application software program for navigating web pages."
+                },
+                "key_term": "System Software: Software designed to provide a platform for other software, managing computer hardware and basic background system operations."
+            }
+        },
+        {
+            "id": "m1_e_12",
+            "raw_id": 12,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What unit is commonly used to measure the clock speed of modern computer processors (CPUs)?",
+            "type": "single",
+            "options": [
+                "Gigahertz (GHz)",
+                "Kilograms (kg)",
+                "Liters per minute (L/min)",
+                "Miles per hour (mph)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the standard metric unit used to express CPU operating cycle frequency.",
+                "why_correct": "CPU clock speed is measured in Hertz (cycles per second), typically Gigahertz (GHz, billions of cycles per second) in modern microprocessors.",
+                "options_breakdown": {
+                    "Gigahertz (GHz)": "Correct. One GHz represents one billion clock cycles per second during which CPU instructions are processed.",
+                    "Kilograms (kg)": "Incorrect. Kilograms measure physical mass, not processing cycle frequency.",
+                    "Liters per minute (L/min)": "Incorrect. Liters per minute measures fluid volumetric flow rate.",
+                    "Miles per hour (mph)": "Incorrect. Miles per hour measures physical traveling speed across distances."
+                },
+                "key_term": "Clock Speed: The frequency at which a processor's clock generator ticks, dictating how many electrical clock cycles the CPU performs per second."
+            }
+        },
+        {
+            "id": "m1_e_13",
+            "raw_id": 13,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "RAM and ROM",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What critical program is typically stored in a computer's ROM or motherboard flash chip to bootstrap hardware during boot?",
+            "type": "single",
+            "options": [
+                "BIOS / UEFI firmware",
+                "Video editing software",
+                "Web search engine cookies",
+                "Social media chat logs"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks what foundational low-level startup code resides in non-volatile ROM/flash memory.",
+                "why_correct": "The BIOS (Basic Input/Output System) or modern UEFI firmware is stored in non-volatile ROM/Flash on the motherboard to test hardware and load the operating system.",
+                "options_breakdown": {
+                    "BIOS / UEFI firmware": "Correct. BIOS/UEFI initializes CPU registers, tests memory (POST), and finds the operating system bootloader.",
+                    "Video editing software": "Incorrect. Video editing suites are high-level applications installed on secondary storage drives.",
+                    "Web search engine cookies": "Incorrect. Cookies are small web text files stored in browser directories on disk.",
+                    "Social media chat logs": "Incorrect. Chat logs are application data stored in user profiles or cloud databases."
+                },
+                "key_term": "BIOS / UEFI: Low-level firmware stored in non-volatile motherboard memory that tests hardware during power-on and boots the OS."
+            }
+        },
+        {
+            "id": "m1_e_14",
+            "raw_id": 14,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Storage devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following storage capacities represents the largest amount of digital data?",
+            "type": "single",
+            "options": [
+                "1 Terabyte (TB)",
+                "1 Gigabyte (GB)",
+                "1 Megabyte (MB)",
+                "1 Kilobyte (KB)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to compare digital storage unit hierarchies to identify the largest capacity.",
+                "why_correct": "In computing data hierarchies: 1 TB = 1,024 GB = 1,048,576 MB = 1,073,741,824 KB. Thus, 1 Terabyte is by far the largest.",
+                "options_breakdown": {
+                    "1 Terabyte (TB)": "Correct. A Terabyte equals approximately one trillion bytes (or 1,024 Gigabytes), the largest option listed.",
+                    "1 Gigabyte (GB)": "Incorrect. A Gigabyte equals ~1,024 Megabytes, which is smaller than a Terabyte.",
+                    "1 Megabyte (MB)": "Incorrect. A Megabyte equals ~1,024 Kilobytes, significantly smaller than a Gigabyte or Terabyte.",
+                    "1 Kilobyte (KB)": "Incorrect. A Kilobyte equals 1,024 bytes, the smallest unit among the choices."
+                },
+                "key_term": "Terabyte (TB): A unit of digital data capacity equal to 1,024 Gigabytes (approx. 1 trillion bytes)."
+            }
+        },
+        {
+            "id": "m1_e_15",
+            "raw_id": 15,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Input and output devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are examples of computer INPUT devices? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Keyboard",
+                "Webcam",
+                "Headphones",
+                "Barcode Scanner"
+            ],
+            "correct": [
+                0,
+                1,
+                3
+            ],
+            "explanation": {
+                "asking": "This question asks you to select all hardware devices that feed data, video, or keystrokes into the computer.",
+                "why_correct": "Keyboards (text data), Webcams (video data), and Barcode Scanners (optical data) are input devices. Headphones output audio sound waves to the human ear.",
+                "options_breakdown": {
+                    "Keyboard": "Correct. A keyboard sends keystroke electrical scan codes into the computer as input.",
+                    "Webcam": "Correct. A webcam captures optical light frames and feeds digital video into the computer as input.",
+                    "Headphones": "Incorrect. Headphones convert digital audio signals from the computer into physical sound waves, making them an output device.",
+                    "Barcode Scanner": "Correct. A barcode scanner reads reflected laser light from barcodes and sends character strings into the system as input."
+                },
+                "key_term": "Input Device: Hardware equipment used to provide data and control signals to an information processing system."
+            }
+        },
+        {
+            "id": "m1_e_16",
+            "raw_id": 16,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Files and folders",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary function of a folder (directory) in a computer's file system?",
+            "type": "single",
+            "options": [
+                "To organize and group related files into a logical hierarchical structure",
+                "To physically compress the computer's CPU chip into a smaller space",
+                "To supply battery power to external monitors",
+                "To translate human voice directly into printer ink"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the organizational role of folders/directories in file management.",
+                "why_correct": "Folders provide a hierarchical organization container enabling users and operating systems to group, locate, and manage files systematically.",
+                "options_breakdown": {
+                    "To organize and group related files into a logical hierarchical structure": "Correct. Folders act as directories that contain files and subfolders for structured data storage.",
+                    "To physically compress the computer's CPU chip into a smaller space": "Incorrect. Folders are logical software structures that have no physical effect on CPU chip dimensions.",
+                    "To supply battery power to external monitors": "Incorrect. File organization software does not deliver electrical power.",
+                    "To translate human voice directly into printer ink": "Incorrect. Folders do not convert speech or synthesize printer ink."
+                },
+                "key_term": "Directory / Folder: A virtual container within a digital file system in which groups of computer files and other subdirectories can be kept and organized."
+            }
+        },
+        {
+            "id": "m1_e_17",
+            "raw_id": 17,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are widely used operating systems? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Microsoft Windows",
+                "Linux",
+                "Apple macOS",
+                "Microsoft Excel"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify genuine operating systems from the list.",
+                "why_correct": "Windows, Linux, and macOS are full operating systems. Microsoft Excel is a spreadsheet application that runs on top of an operating system.",
+                "options_breakdown": {
+                    "Microsoft Windows": "Correct. Windows is the dominant commercial desktop operating system developed by Microsoft.",
+                    "Linux": "Correct. Linux is an open-source Unix-like operating system kernel widely used in servers, desktops, and mobile devices.",
+                    "Apple macOS": "Correct. macOS is the Unix-based operating system designed by Apple for Mac computers.",
+                    "Microsoft Excel": "Incorrect. Excel is an application software program for spreadsheets, not an operating system."
+                },
+                "key_term": "Operating System Distribution: A packaged operating system build that includes the kernel, system utilities, and desktop management software."
+            }
+        },
+        {
+            "id": "m1_e_18",
+            "raw_id": 18,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Basic computer operations",
+            "is_scenario": true,
+            "scenario": "A user is typing a critical report and wants to create a duplicate backup copy of the document file to save onto an external USB drive.",
+            "question": "Which combination of standard shortcut commands accomplishes copying and then pasting the file?",
+            "type": "single",
+            "options": [
+                "Ctrl + C (Copy) followed by Ctrl + V (Paste)",
+                "Ctrl + P (Print) followed by Ctrl + Z (Undo)",
+                "Alt + F4 (Close) followed by Shift + Delete (Permanent Delete)",
+                "Ctrl + B (Bold) followed by Esc (Cancel)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the universal keyboard shortcuts used to copy and paste files or text in computer operating systems.",
+                "why_correct": "Ctrl + C copies the selected item into the clipboard memory buffer, and Ctrl + V pastes a duplicate copy into the destination directory.",
+                "options_breakdown": {
+                    "Ctrl + C (Copy) followed by Ctrl + V (Paste)": "Correct. Ctrl + C duplicates the reference to clipboard; Ctrl + V outputs the duplicate at the target location.",
+                    "Ctrl + P (Print) followed by Ctrl + Z (Undo)": "Incorrect. Ctrl + P sends items to a physical printer; Ctrl + Z reverts the last performed action.",
+                    "Alt + F4 (Close) followed by Shift + Delete (Permanent Delete)": "Incorrect. Alt + F4 terminates active windows; Shift + Delete deletes files permanently bypass the Recycle Bin.",
+                    "Ctrl + B (Bold) followed by Esc (Cancel)": "Incorrect. Ctrl + B toggles bold font formatting in text editors; Esc closes active dialogs."
+                },
+                "key_term": "Clipboard: A temporary operating system memory buffer that holds copied or cut text, images, or files until pasted elsewhere."
+            }
+        },
+        {
+            "id": "m1_e_19",
+            "raw_id": 19,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Internet and cloud storage basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a major advantage of storing files in cloud storage compared to storing them solely on a local laptop hard drive?",
+            "type": "single",
+            "options": [
+                "Files can be accessed from any authorized device with internet connectivity, and are protected if the laptop is physically damaged",
+                "Cloud storage makes a laptop run 1,000 times faster without requiring electricity",
+                "Cloud storage automatically deletes your files every 24 hours so you never run out of space",
+                "Cloud storage guarantees that nobody will ever need a password to access your private data"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the core operational and redundancy advantages of cloud storage.",
+                "why_correct": "Cloud storage decouples data from local hardware vulnerabilities, allowing synchronization across multiple devices and preserving data if local hardware breaks or is stolen.",
+                "options_breakdown": {
+                    "Files can be accessed from any authorized device with internet connectivity, and are protected if the laptop is physically damaged": "Correct. Geographic redundancy and multi-device access are primary strengths of cloud storage.",
+                    "Cloud storage makes a laptop run 1,000 times faster without requiring electricity": "Incorrect. Cloud storage does not alter CPU hardware speed or eliminate electricity requirements.",
+                    "Cloud storage automatically deletes your files every 24 hours so you never run out of space": "Incorrect. Cloud storage persists files until the user deliberately deletes them.",
+                    "Cloud storage guarantees that nobody will ever need a password to access your private data": "Incorrect. Cloud storage requires robust authentication (passwords, MFA) to safeguard privacy."
+                },
+                "key_term": "Data Redundancy: Storing duplicate copies of data across multiple independent locations to ensure availability during equipment failure."
+            }
+        },
+        {
+            "id": "m1_e_20",
+            "raw_id": 20,
+            "module_id": 1,
+            "difficulty": "easy",
+            "topic": "Introduction to computers",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the smallest unit of digital data in computing, representing either a 0 or a 1?",
+            "type": "single",
+            "options": [
+                "Bit",
+                "Byte",
+                "Pixel",
+                "Packet"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the fundamental binary atomic unit of digital information.",
+                "why_correct": "A Bit (short for binary digit) is the smallest fundamental unit of data in computing, holding a binary value of either 0 (off) or 1 (on). A Byte consists of 8 bits.",
+                "options_breakdown": {
+                    "Bit": "Correct. A bit is the indivisible binary unit capable of storing either state 0 or 1.",
+                    "Byte": "Incorrect. A byte is a group of 8 bits, typically representing a single text character.",
+                    "Pixel": "Incorrect. A pixel is the smallest picture element in a digital display, consisting of multiple color sub-elements.",
+                    "Packet": "Incorrect. A packet is a formatted unit of data transferred across a computer network."
+                },
+                "key_term": "Bit: The basic unit of information in digital computing, representing a single binary state of 0 or 1."
+            }
+        },
+        {
+            "id": "m1_i_21",
+            "raw_id": 21,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How does CPU cache memory (L1, L2, L3) enhance system performance compared to relying solely on system RAM?",
+            "type": "single",
+            "options": [
+                "It provides ultra-low latency, high-speed on-die static memory that reduces CPU wait states for frequently accessed data",
+                "It permanently saves open word processing documents directly onto the internet",
+                "It eliminates the need for any secondary storage drives or SSDs in modern computers",
+                "It converts AC wall current directly into low-voltage CPU direct current"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the performance role of on-die CPU cache levels in overcoming RAM latency bottlenecks.",
+                "why_correct": "CPU cache is high-speed Static RAM (SRAM) integrated directly onto or adjacent to the processor core. By storing recently referenced instructions and data, it prevents the CPU from idling while waiting for slower main RAM.",
+                "options_breakdown": {
+                    "It provides ultra-low latency, high-speed on-die static memory that reduces CPU wait states for frequently accessed data": "Correct. L1, L2, and L3 caches provide step-wise low-latency data access, drastically minimizing memory latency.",
+                    "It permanently saves open word processing documents directly onto the internet": "Incorrect. CPU cache is volatile and strictly internal; it does not perform internet cloud saves.",
+                    "It eliminates the need for any secondary storage drives or SSDs in modern computers": "Incorrect. Cache has very small capacity (megabytes) and is volatile; secondary storage is still required.",
+                    "It converts AC wall current directly into low-voltage CPU direct current": "Incorrect. Power conversion is performed by the Power Supply Unit and motherboard Voltage Regulator Modules (VRMs)."
+                },
+                "key_term": "Cache Memory: High-speed volatile SRAM integrated into the CPU that stores copies of frequently accessed data from main RAM to speed up execution."
+            }
+        },
+        {
+            "id": "m1_i_22",
+            "raw_id": 22,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "RAM and ROM",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why can a 32-bit operating system and CPU architecture address a maximum of only 4 Gigabytes (GB) of system RAM?",
+            "type": "single",
+            "options": [
+                "Because 2 raised to the 32nd power yields exactly 4,294,967,296 unique memory addresses (4 GB)",
+                "Because computer motherboards only have physical wire space for 4 RAM slots",
+                "Because RAM manufacturers signed an international agreement capping 32-bit memory",
+                "Because electrical signals cannot travel more than 4 inches across a motherboard bus"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the mathematical and architectural reason 32-bit address registers are limited to 4 GB of addressable space.",
+                "why_correct": "A 32-bit memory address register has 2^32 possible binary address values. Since each address points to one byte (8 bits), 2^32 bytes equals exactly 4,294,967,296 bytes, which is 4 GB.",
+                "options_breakdown": {
+                    "Because 2 raised to the 32nd power yields exactly 4,294,967,296 unique memory addresses (4 GB)": "Correct. 2^32 discrete byte addresses mathematically equates to 4 Gigabytes of addressable memory space.",
+                    "Because computer motherboards only have physical wire space for 4 RAM slots": "Incorrect. The number of physical DIMM slots does not determine architectural register bit-width limitations.",
+                    "Because RAM manufacturers signed an international agreement capping 32-bit memory": "Incorrect. The limitation is fundamental binary mathematics, not a commercial trade pact.",
+                    "Because electrical signals cannot travel more than 4 inches across a motherboard bus": "Incorrect. Signal propagation distances do not impose binary address register limits."
+                },
+                "key_term": "Address Space: The total range of discrete memory locations that a processor's address bus can reference."
+            }
+        },
+        {
+            "id": "m1_i_23",
+            "raw_id": 23,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Files and folders",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "A user attempts to copy a single 6 GB high-definition video file onto a USB flash drive formatted with the FAT32 file system, but the operating system reports an error. What is the cause?",
+            "type": "single",
+            "options": [
+                "FAT32 has an architectural maximum individual file size limit of 4 GB (2^32 - 1 bytes)",
+                "FAT32 drives cannot store video files under any circumstances",
+                "USB flash drives can only store plain text documents",
+                "The computer's monitor does not support high-definition video playback"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests your knowledge of file system constraints, specifically the individual file size limitation inherent to FAT32.",
+                "why_correct": "The FAT32 file system uses 32-bit fields in its directory entries to track file size in bytes, capping any single file at 4 GB minus 1 byte (4,294,967,295 bytes).",
+                "options_breakdown": {
+                    "FAT32 has an architectural maximum individual file size limit of 4 GB (2^32 - 1 bytes)": "Correct. Due to 32-bit file size tracking, FAT32 cannot allocate or record any single file exceeding 4 GB.",
+                    "FAT32 drives cannot store video files under any circumstances": "Incorrect. FAT32 stores any file format (including video), provided individual files do not exceed 4 GB.",
+                    "USB flash drives can only store plain text documents": "Incorrect. USB flash drives store all digital file types.",
+                    "The computer's monitor does not support high-definition video playback": "Incorrect. Display capability has no bearing on file system write operations."
+                },
+                "key_term": "FAT32: A legacy 32-bit file system developed for Windows that has widespread compatibility but caps individual files at 4 GB."
+            }
+        },
+        {
+            "id": "m1_i_24",
+            "raw_id": 24,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Operating systems",
+            "is_scenario": true,
+            "scenario": "An engineer is running multiple heavy database and simulation programs simultaneously. The computer has 16 GB of physical RAM, and memory usage reaches 99%. Rather than crashing immediately, the system slows down noticeably but keeps running.",
+            "question": "What operating system mechanism allows the computer to continue functioning when physical RAM is exhausted?",
+            "type": "single",
+            "options": [
+                "Virtual Memory (Paging / Swapping) using space on the storage drive as simulated RAM",
+                "Automatic cloud overclocking of the power supply unit",
+                "The CPU physically creating more silicon memory chips inside the motherboard",
+                "Converting monitor display pixels into temporary storage registers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of how operating systems handle memory pressure via virtual memory paging/swapping.",
+                "why_correct": "When physical RAM is exhausted, the OS memory manager pages out inactive memory blocks to a reserved area on the storage drive (paging file in Windows, swap partition in Linux).",
+                "options_breakdown": {
+                    "Virtual Memory (Paging / Swapping) using space on the storage drive as simulated RAM": "Correct. Virtual memory allows disk storage to extend physical RAM, preventing out-of-memory crashes at the cost of lower speed.",
+                    "Automatic cloud overclocking of the power supply unit": "Incorrect. Power supplies cannot be overclocked through cloud services to generate memory.",
+                    "The CPU physically creating more silicon memory chips inside the motherboard": "Incorrect. Microprocessors cannot physically fabricate hardware chips at runtime.",
+                    "Converting monitor display pixels into temporary storage registers": "Incorrect. Display pixels are visual output elements, not general-purpose memory addresses."
+                },
+                "key_term": "Virtual Memory: A memory management capability of an OS that uses secondary storage to temporarily hold data when physical RAM is saturated."
+            }
+        },
+        {
+            "id": "m1_i_25",
+            "raw_id": 25,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a multi-core processor and a processor with Hyper-Threading (simultaneous multithreading)?",
+            "type": "single",
+            "options": [
+                "A multi-core processor contains multiple physical silicon processing units, while Hyper-Threading allows one physical core to present two logical execution threads",
+                "Hyper-Threading physically cuts the CPU silicon in half with lasers to create two motherboards",
+                "Multi-core processors only work on mobile phones, while Hyper-Threading only runs on mainframes",
+                "Hyper-Threading is a software virus that forces processors to run backwards"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish between physical CPU cores and logical hardware execution threads.",
+                "why_correct": "A physical core is an independent processing unit with its own execution pipelines. Hyper-Threading (SMT) duplicates architectural state registers so a single physical core can interleave execution of two threads.",
+                "options_breakdown": {
+                    "A multi-core processor contains multiple physical silicon processing units, while Hyper-Threading allows one physical core to present two logical execution threads": "Correct. Multi-core provides distinct physical hardware cores; Hyper-Threading maximizes physical core utilization by handling two threads concurrently.",
+                    "Hyper-Threading physically cuts the CPU silicon in half with lasers to create two motherboards": "Incorrect. Hyper-Threading is an internal architectural feature, not a physical laser alteration.",
+                    "Multi-core processors only work on mobile phones, while Hyper-Threading only runs on mainframes": "Incorrect. Both technologies are ubiquitous across modern desktops, laptops, and servers.",
+                    "Hyper-Threading is a software virus that forces processors to run backwards": "Incorrect. Hyper-Threading is a legitimate hardware feature designed by processor engineers."
+                },
+                "key_term": "Simultaneous Multithreading (SMT): A hardware technique enabling multiple execution threads to share execution units within a single physical processor core."
+            }
+        },
+        {
+            "id": "m1_i_26",
+            "raw_id": 26,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Storage devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the purpose of the TRIM command in modern Solid-State Drives (SSDs)?",
+            "type": "single",
+            "options": [
+                "It notifies the SSD controller which blocks of data are no longer considered in use and can be wiped internally to optimize future write performance",
+                "It physically cuts off excess edges of the SSD circuit board to make it lighter",
+                "It compresses all user images into audio files to save drive space",
+                "It increases the mechanical spin speed of the solid-state platters"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the function of the OS-level TRIM command in managing NAND flash cell lifecycles.",
+                "why_correct": "Because NAND flash memory must erase entire blocks before writing new data, the TRIM command allows the OS to inform the SSD controller about deleted data, allowing garbage collection to prepare blocks in advance.",
+                "options_breakdown": {
+                    "It notifies the SSD controller which blocks of data are no longer considered in use and can be wiped internally to optimize future write performance": "Correct. TRIM informs the SSD controller of deleted logical blocks so garbage collection can clean them, sustaining high write speeds.",
+                    "It physically cuts off excess edges of the SSD circuit board to make it lighter": "Incorrect. TRIM is an ATA/NVMe software command, not a physical cutting process.",
+                    "It compresses all user images into audio files to save drive space": "Incorrect. TRIM does not transcode media file formats.",
+                    "It increases the mechanical spin speed of the solid-state platters": "Incorrect. SSDs have no mechanical spinning platters."
+                },
+                "key_term": "TRIM: An operating system command that allows an SSD controller to proactively erase invalid memory blocks to maintain optimal write performance and drive longevity."
+            }
+        },
+        {
+            "id": "m1_i_27",
+            "raw_id": 27,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Hardware and software",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why are Graphics Processing Units (GPUs) significantly more efficient than CPUs for tasks such as 3D graphics rendering and machine learning model training?",
+            "type": "single",
+            "options": [
+                "GPUs feature thousands of smaller, specialized cores designed to execute thousands of mathematical operations in parallel simultaneously",
+                "GPUs have larger cooling fans that make the computer run cooler than room temperature",
+                "GPUs do not require any electrical power to perform floating-point calculations",
+                "GPUs only execute instructions written in plain English sentences"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests your understanding of architectural differences between latency-optimized CPUs and throughput-optimized GPUs.",
+                "why_correct": "A CPU has a few powerful cores optimized for serial, sequential task execution. A GPU has thousands of smaller cores designed for massive data-parallel tasks (SIMD - Single Instruction, Multiple Data) like matrix math.",
+                "options_breakdown": {
+                    "GPUs feature thousands of smaller, specialized cores designed to execute thousands of mathematical operations in parallel simultaneously": "Correct. Highly parallel architectures make GPUs exceptionally efficient at matrix transformations and tensor math.",
+                    "GPUs have larger cooling fans that make the computer run cooler than room temperature": "Incorrect. Cooling systems remove heat generated by components; they cannot cool below ambient room temperature.",
+                    "GPUs do not require any electrical power to perform floating-point calculations": "Incorrect. GPUs consume significant electrical power under heavy compute loads.",
+                    "GPUs only execute instructions written in plain English sentences": "Incorrect. GPUs execute binary machine code compiled from compute shaders and CUDA/ROCm kernels."
+                },
+                "key_term": "Parallel Processing: The simultaneous execution of the same computation across multiple processing cores at the same moment."
+            }
+        },
+        {
+            "id": "m1_i_28",
+            "raw_id": 28,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In modern operating systems, what is the critical security purpose of separating execution into 'Kernel Mode' and 'User Mode'?",
+            "type": "single",
+            "options": [
+                "It prevents user applications from directly modifying critical hardware registers, memory spaces, and OS structures, preventing crashes and unauthorized access",
+                "It ensures that games can only run when the keyboard is disconnected",
+                "It forces computers to turn off their power supplies whenever a user opens a web browser",
+                "It divides the screen into two halves: one for typing and one for reading"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the fundamental CPU protection rings and privilege separation enforced by modern operating systems.",
+                "why_correct": "Privilege rings enforce hardware isolation. User Mode restricts applications from directly touching hardware or critical kernel memory. If a user app crashes, the OS remains stable.",
+                "options_breakdown": {
+                    "It prevents user applications from directly modifying critical hardware registers, memory spaces, and OS structures, preventing crashes and unauthorized access": "Correct. Privilege separation prevents malicious or buggy user-space programs from corrupting OS kernel integrity.",
+                    "It ensures that games can only run when the keyboard is disconnected": "Incorrect. Operating systems support input devices across all user applications.",
+                    "It forces computers to turn off their power supplies whenever a user opens a web browser": "Incorrect. User mode applications run normally without shutting down system power.",
+                    "It divides the screen into two halves: one for typing and one for reading": "Incorrect. CPU execution modes relate to instruction privileges, not display window layouts."
+                },
+                "key_term": "Kernel Mode: A privileged CPU execution state where code has unrestricted direct access to all hardware, memory addresses, and system instructions."
+            }
+        },
+        {
+            "id": "m1_i_29",
+            "raw_id": 29,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Hardware and software",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary role of a Device Driver in a computer system?",
+            "type": "single",
+            "options": [
+                "It acts as a specialized software translator that allows the operating system to communicate with specific hardware peripherals",
+                "It physically drives the vehicle delivering computer parts to retail stores",
+                "It scans computer monitors for fingerprints and dust particles",
+                "It encrypts all internet web pages into secret Morse code"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the software component that bridges OS generic commands and device-specific hardware commands.",
+                "why_correct": "A device driver provides a software interface to hardware devices, translating standard operating system I/O requests (like 'print document') into proprietary hardware electrical signals.",
+                "options_breakdown": {
+                    "It acts as a specialized software translator that allows the operating system to communicate with specific hardware peripherals": "Correct. Device drivers translate generic OS system calls into hardware-specific control commands.",
+                    "It physically drives the vehicle delivering computer parts to retail stores": "Incorrect. A software driver is computer code, not a human logistics driver.",
+                    "It scans computer monitors for fingerprints and dust particles": "Incorrect. Device drivers cannot detect physical dust or dirt.",
+                    "It encrypts all internet web pages into secret Morse code": "Incorrect. Drivers do not perform Morse code web page conversions."
+                },
+                "key_term": "Device Driver: A computer program that operates or controls a particular type of hardware device attached to an operating system."
+            }
+        },
+        {
+            "id": "m1_i_30",
+            "raw_id": 30,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the function of the PCIe (Peripheral Component Interconnect Express) bus on a computer motherboard?",
+            "type": "single",
+            "options": [
+                "It provides high-speed, serial point-to-point data links connecting high-performance components like graphics cards and NVMe SSDs directly to the CPU/chipset",
+                "It pumps liquid cooling coolant through the CPU radiator pipes",
+                "It broadcasts Wi-Fi signals to neighbor houses without an antenna",
+                "It recharges the computer's AAA flashlight batteries"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of motherboard expansion bus architectures, specifically PCIe lane topology.",
+                "why_correct": "PCIe is the high-bandwidth point-to-point expansion bus standard used to connect graphics cards, NVMe SSDs, and high-speed network adapters to the processor with minimal latency.",
+                "options_breakdown": {
+                    "It provides high-speed, serial point-to-point data links connecting high-performance components like graphics cards and NVMe SSDs directly to the CPU/chipset": "Correct. PCIe lanes provide dedicated high-speed full-duplex communication channels between peripherals and processor.",
+                    "It pumps liquid cooling coolant through the CPU radiator pipes": "Incorrect. Coolant circulation is performed by a mechanical water pump, not an electrical data bus.",
+                    "It broadcasts Wi-Fi signals to neighbor houses without an antenna": "Incorrect. PCIe transports data across motherboard traces; it is not a wireless radio transmitter.",
+                    "It recharges the computer's AAA flashlight batteries": "Incorrect. PCIe buses power motherboard cards; they do not charge consumer flashlight batteries."
+                },
+                "key_term": "PCIe (PCI Express): A high-speed serial computer expansion bus standard designed to connect high-bandwidth peripherals like GPUs and NVMe drives to the CPU."
+            }
+        },
+        {
+            "id": "m1_i_31",
+            "raw_id": 31,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Storage devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following statements correctly compare storage technologies? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "NVMe SSDs transfer data over PCIe lanes and offer significantly higher throughput than SATA-based SSDs",
+                "Magnetic HDDs have mechanical latency caused by spindle rotation and drive head positioning",
+                "Optical media (CDs/DVDs) use physical pits and lands read by laser light to store digital data",
+                "RAM is a non-volatile secondary storage medium that retains data when power is disconnected"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question tests comparative analysis across different secondary storage architectures.",
+                "why_correct": "NVMe leverages high-bandwidth PCIe lanes; HDDs suffer from rotational latency and seek times; optical media uses laser-read pits. RAM is volatile primary memory, not non-volatile storage.",
+                "options_breakdown": {
+                    "NVMe SSDs transfer data over PCIe lanes and offer significantly higher throughput than SATA-based SSDs": "Correct. NVMe drives bypass SATA 6 Gbps bottlenecks by connecting directly via PCIe lanes.",
+                    "Magnetic HDDs have mechanical latency caused by spindle rotation and drive head positioning": "Correct. Rotational latency and head seek times inherently limit mechanical HDD performance.",
+                    "Optical media (CDs/DVDs) use physical pits and lands read by laser light to store digital data": "Correct. Optical discs represent binary bits through microscopic reflective lands and non-reflective pits.",
+                    "RAM is a non-volatile secondary storage medium that retains data when power is disconnected": "Incorrect. RAM is volatile primary memory that loses all data when unpowered."
+                },
+                "key_term": "NVMe (Non-Volatile Memory Express): A high-speed communications protocol developed specifically for flash memory storage over PCIe buses."
+            }
+        },
+        {
+            "id": "m1_i_32",
+            "raw_id": 32,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Files and folders",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What occurs when an operating system sets the 'Read-Only' file attribute on a document?",
+            "type": "single",
+            "options": [
+                "Users and programs can open and view the file's contents, but cannot modify or overwrite its data directly",
+                "The computer will immediately delete the file permanently from the hard drive",
+                "The file can only be opened when the computer's speaker volume is turned off",
+                "The document is automatically converted into an executable virus program"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests your understanding of basic file system permission and attribute flags.",
+                "why_correct": "The Read-Only attribute protects a file from accidental alteration or deletion by allowing read operations while prohibiting write/save operations.",
+                "options_breakdown": {
+                    "Users and programs can open and view the file's contents, but cannot modify or overwrite its data directly": "Correct. The read-only flag permits viewing and copying, but prevents in-place edits and accidental overwrites.",
+                    "The computer will immediately delete the file permanently from the hard drive": "Incorrect. Read-only files are preserved, not deleted.",
+                    "The file can only be opened when the computer's speaker volume is turned off": "Incorrect. Audio settings have no relation to file access flags.",
+                    "The document is automatically converted into an executable virus program": "Incorrect. Attribute flags do not alter binary code or inject malware."
+                },
+                "key_term": "File Attribute: Metadata associated with a computer file that specifies permissions and OS handling, such as Read-Only, Hidden, or System."
+            }
+        },
+        {
+            "id": "m1_i_33",
+            "raw_id": 33,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "RAM and ROM",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What security enhancement does modern UEFI firmware introduce over legacy BIOS during the computer boot process?",
+            "type": "single",
+            "options": [
+                "Secure Boot, which validates cryptographic digital signatures on bootloaders to prevent boot-level rootkits from executing",
+                "Automatic free upgrades to the physical graphics card",
+                "Deleting all passwords from the user's online banking accounts",
+                "Allowing unauthorized USB drives to bypass all security checks unconditionally"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the security mechanisms introduced with the transition from legacy BIOS to UEFI.",
+                "why_correct": "UEFI Secure Boot uses cryptographic certificates stored in firmware to verify the digital signature of the operating system bootloader before executing it, blocking malicious bootkits.",
+                "options_breakdown": {
+                    "Secure Boot, which validates cryptographic digital signatures on bootloaders to prevent boot-level rootkits from executing": "Correct. Secure Boot establishes a trusted boot chain by verifying signatures on low-level boot code.",
+                    "Automatic free upgrades to the physical graphics card": "Incorrect. Firmware cannot physically modify or replace graphics hardware.",
+                    "Deleting all passwords from the user's online banking accounts": "Incorrect. Firmware has no access or role in deleting bank passwords.",
+                    "Allowing unauthorized USB drives to bypass all security checks unconditionally": "Incorrect. Secure Boot prevents untrusted bootloaders on USB drives from running."
+                },
+                "key_term": "Secure Boot: A security standard designed by the PC industry to ensure that a device boots using only software that is trusted by the Original Equipment Manufacturer (OEM)."
+            }
+        },
+        {
+            "id": "m1_i_34",
+            "raw_id": 34,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Internet and cloud storage basics",
+            "is_scenario": true,
+            "scenario": "A small business synchronizes its customer records folder to a commercial cloud storage service. An employee accidentally opens an encrypted ransomware attachment, which encrypts the local customer files. Within minutes, the encrypted files synchronize to the cloud.",
+            "question": "Which built-in cloud storage feature allows the business to recover their original, unencrypted customer records without paying a ransom?",
+            "type": "single",
+            "options": [
+                "File Versioning / Historical Revision History, which allows restoring files to an earlier snapshot before encryption occurred",
+                "Sending an email to the power company asking them to reverse electrical flow",
+                "Using a magnet on the computer monitor to wipe the virus",
+                "Changing the desktop wallpaper to a different picture"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests practical security recovery using cloud file versioning capabilities against ransomware encryption.",
+                "why_correct": "Cloud storage providers maintain historical file versions. When ransomware overwrites a file with an encrypted version, the user can roll back the file to the previous clean revision timestamp.",
+                "options_breakdown": {
+                    "File Versioning / Historical Revision History, which allows restoring files to an earlier snapshot before encryption occurred": "Correct. Version history retains previous snapshots of modified files, neutralizing ransomware overwrites.",
+                    "Sending an email to the power company asking them to reverse electrical flow": "Incorrect. Electrical utility companies cannot restore encrypted binary data.",
+                    "Using a magnet on the computer monitor to wipe the virus": "Incorrect. Magnets damage displays and do not decrypt data.",
+                    "Changing the desktop wallpaper to a different picture": "Incorrect. Desktop wallpapers are cosmetic images and have no effect on encrypted files."
+                },
+                "key_term": "File Versioning: A feature in cloud storage and file systems that saves multiple historical iterations of a file as it is modified, allowing rollbacks."
+            }
+        },
+        {
+            "id": "m1_i_35",
+            "raw_id": 35,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "RAM and ROM",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are characteristics of Static RAM (SRAM) compared to Dynamic RAM (DRAM)? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "SRAM is faster and does not require periodic electrical refresh cycles like DRAM",
+                "SRAM is more complex, expensive, and takes more physical chip space than DRAM",
+                "SRAM is commonly used for CPU cache memory rather than main system memory",
+                "SRAM retains its data permanently even when the computer is completely unplugged"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question tests your understanding of the technical differences between SRAM and DRAM memory technologies.",
+                "why_correct": "SRAM uses flip-flops (4-6 transistors per bit), making it very fast with no refresh needed, but expensive and bulky, so it is used for CPU caches. DRAM uses a single transistor and capacitor per bit, needing periodic refreshes, but is cheap and dense, used for main RAM. Both are volatile.",
+                "options_breakdown": {
+                    "SRAM is faster and does not require periodic electrical refresh cycles like DRAM": "Correct. SRAM flip-flop circuits hold data steadily as long as power is applied without refresh pulses.",
+                    "SRAM is more complex, expensive, and takes more physical chip space than DRAM": "Correct. Multiple transistors per bit make SRAM far less dense and more expensive per gigabyte.",
+                    "SRAM is commonly used for CPU cache memory rather than main system memory": "Correct. High speed and low latency make SRAM the ideal choice for processor caches (L1/L2/L3).",
+                    "SRAM retains its data permanently even when the computer is completely unplugged": "Incorrect. SRAM is volatile; it loses data immediately when electrical power is cut."
+                },
+                "key_term": "Dynamic RAM (DRAM): Memory that stores each bit of data in a separate capacitor within an integrated circuit, requiring periodic electrical recharging."
+            }
+        },
+        {
+            "id": "m1_i_36",
+            "raw_id": 36,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Context Switching' in an operating system process scheduler?",
+            "type": "single",
+            "options": [
+                "The process of saving the execution state of one running thread/process so another process can run on the CPU core, then restoring the original process later",
+                "Switching the computer monitor from color to black-and-white mode",
+                "Physically replacing the processor chip with a faster model while programs are running",
+                "Changing the language of a document from French to Spanish"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of multi-tasking operating system primitives and CPU scheduling.",
+                "why_correct": "In preemptive multi-tasking, context switching saves the CPU registers, program counter, and stack pointer of a running process and loads the state of the next scheduled process to create the illusion of simultaneous execution.",
+                "options_breakdown": {
+                    "The process of saving the execution state of one running thread/process so another process can run on the CPU core, then restoring the original process later": "Correct. Context switching enables multitasking by rapidly swapping CPU execution states between competing processes.",
+                    "Switching the computer monitor from color to black-and-white mode": "Incorrect. Color balance is a display rendering setting.",
+                    "Physically replacing the processor chip with a faster model while programs are running": "Incorrect. CPUs cannot be hot-swapped during execution in standard computers.",
+                    "Changing the language of a document from French to Spanish": "Incorrect. Text translation is an application-level linguistic task."
+                },
+                "key_term": "Context Switching: The process of storing the state of a CPU thread or process so that it can be paused and resumed later, facilitating multitasking."
+            }
+        },
+        {
+            "id": "m1_i_37",
+            "raw_id": 37,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Basic computer operations",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the operational difference between putting a computer into 'Sleep Mode' versus 'Hibernation'?",
+            "type": "single",
+            "options": [
+                "Sleep keeps data in volatile RAM under very low power, whereas Hibernation writes all active RAM contents to the hard drive/SSD and cuts power completely",
+                "Sleep permanently deletes all open documents, while Hibernation prints them onto paper",
+                "Hibernation requires the computer to be connected to an active satellite dish",
+                "Sleep mode only works on mobile phones, while Hibernation only works in winter months"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish between memory-preserving ACPI power states (S3 Sleep vs S4 Hibernation).",
+                "why_correct": "In Sleep (S3), power is maintained to RAM so the system wakes instantly. In Hibernation (S4), the complete RAM state is saved to persistent storage (e.g. hiberfil.sys) and the computer powers off entirely.",
+                "options_breakdown": {
+                    "Sleep keeps data in volatile RAM under very low power, whereas Hibernation writes all active RAM contents to the hard drive/SSD and cuts power completely": "Correct. Sleep preserves session state in RAM; Hibernation commits session state to non-volatile disk, enabling zero power consumption.",
+                    "Sleep permanently deletes all open documents, while Hibernation prints them onto paper": "Incorrect. Neither power state deletes documents or triggers printers.",
+                    "Hibernation requires the computer to be connected to an active satellite dish": "Incorrect. Power states are local motherboard operations independent of satellites.",
+                    "Sleep mode only works on mobile phones, while Hibernation only works in winter months": "Incorrect. Both are standard operating system power management states available year-round."
+                },
+                "key_term": "Hibernation: A power-management mode that writes the computer's active memory contents to non-volatile storage, allowing complete power shutdown with session restoration upon reboot."
+            }
+        },
+        {
+            "id": "m1_i_38",
+            "raw_id": 38,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Input and output devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why has the USB-C (Type-C) physical connector become the dominant standard for modern computer peripherals?",
+            "type": "single",
+            "options": [
+                "It features a reversible physical orientation and supports high-speed data transfer, video output (DisplayPort alt mode), and high-wattage power delivery over a single cable",
+                "It is made of pure gold and cannot be purchased by normal computer users",
+                "It only works with printers manufactured before the year 1995",
+                "It completely prevents any computer from ever connecting to the internet"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests your understanding of modern universal peripheral interface standards.",
+                "why_correct": "USB-C delivers a reversible physical plug and multiplexes USB data, PCI Express, DisplayPort/HDMI video signals, and USB Power Delivery (up to 240W) across a single unified connector.",
+                "options_breakdown": {
+                    "It features a reversible physical orientation and supports high-speed data transfer, video output (DisplayPort alt mode), and high-wattage power delivery over a single cable": "Correct. Reversibility combined with multi-protocol support (data, video, and power) makes USB-C the universal interface.",
+                    "It is made of pure gold and cannot be purchased by normal computer users": "Incorrect. USB-C cables use standard copper conductors and are widely affordable.",
+                    "It only works with printers manufactured before the year 1995": "Incorrect. USB-C was standardized in 2014 for modern electronic devices.",
+                    "It completely prevents any computer from ever connecting to the internet": "Incorrect. USB-C supports Ethernet network adapters and internet connectivity."
+                },
+                "key_term": "USB-C: A 24-pin reversible-plug connector system that supports USB 3.x/USB4 data, video output, and bidirectional Power Delivery."
+            }
+        },
+        {
+            "id": "m1_i_39",
+            "raw_id": 39,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Files and folders",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between an 'Absolute Path' and a 'Relative Path' in a computer file system?",
+            "type": "single",
+            "options": [
+                "An absolute path specifies the complete location from the root directory of the drive, while a relative path specifies the location in relation to the current working directory",
+                "An absolute path only works when disconnected from the internet, while a relative path requires Wi-Fi",
+                "An absolute path can only point to image files, while a relative path only points to music files",
+                "A relative path is always permanent and can never be changed by the user"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish between fully qualified absolute directory paths and context-dependent relative directory paths.",
+                "why_correct": "An absolute path begins at the root (e.g. C:\\Users\\Name\\file.txt or /home/user/file.txt) and specifies the exact path regardless of where you are. A relative path (e.g. ../docs/file.txt) depends on your current directory.",
+                "options_breakdown": {
+                    "An absolute path specifies the complete location from the root directory of the drive, while a relative path specifies the location in relation to the current working directory": "Correct. Absolute paths are fully qualified from root; relative paths resolve based on current working directory.",
+                    "An absolute path only works when disconnected from the internet, while a relative path requires Wi-Fi": "Incorrect. File paths are local file system addressing conventions, not network states.",
+                    "An absolute path can only point to image files, while a relative path only points to music files": "Incorrect. Path syntax applies identically to all file formats.",
+                    "A relative path is always permanent and can never be changed by the user": "Incorrect. Relative path resolution changes whenever the working directory shifts."
+                },
+                "key_term": "Absolute Path: The complete list of directory names that points to a specific file or folder starting from the root of the file system."
+            }
+        },
+        {
+            "id": "m1_i_40",
+            "raw_id": 40,
+            "module_id": 1,
+            "difficulty": "intermediate",
+            "topic": "Introduction to computers",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between data and information in computing?",
+            "type": "single",
+            "options": [
+                "Data refers to raw, unorganized facts and figures, while information is data that has been structured, processed, and given meaningful context",
+                "Data is only used by printers, while information is only used by mice",
+                "Data is always measured in gallons, while information is measured in miles",
+                "There is no difference; the two words have identical mathematical meanings in computer science"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the foundational conceptual distinction between raw data inputs and processed information outputs.",
+                "why_correct": "Data consists of unprocessed symbols, numbers, or characters. When a computer processes, categorizes, and provides context to that data, it becomes actionable information.",
+                "options_breakdown": {
+                    "Data refers to raw, unorganized facts and figures, while information is data that has been structured, processed, and given meaningful context": "Correct. Raw facts (data) become structured, contextual, and understandable knowledge (information) through processing.",
+                    "Data is only used by printers, while information is only used by mice": "Incorrect. Peripheral devices do not partition data and information by hardware type.",
+                    "Data is always measured in gallons, while information is measured in miles": "Incorrect. Digital data and information are measured in bits and bytes.",
+                    "There is no difference; the two words have identical mathematical meanings in computer science": "Incorrect. In computer science, data is the raw input and information is the processed, contextual output."
+                },
+                "key_term": "Information: Data that has been verified, organized, contextualized, and processed so that it is useful and meaningful to human decision-makers."
+            }
+        },
+        {
+            "id": "m1_h_41",
+            "raw_id": 41,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Operating systems",
+            "is_scenario": true,
+            "scenario": "A server running multiple memory-intensive tasks experiences severe disk activity with storage utilization at 100%, while CPU utilization drops below 10% and the system becomes virtually unresponsive.",
+            "question": "What architectural phenomenon is occurring, and what is its root cause?",
+            "type": "single",
+            "options": [
+                "Thrashing; the operating system is spending nearly all its time swapping memory pages between RAM and disk rather than executing application code",
+                "The CPU fan has reversed its rotation and is pulling data out of the motherboard",
+                "The computer has run out of monitor resolution pixels to render user windows",
+                "The network cable has overheated and converted electrical packets into radio static"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This diagnostic scenario asks you to identify the cause of extreme disk saturation and low CPU usage under heavy memory load.",
+                "why_correct": "Thrashing occurs when total active virtual memory working sets exceed physical RAM. The OS constantly generates page faults, swapping pages between RAM and swap/pagefile in an endless loop, stalling CPU progress.",
+                "options_breakdown": {
+                    "Thrashing; the operating system is spending nearly all its time swapping memory pages between RAM and disk rather than executing application code": "Correct. In thrashing states, continuous page fault handling saturates disk I/O while CPU cores idle waiting for memory transfers.",
+                    "The CPU fan has reversed its rotation and is pulling data out of the motherboard": "Incorrect. Cooling fans move physical air, not digital data.",
+                    "The computer has run out of monitor resolution pixels to render user windows": "Incorrect. Resolution limits do not cause secondary storage saturation or low CPU usage.",
+                    "The network cable has overheated and converted electrical packets into radio static": "Incorrect. Network cables cannot cause internal virtual memory paging loops."
+                },
+                "key_term": "Thrashing: A state where a computer's CPU spends more time handling page faults and swapping memory pages to disk than executing actual software instructions."
+            }
+        },
+        {
+            "id": "m1_h_42",
+            "raw_id": 42,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Hardware and software",
+            "is_scenario": true,
+            "scenario": "A security analyst is investigating a physical attack where an adversary plugs an unauthorized high-speed Thunderbolt peripheral into an unattended laptop, immediately extracting sensitive encryption keys directly from system memory without entering an OS password.",
+            "question": "Which low-level hardware architecture feature allows this attack, and what security technology mitigates it?",
+            "type": "single",
+            "options": [
+                "Direct Memory Access (DMA); mitigated by an IOMMU (Input-Output Memory Management Unit) and Kernel DMA Protection",
+                "Bluetooth audio streaming; mitigated by disabling computer speakers",
+                "Monitor refresh frequency; mitigated by switching from 60 Hz to 120 Hz",
+                "Optical disc burning; mitigated by removing all CD-ROM drives"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Direct Memory Access (DMA) physical attacks and IOMMU hardware defense mechanisms.",
+                "why_correct": "High-speed expansion interfaces (PCIe, Thunderbolt) utilize Direct Memory Access (DMA) to read/write RAM without CPU intervention. Malicious devices can dump memory unless an IOMMU restricts device memory access.",
+                "options_breakdown": {
+                    "Direct Memory Access (DMA); mitigated by an IOMMU (Input-Output Memory Management Unit) and Kernel DMA Protection": "Correct. DMA grants peripherals direct memory access; an IOMMU enforces memory address isolation and access control policies on peripheral buses.",
+                    "Bluetooth audio streaming; mitigated by disabling computer speakers": "Incorrect. Bluetooth audio profiles cannot perform physical PCIe direct memory bus reads.",
+                    "Monitor refresh frequency; mitigated by switching from 60 Hz to 120 Hz": "Incorrect. Display panel refresh rates do not govern memory bus read permissions.",
+                    "Optical disc burning; mitigated by removing all CD-ROM drives": "Incorrect. Optical drives are not involved in Thunderbolt bus memory extraction."
+                },
+                "key_term": "Direct Memory Access (DMA): A feature of computer systems that allows certain hardware subsystems to access main system memory independently of the central processing unit."
+            }
+        },
+        {
+            "id": "m1_h_43",
+            "raw_id": 43,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How do modern superscalar processors utilize 'Speculative Execution' and 'Branch Prediction' to optimize instruction pipelines?",
+            "type": "single",
+            "options": [
+                "They predict the likely outcome of conditional branch instructions and compute future instructions in advance before the outcome is definitively known",
+                "They turn off unused CPU cores to save battery power during intensive gaming",
+                "They permanently write operating system passwords into optical laser discs",
+                "They convert digital binary code into analog radio waves to bypass motherboard wires"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the microarchitectural mechanisms of speculative execution and branch prediction in modern CPUs.",
+                "why_correct": "To avoid pipeline stalls when waiting for conditional branches (like if/else statements), the CPU predicts the path, speculatively executes ahead, and commits results if correct or discards them if wrong.",
+                "options_breakdown": {
+                    "They predict the likely outcome of conditional branch instructions and compute future instructions in advance before the outcome is definitively known": "Correct. Branch prediction and speculative execution keep execution pipelines saturated, boosting instruction throughput.",
+                    "They turn off unused CPU cores to save battery power during intensive gaming": "Incorrect. Power gating and C-states manage energy, but do not describe speculative execution.",
+                    "They permanently write operating system passwords into optical laser discs": "Incorrect. Speculative execution is an internal microarchitectural calculation process, not an optical burning tool.",
+                    "They convert digital binary code into analog radio waves to bypass motherboard wires": "Incorrect. CPU execution occurs across microscopic silicon transistor traces, not radio broadcast."
+                },
+                "key_term": "Speculative Execution: An optimization technique where a computer system performs a task before it is known whether it is actually needed, preventing delay."
+            }
+        },
+        {
+            "id": "m1_h_44",
+            "raw_id": 44,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Storage devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following architectural advantages explain why NVMe SSDs dramatically outperform legacy SATA SSDs in high-concurrency enterprise workloads? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "NVMe supports up to 64,000 command queues with 64,000 commands per queue, whereas SATA AHCI supports only a single queue of 32 commands",
+                "NVMe communicates directly over high-speed PCIe lanes, bypassing the legacy SATA host controller latency",
+                "NVMe eliminates the need for any electrical power supply connections",
+                "NVMe uses streamlined register interfaces and hardware interrupts optimized for multi-core parallelism"
+            ],
+            "correct": [
+                0,
+                1,
+                3
+            ],
+            "explanation": {
+                "asking": "This question tests deep comparative understanding of NVMe protocol architecture versus legacy SATA/AHCI.",
+                "why_correct": "NVMe was designed specifically for flash memory: it supports massive queue concurrency (64K queues vs 1), bypasses SATA bus bottlenecks by utilizing PCIe directly, and reduces command overhead with optimized register sets. It still requires electrical power.",
+                "options_breakdown": {
+                    "NVMe supports up to 64,000 command queues with 64,000 commands per queue, whereas SATA AHCI supports only a single queue of 32 commands": "Correct. Massive queue depth allows multi-core CPUs to dispatch parallel I/O requests without bottlenecking.",
+                    "NVMe communicates directly over high-speed PCIe lanes, bypassing the legacy SATA host controller latency": "Correct. Direct PCIe connection eliminates the 600 MB/s SATA III interface bottleneck.",
+                    "NVMe eliminates the need for any electrical power supply connections": "Incorrect. NVMe drives draw electrical power from the M.2 slot or PCIe bus.",
+                    "NVMe uses streamlined register interfaces and hardware interrupts optimized for multi-core parallelism": "Correct. Low-overhead register interfaces enable parallel interrupt handling across modern CPU cores."
+                },
+                "key_term": "NVMe Queue Depth: The capacity of an NVMe storage device to queue and process parallel I/O requests simultaneously across modern multi-threaded operating systems."
+            }
+        },
+        {
+            "id": "m1_h_45",
+            "raw_id": 45,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "RAM and ROM",
+            "is_scenario": true,
+            "scenario": "An advanced persistent threat (APT) actor installs a malicious implant that alters the SPI flash chip containing a motherboard's UEFI firmware. The system administrator completely formats the SSD and reinstalls Windows from scratch, but upon reboot, the malware immediately re-infects the clean operating system.",
+            "question": "Why did reformatting the storage drive fail to eliminate this malware?",
+            "type": "single",
+            "options": [
+                "The malware resides in non-volatile motherboard firmware (ROM/SPI Flash) outside the storage drive, allowing it to execute before the OS and inject itself during boot",
+                "The SSD was formatted using a mouse instead of a keyboard",
+                "Windows reinstallation files automatically download all known viruses from the internet",
+                "The computer's power cord was plugged in upside down"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of firmware-level persistence and the architectural boundary between storage drives and motherboard firmware.",
+                "why_correct": "Formatting a hard drive or SSD only wipes secondary storage. Malware residing in motherboard SPI flash firmware (a UEFI rootkit/bootkit) executes at ring -2 before the OS even loads, surviving disk formatting.",
+                "options_breakdown": {
+                    "The malware resides in non-volatile motherboard firmware (ROM/SPI Flash) outside the storage drive, allowing it to execute before the OS and inject itself during boot": "Correct. Firmware implants persist in physical non-volatile chips on the motherboard, completely isolated from storage drive wipe operations.",
+                    "The SSD was formatted using a mouse instead of a keyboard": "Incorrect. The input peripheral used to trigger a format command does not impact wipe thoroughness.",
+                    "Windows reinstallation files automatically download all known viruses from the internet": "Incorrect. Official operating system installers do not download malware.",
+                    "The computer's power cord was plugged in upside down": "Incorrect. Power polarity has zero bearing on firmware rootkit persistence."
+                },
+                "key_term": "UEFI Rootkit: Malware programmed directly into motherboard non-volatile firmware that executes prior to the operating system and survives complete drive replacements."
+            }
+        },
+        {
+            "id": "m1_h_46",
+            "raw_id": 46,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In a Non-Uniform Memory Access (NUMA) multi-socket server architecture, what is the performance impact when a CPU core accesses memory physically attached to a different CPU socket?",
+            "type": "single",
+            "options": [
+                "Latency is significantly higher and bandwidth is reduced because the request must traverse an inter-socket interconnect (such as UPI or Infinity Fabric)",
+                "The data is immediately deleted because processors cannot share memory across sockets",
+                "The computer's operating system instantly crashes with an unrecoverable kernel panic",
+                "The processor accesses the remote memory faster than its own local memory channels"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of multi-processor memory hierarchies and NUMA interconnect latencies.",
+                "why_correct": "In NUMA architectures, each CPU socket has its own local memory controllers. Accessing local memory is fast; accessing 'remote' memory attached to another socket requires passing through inter-socket interconnects, adding latency.",
+                "options_breakdown": {
+                    "Latency is significantly higher and bandwidth is reduced because the request must traverse an inter-socket interconnect (such as UPI or Infinity Fabric)": "Correct. Remote node memory accesses must pass across inter-socket interconnect links, incurring higher latency.",
+                    "The data is immediately deleted because processors cannot share memory across sockets": "Incorrect. NUMA architectures maintain cache-coherent shared memory across all sockets.",
+                    "The computer's operating system instantly crashes with an unrecoverable kernel panic": "Incorrect. NUMA memory sharing is standard and fully handled by hardware and OS schedulers.",
+                    "The processor accesses the remote memory faster than its own local memory channels": "Incorrect. Remote memory is always slower than direct local memory channels."
+                },
+                "key_term": "NUMA (Non-Uniform Memory Access): A computer memory design where memory access time depends on the memory's physical location relative to the processor accessing it."
+            }
+        },
+        {
+            "id": "m1_h_47",
+            "raw_id": 47,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the role of an Interrupt Service Routine (ISR) when a hardware device signals the CPU via an Interrupt Request (IRQ)?",
+            "type": "single",
+            "options": [
+                "It temporarily halts current execution, saves processor state, and immediately executes the specific kernel handler code required to service the hardware event",
+                "It shuts down the computer monitor to protect the user's eyes from bright flashes",
+                "It permanently burns an electrical fuse inside the motherboard to disable the peripheral",
+                "It converts computer files into text messages sent to mobile phones"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of low-level hardware interrupts and asynchronous device management in operating systems.",
+                "why_correct": "Hardware interrupts notify the CPU of an urgent event (e.g. network packet arrival, key press). The CPU saves its current context and invokes the registered Interrupt Service Routine (ISR) to process the event promptly.",
+                "options_breakdown": {
+                    "It temporarily halts current execution, saves processor state, and immediately executes the specific kernel handler code required to service the hardware event": "Correct. An ISR is a high-priority kernel function that acknowledges and handles urgent hardware signals.",
+                    "It shuts down the computer monitor to protect the user's eyes from bright flashes": "Incorrect. Interrupts manage data flow between hardware and OS; they do not perform eye protection.",
+                    "It permanently burns an electrical fuse inside the motherboard to disable the peripheral": "Incorrect. Interrupts are normal operational signaling mechanisms, not destructive fuse-blowing events.",
+                    "It converts computer files into text messages sent to mobile phones": "Incorrect. ISRs handle low-level device I/O, not cellular SMS messaging."
+                },
+                "key_term": "Interrupt Service Routine (ISR): A software routine that an operating system or low-level controller executes in response to receiving a hardware interrupt."
+            }
+        },
+        {
+            "id": "m1_h_48",
+            "raw_id": 48,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Files and folders",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How does a 'Journaling File System' (such as NTFS or ext4) maintain data integrity during a sudden power loss or system crash?",
+            "type": "single",
+            "options": [
+                "It records proposed metadata changes in a circular transaction log (journal) before committing them to the main file system structures, enabling rapid rollback or recovery",
+                "It keeps a physical handwritten paper notebook inside the computer casing",
+                "It uses solar battery panels to keep the entire computer powered for 30 days without electricity",
+                "It automatically sends all deleted files to the computer manufacturer's email address"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the crash-recovery mechanism of journaling file systems.",
+                "why_correct": "Journaling file systems log planned metadata updates to a dedicated journal before writing them to disk. After an unexpected power cut, the OS replays or discards incomplete journal transactions, preventing file system corruption.",
+                "options_breakdown": {
+                    "It records proposed metadata changes in a circular transaction log (journal) before committing them to the main file system structures, enabling rapid rollback or recovery": "Correct. Logging intent before writing ensures file system structural consistency can be restored in seconds upon reboot.",
+                    "It keeps a physical handwritten paper notebook inside the computer casing": "Incorrect. A digital journal is a reserved binary storage block, not physical paper.",
+                    "It uses solar battery panels to keep the entire computer powered for 30 days without electricity": "Incorrect. Journaling is a file system software design, not an alternative solar power system.",
+                    "It automatically sends all deleted files to the computer manufacturer's email address": "Incorrect. File system drivers do not email personal files to manufacturers."
+                },
+                "key_term": "Journaling File System: A file system that tracks changes in a dedicated journal before committing them to the main file system to prevent data corruption during unexpected crashes."
+            }
+        },
+        {
+            "id": "m1_h_49",
+            "raw_id": 49,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "CPU and its functions",
+            "is_scenario": true,
+            "scenario": "During an intense forensic password-cracking workload, a technician observes that the CPU clock speed suddenly drops from 4.8 GHz down to 1.8 GHz, despite the workload remaining at maximum demand.",
+            "question": "What internal hardware self-preservation mechanism was triggered, and why?",
+            "type": "single",
+            "options": [
+                "Thermal Throttling; the processor reached its maximum safe junction temperature (TjMax) and automatically reduced voltage and multiplier to prevent catastrophic silicon burnout",
+                "Memory leak; the CPU ran out of electricity because the power outlet was tired",
+                "Software expiration; the processor requires a monthly subscription payment to run above 2 GHz",
+                "Drive defragmentation; the CPU paused to physically polish the surface of its heat spreader"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This diagnostic scenario asks you to identify the hardware protective response to excessive CPU heat generation.",
+                "why_correct": "When a CPU hits its thermal threshold (TjMax, often 95-105\u00b0C), internal thermal sensors signal the processor to aggressively drop its clock multiplier and core voltage (throttling) to reduce heat and prevent permanent silicon destruction.",
+                "options_breakdown": {
+                    "Thermal Throttling; the processor reached its maximum safe junction temperature (TjMax) and automatically reduced voltage and multiplier to prevent catastrophic silicon burnout": "Correct. Thermal throttling lowers clock frequencies and operating voltages dynamically to dissipate dangerous heat levels.",
+                    "Memory leak; the CPU ran out of electricity because the power outlet was tired": "Incorrect. Memory leaks are software allocation bugs; electrical outlets do not experience fatigue.",
+                    "Software expiration; the processor requires a monthly subscription payment to run above 2 GHz": "Incorrect. Standard CPU clock capability is dictated by silicon physics, not monthly paywalls.",
+                    "Drive defragmentation; the CPU paused to physically polish the surface of its heat spreader": "Incorrect. Defragmentation reorganizes drive sectors; CPUs cannot physically polish their own metal lids."
+                },
+                "key_term": "Thermal Throttling: An automatic hardware protection mechanism that reduces CPU clock speed and power consumption when temperatures exceed safe operational limits."
+            }
+        },
+        {
+            "id": "m1_h_50",
+            "raw_id": 50,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "RAM and ROM",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why do enterprise servers and financial trading mainframes strictly mandate ECC (Error-Correcting Code) RAM rather than standard non-ECC consumer RAM?",
+            "type": "single",
+            "options": [
+                "ECC memory detects and automatically corrects single-bit memory errors caused by cosmic rays or electrical interference, preventing silent data corruption and unexpected system crashes",
+                "ECC memory comes with free lifetime antivirus software pre-installed in the silicon",
+                "ECC memory doubles the physical internet bandwidth of the building's fiber optic cables",
+                "ECC memory allows users to play computer games without needing a graphics card"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of the mission-critical role of ECC memory in enterprise computing.",
+                "why_correct": "Random bit flips in memory (caused by background radiation, cosmic rays, or electrical noise) can corrupt database records or crash servers. ECC uses parity bits and Hamming codes to detect and correct single-bit errors in real time.",
+                "options_breakdown": {
+                    "ECC memory detects and automatically corrects single-bit memory errors caused by cosmic rays or electrical interference, preventing silent data corruption and unexpected system crashes": "Correct. ECC memory calculates checksums to identify and correct single-bit flips, ensuring system uptime and data integrity.",
+                    "ECC memory comes with free lifetime antivirus software pre-installed in the silicon": "Incorrect. Memory chips do not come pre-loaded with antivirus software.",
+                    "ECC memory doubles the physical internet bandwidth of the building's fiber optic cables": "Incorrect. RAM architecture does not alter external fiber optic telecommunications bandwidth.",
+                    "ECC memory allows users to play computer games without needing a graphics card": "Incorrect. ECC memory has no dedicated 3D rendering pipeline."
+                },
+                "key_term": "ECC RAM (Error-Correcting Code Memory): A type of computer data storage that can detect and correct the most common kinds of internal data corruption."
+            }
+        },
+        {
+            "id": "m1_h_51",
+            "raw_id": 51,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Hardware and software",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the function of CPU hardware virtualization extensions (such as Intel VT-x or AMD-V)?",
+            "type": "single",
+            "options": [
+                "They allow a hypervisor to execute guest operating system instructions directly on the physical CPU safely without expensive software binary translation",
+                "They turn physical computer hardware into a holographic projection in the room",
+                "They eliminate the need for computer monitors by projecting images into human thoughts",
+                "They allow software to download physical RAM chips directly from cloud repositories"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the hardware architectural acceleration of virtual machines via processor virtualization extensions.",
+                "why_correct": "Hardware-assisted virtualization provides a new CPU execution privilege mode (Root and Non-Root mode). This allows hypervisors (like ESXi, KVM, Hyper-V) to run virtual machine guest kernels at near-native speeds without complex software emulation.",
+                "options_breakdown": {
+                    "They allow a hypervisor to execute guest operating system instructions directly on the physical CPU safely without expensive software binary translation": "Correct. Hardware extensions provide hardware-managed VM control structures, enabling near-native virtualization performance.",
+                    "They turn physical computer hardware into a holographic projection in the room": "Incorrect. Virtualization runs multiple operating systems; it does not produce physical holograms.",
+                    "They eliminate the need for computer monitors by projecting images into human thoughts": "Incorrect. Display peripherals are still required to view virtualized guest outputs.",
+                    "They allow software to download physical RAM chips directly from cloud repositories": "Incorrect. Physical semiconductor chips cannot be downloaded across networks."
+                },
+                "key_term": "Hardware-Assisted Virtualization: CPU architectural features (like VT-x/AMD-V) that facilitate efficient virtualization by allowing hypervisors to run guest OS code directly on the processor."
+            }
+        },
+        {
+            "id": "m1_h_52",
+            "raw_id": 52,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Storage devices",
+            "is_scenario": true,
+            "scenario": "A storage administrator configures four identical 4 TB hard disk drives into a RAID 5 array. Following initialization, what is the total usable storage capacity, and what is the fault tolerance level of this array?",
+            "question": "A storage administrator configures four identical 4 TB hard disk drives into a RAID 5 array. Following initialization, what is the total usable storage capacity, and what is the fault tolerance level of this array?",
+            "type": "single",
+            "options": [
+                "12 TB usable storage capacity; array survives the failure of any 1 single drive without data loss",
+                "16 TB usable storage capacity; array survives the failure of all 4 drives simultaneously",
+                "4 TB usable storage capacity; array loses all data if any drive experiences a read error",
+                "1 TB usable storage capacity; array converts all mechanical drives into high-speed optical lasers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests practical storage administration calculations for RAID 5 parity striping.",
+                "why_correct": "RAID 5 utilizes block-level striping with distributed parity. Usable capacity is calculated as (N - 1) * Capacity of smallest drive. With 4 x 4 TB drives, usable space is (4 - 1) * 4 TB = 12 TB. The parity allows surviving exactly 1 drive failure.",
+                "options_breakdown": {
+                    "12 TB usable storage capacity; array survives the failure of any 1 single drive without data loss": "Correct. RAID 5 reserves the equivalent of one drive's capacity for distributed parity, yielding (4 - 1) * 4 TB = 12 TB and single-drive fault tolerance.",
+                    "16 TB usable storage capacity; array survives the failure of all 4 drives simultaneously": "Incorrect. 16 TB would be RAID 0 (no parity), which has zero fault tolerance.",
+                    "4 TB usable storage capacity; array loses all data if any drive experiences a read error": "Incorrect. RAID 5 provides redundancy and yields 12 TB across four 4 TB drives.",
+                    "1 TB usable storage capacity; array converts all mechanical drives into high-speed optical lasers": "Incorrect. RAID calculations yield 12 TB; RAID controllers do not convert drives into lasers."
+                },
+                "key_term": "RAID 5: A storage array configuration that stripes data and distributed parity across three or more disks, providing single-drive fault tolerance with high read throughput."
+            }
+        },
+        {
+            "id": "m1_h_53",
+            "raw_id": 53,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How does a Trusted Platform Module (TPM) chip provide cryptographic proof that a computer's boot chain and operating system kernel have not been modified?",
+            "type": "single",
+            "options": [
+                "It records cryptographic hashes of each boot component into Platform Configuration Registers (PCRs) and refuses to release decryption keys if hashes do not match expected values",
+                "It takes a physical digital photograph of the person turning on the computer",
+                "It deletes the computer's hard drive whenever the user boots without an active internet connection",
+                "It increases the electrical voltage of the motherboard until unapproved files catch fire"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the cryptographic measurement and attestation mechanisms of TPM hardware.",
+                "why_correct": "During Measured Boot, each firmware and OS component hashes the next component before executing it, extending the values into the TPM's Platform Configuration Registers (PCRs). If any component is modified, PCR values change and the TPM will not unseal encryption keys (e.g. BitLocker).",
+                "options_breakdown": {
+                    "It records cryptographic hashes of each boot component into Platform Configuration Registers (PCRs) and refuses to release decryption keys if hashes do not match expected values": "Correct. TPM PCR extension establishes a tamper-evident hardware measurement chain that gates access to drive encryption keys.",
+                    "It takes a physical digital photograph of the person turning on the computer": "Incorrect. TPMs are cryptographic microcontrollers; they do not have built-in camera optics.",
+                    "It deletes the computer's hard drive whenever the user boots without an active internet connection": "Incorrect. TPM measurements are performed entirely locally and offline.",
+                    "It increases the electrical voltage of the motherboard until unapproved files catch fire": "Incorrect. TPMs do not burn or physically incinerate motherboards."
+                },
+                "key_term": "Trusted Platform Module (TPM): A dedicated microcontroller designed to secure hardware through integrated cryptographic keys, measurements, and attestation."
+            }
+        },
+        {
+            "id": "m1_h_54",
+            "raw_id": 54,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "CPU and its functions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why did hardware vulnerabilities such as Spectre and Meltdown represent such a profound challenge for modern CPU architecture?",
+            "type": "single",
+            "options": [
+                "They exploited fundamental microarchitectural performance optimizations (out-of-order execution and speculative execution) to leak secret data across privilege boundaries via side-channel cache timing",
+                "They physically melted the copper pins on the bottom of the processor socket",
+                "They allowed computer viruses to physically travel through wireless electricity into household light bulbs",
+                "They caused processors to forget how to perform basic additions like 1 + 1"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests advanced knowledge of microarchitectural side-channel attacks on modern CPUs.",
+                "why_correct": "Meltdown and Spectre bypassed OS privilege boundaries by observing cache timing variations left behind by speculative execution operations that were rolled back, proving that hardware performance optimizations could leak secret memory across processes.",
+                "options_breakdown": {
+                    "They exploited fundamental microarchitectural performance optimizations (out-of-order execution and speculative execution) to leak secret data across privilege boundaries via side-channel cache timing": "Correct. Spectre and Meltdown weaponized speculative execution side effects, allowing unprivileged processes to read kernel or hypervisor memory via timing side channels.",
+                    "They physically melted the copper pins on the bottom of the processor socket": "Incorrect. Spectre and Meltdown do not cause physical melting of pins.",
+                    "They allowed computer viruses to physically travel through wireless electricity into household light bulbs": "Incorrect. These vulnerabilities operate on internal processor cache timing.",
+                    "They caused processors to forget how to perform basic additions like 1 + 1": "Incorrect. Arithmetic logic units remain fully functional; the flaw is information leakage through microarchitectural side channels."
+                },
+                "key_term": "Side-Channel Attack: A security exploit that extracts sensitive information from the physical or microarchitectural implementation of a computer system (such as timing delays or power fluctuations) rather than software bugs."
+            }
+        },
+        {
+            "id": "m1_h_55",
+            "raw_id": 55,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Internet and cloud storage basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In cloud computing architectures, how does Cloud Object Storage (such as Amazon S3 or Google Cloud Storage) fundamentally differ from traditional Block Storage (such as SAN or AWS EBS)?",
+            "type": "single",
+            "options": [
+                "Object storage treats files as discrete, immutable units paired with rich metadata and a unique identifier accessed via HTTP/REST APIs, whereas block storage treats data as raw disk sectors accessed directly by an operating system file system",
+                "Object storage can only store physical concrete stones, while block storage stores digital software",
+                "Block storage is free for all users worldwide, while object storage costs one billion dollars per day",
+                "Object storage requires computers to be connected by physical copper strings rather than internet cables"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests your understanding of architectural distinctions between cloud object storage and traditional block storage.",
+                "why_correct": "Block storage exposes raw blocks (like an unformatted disk) that an OS formats with NTFS/ext4. Object storage is a flat address space accessed via HTTP REST APIs where objects contain data, custom metadata, and a globally unique key.",
+                "options_breakdown": {
+                    "Object storage treats files as discrete, immutable units paired with rich metadata and a unique identifier accessed via HTTP/REST APIs, whereas block storage treats data as raw disk sectors accessed directly by an operating system file system": "Correct. Object storage is API-driven and flat with rich metadata; block storage provides raw sector-level volumes mounted directly by operating systems.",
+                    "Object storage can only store physical concrete stones, while block storage stores digital software": "Incorrect. Both store digital bits; 'object' and 'block' refer to architectural data management abstractions.",
+                    "Block storage is free for all users worldwide, while object storage costs one billion dollars per day": "Incorrect. Cloud providers charge utility rates based on capacity and I/O for both storage tiers.",
+                    "Object storage requires computers to be connected by physical copper strings rather than internet cables": "Incorrect. Object storage is inherently web-native, accessed over standard IP networks via HTTPS."
+                },
+                "key_term": "Object Storage: A computer data storage architecture that manages data as discrete objects rather than as a file hierarchy or raw disk blocks, accessed via RESTful APIs."
+            }
+        },
+        {
+            "id": "m1_h_56",
+            "raw_id": 56,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Hardware and software",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the operational mechanism of Memory-Mapped I/O (MMIO) in computer hardware communication?",
+            "type": "single",
+            "options": [
+                "The CPU allocates portions of its standard physical memory address space to peripheral device registers, allowing the CPU to read and write to hardware using regular memory instructions",
+                "The computer prints a paper map of memory locations and places it on the desk",
+                "The operating system translates digital memory addresses into physical geographic GPS coordinates",
+                "Memory-Mapped I/O requires the user to manually type memory addresses into a web browser every 10 seconds"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the hardware architectural mechanism of Memory-Mapped I/O (MMIO).",
+                "why_correct": "With MMIO, hardware device registers are mapped directly into the CPU's memory address space. The CPU reads and writes to device registers using standard memory access assembly instructions (like MOV), avoiding dedicated I/O instructions.",
+                "options_breakdown": {
+                    "The CPU allocates portions of its standard physical memory address space to peripheral device registers, allowing the CPU to read and write to hardware using regular memory instructions": "Correct. MMIO unifies device control registers into the memory address space, simplifying CPU bus design and driver communication.",
+                    "The computer prints a paper map of memory locations and places it on the desk": "Incorrect. Memory mapping is an electrical register mapping architecture, not a paper printout.",
+                    "The operating system translates digital memory addresses into physical geographic GPS coordinates": "Incorrect. MMIO coordinates are internal bus address hex values, not geographical GPS positions.",
+                    "Memory-Mapped I/O requires the user to manually type memory addresses into a web browser every 10 seconds": "Incorrect. MMIO is handled autonomously at microsecond intervals by CPU hardware and kernel drivers."
+                },
+                "key_term": "Memory-Mapped I/O (MMIO): A method of performing input/output between the CPU and peripheral devices where device registers are mapped to the same address space as system RAM."
+            }
+        },
+        {
+            "id": "m1_h_57",
+            "raw_id": 57,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following conditions must hold simultaneously for a multi-threaded system to enter an unresolvable 'Deadlock' state? (Select all that apply - The Coffman Conditions)",
+            "type": "multiple",
+            "options": [
+                "Mutual Exclusion: At least one resource must be held in a non-shareable mode",
+                "Hold and Wait: A process must be currently holding at least one resource and requesting additional resources held by other processes",
+                "No Preemption: Resources cannot be forcibly confiscated from processes holding them; they must be released voluntarily",
+                "Circular Wait: A closed chain of processes exists where each process holds resources needed by the next process in the chain"
+            ],
+            "correct": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "explanation": {
+                "asking": "This question tests your mastery of operating system concurrency theory and the four fundamental Coffman Deadlock Conditions.",
+                "why_correct": "A deadlock occurs if and only if all four Coffman conditions are present simultaneously: Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait. Breaking any single condition prevents deadlock.",
+                "options_breakdown": {
+                    "Mutual Exclusion: At least one resource must be held in a non-shareable mode": "Correct. Resource exclusivity is the first required condition for deadlock.",
+                    "Hold and Wait: A process must be currently holding at least one resource and requesting additional resources held by other processes": "Correct. Holding resources while waiting for others is the second required condition.",
+                    "No Preemption: Resources cannot be forcibly confiscated from processes holding them; they must be released voluntarily": "Correct. Lack of resource preemption is the third required condition.",
+                    "Circular Wait: A closed chain of processes exists where each process holds resources needed by the next process in the chain": "Correct. Circular dependency is the fourth required condition for deadlock."
+                },
+                "key_term": "Coffman Conditions: The four necessary and sufficient conditions (Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait) required for a deadlock to occur in an operating system."
+            }
+        },
+        {
+            "id": "m1_h_58",
+            "raw_id": 58,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Hardware and software",
+            "is_scenario": true,
+            "scenario": "A software developer allocates dynamic memory using malloc() in a C program inside an infinite loop that runs continuously, but neglects to call free() when the data is no longer needed. Over several hours, the computer's available memory steadily drops to zero.",
+            "question": "What specific software defect is present, and what is its direct architectural consequence?",
+            "type": "single",
+            "options": [
+                "A Memory Leak; heap memory remains allocated and unusable by other processes, eventually exhausting physical RAM and virtual swap space",
+                "A hardware CPU meltdown; the processor chip physically melts from excessive typing speed",
+                "A power supply surge; the computer draws more electricity than the regional power grid can supply",
+                "A monitor resolution overflow; the screen becomes too bright to look at safely"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of memory allocation lifecycles and the architectural consequences of memory leaks.",
+                "why_correct": "Failing to release dynamically allocated heap memory creates a memory leak. Unreferenced memory blocks accumulate in the process address space, starving other processes, inducing heavy paging, and triggering out-of-memory kernel killers.",
+                "options_breakdown": {
+                    "A Memory Leak; heap memory remains allocated and unusable by other processes, eventually exhausting physical RAM and virtual swap space": "Correct. Unreleased heap allocations continuously consume system address space until all available RAM and virtual swap are depleted.",
+                    "A hardware CPU meltdown; the processor chip physically melts from excessive typing speed": "Incorrect. Memory leaks affect memory capacity; they do not melt CPU silicon due to typing.",
+                    "A power supply surge; the computer draws more electricity than the regional power grid can supply": "Incorrect. Memory leaks do not overload utility municipal power grids.",
+                    "A monitor resolution overflow; the screen becomes too bright to look at safely": "Incorrect. Screen brightness is independent of unreleased heap allocations."
+                },
+                "key_term": "Memory Leak: A type of resource leak that occurs when a computer program incorrectly manages memory allocations such that memory that is no longer needed is not released."
+            }
+        },
+        {
+            "id": "m1_h_59",
+            "raw_id": 59,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Storage devices",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In Solid-State Drive engineering, what is 'Write Amplification' (WA), and why is it detrimental to drive lifespan?",
+            "type": "single",
+            "options": [
+                "The ratio of the physical amount of data written to NAND flash memory compared to the logical amount of data written by the host OS; higher ratios accelerate flash cell wear",
+                "A technique where storage drives amplify sound volume to play music louder through computer speakers",
+                "A feature that allows hard drives to duplicate money stored in online bank accounts",
+                "An operating system setting that makes typed text appear in larger bold fonts on the screen"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the NAND flash memory phenomenon known as Write Amplification.",
+                "why_correct": "Because flash cells must be erased in entire blocks before small pages can be re-written, moving and rewriting valid data during garbage collection causes the drive to write more physical bytes than the host requested. This wears out finite cell write endurance cycles faster.",
+                "options_breakdown": {
+                    "The ratio of the physical amount of data written to NAND flash memory compared to the logical amount of data written by the host OS; higher ratios accelerate flash cell wear": "Correct. Write amplification means the physical writes exceed logical requests, consuming finite NAND program/erase (P/E) cycles prematurely.",
+                    "A technique where storage drives amplify sound volume to play music louder through computer speakers": "Incorrect. Write amplification relates to NAND silicon flash cycles, not audio amplification.",
+                    "A feature that allows hard drives to duplicate money stored in online bank accounts": "Incorrect. Storage drives cannot duplicate monetary currency.",
+                    "An operating system setting that makes typed text appear in larger bold fonts on the screen": "Incorrect. Write amplification has no relation to display font sizes."
+                },
+                "key_term": "Write Amplification Factor (WAF): An undesirable phenomenon associated with flash memory where the actual amount of physical data written is a multiple of the logical data intended to be written."
+            }
+        },
+        {
+            "id": "m1_h_60",
+            "raw_id": 60,
+            "module_id": 1,
+            "difficulty": "hard",
+            "topic": "Introduction to computers",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary architectural advantage of a 'Unified Memory Architecture' (UMA) found in modern System-on-Chip (SoC) designs over traditional discrete PC architectures?",
+            "type": "single",
+            "options": [
+                "The CPU, GPU, and Neural Engine share a single high-bandwidth memory pool without needing to copy data back and forth across a bottlenecked PCIe bus",
+                "It eliminates the need for an operating system because the hardware thinks on its own",
+                "It guarantees that a computer will never require a password or software updates",
+                "It converts digital computers into analog mechanical typewriters"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests modern SoC architecture understanding, comparing unified memory against discrete bus-separated systems.",
+                "why_correct": "In traditional PCs, the CPU must copy data across the PCIe bus to GPU VRAM, introducing latency and copying overhead. In unified memory SoCs (like Apple Silicon), CPU, GPU, and NPU address the exact same high-bandwidth RAM pool directly with zero-copy access.",
+                "options_breakdown": {
+                    "The CPU, GPU, and Neural Engine share a single high-bandwidth memory pool without needing to copy data back and forth across a bottlenecked PCIe bus": "Correct. Unified memory enables zero-copy sharing of large data structures (such as LLM weights or textures) across all compute engines.",
+                    "It eliminates the need for an operating system because the hardware thinks on its own": "Incorrect. Unified memory SoCs still require operating systems to manage tasks, files, and processes.",
+                    "It guarantees that a computer will never require a password or software updates": "Incorrect. Hardware memory layout does not replace authentication or software security patches.",
+                    "It converts digital computers into analog mechanical typewriters": "Incorrect. Unified memory is an advanced digital semiconductor architecture, not an analog typewriter."
+                },
+                "key_term": "Unified Memory Architecture (UMA): A system architecture where multiple computing units (CPU, GPU, DSP) share a single pool of physical memory and address space without data replication overhead."
+            }
+        }
+    ]
+}

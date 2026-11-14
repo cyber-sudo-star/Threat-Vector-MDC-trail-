@@ -24,6 +24,7 @@ from functools import wraps
 import joblib
 
 from flask import (
+    jsonify,
     Flask, render_template, request, redirect,
     url_for, session, flash, g
 )
@@ -33,7 +34,15 @@ from PIL import Image
 
 from database import (
     init_db, get_db_connection, log_audit_event,
-    DB_PATH, SCENARIOS_CSV
+    DB_PATH, SCENARIOS_CSV,
+    get_user_knowledge_progress, get_module_knowledge_progress,
+    create_or_get_active_session, get_active_session,
+    save_session_answer, delete_active_session,
+    save_knowledge_attempt, get_knowledge_attempt,
+    get_user_knowledge_attempts
+)
+from data.knowledge_bank.loader import (
+    get_all_modules, get_module_meta, get_quiz_questions
 )
 from train_model import train_and_export_model
 
@@ -54,10 +63,12 @@ if not os.path.exists(MODEL_PATH):
 
 # Load Scikit-learn Model Pipeline
 ml_pipeline = None
+ml_model_error = None
 try:
     ml_pipeline = joblib.load(MODEL_PATH)
     print("[+] Scikit-learn Threat Classifier loaded successfully.")
 except Exception as e:
+    ml_model_error = str(e)
     print(f"[-] Error loading ML model: {e}")
 
 
@@ -167,7 +178,7 @@ def login():
 
     return render_template("login.html")
 
-@app.route("/demo-login", methods=["POST"])
+@app.route("/demo-login", methods=["GET", "POST"])
 def demo_login():
     """Backend endpoint allowing automated test suites or quick login."""
     conn = get_db_connection()
@@ -208,8 +219,18 @@ def index():
 
     conn = get_db_connection()
 
-    # Total scenarios available
+    # Total scenarios, CTF, and War Room available
     total_drills = conn.execute("SELECT COUNT(*) FROM scenarios").fetchone()[0]
+    total_ctf = conn.execute("SELECT COUNT(*) FROM ctf_challenges").fetchone()[0]
+    total_warroom = conn.execute("SELECT COUNT(*) FROM war_room_incidents").fetchone()[0]
+
+    # Calculate practical activity counts
+    user_drills = user["drills_completed"] or 0
+    user_ctf = user["ctf_completed"] or 0
+    user_warroom = user["warroom_completed"] or 0
+    total_practiced = user_drills + user_ctf + user_warroom
+    total_practical_pool = total_drills + total_ctf + total_warroom
+    practiced_pct = min(100, int((total_practiced / total_practical_pool) * 100)) if total_practical_pool > 0 else 0
 
     # Calculate user accuracy %
     responses = conn.execute("""
@@ -230,7 +251,7 @@ def index():
     else:
         readiness_status = "Developing Trainee"
 
-    # User ranking on leaderboard
+    # User ranking on leaderboard (kept for backend/leaderboard, but removed from dashboard display)
     all_users = conn.execute("SELECT id FROM users ORDER BY defense_score DESC").fetchall()
     user_rank = 1
     for idx, u in enumerate(all_users):
@@ -250,10 +271,13 @@ def index():
         "index.html",
         active_page="dashboard",
         total_drills=total_drills,
+        total_ctf=total_ctf,
+        total_warroom=total_warroom,
+        total_practiced=total_practiced,
+        practiced_pct=practiced_pct,
         accuracy_pct=accuracy_pct,
         readiness_score=readiness_score,
         readiness_status=readiness_status,
-        user_rank=user_rank,
         audit_logs=audit_logs
     )
 
@@ -693,7 +717,12 @@ def inspector():
                 else:
                     combined_text = file_text
 
-        if combined_text and ml_pipeline:
+        if not combined_text:
+            flash("Please enter raw text/URL or upload a supported telemetry file to inspect.", "warning")
+        elif not ml_pipeline:
+            err_detail = f" (Reason: {ml_model_error})" if ml_model_error else ""
+            flash(f"AI Threat Inspector Offline: The Scikit-learn threat classification model (model.pkl) could not be loaded{err_detail}. Please verify dependencies and model availability.", "danger")
+        else:
             # 2. Run Scikit-learn ML inference
             probs = ml_pipeline.predict_proba([combined_text])[0]
             malicious_prob = probs[1]  # Class 1 = Malicious
@@ -802,7 +831,9 @@ def inspector():
         "inspector.html",
         active_page="inspector",
         input_text=input_text,
-        result=result
+        result=result,
+        ml_available=(ml_pipeline is not None),
+        ml_model_error=ml_model_error
     )
 
 
@@ -934,6 +965,16 @@ def war_room():
 
     active_phase = phases[current_phase_index] if current_phase_index < total_phases else None
 
+    # Calculate sequential next incident ID with wrap-around
+    next_incident_id = 1
+    if all_incidents:
+        incident_ids = [inc["id"] for inc in all_incidents]
+        if incident["id"] in incident_ids:
+            curr_pos = incident_ids.index(incident["id"])
+            next_incident_id = incident_ids[(curr_pos + 1) % len(incident_ids)]
+        else:
+            next_incident_id = incident_ids[0]
+
     conn.close()
 
     return render_template(
@@ -941,6 +982,7 @@ def war_room():
         active_page="war_room",
         all_incidents=all_incidents,
         active_incident=incident,
+        next_incident_id=next_incident_id,
         phases=phases,
         active_phase=active_phase,
         current_phase_index=current_phase_index,
@@ -1115,8 +1157,22 @@ def profile():
         if r["is_correct"]:
             cat_counts[cat]["correct"] += 1
 
-    # Ensure baseline categories appear even if not yet attempted
-    all_known_cats = ["Phishing", "OTP Scams", "Impersonation", "Urgency", "Quishing/QR", "Tech Support", "Legitimate"]
+    # Ensure all scenario categories (including Spear Phishing) appear even if not yet attempted
+    baseline_cats = [
+        "Phishing", "OTP Scams", "Impersonation", "Urgency",
+        "Quishing/QR", "Tech Support", "Spear Phishing", "Legitimate"
+    ]
+    # Dynamically discover any categories in scenarios table or user responses
+    db_cats_rows = conn.execute("SELECT DISTINCT category FROM scenarios ORDER BY category").fetchall()
+    all_known_cats = list(baseline_cats)
+    for row in db_cats_rows:
+        c_name = row["category"]
+        if c_name not in all_known_cats:
+            all_known_cats.append(c_name)
+    for c_name in cat_counts:
+        if c_name not in all_known_cats:
+            all_known_cats.append(c_name)
+
     category_stats = []
     for c in all_known_cats:
         c_tot = cat_counts.get(c, {}).get("total", 0)
@@ -1163,6 +1219,360 @@ def profile():
     )
 
 
+
+# ==============================================================================
+# 9. Knowledge Check Training & Assessment System
+# ==============================================================================
+
+@app.route("/knowledge-check")
+def knowledge_modules():
+    """
+    Knowledge Check Modules Portal:
+    Presents all 8 structured modules with difficulty status, completion badges,
+    and trainee overall progress metrics.
+    """
+    user = g.user or get_current_user()
+    if user is None:
+        return redirect(url_for("login"))
+
+    modules_list = get_all_modules()
+    progress_data = get_user_knowledge_progress(user["id"])
+    recent_attempts = get_user_knowledge_attempts(user["id"], limit=5)
+
+    return render_template(
+        "knowledge_modules.html",
+        active_page="knowledge",
+        modules=modules_list,
+        progress=progress_data,
+        recent_attempts=recent_attempts
+    )
+
+
+@app.route("/knowledge-check/<int:module_id>")
+def knowledge_difficulty(module_id):
+    """
+    Module Difficulty Selector:
+    Displays introduction, covered topics, and the 3 difficulty tiers (Easy, Intermediate, Hard)
+    with 20 questions each and the trainee's best scores.
+    """
+    user = g.user or get_current_user()
+    if user is None:
+        return redirect(url_for("login"))
+
+    if module_id < 1 or module_id > 8:
+        flash("Invalid module selected.", "warning")
+        return redirect(url_for("knowledge_modules"))
+
+    module_meta = get_module_meta(module_id)
+    module_prog = get_module_knowledge_progress(user["id"], module_id)
+
+    return render_template(
+        "knowledge_difficulty.html",
+        active_page="knowledge",
+        module=module_meta,
+        module_progress=module_prog
+    )
+
+
+@app.route("/knowledge-check/<int:module_id>/<difficulty>")
+def knowledge_quiz(module_id, difficulty):
+    """
+    Interactive Knowledge Assessment Runner:
+    Loads 20 questions for the selected difficulty level.
+    Resilient against page reloads: active sessions are persisted in SQLite.
+    Questions and answer choices are dynamically shuffled per session.
+    """
+    user = g.user or get_current_user()
+    if user is None:
+        return redirect(url_for("login"))
+
+    diff_title = difficulty.strip().capitalize()
+    if diff_title not in ["Easy", "Intermediate", "Hard"] or module_id < 1 or module_id > 8:
+        flash("Invalid difficulty or module specified.", "warning")
+        return redirect(url_for("knowledge_modules"))
+
+    sess_key = f"kc_sess_{user['id']}_{module_id}_{diff_title}"
+    restart_flag = request.args.get("restart") == "1"
+
+    if restart_flag:
+        old_sid = session.get(sess_key)
+        if old_sid:
+            delete_active_session(old_sid, user["id"])
+        session.pop(sess_key, None)
+
+    active_sess = None
+    existing_sid = session.get(sess_key)
+    if existing_sid:
+        active_sess = get_active_session(existing_sid, user["id"])
+
+    # If no active session or existing session already completed, start fresh
+    if not active_sess or active_sess.get("is_completed"):
+        new_sid = f"kc_{user['id']}_{module_id}_{diff_title.lower()}_{int(datetime.now().timestamp())}_{random.randint(100, 999)}"
+        questions = get_quiz_questions(module_id, diff_title, shuffle=True)
+        active_sess = create_or_get_active_session(new_sid, user["id"], module_id, diff_title, questions)
+        session[sess_key] = new_sid
+
+    q_idx = active_sess["current_index"]
+    questions = active_sess["questions"]
+
+    # If all questions answered, finish and redirect to results
+    if q_idx >= len(questions):
+        answers = active_sess["answers"]
+        score = sum(1 for a in answers if a and a.get("is_correct"))
+        attempt_id = save_knowledge_attempt(
+            user_id=user["id"],
+            module_id=module_id,
+            difficulty=diff_title,
+            score=score,
+            total_questions=len(questions),
+            answers_list=answers
+        )
+        delete_active_session(active_sess["session_id"], user["id"])
+        session.pop(sess_key, None)
+        return redirect(url_for("knowledge_results", module_id=module_id, difficulty=diff_title, attempt_id=attempt_id))
+
+    current_question = questions[q_idx]
+
+    return render_template(
+        "knowledge_quiz.html",
+        active_page="knowledge",
+        module=get_module_meta(module_id),
+        difficulty=diff_title,
+        session_id=active_sess["session_id"],
+        question_index=q_idx,
+        total_questions=len(questions),
+        question=current_question,
+        answered_count=len([a for a in active_sess["answers"] if a is not None])
+    )
+
+
+@app.route("/knowledge-check/submit", methods=["POST"])
+def knowledge_submit():
+    """
+    Submits and evaluates answer for the current active question.
+    Returns immediate structured feedback including correctness,
+    full option-by-option rationale, and key cybersecurity terms.
+    """
+    user = g.user or get_current_user()
+    if user is None:
+        return jsonify({"status": "error", "message": "Unauthorized"}), 401
+
+    payload = request.get_json(silent=True) or request.form
+    session_id = payload.get("session_id")
+    if not session_id:
+        return jsonify({"status": "error", "message": "Session ID required"}), 400
+
+    active_sess = get_active_session(session_id, user["id"])
+    if not active_sess:
+        return jsonify({"status": "error", "message": "Active session expired or invalid"}), 404
+
+    q_idx = active_sess["current_index"]
+    questions = active_sess["questions"]
+    if q_idx >= len(questions):
+        return jsonify({"status": "error", "message": "Quiz session already completed"}), 400
+
+    current_q = questions[q_idx]
+    is_multi = current_q.get("is_multi_select", False) or isinstance(current_q.get("correct"), (list, tuple))
+
+    # Parse and validate submitted selection
+    if is_multi:
+        selected_raw = payload.get("selected", [])
+        if isinstance(selected_raw, (int, str)):
+            selected_raw = [selected_raw]
+        try:
+            selected_indices = sorted(list(set(int(x) for x in selected_raw)))
+        except (ValueError, TypeError):
+            selected_indices = []
+
+        raw_correct = current_q["correct"]
+        if not isinstance(raw_correct, (list, tuple)):
+            raw_correct = [raw_correct]
+        correct_indices = sorted(list(set(int(x) for x in raw_correct)))
+        is_correct = (selected_indices == correct_indices)
+        user_selection = selected_indices
+        correct_answer = correct_indices
+    else:
+        selected_raw = payload.get("selected")
+        try:
+            selected_idx = int(selected_raw)
+        except (ValueError, TypeError):
+            selected_idx = -1
+
+        if isinstance(current_q["correct"], (list, tuple)):
+            correct_answer = [int(x) for x in current_q["correct"]]
+            is_correct = (selected_idx in correct_answer)
+        else:
+            correct_idx = int(current_q["correct"])
+            is_correct = (selected_idx == correct_idx)
+            correct_answer = correct_idx
+        user_selection = selected_idx
+
+    # Record answer in active session
+    answer_record = {
+        "question_id": current_q["id"],
+        "question": current_q["question"],
+        "scenario": current_q.get("scenario", ""),
+        "is_scenario": current_q.get("is_scenario", False),
+        "is_multi_select": is_multi,
+        "options": current_q["options"],
+        "selected": user_selection,
+        "correct": correct_answer,
+        "is_correct": is_correct,
+        "explanation": current_q["explanation"]
+    }
+
+    save_session_answer(session_id, user["id"], q_idx, answer_record)
+
+    is_last = (q_idx + 1 >= len(questions))
+
+    return jsonify({
+        "status": "success",
+        "is_correct": is_correct,
+        "selected": user_selection,
+        "correct": correct_answer,
+        "explanation": current_q["explanation"],
+        "is_last": is_last,
+        "question_index": q_idx + 1,
+        "total_questions": len(questions)
+    })
+
+
+@app.route("/knowledge-check/next", methods=["POST"])
+def knowledge_next():
+    """
+    Advances question sequence or completes the assessment.
+    """
+    user = g.user or get_current_user()
+    if user is None:
+        return jsonify({"status": "error", "message": "Unauthorized"}), 401
+
+    payload = request.get_json(silent=True) or request.form
+    session_id = payload.get("session_id")
+    if not session_id:
+        return jsonify({"status": "error", "message": "Session ID required"}), 400
+
+    active_sess = get_active_session(session_id, user["id"])
+    if not active_sess:
+        return jsonify({"status": "error", "message": "Active session expired"}), 404
+
+    q_idx = active_sess["current_index"]
+    questions = active_sess["questions"]
+    sess_key = f"kc_sess_{user['id']}_{active_sess['module_id']}_{active_sess['difficulty']}"
+
+    if q_idx >= len(questions):
+        answers = active_sess["answers"]
+        score = sum(1 for a in answers if a and a.get("is_correct"))
+        attempt_id = save_knowledge_attempt(
+            user_id=user["id"],
+            module_id=active_sess["module_id"],
+            difficulty=active_sess["difficulty"],
+            score=score,
+            total_questions=len(questions),
+            answers_list=answers
+        )
+        delete_active_session(session_id, user["id"])
+        session.pop(sess_key, None)
+        return jsonify({
+            "status": "completed",
+            "redirect": url_for(
+                "knowledge_results",
+                module_id=active_sess["module_id"],
+                difficulty=active_sess["difficulty"],
+                attempt_id=attempt_id
+            )
+        })
+
+    return jsonify({
+        "status": "continue",
+        "redirect": url_for(
+            "knowledge_quiz",
+            module_id=active_sess["module_id"],
+            difficulty=active_sess["difficulty"]
+        )
+    })
+
+
+@app.route("/knowledge-check/<int:module_id>/<difficulty>/results/<int:attempt_id>")
+def knowledge_results(module_id, difficulty, attempt_id):
+    """
+    Knowledge Check Assessment Results & Full Explanatory Review:
+    Displays final score, mastery level, defense points earned, and an interactive
+    accordion reviewing every question with correct/user selections and in-depth explanations.
+    """
+    user = g.user or get_current_user()
+    if user is None:
+        return redirect(url_for("login"))
+
+    attempt = get_knowledge_attempt(attempt_id, user["id"])
+    if not attempt or attempt["user_id"] != user["id"]:
+        flash("Attempt record not found.", "warning")
+        return redirect(url_for("knowledge_modules"))
+
+    module_meta = get_module_meta(module_id)
+    module_prog = get_module_knowledge_progress(user["id"], module_id)
+
+    # Determine mastery badge
+    pct = attempt["percentage"]
+    if pct >= 90.0:
+        grade_label = "Cyber Mastery"
+        grade_class = "mastery"
+        grade_desc = "Outstanding performance! You have demonstrated advanced mastery of these core cybersecurity concepts."
+    elif pct >= 60.0:
+        grade_label = "Assessment Passed"
+        grade_class = "passed"
+        grade_desc = "Great job! You have satisfied defensive baseline requirements. Review flagged questions to polish your knowledge."
+    else:
+        grade_label = "Revision Recommended"
+        grade_class = "revision"
+        grade_desc = "Good effort. Review the technical explanations below and retake the assessment to solidify your understanding."
+
+    return render_template(
+        "knowledge_results.html",
+        active_page="knowledge",
+        module=module_meta,
+        difficulty=difficulty,
+        attempt=attempt,
+        module_progress=module_prog,
+        grade_label=grade_label,
+        grade_class=grade_class,
+        grade_desc=grade_desc
+    )
+
+
+@app.route("/knowledge-check/review/<int:attempt_id>")
+def knowledge_review(attempt_id):
+    """Direct route to review a past attempt."""
+    user = g.user or get_current_user()
+    if user is None:
+        return redirect(url_for("login"))
+
+    attempt = get_knowledge_attempt(attempt_id, user["id"])
+    if not attempt:
+        flash("Attempt record not found.", "warning")
+        return redirect(url_for("knowledge_modules"))
+
+    return redirect(url_for(
+        "knowledge_results",
+        module_id=attempt["module_id"],
+        difficulty=attempt["difficulty"],
+        attempt_id=attempt["id"]
+    ))
+
+
+@app.route("/knowledge-check/reset-session/<int:module_id>/<difficulty>")
+def knowledge_reset_session(module_id, difficulty):
+    """Explicitly resets any active session for this module and difficulty."""
+    user = g.user or get_current_user()
+    if user:
+        diff_title = difficulty.strip().capitalize()
+        sess_key = f"kc_sess_{user['id']}_{module_id}_{diff_title}"
+        sid = session.get(sess_key)
+        if sid:
+            delete_active_session(sid, user["id"])
+        session.pop(sess_key, None)
+    return redirect(url_for("knowledge_quiz", module_id=module_id, difficulty=difficulty, restart=1))
+
+
 # ==============================================================================
 # Application Server Entry Point
 # ==============================================================================
@@ -1170,7 +1580,7 @@ def profile():
 if __name__ == "__main__":
     print("""
     ======================================================================
-    ⚡ THREAT VECTOR - Cybersecurity Awareness & Defensive Training SOC ⚡
+    [+] THREAT VECTOR - Cybersecurity Awareness & Defensive Training SOC
     ======================================================================
     [+] Server running locally on: http://127.0.0.1:5000/
     [+] Single-link integrated architecture.

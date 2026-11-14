@@ -1,0 +1,1885 @@
+{
+    "module_id": 6,
+    "title": "Network & Web Security",
+    "description": "Learn how networks and websites are protected, explore common web vulnerabilities, and understand the security mechanisms used to prevent attacks.",
+    "topics": [
+        "Firewalls",
+        "IDS and IPS",
+        "VPNs",
+        "HTTP and HTTPS",
+        "TLS",
+        "Web application basics",
+        "SQL injection",
+        "Cross-site scripting (XSS)",
+        "OWASP Top 10",
+        "Secure browsing"
+    ],
+    "questions": [
+        {
+            "id": "m6_e_01",
+            "raw_id": 1,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Firewalls",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary function of a Network Firewall?",
+            "type": "single",
+            "options": [
+                "To monitor and filter incoming and outgoing network traffic based on predetermined security rules",
+                "To physically extinguish electrical fires inside server racks",
+                "To accelerate download speeds by 500%",
+                "To convert analog audio into digital music"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the foundational role of a network firewall.",
+                "why_correct": "A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's previously established security policies, acting as a barrier between trusted and untrusted networks.",
+                "options_breakdown": {
+                    "To monitor and filter incoming and outgoing network traffic based on predetermined security rules": "Correct. Firewalls enforce access control policies across network boundaries.",
+                    "To physically extinguish electrical fires inside server racks": "Incorrect. Fire suppression systems extinguish physical fires; cyber firewalls filter digital packets.",
+                    "To accelerate download speeds by 500%": "Incorrect. Firewalls inspect packets and do not artificially increase ISP bandwidth.",
+                    "To convert analog audio into digital music": "Incorrect. Audio converters handle sound, not network packet security."
+                },
+                "key_term": "Firewall: A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+            }
+        },
+        {
+            "id": "m6_e_02",
+            "raw_id": 2,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "IDS and IPS",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the key difference between an Intrusion Detection System (IDS) and an Intrusion Prevention System (IPS)?",
+            "type": "single",
+            "options": [
+                "An IDS monitors and alerts on detected suspicious traffic; an IPS actively blocks or drops malicious traffic in real time",
+                "An IDS is hardware, while an IPS is only software",
+                "An IDS only runs on smartphones, while an IPS only runs on routers",
+                "There is zero difference; both are identical acronyms"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the operational distinction between passive detection (IDS) and active prevention (IPS).",
+                "why_correct": "An IDS is a passive listening system that analyzes traffic copies and raises alerts when threats are identified. An IPS sits inline in the direct traffic path and actively drops or blocks malicious packets in real time.",
+                "options_breakdown": {
+                    "An IDS monitors and alerts on detected suspicious traffic; an IPS actively blocks or drops malicious traffic in real time": "Correct. IDS alerts; IPS actively blocks threats inline.",
+                    "An IDS is hardware, while an IPS is only software": "Incorrect. Both can be deployed as dedicated hardware appliances or virtual software sensors.",
+                    "An IDS only runs on smartphones, while an IPS only runs on routers": "Incorrect. Both protect enterprise networks, servers, and cloud environments.",
+                    "There is zero difference; both are identical acronyms": "Incorrect. Detection and prevention represent distinct operational modes."
+                },
+                "key_term": "IDS vs IPS: An IDS detects and alerts on malicious activity passively; an IPS actively takes automated inline action to prevent or block the activity."
+            }
+        },
+        {
+            "id": "m6_e_03",
+            "raw_id": 3,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "VPNs",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does a Virtual Private Network (VPN) do when you connect to the Internet?",
+            "type": "single",
+            "options": [
+                "It creates an encrypted secure tunnel between your device and a remote VPN server, shielding your traffic and hiding your real IP address from local snoops",
+                "It provides unlimited free satellite electricity to your laptop battery",
+                "It deletes all your browsing history from every computer in the world",
+                "It makes your computer completely immune to all software bugs"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of the core purpose of a VPN.",
+                "why_correct": "A VPN encrypts internet traffic from the client device to the VPN gateway. This protects sensitive data from interception on untrusted local networks (like public coffee shop Wi-Fi) and masks the user's true geographic IP address.",
+                "options_breakdown": {
+                    "It creates an encrypted secure tunnel between your device and a remote VPN server, shielding your traffic and hiding your real IP address from local snoops": "Correct. VPNs provide encryption and endpoint privacy across public networks.",
+                    "It provides unlimited free satellite electricity to your laptop battery": "Incorrect. VPNs are software networking tools and cannot supply electrical power.",
+                    "It deletes all your browsing history from every computer in the world": "Incorrect. VPNs encrypt network transit; they do not erase server-side database logs.",
+                    "It makes your computer completely immune to all software bugs": "Incorrect. VPNs do not patch software vulnerabilities or stop malware execution."
+                },
+                "key_term": "VPN (Virtual Private Network): An encrypted connection over the Internet from a device to a network that helps ensure sensitive data is safely transmitted."
+            }
+        },
+        {
+            "id": "m6_e_04",
+            "raw_id": 4,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "HTTP and HTTPS",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why is HTTPS preferred over plain HTTP for web browsing?",
+            "type": "single",
+            "options": [
+                "HTTPS encrypts all transmitted data (including passwords and session cookies) using TLS, protecting it from eavesdropping and tampering",
+                "HTTPS makes websites load with larger fonts and brighter colors",
+                "HTTPS requires users to pay an annual subscription fee to the web designer",
+                "HTTPS is an operating system developed by Microsoft"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the security benefits of HTTPS over plain text HTTP.",
+                "why_correct": "HTTP transmits web traffic in plain text, allowing anyone on the network to intercept credentials and sensitive data. HTTPS wraps HTTP inside Transport Layer Security (TLS) encryption, ensuring confidentiality and integrity.",
+                "options_breakdown": {
+                    "HTTPS encrypts all transmitted data (including passwords and session cookies) using TLS, protecting it from eavesdropping and tampering": "Correct. HTTPS provides confidentiality, data integrity, and server authentication.",
+                    "HTTPS makes websites load with larger fonts and brighter colors": "Incorrect. CSS styles fonts and colors, not transport security protocols.",
+                    "HTTPS requires users to pay an annual subscription fee to the web designer": "Incorrect. HTTPS is an open, free security protocol.",
+                    "HTTPS is an operating system developed by Microsoft": "Incorrect. HTTPS is an application-layer network protocol, not an operating system."
+                },
+                "key_term": "HTTPS: An extension of the Hypertext Transfer Protocol that uses encryption for secure communication over a computer network."
+            }
+        },
+        {
+            "id": "m6_e_05",
+            "raw_id": 5,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "SQL injection",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'SQL Injection' (SQLi)?",
+            "type": "single",
+            "options": [
+                "An attack where malicious SQL database statements are inserted into user entry fields (like login forms or search boxes) to manipulate the backend database",
+                "Injecting medicine into a computer processor with a syringe",
+                "Physically drilling a hole into the server hard drive",
+                "An attack that forces a computer to play audio at maximum volume"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of SQL injection.",
+                "why_correct": "SQL injection occurs when untrusted user input is concatenated directly into a SQL query without proper sanitization or parameterization, allowing an attacker to bypass authentication, dump tables, or modify database data.",
+                "options_breakdown": {
+                    "An attack where malicious SQL database statements are inserted into user entry fields (like login forms or search boxes) to manipulate the backend database": "Correct. SQLi manipulates application database queries through unescaped user input.",
+                    "Injecting medicine into a computer processor with a syringe": "Incorrect. In cybersecurity, 'injection' refers to code injection, not medical injections.",
+                    "Physically drilling a hole into the server hard drive": "Incorrect. SQL injection is an application-layer software attack.",
+                    "An attack that forces a computer to play audio at maximum volume": "Incorrect. SQL injection targets relational database records, not speakers."
+                },
+                "key_term": "SQL Injection (SQLi): A code injection technique used to attack data-driven applications in which malicious SQL statements are inserted into an entry field for execution."
+            }
+        },
+        {
+            "id": "m6_e_06",
+            "raw_id": 6,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Cross-site scripting (XSS)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Cross-Site Scripting' (XSS)?",
+            "type": "single",
+            "options": [
+                "A web vulnerability that enables attackers to inject malicious client-side scripts (such as JavaScript) into web pages viewed by other users",
+                "Writing code in two different programming languages simultaneously",
+                "Cross-country marathon running for computer scientists",
+                "A hardware fault that breaks the keyboard spacebar"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of Cross-Site Scripting (XSS).",
+                "why_correct": "XSS occurs when a web application includes unvalidated and unescaped user input in web pages sent to other users. The victim's browser executes the malicious script, allowing attackers to steal session cookies or deface pages.",
+                "options_breakdown": {
+                    "A web vulnerability that enables attackers to inject malicious client-side scripts (such as JavaScript) into web pages viewed by other users": "Correct. XSS executes unauthorized JavaScript within victim browser contexts.",
+                    "Writing code in two different programming languages simultaneously": "Incorrect. That is polyglot programming, not XSS.",
+                    "Cross-country marathon running for computer scientists": "Incorrect. XSS is a software security flaw.",
+                    "A hardware fault that breaks the keyboard spacebar": "Incorrect. XSS is a software vulnerability, not keyboard hardware damage."
+                },
+                "key_term": "Cross-Site Scripting (XSS): A type of security vulnerability typically found in web applications that enables attackers to inject client-side scripts into web pages viewed by other users."
+            }
+        },
+        {
+            "id": "m6_e_07",
+            "raw_id": 7,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "OWASP Top 10",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the 'OWASP Top 10'?",
+            "type": "single",
+            "options": [
+                "A globally recognized consensus document representing the top ten most critical web application security risks",
+                "The top 10 fastest computer processors on the commercial market",
+                "The top 10 best-selling cybersecurity video games",
+                "The top 10 richest cybersecurity software executives"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of the OWASP foundation and its flagship Top 10 project.",
+                "why_correct": "The Open Web Application Security Project (OWASP) is a non-profit foundation. Its 'OWASP Top 10' is an authoritative awareness guide ranking the most prevalent and critical security risks in web applications (e.g., Broken Access Control, Injection, Cryptographic Failures).",
+                "options_breakdown": {
+                    "A globally recognized consensus document representing the top ten most critical web application security risks": "Correct. The OWASP Top 10 standardizes awareness of the most critical web application flaws.",
+                    "The top 10 fastest computer processors on the commercial market": "Incorrect. OWASP is dedicated to software security, not hardware benchmarking.",
+                    "The top 10 best-selling cybersecurity video games": "Incorrect. OWASP produces professional security documentation and tools.",
+                    "The top 10 richest cybersecurity software executives": "Incorrect. OWASP is an open, non-profit security community."
+                },
+                "key_term": "OWASP Top 10: A regularly updated report outlining the most critical vulnerabilities currently affecting web applications."
+            }
+        },
+        {
+            "id": "m6_e_08",
+            "raw_id": 8,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Secure browsing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does a locked padlock icon in your web browser's address bar indicate?",
+            "type": "single",
+            "options": [
+                "The connection between your browser and the website is encrypted using a valid TLS certificate issued by a trusted Certificate Authority",
+                "The website cannot be hacked by any cybercriminal in the world",
+                "The website is owned personally by the President or Prime Minister",
+                "Your computer screen is locked and cannot be turned off"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests accurate understanding of browser security indicators (the TLS padlock).",
+                "why_correct": "The padlock verifies that data in transit is encrypted using TLS and that the website's certificate was validated by a trusted CA. It does NOT guarantee that the site itself is safe from fraud, scams, or malicious intent.",
+                "options_breakdown": {
+                    "The connection between your browser and the website is encrypted using a valid TLS certificate issued by a trusted Certificate Authority": "Correct. The padlock indicates that transit communication is encrypted and the domain certificate is trusted.",
+                    "The website cannot be hacked by any cybercriminal in the world": "Incorrect. Encrypted sites can still possess backend vulnerabilities or host scams.",
+                    "The website is owned personally by the President or Prime Minister": "Incorrect. Anyone can obtain a valid TLS certificate for their domain.",
+                    "Your computer screen is locked and cannot be turned off": "Incorrect. The browser icon has no relation to OS screen lock states."
+                },
+                "key_term": "Browser Padlock: An icon indicating that the connection to the web server is encrypted with TLS and authenticated with a valid digital certificate."
+            }
+        },
+        {
+            "id": "m6_e_09",
+            "raw_id": 9,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Firewalls",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Stateless Packet-Filtering Firewall and a Stateful Inspection Firewall?",
+            "type": "single",
+            "options": [
+                "A stateless firewall inspects packets in isolation without context; a stateful firewall tracks active connection states (handshakes) and automatically permits established return traffic",
+                "A stateless firewall only works on federal holidays",
+                "A stateful firewall is made of concrete, while a stateless firewall is made of glass",
+                "Stateless firewalls only filter physical printer cables"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the core operational difference between stateless and stateful firewalls.",
+                "why_correct": "Stateless firewalls filter each packet purely on static header fields (IP, port) without memory of prior packets. Stateful firewalls maintain a state table tracking active TCP/UDP sessions, allowing return traffic belonging to established connections automatically.",
+                "options_breakdown": {
+                    "A stateless firewall inspects packets in isolation without context; a stateful firewall tracks active connection states (handshakes) and automatically permits established return traffic": "Correct. Stateful firewalls track session state, making them far more secure and practical.",
+                    "A stateless firewall only works on federal holidays": "Incorrect. Firewalls operate continuously.",
+                    "A stateful firewall is made of concrete, while a stateless firewall is made of glass": "Incorrect. Firewalls are digital hardware appliances or software applications.",
+                    "Stateless firewalls only filter physical printer cables": "Incorrect. Firewalls filter network layer packets, not printer hardware lines."
+                },
+                "key_term": "Stateful Firewall: A network firewall that tracks the operating state and characteristics of network connections traversing it."
+            }
+        },
+        {
+            "id": "m6_e_10",
+            "raw_id": 10,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which HTTP request method is used to submit sensitive data (such as login credentials or credit card forms) in the body of an HTTP request rather than in the URL query string?",
+            "type": "single",
+            "options": [
+                "POST",
+                "GET",
+                "HEAD",
+                "TRACE"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of HTTP methods for secure form submission.",
+                "why_correct": "The POST method transmits form data inside the HTTP message body. The GET method appends parameters directly to the visible URL (e.g., ?password=123), which exposes sensitive credentials in browser history, bookmarks, and server access logs.",
+                "options_breakdown": {
+                    "POST": "Correct. POST carries form parameters securely in the request body rather than exposing them in the URL.",
+                    "GET": "Incorrect. GET appends parameters to the plaintext URL query string, exposing sensitive credentials in logs and history.",
+                    "HEAD": "Incorrect. HEAD requests only the HTTP response headers without the message body.",
+                    "TRACE": "Incorrect. TRACE performs a message loop-back test along the network path."
+                },
+                "key_term": "HTTP POST: An HTTP method designed to send data to the server to create or update resources, carrying data in the request body."
+            }
+        },
+        {
+            "id": "m6_e_11",
+            "raw_id": 11,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "TLS",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What protocol deprecated and replaced the obsolete Secure Sockets Layer (SSL) protocol for modern web encryption?",
+            "type": "single",
+            "options": [
+                "Transport Layer Security (TLS)",
+                "Simple Mail Transfer Protocol (SMTP)",
+                "Dynamic Host Configuration Protocol (DHCP)",
+                "Trivial File Transfer Protocol (TFTP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests protocol evolution history from SSL to TLS.",
+                "why_correct": "SSL 1.0, 2.0, and 3.0 were deprecated due to severe cryptographic flaws (such as POODLE). Modern internet encryption relies on Transport Layer Security (TLS 1.2 and TLS 1.3).",
+                "options_breakdown": {
+                    "Transport Layer Security (TLS)": "Correct. TLS is the modern cryptographic standard that replaced obsolete SSL.",
+                    "Simple Mail Transfer Protocol (SMTP)": "Incorrect. SMTP is an email transmission protocol.",
+                    "Dynamic Host Configuration Protocol (DHCP)": "Incorrect. DHCP automatically leases IP addresses.",
+                    "Trivial File Transfer Protocol (TFTP)": "Incorrect. TFTP is a lightweight UDP file transfer tool."
+                },
+                "key_term": "TLS (Transport Layer Security): A cryptographic protocol designed to provide communications security over a computer network, succeeding SSL."
+            }
+        },
+        {
+            "id": "m6_e_12",
+            "raw_id": 12,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "SQL injection",
+            "is_scenario": true,
+            "scenario": "An attacker enters the string \"' OR '1'='1\" into the password field of a vulnerable web login page.",
+            "question": "Why does this input trick the database into granting unauthorized administrative access?",
+            "type": "single",
+            "options": [
+                "It turns the SQL WHERE clause into a statement that is always mathematically TRUE, bypassing password verification",
+                "It turns off the electrical power to the database server",
+                "It changes the database language into ancient Latin",
+                "It formats the server hard drive and deletes all records"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of classic SQL injection authentication bypass logic.",
+                "why_correct": "The injected \"' OR '1'='1\" alters the SQL query logic: `WHERE username='admin' AND password='' OR '1'='1'`. Because '1'='1' is always true, the entire conditional evaluates to TRUE, bypassing authentication without knowing the password.",
+                "options_breakdown": {
+                    "It turns the SQL WHERE clause into a statement that is always mathematically TRUE, bypassing password verification": "Correct. Injecting a tautology ('1'='1') forces the SQL condition to always evaluate to TRUE.",
+                    "It turns off the electrical power to the database server": "Incorrect. SQL text queries have no physical power disruption capability.",
+                    "It changes the database language into ancient Latin": "Incorrect. SQL injection manipulates query logic, not language translations.",
+                    "It formats the server hard drive and deletes all records": "Incorrect. The injected payload executes an authentication query, not a DROP/format command."
+                },
+                "key_term": "Tautology Injection: A SQL injection technique that uses always-true conditional statements (like '1'='1') to bypass authentication."
+            }
+        },
+        {
+            "id": "m6_e_13",
+            "raw_id": 13,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the role of an HTTP Cookie in modern web applications?",
+            "type": "single",
+            "options": [
+                "A small piece of data stored in the user's web browser that maintains session state and remembers login status across web requests",
+                "A baked chocolate dessert delivered to software engineers",
+                "A physical hardware chip soldered onto the computer motherboard",
+                "An antivirus scanner that removes computer viruses"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition and session management role of HTTP cookies.",
+                "why_correct": "Because HTTP is a stateless protocol, servers issue an HTTP Cookie (containing a unique session ID) to the browser upon login. The browser automatically returns this cookie with every subsequent request to maintain the authenticated session.",
+                "options_breakdown": {
+                    "A small piece of data stored in the user's web browser that maintains session state and remembers login status across web requests": "Correct. Cookies enable stateful authentication across stateless HTTP requests.",
+                    "A baked chocolate dessert delivered to software engineers": "Incorrect. While named after bakery cookies, in computing it is a data storage token.",
+                    "A physical hardware chip soldered onto the computer motherboard": "Incorrect. Cookies are browser-stored text tokens, not physical hardware.",
+                    "An antivirus scanner that removes computer viruses": "Incorrect. Cookies store session data; they do not perform security scanning."
+                },
+                "key_term": "HTTP Cookie: A small block of data created by a web server while a user is browsing a website and placed on the user's computer by the user's web browser."
+            }
+        },
+        {
+            "id": "m6_e_14",
+            "raw_id": 14,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Secure browsing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why is accessing sensitive accounts (like online banking) over unencrypted public coffee shop Wi-Fi without a VPN dangerous?",
+            "type": "single",
+            "options": [
+                "Anyone nearby on the same open wireless network can intercept unencrypted data packets or execute Man-in-the-Middle attacks",
+                "The coffee shop owner will automatically receive 50% of your bank account balance",
+                "Public Wi-Fi cables are physically too thin to carry bank passwords",
+                "Unencrypted Wi-Fi forces your laptop screen to invert its colors"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of wireless eavesdropping risks on untrusted open networks.",
+                "why_correct": "Open public Wi-Fi networks lack encryption between client devices and the access point. Anyone with packet sniffing software (like Wireshark) can capture transmitted unencrypted packets, session tokens, or spoof local traffic.",
+                "options_breakdown": {
+                    "Anyone nearby on the same open wireless network can intercept unencrypted data packets or execute Man-in-the-Middle attacks": "Correct. Open Wi-Fi exposes traffic to local packet sniffing and rogue access point interception.",
+                    "The coffee shop owner will automatically receive 50% of your bank account balance": "Incorrect. Wireless signals do not automatically execute bank transfers to shop owners.",
+                    "Public Wi-Fi cables are physically too thin to carry bank passwords": "Incorrect. Wi-Fi uses radio waves, not physical cables, and bandwidth accommodates all text data.",
+                    "Unencrypted Wi-Fi forces your laptop screen to invert its colors": "Incorrect. Open Wi-Fi has no effect on display color rendering."
+                },
+                "key_term": "Wi-Fi Eavesdropping: The unauthorized interception of network traffic transmitted across open or unencrypted wireless networks."
+            }
+        },
+        {
+            "id": "m6_e_15",
+            "raw_id": 15,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Cross-site scripting (XSS)",
+            "is_scenario": true,
+            "scenario": "A blog application allows users to submit comments without sanitizing HTML tags. An attacker posts a comment containing: `<script>alert('Hacked!');</script>`. Whenever any other user views the blog post, the popup alert box appears in their browser.",
+            "question": "What type of Cross-Site Scripting (XSS) is this?",
+            "type": "single",
+            "options": [
+                "Stored XSS (Persistent XSS)",
+                "Reflected XSS (Non-persistent)",
+                "DOM-based XSS",
+                "Buffer Overflow"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of Stored (Persistent) XSS.",
+                "why_correct": "In Stored XSS, the malicious script is permanently stored in the application's backend database (e.g., in blog comments or user profiles). Every victim who visits the page retrieves and executes the malicious payload.",
+                "options_breakdown": {
+                    "Stored XSS (Persistent XSS)": "Correct. Stored XSS permanently embeds malicious script into the database, serving it to all subsequent page visitors.",
+                    "Reflected XSS (Non-persistent)": "Incorrect. Reflected XSS requires the victim to click a specially crafted link that immediately reflects the payload in a single response.",
+                    "DOM-based XSS": "Incorrect. DOM XSS executes entirely within client-side JavaScript without necessarily storing payloads on the server.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a binary memory corruption vulnerability, not a web script injection flaw."
+                },
+                "key_term": "Stored XSS: A type of cross-site scripting where the malicious script is permanently stored on the target server (such as in a database) and served to users."
+            }
+        },
+        {
+            "id": "m6_e_16",
+            "raw_id": 16,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "OWASP Top 10",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the single most effective defensive programming technique to completely prevent SQL Injection vulnerabilities?",
+            "type": "single",
+            "options": [
+                "Using Parameterized Queries (Prepared Statements) with bound parameters",
+                "Hiding the database login page behind a dark background",
+                "Renaming the SQL database once every week",
+                "Turning off the monitor while running SQL queries"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the primary, foolproof mitigation against SQL injection.",
+                "why_correct": "Parameterized queries (Prepared Statements) separate SQL code from user data. The database treats user input strictly as literal parameter values, never as executable SQL commands, completely neutralizing injection attacks.",
+                "options_breakdown": {
+                    "Using Parameterized Queries (Prepared Statements) with bound parameters": "Correct. Prepared statements ensure user input can never alter query logic.",
+                    "Hiding the database login page behind a dark background": "Incorrect. Visual UI styling provides zero backend security against injection.",
+                    "Renaming the SQL database once every week": "Incorrect. Renaming tables disrupts operations and does not fix underlying SQL concatenation vulnerabilities.",
+                    "Turning off the monitor while running SQL queries": "Incorrect. Turning off monitors has zero effect on backend software execution."
+                },
+                "key_term": "Prepared Statements: A feature used to execute the same or similar database statements repeatedly with high efficiency and complete protection against SQL injection."
+            }
+        },
+        {
+            "id": "m6_e_17",
+            "raw_id": 17,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Firewalls",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Web Application Firewall' (WAF) and how does it differ from a standard network firewall?",
+            "type": "single",
+            "options": [
+                "A WAF operates at Layer 7 (Application layer) specifically inspecting HTTP/HTTPS traffic to block web attacks like SQLi and XSS; a network firewall operates at Layers 3/4 filtering IP addresses and ports",
+                "A WAF is only installed on smartphones, while a network firewall is installed in cars",
+                "A WAF deletes websites every midnight, while a network firewall keeps them online",
+                "There is zero difference; WAF is just an abbreviation for firewall"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between network firewalls (L3/L4) and web application firewalls (L7).",
+                "why_correct": "Network firewalls filter based on IP addresses and TCP/UDP ports (Layers 3 and 4). A Web Application Firewall (WAF) operates at Layer 7, deeply inspecting HTTP request bodies and headers to detect application-layer attacks (SQLi, XSS, CSRF).",
+                "options_breakdown": {
+                    "A WAF operates at Layer 7 (Application layer) specifically inspecting HTTP/HTTPS traffic to block web attacks like SQLi and XSS; a network firewall operates at Layers 3/4 filtering IP addresses and ports": "Correct. WAFs inspect Layer 7 web payloads; network firewalls filter Layers 3 and 4.",
+                    "A WAF is only installed on smartphones, while a network firewall is installed in cars": "Incorrect. Both protect enterprise servers, cloud clusters, and web applications.",
+                    "A WAF deletes websites every midnight, while a network firewall keeps them online": "Incorrect. WAFs protect web applications from compromise.",
+                    "There is zero difference; WAF is just an abbreviation for firewall": "Incorrect. They operate at completely different OSI layers."
+                },
+                "key_term": "WAF (Web Application Firewall): A specific form of application firewall that filters, monitors, and blocks HTTP traffic to and from a web service."
+            }
+        },
+        {
+            "id": "m6_e_18",
+            "raw_id": 18,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Secure browsing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Private Browsing' or 'Incognito Mode' in web browsers, and what does it actually protect?",
+            "type": "single",
+            "options": [
+                "It prevents local browsing history, search records, and cookies from being saved to the local device after closing the window; it does NOT make you anonymous to your ISP or websites",
+                "It makes you 100% invisible to the police, government agencies, and internet providers",
+                "It automatically hacks into any Wi-Fi network nearby",
+                "It makes all websites on the Internet completely free of charge"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests common misconceptions about Incognito / Private Browsing modes.",
+                "why_correct": "Incognito mode only ensures that local session history, cache, and cookies are erased from the local computer when closed. It does NOT hide your traffic from your ISP, employer network filters, or the websites you visit.",
+                "options_breakdown": {
+                    "It prevents local browsing history, search records, and cookies from being saved to the local device after closing the window; it does NOT make you anonymous to your ISP or websites": "Correct. Incognito protects local device privacy from peer users, not network anonymity.",
+                    "It makes you 100% invisible to the police, government agencies, and internet providers": "Incorrect. ISPs, employers, and websites still see your IP address and visited domains.",
+                    "It automatically hacks into any Wi-Fi network nearby": "Incorrect. Incognito is a local browser window setting, not a wireless cracking tool.",
+                    "It makes all websites on the Internet completely free of charge": "Incorrect. Browser privacy modes do not bypass commercial paywalls."
+                },
+                "key_term": "Incognito Mode: A privacy feature in some web browsers that prevents your browsing history from being stored locally on your device."
+            }
+        },
+        {
+            "id": "m6_e_19",
+            "raw_id": 19,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the 'Same-Origin Policy' (SOP) enforced by modern web browsers?",
+            "type": "single",
+            "options": [
+                "A critical security mechanism that prevents JavaScript on one website from reading or accessing data and cookies on a completely different origin domain",
+                "A policy requiring all web servers to be manufactured in the same country",
+                "A rule that all employees must wear the same uniform when using web browsers",
+                "A policy requiring all web pages to have the same background color"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the foundational web security sandbox: the Same-Origin Policy.",
+                "why_correct": "The Same-Origin Policy (SOP) restricts how a document or script loaded by one origin (protocol + host + port) can interact with a resource from another origin, isolating malicious websites from reading your authenticated bank session.",
+                "options_breakdown": {
+                    "A critical security mechanism that prevents JavaScript on one website from reading or accessing data and cookies on a completely different origin domain": "Correct. SOP isolates different web origins from accessing each other's private DOM and cookies.",
+                    "A policy requiring all web servers to be manufactured in the same country": "Incorrect. SOP is a web browser software sandbox, not a hardware manufacturing rule.",
+                    "A rule that all employees must wear the same uniform when using web browsers": "Incorrect. Workplace dress codes have no connection to web browser security policies.",
+                    "A policy requiring all web pages to have the same background color": "Incorrect. Web designers have complete visual styling freedom."
+                },
+                "key_term": "Same-Origin Policy (SOP): A fundamental web application security model under which a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin."
+            }
+        },
+        {
+            "id": "m6_e_20",
+            "raw_id": 20,
+            "module_id": 6,
+            "difficulty": "easy",
+            "topic": "Secure browsing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following actions promote safe and secure web browsing? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Verifying that websites use HTTPS before submitting passwords or personal info",
+                "Keeping your web browser and operating system updated with the latest security patches",
+                "Avoiding clicking suspicious links or downloading attachments from unknown senders",
+                "Typing your banking password into popup ads that claim your computer is infected"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify safe web browsing best practices.",
+                "why_correct": "Safe browsing includes verifying HTTPS, keeping browsers patched, and scrutinizing email links and attachments. Typing credentials into scareware popups directly causes account compromise.",
+                "options_breakdown": {
+                    "Verifying that websites use HTTPS before submitting passwords or personal info": "Correct. HTTPS ensures sensitive communications are encrypted.",
+                    "Keeping your web browser and operating system updated with the latest security patches": "Correct. Patching eliminates vulnerabilities that enable drive-by downloads.",
+                    "Avoiding clicking suspicious links or downloading attachments from unknown senders": "Correct. Prudent caution stops phishing and malware infections.",
+                    "Typing your banking password into popup ads that claim your computer is infected": "Incorrect. This directly gives your credentials to cybercriminals running scareware scams."
+                },
+                "key_term": "Safe Browsing Practices: Habits and procedures users follow to protect their devices and data while navigating the internet."
+            }
+        },
+        {
+            "id": "m6_i_21",
+            "raw_id": 21,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Cross-site scripting (XSS)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between Reflected XSS and Stored XSS?",
+            "type": "single",
+            "options": [
+                "Reflected XSS reflects the malicious script immediately in the response from a single specially crafted link/request; Stored XSS saves the script permanently in the database to victimize any user visiting the page",
+                "Reflected XSS only works on mirrors, while Stored XSS works in grocery stores",
+                "Reflected XSS is hardware, while Stored XSS is software",
+                "There is zero difference; both are identical"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between Reflected (non-persistent) and Stored (persistent) XSS.",
+                "why_correct": "Reflected XSS requires tricking a victim into clicking a link that embeds the payload into an immediate server response (e.g., search error message). Stored XSS injects the payload into the database, serving it automatically to every future visitor.",
+                "options_breakdown": {
+                    "Reflected XSS reflects the malicious script immediately in the response from a single specially crafted link/request; Stored XSS saves the script permanently in the database to victimize any user visiting the page": "Correct. Reflected requires individual victim link delivery; Stored persists in the database.",
+                    "Reflected XSS only works on mirrors, while Stored XSS works in grocery stores": "Incorrect. These are word puns, not web security concepts.",
+                    "Reflected XSS is hardware, while Stored XSS is software": "Incorrect. Both are software web application injection vulnerabilities.",
+                    "There is zero difference; both are identical": "Incorrect. They have fundamentally different persistence and delivery mechanics."
+                },
+                "key_term": "Reflected XSS: A non-persistent cross-site scripting attack where the injected script is reflected off the web server in an error message, search result, or response."
+            }
+        },
+        {
+            "id": "m6_i_22",
+            "raw_id": 22,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "A bank customer logs into their online banking account. In another browser tab, they visit a malicious site that contains a hidden image tag: `<img src='http://bank.com/transfer?amount=1000&to=attacker'>`. The browser automatically sends the user's active session cookie, executing the unauthorized transfer.",
+            "question": "What attack technique did the customer suffer?",
+            "type": "single",
+            "options": [
+                "Cross-Site Request Forgery (CSRF)",
+                "SQL Injection",
+                "Buffer Overflow",
+                "Denial of Service"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Cross-Site Request Forgery (CSRF).",
+                "why_correct": "CSRF tricks an authenticated victim's browser into transmitting unauthorized state-changing HTTP requests to a vulnerable application that implicitly trusts the user's automatic session cookies.",
+                "options_breakdown": {
+                    "Cross-Site Request Forgery (CSRF)": "Correct. CSRF exploits ambient cookie authentication to execute actions on behalf of authenticated users.",
+                    "SQL Injection": "Incorrect. SQL injection manipulates backend database SQL queries.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a memory corruption exploit.",
+                    "Denial of Service": "Incorrect. DoS disrupts availability, whereas CSRF forged an authenticated transaction."
+                },
+                "key_term": "CSRF (Cross-Site Request Forgery): An attack that forces an end user to execute unwanted actions on a web application in which they are currently authenticated."
+            }
+        },
+        {
+            "id": "m6_i_23",
+            "raw_id": 23,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How do modern web applications defend against Cross-Site Request Forgery (CSRF) attacks?",
+            "type": "single",
+            "options": [
+                "By including unpredictable, cryptographically random Anti-CSRF Tokens in forms and verifying them on the server, and setting the 'SameSite=Strict' cookie attribute",
+                "By changing all passwords to lowercase letters",
+                "By turning off the web server whenever users log in",
+                "By removing all images from web pages"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about standard CSRF defense mechanisms.",
+                "why_correct": "Anti-CSRF tokens (unique, secret values tied to the user session and validated on POST requests) and the 'SameSite' cookie attribute prevent external malicious origins from forging valid requests.",
+                "options_breakdown": {
+                    "By including unpredictable, cryptographically random Anti-CSRF Tokens in forms and verifying them on the server, and setting the 'SameSite=Strict' cookie attribute": "Correct. Anti-CSRF tokens and SameSite cookies prevent cross-origin request forging.",
+                    "By changing all passwords to lowercase letters": "Incorrect. Weakening passwords harms security and does nothing to mitigate CSRF.",
+                    "By turning off the web server whenever users log in": "Incorrect. That destroys availability.",
+                    "By removing all images from web pages": "Incorrect. CSRF can be triggered via forms, scripts, and fetch requests, not just images."
+                },
+                "key_term": "Anti-CSRF Token: A unique, unpredictable, and secret value generated by the server-side application and transmitted to the client in a way that is included in a subsequent HTTP request."
+            }
+        },
+        {
+            "id": "m6_i_24",
+            "raw_id": 24,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "HTTP and HTTPS",
+            "is_scenario": true,
+            "scenario": "A web developer adds the HTTP response header `Strict-Transport-Security: max-age=31536000; includeSubDomains` to their web server configuration.",
+            "question": "What does the HTTP Strict Transport Security (HSTS) header instruct browsers to do?",
+            "type": "single",
+            "options": [
+                "It forces browsers to only communicate with the website over secure HTTPS, automatically converting all unencrypted HTTP links and preventing SSL-stripping attacks",
+                "It forces users to change their password every 31,536,000 seconds",
+                "It locks the web server screen after 1 year of continuous operation",
+                "It deletes all emails sent to subdomains"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of HTTP Strict Transport Security (HSTS).",
+                "why_correct": "HSTS instructs browsers that a site must only be accessed over HTTPS for a specified duration (max-age). If an attacker tries to downgrade connections via an SSL-stripping attack, the browser blocks the connection.",
+                "options_breakdown": {
+                    "It forces browsers to only communicate with the website over secure HTTPS, automatically converting all unencrypted HTTP links and preventing SSL-stripping attacks": "Correct. HSTS enforces HTTPS and neutralizes SSL-stripping downgrade attacks.",
+                    "It forces users to change their password every 31,536,000 seconds": "Incorrect. HSTS governs transport protocol encryption, not user password expiration.",
+                    "It locks the web server screen after 1 year of continuous operation": "Incorrect. HSTS is an HTTP header for web browsers, not an OS screen lock.",
+                    "It deletes all emails sent to subdomains": "Incorrect. HSTS enforces web encryption across subdomains, not email deletion."
+                },
+                "key_term": "HSTS (HTTP Strict Transport Security): A web security policy mechanism that helps to protect websites against man-in-the-middle attacks such as protocol downgrade attacks and cookie hijacking."
+            }
+        },
+        {
+            "id": "m6_i_25",
+            "raw_id": 25,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Cross-site scripting (XSS)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does the `HttpOnly` flag on a session cookie protect against?",
+            "type": "single",
+            "options": [
+                "It prevents client-side JavaScript (document.cookie) from accessing or stealing the cookie during an XSS attack",
+                "It forces the website to run on port 80 without encryption",
+                "It deletes the cookie whenever the computer is restarted",
+                "It prevents users from taking screenshots of their computer monitor"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the defensive purpose of the HttpOnly cookie flag.",
+                "why_correct": "When a cookie is flagged as 'HttpOnly', the browser refuses to expose it to client-side scripts (`document.cookie`). Even if an attacker finds an XSS vulnerability, they cannot directly read the session cookie.",
+                "options_breakdown": {
+                    "It prevents client-side JavaScript (document.cookie) from accessing or stealing the cookie during an XSS attack": "Correct. HttpOnly blocks JavaScript access to cookies, mitigating session hijacking via XSS.",
+                    "It forces the website to run on port 80 without encryption": "Incorrect. That would be unencrypted HTTP; HttpOnly is a cookie attribute.",
+                    "It deletes the cookie whenever the computer is restarted": "Incorrect. That is a Session Cookie without an explicit expiration date.",
+                    "It prevents users from taking screenshots of their computer monitor": "Incorrect. Cookies have no control over operating system screenshot utilities."
+                },
+                "key_term": "HttpOnly: A security flag added to an HTTP response header that prevents client-side scripts from accessing the protected cookie."
+            }
+        },
+        {
+            "id": "m6_i_26",
+            "raw_id": 26,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What security protection does the `Content-Security-Policy` (CSP) HTTP header provide to a web application?",
+            "type": "single",
+            "options": [
+                "It restricts the sources and domains from which browsers are allowed to load scripts, styles, images, and other resources, mitigating XSS and data exfiltration",
+                "It prevents employees from watching movies during business hours",
+                "It encrypts the physical copper ethernet cables in the office building",
+                "It automatically writes customer service response emails"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the purpose and mechanics of Content Security Policy (CSP).",
+                "why_correct": "Content Security Policy (CSP) is an HTTP response header allowing site administrators to declare approved sources of executable scripts, stylesheets, and frames, preventing unauthorized inline JavaScript execution (XSS).",
+                "options_breakdown": {
+                    "It restricts the sources and domains from which browsers are allowed to load scripts, styles, images, and other resources, mitigating XSS and data exfiltration": "Correct. CSP controls resource origins to prevent XSS script execution and data theft.",
+                    "It prevents employees from watching movies during business hours": "Incorrect. Web proxy content filters handle employee web filtering, not application CSP headers.",
+                    "It encrypts the physical copper ethernet cables in the office building": "Incorrect. CSP is a browser-level security header, not physical cable encryption.",
+                    "It automatically writes customer service response emails": "Incorrect. CSP is a security control, not an AI email assistant."
+                },
+                "key_term": "Content Security Policy (CSP): An HTTP header that provides a layer of security to detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks."
+            }
+        },
+        {
+            "id": "m6_i_27",
+            "raw_id": 27,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An attacker embeds a legitimate banking website inside an invisible, transparent `<iframe>` overlaid on an enticing button (e.g., 'Click here to win a free iPhone!'). When the victim clicks the button, they unwittingly click the hidden 'Confirm Wire Transfer' button inside the iframe.",
+            "question": "What attack technique is this, and which HTTP header prevents it?",
+            "type": "single",
+            "options": [
+                "Clickjacking (UI Redress Attack); prevented by setting the `X-Frame-Options: DENY` header",
+                "SQL Injection; prevented by Prepared Statements",
+                "Buffer Overflow; prevented by ASLR",
+                "SYN Flood; prevented by SYN Cookies"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Clickjacking and the X-Frame-Options defensive header.",
+                "why_correct": "Clickjacking tricks users into clicking actionable elements on a concealed site framed invisibly. Setting `X-Frame-Options: DENY` (or CSP `frame-ancestors 'none'`) tells browsers never to render the site inside an iframe.",
+                "options_breakdown": {
+                    "Clickjacking (UI Redress Attack); prevented by setting the `X-Frame-Options: DENY` header": "Correct. Clickjacking frames sites transparently; X-Frame-Options blocks framing.",
+                    "SQL Injection; prevented by Prepared Statements": "Incorrect. SQLi manipulates databases, not UI click overlays.",
+                    "Buffer Overflow; prevented by ASLR": "Incorrect. Buffer overflow corrupts application memory.",
+                    "SYN Flood; prevented by SYN Cookies": "Incorrect. SYN floods target network transport connections."
+                },
+                "key_term": "Clickjacking: A malicious technique of tricking a user into clicking on something different from what the user perceives, effectively hijacking clicks."
+            }
+        },
+        {
+            "id": "m6_i_28",
+            "raw_id": 28,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "IDS and IPS",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between Signature-Based Detection and Anomaly-Based (Heuristic) Detection in an IDS/IPS?",
+            "type": "single",
+            "options": [
+                "Signature detection matches traffic against known attack patterns/fingerprints; Anomaly detection establishes a baseline of normal traffic and flags significant statistical deviations",
+                "Signature detection requires hand-writing paper signatures; Anomaly detection is automated",
+                "Signature detection is only used in banks; Anomaly detection is only used in hospitals",
+                "There is zero difference; both require identical code"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about IDS detection methodologies.",
+                "why_correct": "Signature-based detection compares traffic against a database of known exploit signatures (fast and accurate, but blind to new zero-days). Anomaly-based detection establishes baseline traffic norms and flags abnormal spikes, capable of detecting novel attacks.",
+                "options_breakdown": {
+                    "Signature detection matches traffic against known attack patterns/fingerprints; Anomaly detection establishes a baseline of normal traffic and flags significant statistical deviations": "Correct. Signatures detect known threats; anomaly detection flags deviations from normal baselines.",
+                    "Signature detection requires hand-writing paper signatures; Anomaly detection is automated": "Incorrect. Signatures in IDS are digital byte pattern rules.",
+                    "Signature detection is only used in banks; Anomaly detection is only used in hospitals": "Incorrect. Both methods are deployed across all industries.",
+                    "There is zero difference; both require identical code": "Incorrect. They represent fundamentally distinct detection paradigms."
+                },
+                "key_term": "Anomaly-Based Detection: An intrusion detection system technique that detects computer intrusions and misuse by monitoring system activity and classifying it as either normal or anomalous."
+            }
+        },
+        {
+            "id": "m6_i_29",
+            "raw_id": 29,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "VPNs",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Split-Tunnel VPN and a Full-Tunnel VPN configuration?",
+            "type": "single",
+            "options": [
+                "In a Full-Tunnel, ALL internet traffic routes through the encrypted VPN; in a Split-Tunnel, only traffic destined for internal corporate servers routes through the VPN, while general browsing goes directly to the public internet",
+                "A Split-Tunnel VPN splits the laptop physically into two halves",
+                "A Full-Tunnel VPN requires installing an actual concrete pipe under the street",
+                "Split-Tunnel VPNs only work on weekends, while Full-Tunnel VPNs work on weekdays"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests VPN routing architectures (Full-Tunnel vs Split-Tunnel).",
+                "why_correct": "Full-Tunnel routes 100% of client traffic through the enterprise VPN tunnel for centralized inspection. Split-Tunnel routes internal corporate traffic across the VPN while routing general web browsing directly through the user's local ISP, conserving enterprise bandwidth.",
+                "options_breakdown": {
+                    "In a Full-Tunnel, ALL internet traffic routes through the encrypted VPN; in a Split-Tunnel, only traffic destined for internal corporate servers routes through the VPN, while general browsing goes directly to the public internet": "Correct. Full-tunnel inspects all traffic; split-tunnel offloads non-corporate traffic.",
+                    "A Split-Tunnel VPN splits the laptop physically into two halves": "Incorrect. It is a logical network routing policy, not physical damage.",
+                    "A Full-Tunnel VPN requires installing an actual concrete pipe under the street": "Incorrect. 'Tunnel' is a metaphor for packet encapsulation across public IP networks.",
+                    "Split-Tunnel VPNs only work on weekends, while Full-Tunnel VPNs work on weekdays": "Incorrect. Routing configurations operate continuously."
+                },
+                "key_term": "Split Tunneling: A computer networking concept that allows a user to access dissimilar security domains like the Internet and a local LAN or WAN simultaneously using the same or different network connections."
+            }
+        },
+        {
+            "id": "m6_i_30",
+            "raw_id": 30,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "TLS",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What major security enhancement and performance optimization was introduced in TLS 1.3 compared to older TLS 1.2?",
+            "type": "single",
+            "options": [
+                "It removed insecure legacy cipher suites (like RSA key exchange and CBC ciphers) and reduced the handshake from two round trips (2-RTT) to a single round trip (1-RTT)",
+                "It eliminated the need for websites to have domain names",
+                "It replaced all digital computers with analog typewriters",
+                "It made encryption completely illegal in the United States"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of architectural improvements in TLS 1.3 (RFC 8446).",
+                "why_correct": "TLS 1.3 deprecated broken algorithms (MD5, SHA-1, RC4, DES, static RSA key exchange), enforced Perfect Forward Secrecy, and streamlined the handshake from 2-RTT to 1-RTT (with 0-RTT resumption), enhancing speed and security.",
+                "options_breakdown": {
+                    "It removed insecure legacy cipher suites (like RSA key exchange and CBC ciphers) and reduced the handshake from two round trips (2-RTT) to a single round trip (1-RTT)": "Correct. TLS 1.3 pruned legacy insecure algorithms and cut handshake latency in half.",
+                    "It eliminated the need for websites to have domain names": "Incorrect. Domain names are fundamental to internet routing and web PKI.",
+                    "It replaced all digital computers with analog typewriters": "Incorrect. TLS 1.3 is an advanced digital cryptographic standard.",
+                    "It made encryption completely illegal in the United States": "Incorrect. TLS 1.3 is an open international standard endorsed by NIST and CISA."
+                },
+                "key_term": "TLS 1.3: The latest version of the Transport Layer Security protocol that offers significant performance and security improvements over previous versions."
+            }
+        },
+        {
+            "id": "m6_i_31",
+            "raw_id": 31,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "OWASP Top 10",
+            "is_scenario": true,
+            "scenario": "A developer implements an application endpoint `GET /api/user/profile?id=105`. An authenticated attacker changes the URL parameter to `id=106` and immediately views another customer's confidential medical records without authorization.",
+            "question": "What OWASP Top 10 vulnerability was exposed?",
+            "type": "single",
+            "options": [
+                "Broken Access Control (specifically Insecure Direct Object Reference / IDOR)",
+                "SQL Injection",
+                "Cross-Site Scripting (XSS)",
+                "Server-Side Request Forgery (SSRF)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of Insecure Direct Object References (IDOR), a subset of Broken Access Control.",
+                "why_correct": "IDOR occurs when an application exposes a reference to an internal object (like a database ID) in the URL without checking whether the requesting user is authorized to access that specific record.",
+                "options_breakdown": {
+                    "Broken Access Control (specifically Insecure Direct Object Reference / IDOR)": "Correct. Accessing another user's record by tampering with an exposed object ID is classic IDOR.",
+                    "SQL Injection": "Incorrect. The query was valid SQL; the application simply failed to check authorization.",
+                    "Cross-Site Scripting (XSS)": "Incorrect. XSS executes client-side script; no JavaScript was injected here.",
+                    "Server-Side Request Forgery (SSRF)": "Incorrect. SSRF tricks the server into making backend network requests."
+                },
+                "key_term": "IDOR (Insecure Direct Object Reference): A vulnerability that occurs when an application provides direct access to objects based on user-supplied input without performing authorization checks."
+            }
+        },
+        {
+            "id": "m6_i_32",
+            "raw_id": 32,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "HTTP and HTTPS",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does the `SameSite` attribute on an HTTP Cookie do when set to `Strict`?",
+            "type": "single",
+            "options": [
+                "The cookie is never sent in cross-site requests (e.g., following a link from an external website), effectively neutralizing CSRF attacks",
+                "The cookie is automatically shared with all search engines on the web",
+                "The cookie cannot be read by the web server that created it",
+                "The cookie expires in exactly 1 millisecond"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the behavior of the modern SameSite cookie attribute.",
+                "why_correct": "'SameSite=Strict' ensures that the browser never sends the cookie in cross-site requests (including standard top-level link clicks from external sites), isolating session authentication to first-party navigation.",
+                "options_breakdown": {
+                    "The cookie is never sent in cross-site requests (e.g., following a link from an external website), effectively neutralizing CSRF attacks": "Correct. SameSite=Strict prevents cross-origin transmission of authentication cookies.",
+                    "The cookie is automatically shared with all search engines on the web": "Incorrect. Cookies are origin-isolated and not broadcast to search engines.",
+                    "The cookie cannot be read by the web server that created it": "Incorrect. The issuing server reads the cookie on first-party requests.",
+                    "The cookie expires in exactly 1 millisecond": "Incorrect. SameSite governs cross-origin routing, not expiration lifespan."
+                },
+                "key_term": "SameSite Attribute: A cookie attribute that lets servers dictate whether cookies are sent with cross-site requests, protecting against CSRF and tracking."
+            }
+        },
+        {
+            "id": "m6_i_33",
+            "raw_id": 33,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Firewalls",
+            "is_scenario": true,
+            "scenario": "An enterprise implements a Next-Generation Firewall (NGFW). Which capability distinguishes an NGFW from a traditional Layer 3/4 packet-filtering firewall?",
+            "question": "An enterprise implements a Next-Generation Firewall (NGFW). Which capability distinguishes an NGFW from a traditional Layer 3/4 packet-filtering firewall?",
+            "type": "single",
+            "options": [
+                "Deep Packet Inspection (DPI) capable of identifying application-layer protocols (e.g., distinguishing Facebook from SSH on port 443) and integrated IPS functionality",
+                "The ability to run on solar power without any electrical cables",
+                "It automatically prints out hard copies of all network packets onto physical paper",
+                "It converts computer viruses into legitimate antivirus programs"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Next-Generation Firewall (NGFW) capabilities.",
+                "why_correct": "Traditional firewalls only inspect IP headers and port numbers. NGFWs perform Deep Packet Inspection (DPI) at Layer 7, identifying actual applications regardless of port, and integrate threat intelligence, sandboxing, and IPS inline.",
+                "options_breakdown": {
+                    "Deep Packet Inspection (DPI) capable of identifying application-layer protocols (e.g., distinguishing Facebook from SSH on port 443) and integrated IPS functionality": "Correct. NGFWs inspect Layer 7 application traffic and integrate advanced threat filtering.",
+                    "The ability to run on solar power without any electrical cables": "Incorrect. Power options have nothing to do with firewall packet inspection intelligence.",
+                    "It automatically prints out hard copies of all network packets onto physical paper": "Incorrect. Network traffic is digital and inspected in high-speed ASIC memory.",
+                    "It converts computer viruses into legitimate antivirus programs": "Incorrect. Firewalls drop or block malicious packets; they cannot convert malware into antivirus."
+                },
+                "key_term": "Next-Generation Firewall (NGFW): A network security device that provides capabilities beyond a standard, stateful firewall, including deep packet inspection, application-level inspection, and an intrusion prevention system."
+            }
+        },
+        {
+            "id": "m6_i_34",
+            "raw_id": 34,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are secure HTTP response headers recommended by OWASP to harden web applications? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Strict-Transport-Security (HSTS) to enforce HTTPS connections",
+                "X-Content-Type-Options: nosniff to prevent MIME-type sniffing attacks",
+                "X-Frame-Options: DENY to prevent clickjacking in iframes",
+                "Access-Control-Allow-Origin: * to share private passwords with everyone"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify protective security headers versus dangerous misconfigurations.",
+                "why_correct": "HSTS, X-Content-Type-Options: nosniff, and X-Frame-Options are standard defensive hardening headers. Setting CORS wildcard `*` with credentials creates serious security exposures.",
+                "options_breakdown": {
+                    "Strict-Transport-Security (HSTS) to enforce HTTPS connections": "Correct. HSTS forces secure HTTPS communication.",
+                    "X-Content-Type-Options: nosniff to prevent MIME-type sniffing attacks": "Correct. Nosniff prevents browsers from misinterpreting files as executable scripts.",
+                    "X-Frame-Options: DENY to prevent clickjacking in iframes": "Correct. X-Frame-Options stops framing and clickjacking.",
+                    "Access-Control-Allow-Origin: * to share private passwords with everyone": "Incorrect. Overly permissive CORS wildcards compromise sensitive cross-origin data."
+                },
+                "key_term": "Security Headers: HTTP response headers that enhance web application security by restricting browser capabilities and enforcing secure protocols."
+            }
+        },
+        {
+            "id": "m6_i_35",
+            "raw_id": 35,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "SQL injection",
+            "is_scenario": true,
+            "scenario": "A penetration tester observes that an input field `username` is directly concatenated into a query: `\"SELECT * FROM users WHERE user='\" + input + \"'\"`.",
+            "question": "What fatal vulnerability exists, and why is string concatenation dangerous in SQL construction?",
+            "type": "single",
+            "options": [
+                "SQL Injection; because the database interpreter cannot distinguish between developer query logic and user-supplied data",
+                "Cross-Site Scripting; because JavaScript cannot run in SQL databases",
+                "Buffer Overflow; because strings cannot be concatenated in Python",
+                "Denial of Service; because databases refuse to store text longer than 10 characters"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests the root architectural cause of injection flaws.",
+                "why_correct": "When user input is concatenated directly into a query string, the SQL interpreter treats the input as code instructions rather than literal data, allowing malicious input to alter the syntactic structure of the query.",
+                "options_breakdown": {
+                    "SQL Injection; because the database interpreter cannot distinguish between developer query logic and user-supplied data": "Correct. String concatenation blurs the boundary between code instructions and data.",
+                    "Cross-Site Scripting; because JavaScript cannot run in SQL databases": "Incorrect. SQL injection attacks SQL engines, not browser JavaScript.",
+                    "Buffer Overflow; because strings cannot be concatenated in Python": "Incorrect. String concatenation is supported in Python; the flaw is unescaped SQL syntax.",
+                    "Denial of Service; because databases refuse to store text longer than 10 characters": "Incorrect. Databases store millions of characters."
+                },
+                "key_term": "Injection Root Cause: The failure of an interpreter to separate untrusted user-supplied data from programmatic command instructions."
+            }
+        },
+        {
+            "id": "m6_i_36",
+            "raw_id": 36,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between client-side validation and server-side validation in web development?",
+            "type": "single",
+            "options": [
+                "Client-side validation provides a smooth user experience in the browser but can be easily bypassed by an attacker; Server-side validation is mandatory because the server must independently verify all incoming data",
+                "Client-side validation is 100% secure and makes server validation unnecessary",
+                "Server-side validation only runs when the client computer is unplugged",
+                "Client-side validation only works on tablet computers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the necessity of server-side input validation.",
+                "why_correct": "Client-side validation (HTML5 attributes, JavaScript checks) improves UI responsiveness, but an attacker can easily bypass it using tools like curl, Postman, or Burp Suite. The server MUST independently validate and sanitize all incoming data.",
+                "options_breakdown": {
+                    "Client-side validation provides a smooth user experience in the browser but can be easily bypassed by an attacker; Server-side validation is mandatory because the server must independently verify all incoming data": "Correct. Never rely on client-side validation for security; server-side validation is non-negotiable.",
+                    "Client-side validation is 100% secure and makes server validation unnecessary": "Incorrect. Attackers can completely bypass client-side checks with simple proxy tools.",
+                    "Server-side validation only runs when the client computer is unplugged": "Incorrect. Server validation executes on every incoming HTTP request.",
+                    "Client-side validation only works on tablet computers": "Incorrect. Client-side checks execute in any web browser."
+                },
+                "key_term": "Server-Side Validation: The practice of verifying the correctness, safety, and validity of input on the receiving backend server."
+            }
+        },
+        {
+            "id": "m6_i_37",
+            "raw_id": 37,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Secure browsing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Certificate Pinning' (SSL/TLS Pinning) in mobile applications and specialized browsers?",
+            "type": "single",
+            "options": [
+                "Hardcoding the expected server certificate or public key directly inside the client application so it rejects rogue certificates, even if signed by a compromised Certificate Authority",
+                "Pinning a physical paper certificate to an office bulletin board",
+                "A feature that attaches websites to the Windows taskbar",
+                "An attack that locks a user's web browser until a fee is paid"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of Certificate Pinning.",
+                "why_correct": "Certificate Pinning ensures the client app only accepts a specific, pre-defined certificate or public key. If an attacker uses a compromised or rogue CA to issue a fraudulent certificate for the domain, the pinned client immediately rejects the connection.",
+                "options_breakdown": {
+                    "Hardcoding the expected server certificate or public key directly inside the client application so it rejects rogue certificates, even if signed by a compromised Certificate Authority": "Correct. Pinning binds expected cryptographic keys to eliminate reliance on external CA trust chains.",
+                    "Pinning a physical paper certificate to an office bulletin board": "Incorrect. This is a literal joke, not a software security feature.",
+                    "A feature that attaches websites to the Windows taskbar": "Incorrect. Taskbar shortcuts are OS GUI conveniences.",
+                    "An attack that locks a user's web browser until a fee is paid": "Incorrect. That describes ransomware, not certificate pinning."
+                },
+                "key_term": "Certificate Pinning: The process of associating a host with its expected X.509 certificate or public key to prevent Man-in-the-Middle attacks."
+            }
+        },
+        {
+            "id": "m6_i_38",
+            "raw_id": 38,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "OWASP Top 10",
+            "is_scenario": true,
+            "scenario": "A web application allows users to upload custom profile pictures. An attacker uploads a file named `shell.php` containing malicious backend code. When the attacker browses to `http://example.com/uploads/shell.php`, the web server executes the PHP file, granting the attacker a web shell.",
+            "question": "Which file handling vulnerability allowed the attacker to upload and execute a PHP web shell?",
+            "type": "single",
+            "options": [
+                "Unrestricted File Upload Vulnerability",
+                "SQL Injection",
+                "Cross-Site Scripting",
+                "Denial of Service"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of unrestricted file upload vulnerabilities.",
+                "why_correct": "If an application fails to validate file types, extensions, and upload storage execution permissions, an attacker can upload executable server scripts (.php, .jsp, .aspx) to gain remote code execution (RCE).",
+                "options_breakdown": {
+                    "Unrestricted File Upload Vulnerability": "Correct. Allowing executable script uploads leads directly to remote code execution.",
+                    "SQL Injection": "Incorrect. The exploit executed a malicious PHP script on disk, not a database query.",
+                    "Cross-Site Scripting": "Incorrect. XSS executes in client browsers; this executed on the backend server.",
+                    "Denial of Service": "Incorrect. The attacker gained command execution rather than service disruption."
+                },
+                "key_term": "Unrestricted File Upload: A vulnerability where an application allows an attacker to upload malicious files (like executable scripts) that are executed by the server."
+            }
+        },
+        {
+            "id": "m6_i_39",
+            "raw_id": 39,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "VPNs",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between an IPsec VPN and an SSL/TLS VPN?",
+            "type": "single",
+            "options": [
+                "IPsec operates at Network Layer 3 encrypting all IP traffic and often requires dedicated client software; SSL/TLS operates at Transport/Application layers and can be accessed easily through a standard web browser",
+                "IPsec only works on copper cables; SSL/TLS only works on wireless",
+                "IPsec is an analog protocol; SSL/TLS is a digital protocol",
+                "There is zero difference; both use identical ports and protocols"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the technical comparison between IPsec (L3) and SSL/TLS (L4/L7) VPNs.",
+                "why_correct": "IPsec operates at Layer 3, encapsulating entire IP packets, making it ideal for site-to-site tunnels and complex enterprise access (often requiring agent software). SSL/TLS VPNs (like OpenVPN or clientless browser portals) operate at higher layers, enabling frictionless remote user access.",
+                "options_breakdown": {
+                    "IPsec operates at Network Layer 3 encrypting all IP traffic and often requires dedicated client software; SSL/TLS operates at Transport/Application layers and can be accessed easily through a standard web browser": "Correct. IPsec provides full Layer 3 encapsulation; SSL/TLS VPNs offer high-level user convenience.",
+                    "IPsec only works on copper cables; SSL/TLS only works on wireless": "Incorrect. Both run across all standard network transmission media.",
+                    "IPsec is an analog protocol; SSL/TLS is a digital protocol": "Incorrect. Both are digital cryptographic network protocols.",
+                    "There is zero difference; both use identical ports and protocols": "Incorrect. IPsec uses protocols 50/51 (ESP/AH) and UDP 500; SSL/TLS uses standard TCP/UDP ports."
+                },
+                "key_term": "IPsec vs SSL VPN: IPsec secures all traffic at the network layer; SSL VPN provides application-specific or web-accessible encrypted tunneling."
+            }
+        },
+        {
+            "id": "m6_i_40",
+            "raw_id": 40,
+            "module_id": 6,
+            "difficulty": "intermediate",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Session Hijacking' (Cookie Theft) attack in web security?",
+            "type": "single",
+            "options": [
+                "An adversary steals a valid user's active session cookie (via XSS or network sniffing) and uses it to impersonate the authenticated victim without needing their password",
+                "An attacker restarts the web server hardware physically",
+                "An attacker buys all the domain names in the world",
+                "An attacker forces a computer screen to turn off"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of session hijacking.",
+                "why_correct": "Because web applications use session cookies to remember authenticated users, anyone who obtains a copy of the active session token can paste it into their own browser and immediately assume the victim's authenticated identity.",
+                "options_breakdown": {
+                    "An adversary steals a valid user's active session cookie (via XSS or network sniffing) and uses it to impersonate the authenticated victim without needing their password": "Correct. Session hijacking bypasses authentication by replaying stolen session identifiers.",
+                    "An attacker restarts the web server hardware physically": "Incorrect. That is a physical denial of service.",
+                    "An attacker buys all the domain names in the world": "Incorrect. Domain purchases have no relation to session hijacking.",
+                    "An attacker forces a computer screen to turn off": "Incorrect. Session theft targets application user accounts."
+                },
+                "key_term": "Session Hijacking: The exploitation of a valid computer session to gain unauthorized access to information or services in a computer system."
+            }
+        },
+        {
+            "id": "m6_h_41",
+            "raw_id": 41,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "A cloud-hosted web application takes a user-supplied URL to generate a link preview: `POST /api/preview {url: 'http://169.254.169.254/latest/meta-data/iam/security-credentials/'}`. The vulnerable backend server fetches this internal cloud metadata URL and returns the temporary AWS IAM secret access keys to the attacker.",
+            "question": "What critical cloud web vulnerability was exploited?",
+            "type": "single",
+            "options": [
+                "Server-Side Request Forgery (SSRF)",
+                "Cross-Site Scripting (XSS)",
+                "SQL Injection",
+                "Clickjacking"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Server-Side Request Forgery (SSRF) targeting cloud metadata services.",
+                "why_correct": "SSRF occurs when a web application fetches a remote resource without validating the user-supplied URL. In cloud environments (AWS, GCP, Azure), attackers target the link-local metadata IP `169.254.169.254` to extract IAM role credentials.",
+                "options_breakdown": {
+                    "Server-Side Request Forgery (SSRF)": "Correct. SSRF forces the backend server to make unauthorized requests to internal cloud metadata services.",
+                    "Cross-Site Scripting (XSS)": "Incorrect. XSS executes scripts in the client browser, not backend server requests.",
+                    "SQL Injection": "Incorrect. SQL injection attacks SQL database queries.",
+                    "Clickjacking": "Incorrect. Clickjacking overlays transparent iframes on UI buttons."
+                },
+                "key_term": "SSRF (Server-Side Request Forgery): A web security vulnerability that allows an attacker to induce the server-side application to make requests to an unintended location."
+            }
+        },
+        {
+            "id": "m6_h_42",
+            "raw_id": 42,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "SQL injection",
+            "is_scenario": true,
+            "scenario": "An application is vulnerable to SQL injection, but the web page does not display database errors or extracted data on the screen. The attacker sends the payload `admin' AND (SELECT CASE WHEN (username='admin') THEN pg_sleep(10) ELSE pg_sleep(0) END FROM users) --` and measures that the server takes exactly 10 seconds to respond.",
+            "question": "What specific type of blind SQL injection has been executed?",
+            "type": "single",
+            "options": [
+                "Time-Based Blind SQL Injection",
+                "Error-Based SQL Injection",
+                "Union-Based SQL Injection",
+                "DOM-based SQL Injection"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Time-Based Blind SQL injection.",
+                "why_correct": "When an application reveals zero database feedback or visual differences, attackers inject database sleep commands (like pg_sleep, sleep, or waitfor delay) tied to conditional statements. If the condition is true, the response is delayed, leaking data bit by bit.",
+                "options_breakdown": {
+                    "Time-Based Blind SQL Injection": "Correct. Time-based blind injection infers data from injected database sleep delays.",
+                    "Error-Based SQL Injection": "Incorrect. Error-based injection extracts data directly inside visible SQL error messages.",
+                    "Union-Based SQL Injection": "Incorrect. Union-based injection combines query results into visible HTTP responses.",
+                    "DOM-based SQL Injection": "Incorrect. SQL injection executes on the backend database, not the browser DOM."
+                },
+                "key_term": "Time-Based Blind SQLi: A blind SQL injection technique that relies on the database pausing for a specified amount of time before returning the results."
+            }
+        },
+        {
+            "id": "m6_h_43",
+            "raw_id": 43,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An application parses incoming XML documents using an unhardened XML parser. An attacker submits an XML payload defining a custom DOCTYPE entity referencing `<!ENTITY xxe SYSTEM 'file:///etc/passwd'>`. When processed, the application includes the contents of `/etc/passwd` in the response.",
+            "question": "Which XML parsing vulnerability allowed the attacker to disclose the contents of the /etc/passwd file?",
+            "type": "single",
+            "options": [
+                "XML External Entity (XXE) Injection",
+                "Cross-Site Scripting (XSS)",
+                "SQL Injection",
+                "Buffer Overflow"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of XML External Entity (XXE) injection.",
+                "why_correct": "XXE vulnerabilities occur when an XML parser processes external entity references defined in user-supplied DTDs without disabling external DTD resolution, enabling local file disclosure, internal port scanning, or SSRF.",
+                "options_breakdown": {
+                    "XML External Entity (XXE) Injection": "Correct. XXE abuses external entity declarations to read local files or trigger SSRF.",
+                    "Cross-Site Scripting (XSS)": "Incorrect. XSS injects browser JavaScript, not backend XML entity resolution.",
+                    "SQL Injection": "Incorrect. SQL injection manipulates SQL database syntax.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a memory corruption exploit in binary languages."
+                },
+                "key_term": "XXE (XML External Entity): A web security vulnerability that allows an attacker to interfere with an application's processing of XML data, disclosing internal files or executing SSRF."
+            }
+        },
+        {
+            "id": "m6_h_44",
+            "raw_id": 44,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An attacker exploits discrepancies in how a front-end reverse proxy and a back-end web server interpret `Content-Length` and `Transfer-Encoding: chunked` HTTP request headers. This allows the attacker to smuggle an unauthorized HTTP request directly inside the body of a legitimate request, poisoning the web server socket.",
+            "question": "What advanced web attack technique was executed?",
+            "type": "single",
+            "options": [
+                "HTTP Request Smuggling",
+                "SQL Injection",
+                "DOM-based XSS",
+                "Clickjacking"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of HTTP Request Smuggling (CL.TE / TE.CL vulnerabilities).",
+                "why_correct": "HTTP Request Smuggling occurs when chained web servers (like a reverse proxy and backend server) disagree on where an HTTP request boundaries begin and end. This permits attackers to prepend unauthorized requests to subsequent users' sessions.",
+                "options_breakdown": {
+                    "HTTP Request Smuggling": "Correct. HTTP request smuggling exploits request boundary parsing discrepancies between proxies and backends.",
+                    "SQL Injection": "Incorrect. SQLi targets database query syntax.",
+                    "DOM-based XSS": "Incorrect. DOM XSS executes within client browser JavaScript.",
+                    "Clickjacking": "Incorrect. Clickjacking overlays transparent iframes."
+                },
+                "key_term": "HTTP Request Smuggling: A technique for interfering with the way a web site processes sequences of HTTP requests that are received from one or more users."
+            }
+        },
+        {
+            "id": "m6_h_45",
+            "raw_id": 45,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Cross-site scripting (XSS)",
+            "is_scenario": true,
+            "scenario": "An attacker crafts a URL with a malicious fragment parameter `http://example.com/#name=<img src=x onerror=alert(1)>`. The client-side JavaScript on the page reads `location.hash` directly and passes it to `document.getElementById('welcome').innerHTML` without sending the payload to the server.",
+            "question": "What specific subtype of XSS has occurred?",
+            "type": "single",
+            "options": [
+                "DOM-Based XSS",
+                "Stored XSS",
+                "Reflected XSS",
+                "Server-Side Request Forgery"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of DOM-Based Cross-Site Scripting.",
+                "why_correct": "DOM XSS occurs entirely on the client side. The malicious payload is read by client-side JavaScript from a source (like location.hash) and written to an unsafe sink (like innerHTML) without ever traversing the backend server.",
+                "options_breakdown": {
+                    "DOM-Based XSS": "Correct. DOM XSS executes entirely in the client-side DOM when unsafe sinks consume untrusted sources.",
+                    "Stored XSS": "Incorrect. Stored XSS requires backend database persistence.",
+                    "Reflected XSS": "Incorrect. Reflected XSS reflects payloads through backend HTTP responses.",
+                    "Server-Side Request Forgery": "Incorrect. SSRF occurs on the backend server, whereas DOM XSS is purely client-side."
+                },
+                "key_term": "DOM-Based XSS: An XSS attack wherein the attack payload is executed as a result of modifying the DOM 'environment' in the victim's browser used by the original client-side script."
+            }
+        },
+        {
+            "id": "m6_h_46",
+            "raw_id": 46,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "A bank's REST API includes the header `Access-Control-Allow-Origin: https://attacker.com` alongside `Access-Control-Allow-Credentials: true`. Because of this misconfiguration, an attacker's website can make authenticated AJAX requests and read the victim's private account balances.",
+            "question": "What web security policy has been fatally misconfigured?",
+            "type": "single",
+            "options": [
+                "Cross-Origin Resource Sharing (CORS) Misconfiguration",
+                "Same-Origin Policy (SOP) failure in browser",
+                "DNSSEC Misconfiguration",
+                "Border Gateway Protocol error"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Cross-Origin Resource Sharing (CORS) security exposures.",
+                "why_correct": "CORS relaxes the Same-Origin Policy when explicitly instructed by headers. Reflecting arbitrary origins in `Access-Control-Allow-Origin` with `Access-Control-Allow-Credentials: true` allows external malicious websites to read authenticated private data.",
+                "options_breakdown": {
+                    "Cross-Origin Resource Sharing (CORS) Misconfiguration": "Correct. Permissive CORS configurations bypass SOP protections, exposing authenticated data to cross-origin attackers.",
+                    "Same-Origin Policy (SOP) failure in browser": "Incorrect. The browser correctly enforced SOP; the server explicitly instructed the browser to bypass SOP via CORS headers.",
+                    "DNSSEC Misconfiguration": "Incorrect. DNSSEC provides cryptographic authentication for DNS records.",
+                    "Border Gateway Protocol error": "Incorrect. BGP is an autonomous system network routing protocol."
+                },
+                "key_term": "CORS (Cross-Origin Resource Sharing): An HTTP-header based mechanism that allows a server to indicate any origins other than its own from which a browser should permit loading resources."
+            }
+        },
+        {
+            "id": "m6_h_47",
+            "raw_id": 47,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Firewalls",
+            "is_scenario": true,
+            "scenario": "An attacker attempts to evade a Web Application Firewall (WAF) signature that blocks the word `UNION SELECT`. The attacker rewrites the payload using URL hex encoding, nested comments (`UNI/**/ON SEL/**/ECT`), or multipart boundary splitting.",
+            "question": "What adversarial technique is being utilized against the WAF?",
+            "type": "single",
+            "options": [
+                "WAF Evasion / Signature Bypassing",
+                "Buffer Overflow",
+                "Replay Attack",
+                "ARP Cache Poisoning"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of WAF evasion and signature bypass techniques.",
+                "why_correct": "WAF evasion techniques exploit discrepancies between how the WAF normalizes/decodes payloads and how the backend SQL interpreter parses them (e.g., character encoding, comment insertion, case alternation).",
+                "options_breakdown": {
+                    "WAF Evasion / Signature Bypassing": "Correct. Obfuscating payloads bypasses static WAF string signatures while remaining executable by backend parsers.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a binary memory corruption bug.",
+                    "Replay Attack": "Incorrect. Replay attacks retransmit captured valid authentication tokens.",
+                    "ARP Cache Poisoning": "Incorrect. ARP poisoning corrupts Layer 2 switch forwarding tables."
+                },
+                "key_term": "WAF Evasion: Techniques used by attackers to disguise attack payloads so that a Web Application Firewall does not recognize the signature."
+            }
+        },
+        {
+            "id": "m6_h_48",
+            "raw_id": 48,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "A company decommissioned an AWS S3 bucket formerly used for `assets.company.com`, but left the DNS CNAME record pointing to the non-existent S3 bucket name in public DNS. An attacker creates an S3 bucket with that exact name and takes full control of `assets.company.com`, serving malicious JavaScript under the company's verified domain.",
+            "question": "What specific attack occurred?",
+            "type": "single",
+            "options": [
+                "Subdomain Takeover",
+                "SQL Injection",
+                "Clickjacking",
+                "Buffer Overflow"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Subdomain Takeovers via dangling DNS records.",
+                "why_correct": "Subdomain Takeover occurs when a DNS record (like a CNAME) points to an external cloud resource (AWS S3, GitHub Pages, Heroku) that has been deleted or unclaimed. Attackers claim the resource name and gain full control over the corporate subdomain.",
+                "options_breakdown": {
+                    "Subdomain Takeover": "Correct. Claiming dangling cloud resources mapped by DNS CNAME records achieves Subdomain Takeover.",
+                    "SQL Injection": "Incorrect. SQL injection targets application databases.",
+                    "Clickjacking": "Incorrect. Clickjacking overlays transparent iframes on web buttons.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow corrupts application memory stacks."
+                },
+                "key_term": "Subdomain Takeover: A process where an attacker gains control over a subdomain of a target domain by pointing to an unclaimed third-party cloud service."
+            }
+        },
+        {
+            "id": "m6_h_49",
+            "raw_id": 49,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "TLS",
+            "is_scenario": true,
+            "scenario": "A mobile security analyst tests an iOS banking application and observes that the application refuses to establish HTTPS connections when routed through Burp Suite with a custom CA root certificate installed on the device.",
+            "question": "Which defensive mechanism implemented in the mobile app's code is blocking the intercepting proxy?",
+            "type": "single",
+            "options": [
+                "SSL / TLS Certificate Pinning",
+                "HSTS Header enforcement alone",
+                "Cross-Origin Resource Sharing",
+                "Operating System Defragmentation"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of SSL/TLS Certificate Pinning in mobile security assessments.",
+                "why_correct": "Mobile applications implement SSL Pinning by hardcoding expected public key hashes directly into application binaries. Even if an analyst installs a trusted CA onto the test device, the pinned app rejects the proxy certificate because its key doesn't match the pinned hash.",
+                "options_breakdown": {
+                    "SSL / TLS Certificate Pinning": "Correct. Certificate pinning blocks intercepting proxies by requiring exact cryptographic key matches hardcoded in the app.",
+                    "HSTS Header enforcement alone": "Incorrect. HSTS forces HTTPS, but trusts any valid CA installed in the system trust store.",
+                    "Cross-Origin Resource Sharing": "Incorrect. CORS is a browser cross-origin policy, not a mobile network socket control.",
+                    "Operating System Defragmentation": "Incorrect. Defragmentation arranges disk blocks on spinning hard drives."
+                },
+                "key_term": "SSL Pinning: The practice of hardcoding the server's certificate or public key within a client application to prevent MitM attacks using forged or custom root CAs."
+            }
+        },
+        {
+            "id": "m6_h_50",
+            "raw_id": 50,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An application deserializes untrusted user-supplied JSON or Python pickle objects directly using `pickle.loads(user_input)` without sanitization.",
+            "question": "What critical vulnerability allows an attacker to construct a serialized object that executes arbitrary operating system commands during deserialization?",
+            "type": "single",
+            "options": [
+                "Insecure Deserialization",
+                "SQL Injection",
+                "Clickjacking",
+                "Reflected XSS"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Insecure Deserialization (OWASP Top 10).",
+                "why_correct": "Insecure Deserialization occurs when untrusted data is used to instantiate objects in memory. In languages like Python, Java, or PHP, attackers craft malicious magic methods (`__reduce__`, `readObject`) that execute arbitrary shell commands upon deserialization.",
+                "options_breakdown": {
+                    "Insecure Deserialization": "Correct. Deserializing untrusted object streams leads directly to Remote Code Execution (RCE).",
+                    "SQL Injection": "Incorrect. SQL injection targets relational database queries.",
+                    "Clickjacking": "Incorrect. Clickjacking overlays transparent iframes.",
+                    "Reflected XSS": "Incorrect. Reflected XSS executes JavaScript in victim web browsers."
+                },
+                "key_term": "Insecure Deserialization: A vulnerability where untrusted data is used to abuse the logic of an application, inflict a denial of service attack, or execute arbitrary code upon object deserialization."
+            }
+        },
+        {
+            "id": "m6_h_51",
+            "raw_id": 51,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An attacker establishes a persistent two-way WebSocket connection to a financial application. By tricking a logged-in user into visiting a malicious site, the attacker initiates a WebSocket handshake from the malicious origin, exploiting the fact that WebSockets do not strictly enforce the Same-Origin Policy by default.",
+            "question": "What specific web attack is this?",
+            "type": "single",
+            "options": [
+                "Cross-Site WebSocket Hijacking (CSWSH)",
+                "SQL Injection",
+                "Buffer Overflow",
+                "SYN Flooding"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of Cross-Site WebSocket Hijacking (CSWSH).",
+                "why_correct": "Unlike standard HTTP fetch requests constrained by SOP, the WebSocket specification does not enforce the Same-Origin Policy. Unless developers explicitly validate the `Origin` header during the initial HTTP Upgrade handshake, cross-site sites can hijack the connection.",
+                "options_breakdown": {
+                    "Cross-Site WebSocket Hijacking (CSWSH)": "Correct. CSWSH abuses the lack of default SOP enforcement on WebSocket handshakes to steal live streaming data.",
+                    "SQL Injection": "Incorrect. SQL injection manipulates SQL database syntax.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow corrupts application memory stacks.",
+                    "SYN Flooding": "Incorrect. SYN flooding is a network transport exhaustion attack."
+                },
+                "key_term": "CSWSH: A cross-origin attack that exploits missing Origin validation during the WebSocket handshake to steal real-time bi-directional data."
+            }
+        },
+        {
+            "id": "m6_h_52",
+            "raw_id": 52,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "A web application uses a web template engine (such as Jinja2 in Python or Twig in PHP) and passes unsanitized user input directly into template string rendering: `render_template_string(\"Hello \" + request.args.get('name'))`. An attacker submits `{{ 7 * 7 }}` and the screen renders `Hello 49`, followed by code that spawns an operating system shell.",
+            "question": "Which server-side template vulnerability did the attacker exploit to achieve remote arithmetic evaluation and shell execution?",
+            "type": "single",
+            "options": [
+                "Server-Side Template Injection (SSTI)",
+                "Cross-Site Scripting (XSS)",
+                "SQL Injection",
+                "XML External Entity (XXE)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of Server-Side Template Injection (SSTI).",
+                "why_correct": "SSTI occurs when user input is concatenated directly into template engine directives rather than passed as data parameters. Attackers inject template syntax to access backend Python/PHP runtime objects and execute arbitrary code.",
+                "options_breakdown": {
+                    "Server-Side Template Injection (SSTI)": "Correct. SSTI abuses template engine syntax concatenation to achieve Remote Code Execution.",
+                    "Cross-Site Scripting (XSS)": "Incorrect. XSS executes in client browsers; SSTI evaluated arithmetic and code on the backend server.",
+                    "SQL Injection": "Incorrect. SQL injection attacks relational database engines.",
+                    "XML External Entity (XXE)": "Incorrect. XXE attacks XML parsers."
+                },
+                "key_term": "SSTI (Server-Side Template Injection): A vulnerability that occurs when an attacker is able to use native template syntax to inject a malicious payload into a template, which is then executed on the server."
+            }
+        },
+        {
+            "id": "m6_h_53",
+            "raw_id": 53,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An attacker discovers that a web application uses a predictable, linear random number generator (such as standard `Math.random()` in JavaScript) to generate password reset tokens.",
+            "question": "Why is using standard pseudo-random number generators (PRNGs) cryptographically insecure for security tokens?",
+            "type": "single",
+            "options": [
+                "PRNGs are deterministic; an attacker who observes a sequence of outputs can mathematically calculate past and future generated tokens, predicting other users' password reset links",
+                "PRNGs physically overheat the computer processor",
+                "PRNGs only generate even numbers, never odd numbers",
+                "PRNGs automatically format the database server"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Cryptographically Secure Pseudo-Random Number Generators (CSPRNGs).",
+                "why_correct": "Standard PRNGs (like linear congruential generators or Mersenne Twister) are designed for speed in simulations, not security. An observer can deduce the internal state from output samples. Security tokens require CSPRNGs (like `/dev/urandom` or `crypto.getRandomValues`).",
+                "options_breakdown": {
+                    "PRNGs are deterministic; an attacker who observes a sequence of outputs can mathematically calculate past and future generated tokens, predicting other users' password reset links": "Correct. Standard PRNGs leak internal state, allowing attackers to predict subsequent secret tokens.",
+                    "PRNGs physically overheat the computer processor": "Incorrect. PRNG calculations use minimal CPU cycles and have no severe thermal impact.",
+                    "PRNGs only generate even numbers, never odd numbers": "Incorrect. PRNGs produce uniform random distributions across odd and even integers.",
+                    "PRNGs automatically format the database server": "Incorrect. Number generators calculate mathematical values and do not execute disk commands."
+                },
+                "key_term": "CSPRNG: A pseudo-random number generator with properties that make it suitable for use in cryptography (unpredictability and forward/backward secrecy)."
+            }
+        },
+        {
+            "id": "m6_h_54",
+            "raw_id": 54,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "SQL injection",
+            "is_scenario": true,
+            "scenario": "An application uses a web form that executes a query against a PostgreSQL database. The application filters out single quotes (`'`) but fails to sanitize backslashes (`\\`).",
+            "question": "How can an attacker use backslash characters to escape the SQL string literal and execute SQL injection?",
+            "type": "single",
+            "options": [
+                "The attacker injects a backslash `\\` to escape the opening single quote in the application query, turning the subsequent SQL quote into data and escaping into raw SQL commands",
+                "The attacker types backslashes to physically reverse the direction of electrical current in the motherboard",
+                "The backslash deletes all tables in PostgreSQL automatically",
+                "The backslash forces PostgreSQL to convert into MySQL"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests advanced SQL injection bypasses using backslash character escaping.",
+                "why_correct": "If an application wraps input in `'` and escapes quotes by prepending `\\'`, injecting a backslash results in `\\'`. The injected backslash escapes the escape character, leaving the single quote intact to break out of the string literal.",
+                "options_breakdown": {
+                    "The attacker injects a backslash `\\` to escape the opening single quote in the application query, turning the subsequent SQL quote into data and escaping into raw SQL commands": "Correct. Backslash escaping bypasses naive quote filters by altering delimiter parsing.",
+                    "The attacker types backslashes to physically reverse the direction of electrical current in the motherboard": "Incorrect. SQL text characters have no electrical polarity reversal capability.",
+                    "The backslash deletes all tables in PostgreSQL automatically": "Incorrect. A backslash is a literal character, not a destructive command.",
+                    "The backslash forces PostgreSQL to convert into MySQL": "Incorrect. Database software engines do not convert into competing products."
+                },
+                "key_term": "Character Escaping Bypasses: Techniques exploiting how backslashes and quote delimiters interact within database string parsers to break query boundaries."
+            }
+        },
+        {
+            "id": "m6_h_55",
+            "raw_id": 55,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An API authentication service uses JSON Web Tokens (JWT). An attacker modifies the JWT header from `\"alg\": \"RS256\"` to `\"alg\": \"none\"` and strips the signature block entirely. The vulnerable backend accepts the token without verifying a signature, granting the attacker instant administrative access.",
+            "question": "What classic JWT vulnerability was exploited?",
+            "type": "single",
+            "options": [
+                "JWT 'none' Algorithm Vulnerability",
+                "SQL Injection",
+                "Buffer Overflow",
+                "Replay Attack"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of the infamous JWT 'none' algorithm vulnerability (CVE-2015-9235).",
+                "why_correct": "The JWT specification includes an algorithm `none` for unsecured tokens. Vulnerable JWT libraries accepted `\"alg\": \"none\"` without validating signatures, allowing attackers to forge arbitrary claims and tamper with tokens.",
+                "options_breakdown": {
+                    "JWT 'none' Algorithm Vulnerability": "Correct. Flawed JWT implementations accepted 'none' algorithm headers, bypassing signature verification completely.",
+                    "SQL Injection": "Incorrect. SQL injection targets relational database syntax.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow corrupts application memory stacks.",
+                    "Replay Attack": "Incorrect. Replay attacks reuse unmodified authentic tokens; this forged arbitrary claims."
+                },
+                "key_term": "JWT 'none' Algorithm Flaw: A critical vulnerability where a server accepts JSON Web Tokens with the algorithm header set to 'none' without verifying any cryptographic signature."
+            }
+        },
+        {
+            "id": "m6_h_56",
+            "raw_id": 56,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the security hazard of enabling `Access-Control-Allow-Origin: *` on an internal enterprise API that requires user cookies for authentication?",
+            "type": "single",
+            "options": [
+                "Browsers strictly prohibit combining wildcard `*` with credentials (`Access-Control-Allow-Credentials: true`), but if an application dynamically reflects the request `Origin` header, any external website can steal authenticated private data",
+                "It causes all web servers in the world to immediately reboot",
+                "It uninstalls the web browser from the client's computer",
+                "It converts the user's hard drive into an optical laser disk"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests CORS credential reflection vulnerabilities.",
+                "why_correct": "The CORS standard explicitly forbids combining `Allow-Origin: *` with `Allow-Credentials: true`. However, vulnerable developers frequently bypass this error by dynamically echoing the incoming `Origin` header into `Allow-Origin`, opening authenticated endpoints to cross-origin data theft.",
+                "options_breakdown": {
+                    "Browsers strictly prohibit combining wildcard `*` with credentials (`Access-Control-Allow-Credentials: true`), but if an application dynamically reflects the request `Origin` header, any external website can steal authenticated private data": "Correct. Dynamic origin reflection with credentials bypasses SOP and leaks sensitive user data to malicious sites.",
+                    "It causes all web servers in the world to immediately reboot": "Incorrect. CORS headers govern browser HTTP permissions, not server power management.",
+                    "It uninstalls the web browser from the client's computer": "Incorrect. CORS policies cannot execute OS uninstallations.",
+                    "It converts the user's hard drive into an optical laser disk": "Incorrect. HTTP headers have no physical hardware transmutation properties."
+                },
+                "key_term": "CORS Origin Reflection: A common developer antipattern where the server dynamically echoes the client's Origin header into Access-Control-Allow-Origin, enabling credentialed cross-origin data theft."
+            }
+        },
+        {
+            "id": "m6_h_57",
+            "raw_id": 57,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "A banking web application generates session IDs using a 16-bit integer (supporting only 65,536 possible session IDs).",
+            "question": "Why does a small session ID entropy space leave the application vulnerable to session prediction attacks?",
+            "type": "single",
+            "options": [
+                "An attacker can easily brute-force and predict active session tokens within a few minutes using automated requests, hijacking live user sessions",
+                "It causes the web server's power supply to blow a fuse",
+                "It forces all customer accounts to change their names to 'Anonymous'",
+                "It prevents more than 16 users from using the website simultaneously"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests session token entropy requirements (OWASP Session Management).",
+                "why_correct": "Session identifiers must possess high cryptographic entropy (at least 128 bits of randomness). A 16-bit space has only 65,536 values, allowing an attacker to guess active tokens in seconds via automated brute force.",
+                "options_breakdown": {
+                    "An attacker can easily brute-force and predict active session tokens within a few minutes using automated requests, hijacking live user sessions": "Correct. Insufficient token entropy allows rapid guessing of active authenticated session IDs.",
+                    "It causes the web server's power supply to blow a fuse": "Incorrect. Session entropy is a cryptographic randomness metric, not an electrical power surge.",
+                    "It forces all customer accounts to change their names to 'Anonymous'": "Incorrect. Token entropy does not alter database username fields.",
+                    "It prevents more than 16 users from using the website simultaneously": "Incorrect. A 16-bit number supports up to 65,536 distinct integer values, not 16 users."
+                },
+                "key_term": "Session Token Entropy: A measure of the randomness and unpredictability of session identifiers, crucial for preventing session guessing attacks."
+            }
+        },
+        {
+            "id": "m6_h_58",
+            "raw_id": 58,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "HTTP and HTTPS",
+            "is_scenario": true,
+            "scenario": "An attacker positions themselves as a Man-in-the-Middle on an unencrypted Wi-Fi network and intercepts an initial plaintext HTTP request to `http://bank.com`. The attacker proxies the secure HTTPS connection to the bank, but strips all HTTPS links and forwards plain HTTP to the victim's browser.",
+            "question": "What classic protocol downgrade attack did the attacker execute (popularized by SSLstrip)?",
+            "type": "single",
+            "options": [
+                "SSL / TLS Stripping Attack",
+                "SQL Injection",
+                "Buffer Overflow",
+                "Clickjacking"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of SSL Stripping attacks.",
+                "why_correct": "In SSL Stripping, the attacker intercepts the client's initial unencrypted HTTP redirect, maintains an encrypted HTTPS session with the authentic server, but serves unencrypted HTTP back to the client, capturing plaintext credentials in transit. HSTS was created specifically to eliminate this attack.",
+                "options_breakdown": {
+                    "SSL / TLS Stripping Attack": "Correct. SSL stripping downgrades HTTPS connections to unencrypted HTTP to intercept credentials in transit.",
+                    "SQL Injection": "Incorrect. SQL injection manipulates relational database queries.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow corrupts application memory stacks.",
+                    "Clickjacking": "Incorrect. Clickjacking overlays transparent iframes."
+                },
+                "key_term": "SSL Stripping: A type of man-in-the-middle attack in which an attacker downgrades a secure HTTPS connection to an insecure HTTP connection."
+            }
+        },
+        {
+            "id": "m6_h_59",
+            "raw_id": 59,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "Web application basics",
+            "is_scenario": true,
+            "scenario": "An engineer reviews an API and finds that an endpoint accepts JSON payloads: `{\"user\": \"alice\", \"is_admin\": false}`. When a regular user registers, they append `\"is_admin\": true` to the JSON body. Because the backend framework automatically binds all request properties directly to the User database model without filtering, the user is created as a full administrator.",
+            "question": "Which object-relational model binding vulnerability allowed the attacker to elevate their account privileges to administrator?",
+            "type": "single",
+            "options": [
+                "Mass Assignment (Over-Posting / Auto-Binding Vulnerability)",
+                "SQL Injection",
+                "Cross-Site Scripting",
+                "XML External Entity (XXE)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of Mass Assignment vulnerabilities in modern web frameworks.",
+                "why_correct": "Mass Assignment occurs when modern MVC or ORM frameworks automatically bind incoming HTTP request parameters to internal model fields without an explicit allowlist (like strong parameters or DTOs), allowing attackers to overwrite sensitive internal properties (e.g., `is_admin`, `balance`).",
+                "options_breakdown": {
+                    "Mass Assignment (Over-Posting / Auto-Binding Vulnerability)": "Correct. Mass assignment automatically binds untrusted input fields to internal model attributes, elevating privileges.",
+                    "SQL Injection": "Incorrect. The ORM executed valid queries; the flaw was unvetted parameter binding.",
+                    "Cross-Site Scripting": "Incorrect. XSS executes in client browsers; this altered backend user model permissions.",
+                    "XML External Entity (XXE)": "Incorrect. The payload was JSON, not XML."
+                },
+                "key_term": "Mass Assignment: A vulnerability where an active record pattern or object-relational mapping blindly maps user-controlled input into object properties."
+            }
+        },
+        {
+            "id": "m6_h_60",
+            "raw_id": 60,
+            "module_id": 6,
+            "difficulty": "hard",
+            "topic": "OWASP Top 10",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are recognized categories in the authoritative OWASP Top 10 web application security framework? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Broken Access Control (A01)",
+                "Cryptographic Failures (A02)",
+                "Injection (A03, including SQLi and XSS)",
+                "Overheating CPU Fans (A10)"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify official OWASP Top 10 risk categories.",
+                "why_correct": "Broken Access Control, Cryptographic Failures, and Injection are leading categories in the OWASP Top 10. Hardware fan cooling issues are physical maintenance items, not application security vulnerabilities.",
+                "options_breakdown": {
+                    "Broken Access Control (A01)": "Correct. Broken Access Control is the #1 ranked vulnerability in the OWASP Top 10.",
+                    "Cryptographic Failures (A02)": "Correct. Cryptographic Failures addresses sensitive data exposure and weak encryption.",
+                    "Injection (A03, including SQLi and XSS)": "Correct. Injection covers SQL, command, and cross-site scripting vulnerabilities.",
+                    "Overheating CPU Fans (A10)": "Incorrect. Hardware thermal issues are not web application software vulnerabilities."
+                },
+                "key_term": "OWASP Top 10 Categories: Standardized classification of the most prevalent and impactful software security vulnerabilities in modern web applications."
+            }
+        }
+    ]
+}

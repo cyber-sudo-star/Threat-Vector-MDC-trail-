@@ -1,0 +1,1885 @@
+{
+    "module_id": 5,
+    "title": "Cyber Threats & Attacks",
+    "description": "Discover common cyber threats and attack techniques, understand how attackers operate, and learn how to identify suspicious activities.",
+    "topics": [
+        "Malware",
+        "Viruses, worms, and Trojans",
+        "Ransomware",
+        "Phishing",
+        "Social engineering",
+        "Brute-force attacks",
+        "Dictionary attacks",
+        "DoS and DDoS attacks",
+        "Insider threats",
+        "Attack vectors"
+    ],
+    "questions": [
+        {
+            "id": "m5_e_01",
+            "raw_id": 1,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does the term 'Malware' stand for in cybersecurity?",
+            "type": "single",
+            "options": [
+                "Malicious Software",
+                "Mailing Hardware",
+                "Mainstream Software",
+                "Modular Architecture"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the fundamental definition of the portmanteau 'malware'.",
+                "why_correct": "Malware is short for 'Malicious Software', an overarching term for any program or code designed to harm, exploit, or compromise computer systems.",
+                "options_breakdown": {
+                    "Malicious Software": "Correct. Malware is an umbrella term for software intentionally designed to cause damage or unauthorized actions.",
+                    "Mailing Hardware": "Incorrect. Hardware refers to physical devices, not malicious code.",
+                    "Mainstream Software": "Incorrect. Mainstream software refers to popular commercial applications.",
+                    "Modular Architecture": "Incorrect. Modular architecture is a software engineering design pattern."
+                },
+                "key_term": "Malware: Any software intentionally designed to cause disruption, damage, or gain unauthorized access to a computer system."
+            }
+        },
+        {
+            "id": "m5_e_02",
+            "raw_id": 2,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Viruses, worms, and Trojans",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary operational difference between a computer Virus and a computer Worm?",
+            "type": "single",
+            "options": [
+                "A virus requires human interaction to execute and spread by attaching to a host file; a worm self-replicates across networks automatically without human action",
+                "A virus only affects printers, while a worm only affects keyboards",
+                "A virus is beneficial software, while a worm is hardware",
+                "There is zero difference; both are identical terms for ransomware"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the technical distinction between viruses (host-dependent) and worms (self-propagating).",
+                "why_correct": "A computer virus attaches to a legitimate host program and requires a user to run it to spread. A worm is an autonomous standalone program that exploits network vulnerabilities to replicate across systems without human intervention.",
+                "options_breakdown": {
+                    "A virus requires human interaction to execute and spread by attaching to a host file; a worm self-replicates across networks automatically without human action": "Correct. Viruses need host files and user action; worms propagate autonomously across networks.",
+                    "A virus only affects printers, while a worm only affects keyboards": "Incorrect. Both target computers, servers, and networks.",
+                    "A virus is beneficial software, while a worm is hardware": "Incorrect. Both are categories of malicious software.",
+                    "There is zero difference; both are identical terms for ransomware": "Incorrect. They have distinct replication mechanics and payloads."
+                },
+                "key_term": "Worm: A standalone malware program that replicates itself automatically in order to spread to other computers across a network."
+            }
+        },
+        {
+            "id": "m5_e_03",
+            "raw_id": 3,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Viruses, worms, and Trojans",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which type of malware misleads users of its true intent by disguising itself as a legitimate, desirable program (such as a free game or cracked software)?",
+            "type": "single",
+            "options": [
+                "Trojan Horse (Trojan)",
+                "Computer Worm",
+                "Stateful Firewall",
+                "Antivirus Definition"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests identification of Trojan Horse malware.",
+                "why_correct": "A Trojan Horse masquerades as a benign or useful application (like a video player or utility) to trick users into downloading and executing it, secretly delivering a malicious payload.",
+                "options_breakdown": {
+                    "Trojan Horse (Trojan)": "Correct. Named after the mythical Greek Trojan Horse, it conceals malicious code inside seemingly legitimate software.",
+                    "Computer Worm": "Incorrect. Worms spread independently across network vulnerabilities.",
+                    "Stateful Firewall": "Incorrect. A firewall is a network defense mechanism, not malware.",
+                    "Antivirus Definition": "Incorrect. Antivirus definitions are signature files used to detect malware."
+                },
+                "key_term": "Trojan Horse: Any malware that misleads users of its true intent by disguising itself as legitimate or harmless software."
+            }
+        },
+        {
+            "id": "m5_e_04",
+            "raw_id": 4,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Ransomware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary objective of Ransomware malware when it infects a victim system?",
+            "type": "single",
+            "options": [
+                "It encrypts the victim's files and demands payment (usually in cryptocurrency) in exchange for the decryption key",
+                "It cleans dust off the computer's cooling fan",
+                "It turns off the computer monitor and plays music from the 1980s",
+                "It orders 50 pizzas to the victim's physical house address"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the defining behavior of ransomware attacks.",
+                "why_correct": "Ransomware uses strong cryptography to lock a victim's files, documents, and databases. The cybercriminals then display a ransom note demanding extortion payment (often Bitcoin) to restore access.",
+                "options_breakdown": {
+                    "It encrypts the victim's files and demands payment (usually in cryptocurrency) in exchange for the decryption key": "Correct. Ransomware extorts victims by holding their encrypted data hostage.",
+                    "It cleans dust off the computer's cooling fan": "Incorrect. Malware is malicious code and cannot physically clean hardware.",
+                    "It turns off the computer monitor and plays music from the 1980s": "Incorrect. That describes early 1990s prank viruses, not modern commercial ransomware.",
+                    "It orders 50 pizzas to the victim's physical house address": "Incorrect. Ransomware focuses on financial extortion and data encryption."
+                },
+                "key_term": "Ransomware: A type of malware from cryptovirology that threatens to publish the victim's personal data or perpetually block access to it unless a ransom is paid."
+            }
+        },
+        {
+            "id": "m5_e_05",
+            "raw_id": 5,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Phishing",
+            "is_scenario": true,
+            "scenario": "An employee receives an email appearing to come from their bank, claiming their account is suspended and urging them to immediately click a link and log in to verify their identity.",
+            "question": "What type of cyber attack is this employee encountering?",
+            "type": "single",
+            "options": [
+                "Phishing",
+                "Denial of Service (DoS)",
+                "Hardware Keylogging",
+                "Buffer Overflow"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognition of deceptive social engineering emails (phishing).",
+                "why_correct": "Phishing uses deceptive emails mimicking trusted organizations (banks, PayPal, Microsoft) to manipulate recipients into clicking malicious links and revealing sensitive credentials.",
+                "options_breakdown": {
+                    "Phishing": "Correct. This is a classic phishing email designed to steal banking credentials through a fraudulent landing page.",
+                    "Denial of Service (DoS)": "Incorrect. DoS disrupts server availability through resource exhaustion.",
+                    "Hardware Keylogging": "Incorrect. Hardware keyloggers physically plug into keyboard cables.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a memory corruption exploit in software binaries."
+                },
+                "key_term": "Phishing: The fraudulent practice of sending emails or other messages purporting to be from reputable companies to induce individuals to reveal personal information."
+            }
+        },
+        {
+            "id": "m5_e_06",
+            "raw_id": 6,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Phishing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Spear Phishing'?",
+            "type": "single",
+            "options": [
+                "A targeted phishing attack customized with personal information aimed at a specific individual or organization",
+                "A phishing email sent exclusively to commercial fishermen",
+                "An automated attack that only infects underwater submarine cables",
+                "A physical attack using a wooden weapon against server racks"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between generic mass phishing and targeted spear phishing.",
+                "why_correct": "Spear phishing is a highly targeted form of phishing where attackers research their target beforehand (using LinkedIn, company sites) to craft convincing, tailored emails addressing the victim by name and role.",
+                "options_breakdown": {
+                    "A targeted phishing attack customized with personal information aimed at a specific individual or organization": "Correct. Spear phishing uses personalized intelligence to deceive specific high-value targets.",
+                    "A phishing email sent exclusively to commercial fishermen": "Incorrect. The term is a cybersecurity metaphor, not related to the seafood industry.",
+                    "An automated attack that only infects underwater submarine cables": "Incorrect. Spear phishing targets human email users.",
+                    "A physical attack using a wooden weapon against server racks": "Incorrect. Cyber attacks operate through digital communication channels."
+                },
+                "key_term": "Spear Phishing: An email or electronic communications scam targeted towards a specific individual, organization, or business."
+            }
+        },
+        {
+            "id": "m5_e_07",
+            "raw_id": 7,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Social engineering",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Social Engineering' in cybersecurity?",
+            "type": "single",
+            "options": [
+                "The psychological manipulation of people into divulging confidential information or performing actions that compromise security",
+                "Building social media websites like Facebook or LinkedIn",
+                "Graduating with a university engineering degree in sociology",
+                "Installing antivirus programs on public library computers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of social engineering.",
+                "why_correct": "Social engineering targets the human element rather than software vulnerabilities. Attackers manipulate human trust, fear, urgency, or curiosity to trick victims into bypassing security controls.",
+                "options_breakdown": {
+                    "The psychological manipulation of people into divulging confidential information or performing actions that compromise security": "Correct. Social engineering exploits human psychology to bypass technical defenses.",
+                    "Building social media websites like Facebook or LinkedIn": "Incorrect. That is web development, not cyber deception.",
+                    "Graduating with a university engineering degree in sociology": "Incorrect. Social engineering in security refers to deceptive manipulation.",
+                    "Installing antivirus programs on public library computers": "Incorrect. That is system maintenance."
+                },
+                "key_term": "Social Engineering: The psychological manipulation of people into performing actions or divulging confidential information."
+            }
+        },
+        {
+            "id": "m5_e_08",
+            "raw_id": 8,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Brute-force attacks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Brute-Force Attack' on a password login page?",
+            "type": "single",
+            "options": [
+                "Systematically trying every possible combination of letters, numbers, and symbols until the correct password is discovered",
+                "Physically hitting the computer monitor with a heavy hammer",
+                "Guessing the user's password once and immediately giving up",
+                "Using a magnet to erase the password from the hard drive"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of brute-force password guessing.",
+                "why_correct": "A brute-force attack is an exhaustive search method that programmatically submits all possible permutations of characters (a, b, c... aa, ab...) until it successfully hits the valid password.",
+                "options_breakdown": {
+                    "Systematically trying every possible combination of letters, numbers, and symbols until the correct password is discovered": "Correct. Brute force exhaustively tries all mathematical permutations.",
+                    "Physically hitting the computer monitor with a heavy hammer": "Incorrect. That is physical vandalism, not an algorithmic cyber attack.",
+                    "Guessing the user's password once and immediately giving up": "Incorrect. Brute force is exhaustive and persistent.",
+                    "Using a magnet to erase the password from the hard drive": "Incorrect. Degaussing erases magnetic drives, but is not a brute-force attack."
+                },
+                "key_term": "Brute-Force Attack: A cryptanalytic attack that can, in theory, be used to attempt to decrypt any encrypted data by systematically checking all possible keys or passwords."
+            }
+        },
+        {
+            "id": "m5_e_09",
+            "raw_id": 9,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Dictionary attacks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How does a 'Dictionary Attack' differ from a pure brute-force password attack?",
+            "type": "single",
+            "options": [
+                "A dictionary attack uses a curated list of common words, leaked passwords, and predictable patterns rather than trying every random character permutation",
+                "A dictionary attack only works in foreign languages",
+                "A dictionary attack physically steals paperback dictionaries from bookstores",
+                "A dictionary attack requires knowing the user's home address beforehand"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of dictionary attacks vs exhaustive brute force.",
+                "why_correct": "Rather than testing millions of random character strings (e.g., 'qx9$#m'), a dictionary attack tests words from predefined lists of common passwords (e.g., 'RockYou.txt', 'Password123', 'Football'). It is much faster than raw brute force.",
+                "options_breakdown": {
+                    "A dictionary attack uses a curated list of common words, leaked passwords, and predictable patterns rather than trying every random character permutation": "Correct. Dictionary attacks leverage lists of pre-compiled words and commonly reused passwords for speed.",
+                    "A dictionary attack only works in foreign languages": "Incorrect. Wordlists exist across all languages and slang.",
+                    "A dictionary attack physically steals paperback dictionaries from bookstores": "Incorrect. Digital wordlist text files are used, not physical books.",
+                    "A dictionary attack requires knowing the user's home address beforehand": "Incorrect. Dictionary attacks automate attempts across accounts without geographic prerequisites."
+                },
+                "key_term": "Dictionary Attack: A method of breaking into a passphrase-protected computer or server by systematically entering each word in a dictionary as a password."
+            }
+        },
+        {
+            "id": "m5_e_10",
+            "raw_id": 10,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "DoS and DDoS attacks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a DoS (Denial of Service) attack and a DDoS (Distributed Denial of Service) attack?",
+            "type": "single",
+            "options": [
+                "A DoS attack originates from a single attacking computer/IP; a DDoS attack coordinates thousands or millions of compromised systems (a botnet) distributed globally",
+                "A DoS attack is legal, while a DDoS attack is an Olympic sport",
+                "A DoS attack affects software, while a DDoS attack only destroys fiber optic cables",
+                "There is zero difference; both originate from the exact same laptop"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between single-source DoS and distributed botnet DDoS attacks.",
+                "why_correct": "A DoS attack uses one machine and internet connection to flood a victim. A DDoS attack harnesses a botnet of thousands of distributed zombie devices (PCs, IoT cameras, servers) simultaneously, overwhelming target capacity.",
+                "options_breakdown": {
+                    "A DoS attack originates from a single attacking computer/IP; a DDoS attack coordinates thousands or millions of compromised systems (a botnet) distributed globally": "Correct. The 'Distributed' in DDoS signifies thousands of coordinated attacking hosts.",
+                    "A DoS attack is legal, while a DDoS attack is an Olympic sport": "Incorrect. Both are serious federal cybercrimes.",
+                    "A DoS attack affects software, while a DDoS attack only destroys fiber optic cables": "Incorrect. Both target network bandwidth and server computing resources.",
+                    "There is zero difference; both originate from the exact same laptop": "Incorrect. DDoS specifically distributes attacking nodes across the globe."
+                },
+                "key_term": "DDoS: A distributed denial-of-service attack in which multiple compromised computer systems attack a target, causing a denial of service for users."
+            }
+        },
+        {
+            "id": "m5_e_11",
+            "raw_id": 11,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "An unauthorized person wearing high-visibility construction clothing follows closely behind an employee as they badge into a secure corporate building, catching the door before it closes.",
+            "question": "What physical social engineering technique has occurred?",
+            "type": "single",
+            "options": [
+                "Tailgating (or Piggybacking)",
+                "Phishing",
+                "Buffer Overflow",
+                "SQL Injection"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognition of the physical tailgating social engineering technique.",
+                "why_correct": "Tailgating (or piggybacking) occurs when an unauthorized individual closely follows an authorized person through a secure entrance, exploiting politeness or distraction to bypass access control gates.",
+                "options_breakdown": {
+                    "Tailgating (or Piggybacking)": "Correct. Following authorized personnel through secure doors without badging is tailgating.",
+                    "Phishing": "Incorrect. Phishing occurs through email or digital messaging.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a software memory corruption bug.",
+                    "SQL Injection": "Incorrect. SQL injection attacks database web forms."
+                },
+                "key_term": "Tailgating: A physical security breach in which an unauthorized person follows an authorized individual into a restricted premises."
+            }
+        },
+        {
+            "id": "m5_e_12",
+            "raw_id": 12,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Insider threats",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is an 'Insider Threat' in cybersecurity?",
+            "type": "single",
+            "options": [
+                "A current or former employee, contractor, or business partner who has authorized access and misuses it to compromise systems, steal data, or cause harm",
+                "A computer virus that hides inside a physical CPU chip",
+                "An email spam message sent from an external foreign attacker",
+                "A Wi-Fi router installed inside a closet"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of an insider threat.",
+                "why_correct": "An insider threat is a security risk that originates within the targeted organization (employees, contractors, vendors) who already possess legitimate credentials and physical access to sensitive systems.",
+                "options_breakdown": {
+                    "A current or former employee, contractor, or business partner who has authorized access and misuses it to compromise systems, steal data, or cause harm": "Correct. Insiders already possess legitimate credentials and internal knowledge, making them uniquely dangerous.",
+                    "A computer virus that hides inside a physical CPU chip": "Incorrect. That refers to firmware/hardware implants, not human insider threats.",
+                    "An email spam message sent from an external foreign attacker": "Incorrect. That is an external threat.",
+                    "A Wi-Fi router installed inside a closet": "Incorrect. Hardware placement has nothing to do with insider threat definitions."
+                },
+                "key_term": "Insider Threat: A malicious threat to an organization that comes from people within the organization, such as employees, former employees, or contractors."
+            }
+        },
+        {
+            "id": "m5_e_13",
+            "raw_id": 13,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Attack vectors",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is an 'Attack Vector' in cybersecurity?",
+            "type": "single",
+            "options": [
+                "The path, method, or route an attacker uses to gain unauthorized access to a computer network or system",
+                "The physical angle at which you position your computer monitor",
+                "The mathematics used to calculate airplane flight paths",
+                "The brand name of an antivirus firewall software"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of an attack vector.",
+                "why_correct": "An attack vector is the specific pathway or mechanism by which an adversary infects or breaches a target (e.g., phishing email, unpatched software exploit, malicious USB drive, credential stuffing).",
+                "options_breakdown": {
+                    "The path, method, or route an attacker uses to gain unauthorized access to a computer network or system": "Correct. Attack vectors describe the entryway or exploit vehicle utilized by the adversary.",
+                    "The physical angle at which you position your computer monitor": "Incorrect. Monitor ergonomics are not cybersecurity attack vectors.",
+                    "The mathematics used to calculate airplane flight paths": "Incorrect. In cybersecurity, 'vector' describes attack ingress paths.",
+                    "The brand name of an antivirus firewall software": "Incorrect. It is a technical threat concept, not a software commercial brand."
+                },
+                "key_term": "Attack Vector: A specific path, method, or scenario used by a threat actor to gain unauthorized access to a network or computer."
+            }
+        },
+        {
+            "id": "m5_e_14",
+            "raw_id": 14,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "An employee receives a phone call from someone claiming to be from the company's IT helpdesk, frantically asking the employee to confirm their password to fix an urgent email error.",
+            "question": "What voice-based social engineering technique is being executed?",
+            "type": "single",
+            "options": [
+                "Vishing (Voice Phishing)",
+                "Smishing",
+                "Shoulder Surfing",
+                "Dumping"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of voice-based social engineering (vishing).",
+                "why_correct": "Vishing (Voice Phishing) uses phone calls and voice manipulation (often spoofing caller ID) to trick victims into disclosing credentials, financial information, or granting remote access.",
+                "options_breakdown": {
+                    "Vishing (Voice Phishing)": "Correct. Phone-based phishing scams are known as Vishing.",
+                    "Smishing": "Incorrect. Smishing is phishing conducted via SMS text messages.",
+                    "Shoulder Surfing": "Incorrect. Shoulder surfing is peering over someone's shoulder to watch them type passwords.",
+                    "Dumping": "Incorrect. Dumpster diving involves sifting through physical trash for sensitive paper records."
+                },
+                "key_term": "Vishing: The fraudulent practice of making phone calls or leaving voice messages purporting to be from reputable companies in order to induce individuals to reveal personal information."
+            }
+        },
+        {
+            "id": "m5_e_15",
+            "raw_id": 15,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "A user receives an SMS text message on their mobile phone saying: 'FedEx: Your package delivery failed. Click http://bit.ly/fake99 to pay $1.50 redelivery fee.'",
+            "question": "What SMS-based social engineering technique is this?",
+            "type": "single",
+            "options": [
+                "Smishing (SMS Phishing)",
+                "Vishing",
+                "Whaling",
+                "Drive-by Download"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognition of SMS-based phishing (smishing).",
+                "why_correct": "Smishing (SMS Phishing) delivers deceptive links or urgent requests via SMS text messages, capitalizing on the high open rates of mobile messaging.",
+                "options_breakdown": {
+                    "Smishing (SMS Phishing)": "Correct. Phishing via SMS text messaging is called Smishing.",
+                    "Vishing": "Incorrect. Vishing uses voice phone calls.",
+                    "Whaling": "Incorrect. Whaling specifically targets high-ranking executives (C-suite).",
+                    "Drive-by Download": "Incorrect. Drive-by downloads occur automatically when visiting malicious websites."
+                },
+                "key_term": "Smishing: A form of phishing in which an attacker uses a mobile text message to lure victims into calling back a fraudulent phone number or visiting a malicious website."
+            }
+        },
+        {
+            "id": "m5_e_16",
+            "raw_id": 16,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which type of malware records every keystroke typed by a user on their keyboard and silently sends the logs to an attacker to harvest passwords and credit cards?",
+            "type": "single",
+            "options": [
+                "Keylogger",
+                "Adware",
+                "Screen Dimmer",
+                "Disk Defragmenter"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests identification of keystroke logging malware.",
+                "why_correct": "A Keylogger silently records keyboard input (including passwords, usernames, chat messages, and credit card numbers) and exfiltrates the captured keystrokes to an attacker.",
+                "options_breakdown": {
+                    "Keylogger": "Correct. Keyloggers intercept and record user keystrokes for credential theft.",
+                    "Adware": "Incorrect. Adware inundates the user with unsolicited popup advertisements.",
+                    "Screen Dimmer": "Incorrect. Screen dimmers are accessibility tools to reduce monitor glare.",
+                    "Disk Defragmenter": "Incorrect. A defragmenter reorganizes disk clusters for storage efficiency."
+                },
+                "key_term": "Keylogger: Surveillance software (or hardware) designed to record and log every keystroke made on a computer keyboard."
+            }
+        },
+        {
+            "id": "m5_e_17",
+            "raw_id": 17,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which type of malware secretly hijacks a victim's computer CPU and GPU resources to mine Bitcoin or Monero without the user's consent?",
+            "type": "single",
+            "options": [
+                "Cryptojacking / Cryptominer malware",
+                "Ransomware",
+                "Logic Bomb",
+                "Rootkit"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests recognition of unauthorized cryptocurrency mining malware (cryptojacking).",
+                "why_correct": "Cryptojacking malware covertly uses the victim's processing power and electricity to mine cryptocurrencies, causing high CPU usage, slow performance, and elevated electricity bills.",
+                "options_breakdown": {
+                    "Cryptojacking / Cryptominer malware": "Correct. Cryptojacking stealthily consumes processor cycles for cryptocurrency mining.",
+                    "Ransomware": "Incorrect. Ransomware encrypts files and demands payment loudly, rather than mining stealthily.",
+                    "Logic Bomb": "Incorrect. A logic bomb is dormant code waiting for a specific trigger condition.",
+                    "Rootkit": "Incorrect. A rootkit modifies the operating system kernel to conceal malware presence."
+                },
+                "key_term": "Cryptojacking: The unauthorized use of a person's or organization's computing device to mine cryptocurrency."
+            }
+        },
+        {
+            "id": "m5_e_18",
+            "raw_id": 18,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Phishing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Whaling' in the context of phishing attacks?",
+            "type": "single",
+            "options": [
+                "A high-level spear phishing attack targeted specifically at high-profile executives such as CEOs, CFOs, and board members",
+                "An attack designed to infect computers located on commercial fishing boats",
+                "An attack that only targets very large databases exceeding 100 Terabytes",
+                "A DoS attack that fills an office with water"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about executive-targeted phishing (whaling).",
+                "why_correct": "Whaling is a spear phishing attack directed specifically at the 'big fish'\u2014CEOs, CFOs, and other senior corporate leaders with access to high-value wire transfers and sensitive company secrets.",
+                "options_breakdown": {
+                    "A high-level spear phishing attack targeted specifically at high-profile executives such as CEOs, CFOs, and board members": "Correct. Whaling targets senior executive leadership for maximum financial or espionage payoff.",
+                    "An attack designed to infect computers located on commercial fishing boats": "Incorrect. Whaling is a metaphor for hunting corporate executive targets.",
+                    "An attack that only targets very large databases exceeding 100 Terabytes": "Incorrect. Whaling targets human corporate leaders, not storage arrays.",
+                    "A DoS attack that fills an office with water": "Incorrect. Cyber attacks operate in the digital domain."
+                },
+                "key_term": "Whaling: A specific type of spear phishing attack that targets high-profile individuals like senior executives, celebrities, or government officials."
+            }
+        },
+        {
+            "id": "m5_e_19",
+            "raw_id": 19,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Botnet' in cybersecurity?",
+            "type": "single",
+            "options": [
+                "A network of infected, compromised computers (bots or zombies) controlled remotely by a threat actor (the botmaster) via a Command and Control (C2) server",
+                "A team of human computer programmers working at Microsoft",
+                "A type of robotic arm used in automobile manufacturing factories",
+                "A collection of fiber optic cables laid across the Atlantic Ocean"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of a botnet.",
+                "why_correct": "A botnet is a fleet of internet-connected devices (PCs, servers, IoT devices) infected with malware that execute coordinated attacks (like DDoS, spam relays, or credential stuffing) at the command of a botmaster.",
+                "options_breakdown": {
+                    "A network of infected, compromised computers (bots or zombies) controlled remotely by a threat actor (the botmaster) via a Command and Control (C2) server": "Correct. Botnets coordinate thousands of hijacked hosts for large-scale cyber attacks.",
+                    "A team of human computer programmers working at Microsoft": "Incorrect. A botnet consists of compromised computers, not corporate software developers.",
+                    "A type of robotic arm used in automobile manufacturing factories": "Incorrect. That is an industrial factory robot, not a cyber botnet.",
+                    "A collection of fiber optic cables laid across the Atlantic Ocean": "Incorrect. Those are physical undersea telecommunications cables."
+                },
+                "key_term": "Botnet: A number of Internet-connected devices, each running one or more bots, under the control of a common attacker."
+            }
+        },
+        {
+            "id": "m5_e_20",
+            "raw_id": 20,
+            "module_id": 5,
+            "difficulty": "easy",
+            "topic": "Social engineering",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following psychological triggers are commonly exploited by social engineers in phishing and scam campaigns? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Urgency (e.g., 'Your account will be terminated in 24 hours!')",
+                "Fear / Intimidation (e.g., 'The IRS will arrest you unless you pay immediately')",
+                "Authority (e.g., pretending to be the CEO or police)",
+                "Mathematical calculus (e.g., asking victims to solve multivariable differential equations)"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about the classic psychological persuasion levers exploited in social engineering.",
+                "why_correct": "Social engineers exploit basic human emotions: Urgency, Fear, Authority, Curiosity, and Greed to bypass logical thinking. They do not rely on advanced calculus problems.",
+                "options_breakdown": {
+                    "Urgency (e.g., 'Your account will be terminated in 24 hours!')": "Correct. Urgency forces victims to act quickly without thinking critically.",
+                    "Fear / Intimidation (e.g., 'The IRS will arrest you unless you pay immediately')": "Correct. Fear of negative consequences induces compliance.",
+                    "Authority (e.g., pretending to be the CEO or police)": "Correct. People naturally comply with perceived authority figures.",
+                    "Mathematical calculus (e.g., asking victims to solve multivariable differential equations)": "Incorrect. Complex math discourages engagement and has no psychological coercive power in social engineering."
+                },
+                "key_term": "Psychological Triggers: Emotional levers (fear, urgency, greed, authority) manipulated by attackers to bypass logical decision-making."
+            }
+        },
+        {
+            "id": "m5_i_21",
+            "raw_id": 21,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Brute-force attacks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Credential Stuffing' and how does it exploit human behavior?",
+            "type": "single",
+            "options": [
+                "Automated attacks that test username and password pairs stolen from previous data breaches against multiple unrelated websites, exploiting users who reuse the same password across accounts",
+                "Packing physical paper passwords into a USB drive",
+                "Guessing completely random strings of numbers on a calculator",
+                "Installing extra RAM chips into a web server"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about credential stuffing mechanics.",
+                "why_correct": "Users frequently reuse identical passwords across different accounts. When one site suffers a breach, attackers load the leaked credentials into automated bots and test them across banking, retail, and email portals.",
+                "options_breakdown": {
+                    "Automated attacks that test username and password pairs stolen from previous data breaches against multiple unrelated websites, exploiting users who reuse the same password across accounts": "Correct. Credential stuffing exploits widespread password reuse across disparate services.",
+                    "Packing physical paper passwords into a USB drive": "Incorrect. Credential stuffing is an automated software authentication attack.",
+                    "Guessing completely random strings of numbers on a calculator": "Incorrect. Credential stuffing uses real leaked credential pairs, not random numbers.",
+                    "Installing extra RAM chips into a web server": "Incorrect. Hardware upgrades are not cyber attacks."
+                },
+                "key_term": "Credential Stuffing: An automated attack where a list of compromised user credentials is used to breach into a system on the assumption that users reuse passwords."
+            }
+        },
+        {
+            "id": "m5_i_22",
+            "raw_id": 22,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Rootkit' and why is it exceptionally difficult to detect and remove?",
+            "type": "single",
+            "options": [
+                "It embeds itself deep within the operating system kernel or bootloader, modifying system calls to conceal its processes, files, and network connections from standard antivirus tools",
+                "It physically glues the computer to the office desk",
+                "It replaces the desktop background with pictures of tree roots",
+                "It only attacks computers in the southern hemisphere"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of rootkits and kernel-level subversion.",
+                "why_correct": "Rootkits operate at Ring 0 (Kernel mode) or hypervisor/firmware levels. Because they control the OS kernel, they can intercept system calls (like 'ps' or 'ls') and hide their own presence from antivirus and administrators.",
+                "options_breakdown": {
+                    "It embeds itself deep within the operating system kernel or bootloader, modifying system calls to conceal its processes, files, and network connections from standard antivirus tools": "Correct. Rootkits subvert the kernel to achieve complete stealth and persistence.",
+                    "It physically glues the computer to the office desk": "Incorrect. Rootkits are software implants, not physical glue.",
+                    "It replaces the desktop background with pictures of tree roots": "Incorrect. Rootkits prioritize complete invisibility, not visual jokes.",
+                    "It only attacks computers in the southern hemisphere": "Incorrect. Cyber threats have no geographic hemisphere restrictions."
+                },
+                "key_term": "Rootkit: A clandestine computer program designed to provide continued privileged access to a computer while actively hiding its presence."
+            }
+        },
+        {
+            "id": "m5_i_23",
+            "raw_id": 23,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "An attacker compromises a legitimate, popular watercooler discussion forum frequently visited by employees of a targeted defense contractor, injecting a browser exploit that infects visitors.",
+            "question": "What specialized attack vector has been executed?",
+            "type": "single",
+            "options": [
+                "Watering Hole Attack",
+                "Evil Twin Wi-Fi Attack",
+                "Buffer Overflow",
+                "SIM Swapping"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognition of a Watering Hole attack.",
+                "why_correct": "In a Watering Hole attack, instead of attacking the hardened company directly, the adversary identifies and infects a third-party website known to be regularly visited by target employees (like a predator waiting at a watering hole).",
+                "options_breakdown": {
+                    "Watering Hole Attack": "Correct. The attacker compromises a trusted third-party website frequented by the target demographic.",
+                    "Evil Twin Wi-Fi Attack": "Incorrect. An Evil Twin is a rogue Wi-Fi hotspot mimicking a legitimate SSID.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a binary software vulnerability.",
+                    "SIM Swapping": "Incorrect. SIM swapping tricks cellular carriers into porting a victim's phone number to an attacker's SIM."
+                },
+                "key_term": "Watering Hole Attack: A computer attack strategy in which an attacker guesses or observes which websites an organization often uses and infects one or more of them with malware."
+            }
+        },
+        {
+            "id": "m5_i_24",
+            "raw_id": 24,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Malware",
+            "is_scenario": true,
+            "scenario": "An employee disgruntled over being passed for a promotion writes a hidden script on the corporate server scheduled to delete the entire customer database if the employee's name is removed from the payroll system.",
+            "question": "What specific type of malicious software code is this?",
+            "type": "single",
+            "options": [
+                "Logic Bomb",
+                "Polymorphic Worm",
+                "Adware",
+                "Spyware"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identification of a logic bomb.",
+                "why_correct": "A Logic Bomb is malicious code intentionally inserted into a software system that remains dormant until a specific logical trigger condition occurs (e.g., date, account deletion, failed login count).",
+                "options_breakdown": {
+                    "Logic Bomb": "Correct. Logic bombs lie dormant until triggered by a specific event or condition.",
+                    "Polymorphic Worm": "Incorrect. Polymorphic worms actively mutate their code while spreading across networks.",
+                    "Adware": "Incorrect. Adware displays unsolicited marketing advertisements.",
+                    "Spyware": "Incorrect. Spyware covertly monitors user behavior and steals information."
+                },
+                "key_term": "Logic Bomb: A piece of code intentionally inserted into a software system that will set off a malicious function when specified conditions are met."
+            }
+        },
+        {
+            "id": "m5_i_25",
+            "raw_id": 25,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "An attacker leaves five USB flash drives labeled 'Confidential: Executive Salary & Bonus Details' scattered on tables in the parking lot and lobby of a corporate bank.",
+            "question": "What physical social engineering technique is being attempted?",
+            "type": "single",
+            "options": [
+                "Baiting",
+                "Tailgating",
+                "Dumpster Diving",
+                "Shoulder Surfing"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognition of the 'Baiting' social engineering technique.",
+                "why_correct": "Baiting relies on human curiosity or greed. The attacker leaves malware-laden media (like flash drives) in public areas, anticipating that an employee will plug it into their work computer to inspect the juicy contents.",
+                "options_breakdown": {
+                    "Baiting": "Correct. Leaving tempting physical media for curious victims to pick up and plug in is classic Baiting.",
+                    "Tailgating": "Incorrect. Tailgating is physically following someone through a secured doorway.",
+                    "Dumpster Diving": "Incorrect. Dumpster diving is searching through garbage for discarded paperwork.",
+                    "Shoulder Surfing": "Incorrect. Shoulder surfing is watching someone type passwords over their shoulder."
+                },
+                "key_term": "Baiting: An attack that uses a false promise to pique a victim's greed or curiosity, such as leaving an infected USB drive in a public place."
+            }
+        },
+        {
+            "id": "m5_i_26",
+            "raw_id": 26,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Drive-By Download' on the web?",
+            "type": "single",
+            "options": [
+                "Unintentional download and execution of malicious code that occurs automatically simply by visiting an infected webpage, without the user ever clicking 'Download'",
+                "Downloading files while driving a car at high speeds",
+                "A delivery service that throws hard drives out of a moving vehicle",
+                "Downloading files using satellite internet on an airplane"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of drive-by downloads exploiting browser vulnerabilities.",
+                "why_correct": "A drive-by download silently exploits unpatched vulnerabilities in the victim's web browser, browser extensions, or operating system upon page load, installing malware with zero user clicks or confirmation prompts.",
+                "options_breakdown": {
+                    "Unintentional download and execution of malicious code that occurs automatically simply by visiting an infected webpage, without the user ever clicking 'Download'": "Correct. Drive-by downloads silently exploit browser flaws without explicit user confirmation.",
+                    "Downloading files while driving a car at high speeds": "Incorrect. The term is a cybersecurity metaphor, not driving a car.",
+                    "A delivery service that throws hard drives out of a moving vehicle": "Incorrect. That describes physical hardware delivery.",
+                    "Downloading files using satellite internet on an airplane": "Incorrect. In-flight Wi-Fi is legitimate commercial connectivity."
+                },
+                "key_term": "Drive-By Download: The unintentional download of a virus or malicious software onto your computer or mobile device without your consent or knowledge."
+            }
+        },
+        {
+            "id": "m5_i_27",
+            "raw_id": 27,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "DoS and DDoS attacks",
+            "is_scenario": true,
+            "scenario": "An attacker sends spoofed UDP DNS or NTP queries to thousands of open resolvers with the source IP forged to match the victim's web server IP. The small 50-byte request elicits a massive 3,000-byte response reflected straight at the victim.",
+            "question": "What attack technique is being executed?",
+            "type": "single",
+            "options": [
+                "Amplification / Reflection DDoS Attack",
+                "SYN Flood Attack",
+                "SQL Injection",
+                "ARP Cache Poisoning"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of amplification and reflection DDoS attacks.",
+                "why_correct": "In Amplification/Reflection attacks, the attacker exploits stateless UDP protocols (DNS, NTP, Memcached). A small spoofed request generates a vastly larger response that is reflected onto the victim, multiplying the attacker's bandwidth 50x to 100x.",
+                "options_breakdown": {
+                    "Amplification / Reflection DDoS Attack": "Correct. Reflection and amplification multiply attack bandwidth by reflecting large responses to a forged victim IP.",
+                    "SYN Flood Attack": "Incorrect. SYN floods exploit TCP connection state memory, not UDP reflection amplification.",
+                    "SQL Injection": "Incorrect. SQL injection targets application databases, not network bandwidth saturation.",
+                    "ARP Cache Poisoning": "Incorrect. ARP poisoning targets local Layer 2 switch forwarding tables."
+                },
+                "key_term": "Amplification Attack: A form of DDoS attack where the attacker leverages vulnerable third-party servers to amplify the volume of traffic directed at the victim."
+            }
+        },
+        {
+            "id": "m5_i_28",
+            "raw_id": 28,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "A fraudster contacts a mobile phone carrier's customer service agent, impersonating a victim and claiming their phone was stolen. The fraudster convinces the agent to transfer the victim's phone number to a new SIM card under the fraudster's control, intercepting the victim's SMS two-factor authentication codes.",
+            "question": "What attack was carried out?",
+            "type": "single",
+            "options": [
+                "SIM Swapping (SIM Jacking)",
+                "Vishing alone without fraud",
+                "Evil Twin Wi-Fi",
+                "Man-in-the-Middle"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of SIM swapping attacks.",
+                "why_correct": "SIM Swapping social engineers carrier support into porting the victim's phone number. Once the phone number moves to the attacker's SIM, incoming calls and SMS 2FA codes route to the attacker, allowing bank account takeovers.",
+                "options_breakdown": {
+                    "SIM Swapping (SIM Jacking)": "Correct. SIM swapping hijacks the victim's mobile number to intercept SMS 2FA codes and reset passwords.",
+                    "Vishing alone without fraud": "Incorrect. While phone calls were involved, the specific technique of porting the phone line is SIM Swapping.",
+                    "Evil Twin Wi-Fi": "Incorrect. Evil Twin attacks target local Wi-Fi networks.",
+                    "Man-in-the-Middle": "Incorrect. SIM swapping diverts endpoint mobile cellular routing, not inline network packet interception."
+                },
+                "key_term": "SIM Swapping: A type of account takeover fraud that generally targets a weakness in two-factor authentication where the second step is an SMS text or call."
+            }
+        },
+        {
+            "id": "m5_i_29",
+            "raw_id": 29,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Downloader and a Dropper in modular malware architecture?",
+            "type": "single",
+            "options": [
+                "A Dropper contains the secondary malware payload embedded inside its own binary; a Downloader fetches the payload from a remote Command and Control (C2) server over the internet",
+                "A Downloader only works on Windows; a Dropper only works on macOS",
+                "A Dropper is hardware; a Downloader is software",
+                "There is zero difference between them"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests modular malware engineering terminology.",
+                "why_correct": "A Dropper carries the malicious payload self-contained inside its own code and unpacks/drops it to disk. A Downloader is a lightweight stager that contacts a remote C2 server to download and execute secondary payloads.",
+                "options_breakdown": {
+                    "A Dropper contains the secondary malware payload embedded inside its own binary; a Downloader fetches the payload from a remote Command and Control (C2) server over the internet": "Correct. Droppers carry embedded payloads; downloaders retrieve payloads dynamically over the network.",
+                    "A Downloader only works on Windows; a Dropper only works on macOS": "Incorrect. Both architectures exist across all operating systems.",
+                    "A Dropper is hardware; a Downloader is software": "Incorrect. Both are software malware components.",
+                    "There is zero difference between them": "Incorrect. They have distinct staging and deployment mechanisms."
+                },
+                "key_term": "Dropper vs Downloader: A dropper extracts an embedded payload from within itself; a downloader contacts an external server to fetch the payload."
+            }
+        },
+        {
+            "id": "m5_i_30",
+            "raw_id": 30,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Insider threats",
+            "is_scenario": true,
+            "scenario": "A security analyst reviews user behavioral analytics (UBA) and notices an employee in marketing who recently gave two weeks' notice is downloading 50 Gigabytes of engineering source code at 2:00 AM.",
+            "question": "What category of insider threat activity is indicated?",
+            "type": "single",
+            "options": [
+                "Malicious Data Exfiltration / Intellectual Property Theft",
+                "Accidental human error",
+                "A legitimate operating system update",
+                "A distributed denial of service attack"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests detecting insider threat data exfiltration indicators.",
+                "why_correct": "Departing employees accessing sensitive data outside their job scope during off-hours is a primary indicator of intellectual property theft for espionage or taking trade secrets to a competitor.",
+                "options_breakdown": {
+                    "Malicious Data Exfiltration / Intellectual Property Theft": "Correct. Off-hours bulk downloading of intellectual property by departing staff indicates deliberate data theft.",
+                    "Accidental human error": "Incorrect. Downloading 50 GB of source code at 2:00 AM requires deliberate, planned actions.",
+                    "A legitimate operating system update": "Incorrect. Operating systems do not download company proprietary engineering source code.",
+                    "A distributed denial of service attack": "Incorrect. DDoS floods incoming traffic; it does not download internal files to an authenticated user account."
+                },
+                "key_term": "Data Exfiltration: The unauthorized copying, transfer, or retrieval of data from a computer or server."
+            }
+        },
+        {
+            "id": "m5_i_31",
+            "raw_id": 31,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "An attacker purchases an expired domain name that was formerly used by a company for employee email notifications, setting up a mail server to collect sensitive emails sent by third parties who still have the old address cached.",
+            "question": "What attack vector is this?",
+            "type": "single",
+            "options": [
+                "Domain Hijacking / Expired Domain Exploitation",
+                "SQL Injection",
+                "Hardware Keylogging",
+                "Cross-Site Request Forgery"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests domain lifecycle risks.",
+                "why_correct": "When organizations neglect to renew expired domains, attackers register them to capture lingering email traffic, redirect brand traffic, or host malicious phishing portals.",
+                "options_breakdown": {
+                    "Domain Hijacking / Expired Domain Exploitation": "Correct. Exploiting expired or neglected domains intercepts misdirected traffic and legitimate emails.",
+                    "SQL Injection": "Incorrect. SQL injection targets application databases.",
+                    "Hardware Keylogging": "Incorrect. Hardware keyloggers physically attach to computer cables.",
+                    "Cross-Site Request Forgery": "Incorrect. CSRF tricks authenticated browsers into submitting unauthorized web requests."
+                },
+                "key_term": "Domain Exploitation: The practice of registering abandoned or expired corporate domains to intercept sensitive communications or execute phishing."
+            }
+        },
+        {
+            "id": "m5_i_32",
+            "raw_id": 32,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Brute-force attacks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Password Spraying' attack and why is it specifically designed to bypass account lockout thresholds?",
+            "type": "single",
+            "options": [
+                "The attacker tries one or two common passwords (e.g., 'Winter2026!') across thousands of different user accounts, avoiding triggering account lockouts on any single account",
+                "The attacker spray-paints the server rack with graffiti",
+                "The attacker types passwords into a water gun and sprays the computer",
+                "The attacker resets all user passwords simultaneously using root privileges"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about password spraying and how it evades lockout policies.",
+                "why_correct": "Standard brute-force attacks try thousands of passwords against one account, quickly triggering an account lockout (e.g., locked after 5 failed tries). Password spraying flips the matrix: it tries one common password across thousands of accounts, staying below the lockout threshold per account.",
+                "options_breakdown": {
+                    "The attacker tries one or two common passwords (e.g., 'Winter2026!') across thousands of different user accounts, avoiding triggering account lockouts on any single account": "Correct. Password spraying stays under account lockout thresholds by testing one password across many usernames.",
+                    "The attacker spray-paints the server rack with graffiti": "Incorrect. That is physical vandalism.",
+                    "The attacker types passwords into a water gun and sprays the computer": "Incorrect. This is a joke, not a cyber attack.",
+                    "The attacker resets all user passwords simultaneously using root privileges": "Incorrect. Password spraying is an unauthorized credential guessing attack, not an administrative reset."
+                },
+                "key_term": "Password Spraying: An attack that attempts to access a large number of accounts (usernames) with a small number of commonly used passwords."
+            }
+        },
+        {
+            "id": "m5_i_33",
+            "raw_id": 33,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "An adversary compromises the build server of a trusted commercial accounting software vendor, injecting a backdoor into the vendor's official signed software update distributed to 10,000 corporate customers.",
+            "question": "What devastating attack vector has been demonstrated (as seen in the SolarWinds incident)?",
+            "type": "single",
+            "options": [
+                "Software Supply Chain Attack",
+                "Brute-force dictionary attack",
+                "Local Wi-Fi jamming",
+                "Physical tailgating"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of software supply chain attacks (e.g., SolarWinds, NotPetya).",
+                "why_correct": "In a Supply Chain Attack, adversaries target third-party software vendors, inserting malicious code into official software builds or updates that downstream customers implicitly trust and install.",
+                "options_breakdown": {
+                    "Software Supply Chain Attack": "Correct. Compromising software vendors to infect downstream clients is a software supply chain attack.",
+                    "Brute-force dictionary attack": "Incorrect. The breach occurred via poisoned vendor software updates, not password guessing.",
+                    "Local Wi-Fi jamming": "Incorrect. Radio jamming is local RF disruption.",
+                    "Physical tailgating": "Incorrect. Tailgating is physically walking through doors behind someone."
+                },
+                "key_term": "Supply Chain Attack: A cyber-attack that seeks to damage an organization by targeting less-secure elements in the supply network."
+            }
+        },
+        {
+            "id": "m5_i_34",
+            "raw_id": 34,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are common mechanisms malware uses to achieve 'Persistence' on a Windows computer so it survives system reboots? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Adding entries to the Windows Registry Run keys (HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run)",
+                "Creating a Windows Scheduled Task (Task Scheduler)",
+                "Installing a malicious Windows Service",
+                "Changing the desktop display resolution from 1080p to 720p"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about Windows malware persistence mechanisms.",
+                "why_correct": "Malware maintains persistence across reboots via Registry Run keys, Scheduled Tasks, Windows Services, WMI event subscriptions, or Startup folders. Changing display resolution has no persistence role.",
+                "options_breakdown": {
+                    "Adding entries to the Windows Registry Run keys (HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run)": "Correct. Registry Run keys execute automatically upon user login.",
+                    "Creating a Windows Scheduled Task (Task Scheduler)": "Correct. Scheduled tasks trigger execution at boot or timed intervals.",
+                    "Installing a malicious Windows Service": "Correct. Windows Services run continuously in the background under system privileges.",
+                    "Changing the desktop display resolution from 1080p to 720p": "Incorrect. Changing display resolution does not trigger program persistence."
+                },
+                "key_term": "Persistence: Techniques that adversaries use to keep access to systems across restarts, changed credentials, and other interruptions."
+            }
+        },
+        {
+            "id": "m5_i_35",
+            "raw_id": 35,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "A cybercriminal calls a corporate finance department claiming to be a vendor CEO, providing forged invoices and urgently requesting that wire transfer banking details be updated to a new offshore account.",
+            "question": "What specific type of financial cyber scam is being attempted?",
+            "type": "single",
+            "options": [
+                "Business Email Compromise (BEC) / CEO Fraud",
+                "Distributed Denial of Service",
+                "SYN Flood",
+                "Cryptojacking"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognition of Business Email Compromise (BEC) / CEO Fraud.",
+                "why_correct": "Business Email Compromise (BEC) tricks employees into making unauthorized wire transfers or changing supplier bank accounts, costing businesses billions annually without deploying malware.",
+                "options_breakdown": {
+                    "Business Email Compromise (BEC) / CEO Fraud": "Correct. BEC exploits trust and impersonation to intercept commercial wire transfers.",
+                    "Distributed Denial of Service": "Incorrect. DDoS disrupts network service availability.",
+                    "SYN Flood": "Incorrect. SYN floods target TCP handshake memory queues.",
+                    "Cryptojacking": "Incorrect. Cryptojacking steals computing power to mine cryptocurrency."
+                },
+                "key_term": "Business Email Compromise (BEC): A type of scam targeting companies that conduct wire transfers and have suppliers abroad."
+            }
+        },
+        {
+            "id": "m5_i_36",
+            "raw_id": 36,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Spyware'?",
+            "type": "single",
+            "options": [
+                "Software that covertly monitors and collects user data, browsing habits, credentials, or personal information without consent and transmits it to a third party",
+                "Software that automatically buys spy gadgets online",
+                "Software used exclusively by professional movie directors",
+                "Hardware that cleans computer screens"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of spyware.",
+                "why_correct": "Spyware secretly tracks user activities, keystrokes, browsing history, and personal credentials without knowledge or authorization, transmitting the intelligence to an adversary.",
+                "options_breakdown": {
+                    "Software that covertly monitors and collects user data, browsing habits, credentials, or personal information without consent and transmits it to a third party": "Correct. Spyware conducts covert surveillance on victim endpoints.",
+                    "Software that automatically buys spy gadgets online": "Incorrect. Spyware does not shop for physical gadgets.",
+                    "Software used exclusively by professional movie directors": "Incorrect. Film editing software is commercial media software.",
+                    "Hardware that cleans computer screens": "Incorrect. Spyware is malicious software, not cleaning equipment."
+                },
+                "key_term": "Spyware: Software with malicious behavior that aims to gather information about a person or organization and send it to another entity in a way that violates privacy."
+            }
+        },
+        {
+            "id": "m5_i_37",
+            "raw_id": 37,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Phishing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Clone Phishing'?",
+            "type": "single",
+            "options": [
+                "Taking a legitimate, previously delivered email, cloning its contents, and replacing the authentic link or attachment with a malicious replica before sending it from a spoofed address",
+                "Creating a biological clone of an IT technician",
+                "Cloning a hard drive to a second backup drive",
+                "Creating two identical web browsers on the same desktop"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the clone phishing technique.",
+                "why_correct": "Clone phishing takes a real, legitimate email that the victim already received, clones it, replaces links/attachments with malicious payloads, and re-sends it claiming to be an update or resend from the original sender.",
+                "options_breakdown": {
+                    "Taking a legitimate, previously delivered email, cloning its contents, and replacing the authentic link or attachment with a malicious replica before sending it from a spoofed address": "Correct. Clone phishing weaponizes legitimate email copies to exploit victim familiarity.",
+                    "Creating a biological clone of an IT technician": "Incorrect. Biological cloning is genetics, not a cyber attack.",
+                    "Cloning a hard drive to a second backup drive": "Incorrect. Drive cloning is a standard IT backup procedure.",
+                    "Creating two identical web browsers on the same desktop": "Incorrect. Opening browser instances is standard OS usage."
+                },
+                "key_term": "Clone Phishing: A phishing attack where a legitimate, and previously delivered, email containing an attachment or link has had its content and recipient address(es) taken and used to create an almost identical or cloned email."
+            }
+        },
+        {
+            "id": "m5_i_38",
+            "raw_id": 38,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "DoS and DDoS attacks",
+            "is_scenario": true,
+            "scenario": "An attacker sends thousands of incomplete HTTP requests to an Apache web server, sending single header lines every 10 seconds to keep connection sockets open as long as possible until the server runs out of worker threads.",
+            "question": "What specific application-layer low-and-slow DoS attack is this?",
+            "type": "single",
+            "options": [
+                "Slowloris Attack",
+                "Smurf Attack",
+                "Ping of Death",
+                "TearDrop Attack"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the Slowloris low-and-slow DoS attack.",
+                "why_correct": "Slowloris is a low-bandwidth Layer 7 denial of service attack that opens multiple connections to the target web server and holds them open by sending partial HTTP headers slowly, exhausting the server's thread pool without generating high network traffic.",
+                "options_breakdown": {
+                    "Slowloris Attack": "Correct. Slowloris holds web server connections open with periodic partial headers, starving thread pools.",
+                    "Smurf Attack": "Incorrect. A Smurf attack floods networks with broadcast ICMP echo packets.",
+                    "Ping of Death": "Incorrect. Ping of Death crashes legacy OS stacks with oversized ICMP packets.",
+                    "TearDrop Attack": "Incorrect. TearDrop sends overlapping fragmented packets to crash IP reassembly."
+                },
+                "key_term": "Slowloris: A type of denial of service attack tool which allows a single machine to take down another machine's web server with minimal bandwidth."
+            }
+        },
+        {
+            "id": "m5_i_39",
+            "raw_id": 39,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Attack vectors",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Zero-Day Vulnerability'?",
+            "type": "single",
+            "options": [
+                "A software security flaw that is unknown to the software vendor or public, meaning zero days have passed since a fix or patch was developed",
+                "A vulnerability that only occurs on the first day of every month",
+                "A computer virus that destroys a computer in zero seconds",
+                "A bug that only affects software written in the year 2000"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of a Zero-Day.",
+                "why_correct": "A Zero-Day is a software vulnerability that developers have not yet discovered or patched. 'Zero days' indicates the vendor has had zero days to remediate the flaw, making it extremely dangerous and valuable on exploit markets.",
+                "options_breakdown": {
+                    "A software security flaw that is unknown to the software vendor or public, meaning zero days have passed since a fix or patch was developed": "Correct. Zero-day flaws have no official security patch available.",
+                    "A vulnerability that only occurs on the first day of every month": "Incorrect. Zero-days exist continuously until discovered and patched.",
+                    "A computer virus that destroys a computer in zero seconds": "Incorrect. Zero-day describes vulnerability patch status, not malware speed.",
+                    "A bug that only affects software written in the year 2000": "Incorrect. That describes the Y2K bug."
+                },
+                "key_term": "Zero-Day: A vulnerability in software or hardware that is unknown to those who should be interested in its mitigation (including the vendor)."
+            }
+        },
+        {
+            "id": "m5_i_40",
+            "raw_id": 40,
+            "module_id": 5,
+            "difficulty": "intermediate",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Scareware'?",
+            "type": "single",
+            "options": [
+                "Malware or deceptive popups that manipulate users into believing their computer is infected with dozens of viruses, pressuring them into buying fake security software",
+                "A computer game designed to frighten players with spooky ghosts",
+                "A horror movie streamed over the Internet",
+                "Software that uninstalls computer games when homework is due"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests recognition of scareware social engineering tactics.",
+                "why_correct": "Scareware inundates victims with alarming fake warnings (e.g., 'Warning: 38 Viruses Found! Your Hard Drive is Corrupting!') to frighten users into purchasing useless or malicious rogue software.",
+                "options_breakdown": {
+                    "Malware or deceptive popups that manipulate users into believing their computer is infected with dozens of viruses, pressuring them into buying fake security software": "Correct. Scareware uses manufactured panic to extort fraudulent software purchases.",
+                    "A computer game designed to frighten players with spooky ghosts": "Incorrect. Video games are entertainment.",
+                    "A horror movie streamed over the Internet": "Incorrect. Streaming media is commercial entertainment.",
+                    "Software that uninstalls computer games when homework is due": "Incorrect. That is parental control software."
+                },
+                "key_term": "Scareware: A form of malicious software that uses social engineering to cause shock, anxiety, or the perception of a threat in order to manipulate users into buying unwanted software."
+            }
+        },
+        {
+            "id": "m5_h_41",
+            "raw_id": 41,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Ransomware",
+            "is_scenario": true,
+            "scenario": "A modern ransomware cartel compromises an enterprise network. Before encrypting the active servers, they silently exfiltrate 2 Terabytes of proprietary customer records and threaten to leak them publicly on a dark web shame blog if the ransom is not paid.",
+            "question": "What modern extortion tactic is this?",
+            "type": "single",
+            "options": [
+                "Double Extortion",
+                "Single Symmetric Encryption",
+                "Buffer Overflow",
+                "Replay Attack"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Double Extortion ransomware tactics.",
+                "why_correct": "Double Extortion pairs encryption with data theft (exfiltration). Even if a victim has clean backups to restore from, the attackers threaten to publish stolen confidential files publicly unless a ransom is paid.",
+                "options_breakdown": {
+                    "Double Extortion": "Correct. Double extortion combines file encryption with public leak threats of stolen data.",
+                    "Single Symmetric Encryption": "Incorrect. That describes basic single-layer encryption without exfiltration extortion.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a memory corruption exploit.",
+                    "Replay Attack": "Incorrect. Replay attacks retransmit captured network credentials."
+                },
+                "key_term": "Double Extortion: A ransomware technique where threat actors not only encrypt a victim's data but also exfiltrate it, threatening to publish it if the ransom is not paid."
+            }
+        },
+        {
+            "id": "m5_h_42",
+            "raw_id": 42,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "An adversary compromises a corporate workstation and executes living-off-the-land techniques using legitimate built-in Windows utilities (like certutil.exe and PowerShell) to download and run malicious payloads without dropping custom compiler tools.",
+            "question": "What are these legitimate operating system binaries repurposed by attackers called?",
+            "type": "single",
+            "options": [
+                "LOLBins (Living Off The Land Binaries)",
+                "Rootkit Drivers",
+                "Hardware Keyloggers",
+                "Firmware ROMs"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of LOLBins in modern threat operations.",
+                "why_correct": "LOLBins (Living Off The Land Binaries) are legitimate, Microsoft-signed binaries built into Windows (e.g., powershell.exe, certutil.exe, mshta.exe, bitsadmin.exe) that attackers repurpose to download payloads, evade defenses, and execute code.",
+                "options_breakdown": {
+                    "LOLBins (Living Off The Land Binaries)": "Correct. LOLBins abuse legitimate trusted operating system binaries to evade detection.",
+                    "Rootkit Drivers": "Incorrect. Rootkit drivers are custom malicious kernel modules.",
+                    "Hardware Keyloggers": "Incorrect. Hardware keyloggers are physical physical interception devices.",
+                    "Firmware ROMs": "Incorrect. Firmware ROMs are physical hardware memory chips."
+                },
+                "key_term": "LOLBins: Non-malicious binaries already installed on an operating system that adversaries use to facilitate malicious activities while blending in with legitimate traffic."
+            }
+        },
+        {
+            "id": "m5_h_43",
+            "raw_id": 43,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between Polymorphic Malware and Metamorphic Malware?",
+            "type": "single",
+            "options": [
+                "Polymorphic malware encrypts its body with a different key each time while keeping its core engine constant; Metamorphic malware completely rewrites and reorders its own code structure on every iteration so its entire binary appearance changes",
+                "Polymorphic malware attacks phones; Metamorphic malware attacks refrigerators",
+                "Polymorphic malware is written in Python; Metamorphic malware is written in HTML",
+                "There is zero difference; both are marketing terms"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about advanced code mutation techniques used to evade signature detection.",
+                "why_correct": "Polymorphic malware mutates its decryptor routine and re-encrypts its payload with unique keys per infection, but the core engine remains identical once decrypted. Metamorphic malware completely disassembles, reorders, and rewrites its own instruction code, altering its entire structure.",
+                "options_breakdown": {
+                    "Polymorphic malware encrypts its body with a different key each time while keeping its core engine constant; Metamorphic malware completely rewrites and reorders its own code structure on every iteration so its entire binary appearance changes": "Correct. Polymorphic changes encryption wrappers; metamorphic rewrites its internal code instructions.",
+                    "Polymorphic malware attacks phones; Metamorphic malware attacks refrigerators": "Incorrect. Both target general computer operating systems.",
+                    "Polymorphic malware is written in Python; Metamorphic malware is written in HTML": "Incorrect. Both are written in assembly/C machine code for binary mutation.",
+                    "There is zero difference; both are marketing terms": "Incorrect. They are distinct, highly complex computer science evasion techniques."
+                },
+                "key_term": "Metamorphic Malware: Software that is capable of mutating or completely rewriting its internal code structure with each iteration, making it extremely difficult to detect via traditional signature-based antivirus."
+            }
+        },
+        {
+            "id": "m5_h_44",
+            "raw_id": 44,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "An attacker plugs a malicious USB device into an unattended receptionist workstation. Within 5 seconds, the USB emulates a physical Human Interface Device (keyboard) and injects 1,000 keystrokes per second, opening PowerShell and downloading a backdoor.",
+            "question": "What specific hardware attack tool was deployed (e.g., USB Rubber Ducky)?",
+            "type": "single",
+            "options": [
+                "BadUSB / Keystroke Injection Device",
+                "Physical Hard Drive Degausser",
+                "Wi-Fi Jammer",
+                "Network Tap"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of BadUSB keystroke injection attacks.",
+                "why_correct": "A BadUSB device (like the Hak5 USB Rubber Ducky) reprograms USB controller firmware to emulate a standard USB keyboard. Because operating systems inherently trust keyboards without driver verification, it injects high-speed malicious terminal commands.",
+                "options_breakdown": {
+                    "BadUSB / Keystroke Injection Device": "Correct. BadUSB devices abuse inherent operating system trust in physical keyboards to execute rapid keystroke attacks.",
+                    "Physical Hard Drive Degausser": "Incorrect. A degausser uses powerful magnetic fields to sanitize physical drives.",
+                    "Wi-Fi Jammer": "Incorrect. Wi-Fi jammers emit RF noise to disrupt 2.4/5 GHz wireless frequencies.",
+                    "Network Tap": "Incorrect. A network tap mirrors physical Ethernet cabling traffic for monitoring."
+                },
+                "key_term": "BadUSB: An attack that repurposes a USB device to emulate a keyboard and execute pre-programmed malicious keystrokes with administrative speed."
+            }
+        },
+        {
+            "id": "m5_h_45",
+            "raw_id": 45,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Brute-force attacks",
+            "is_scenario": true,
+            "scenario": "A threat actor gains local administrative access to a Windows domain member workstation. Rather than cracking the NTLM password hash of a domain administrator stored in memory, the attacker injects the raw NTLM hash directly into an authentication protocol session to impersonate the admin across the network.",
+            "question": "What post-exploitation lateral movement technique was executed?",
+            "type": "single",
+            "options": [
+                "Pass-the-Hash (PtH)",
+                "SQL Injection",
+                "Cross-Site Scripting (XSS)",
+                "Buffer Overflow"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of the Pass-the-Hash attack.",
+                "why_correct": "In Windows NTLM authentication, the password itself is never transmitted; only the NTLM hash is used. Therefore, an attacker who steals the hash can 'Pass-the-Hash' directly to other network servers without ever needing to crack the plaintext password.",
+                "options_breakdown": {
+                    "Pass-the-Hash (PtH)": "Correct. Pass-the-Hash authenticates across Windows domains using the stolen NTLM hash directly.",
+                    "SQL Injection": "Incorrect. SQL injection attacks database web forms.",
+                    "Cross-Site Scripting (XSS)": "Incorrect. XSS executes JavaScript in victim web browsers.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow corrupts application memory stacks."
+                },
+                "key_term": "Pass-the-Hash (PtH): An exploit technique in which an attacker steals a hashed user credential and uses it to authenticate to a new session without needing plaintext."
+            }
+        },
+        {
+            "id": "m5_h_46",
+            "raw_id": 46,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Malware",
+            "is_scenario": true,
+            "scenario": "During dynamic malware analysis, an analyst observes that a suspected Trojan terminates immediately upon detecting that the processor execution speed is too slow or that mouse cursor coordinates have not moved for 3 minutes.",
+            "question": "What malware evasion behavior is being exhibited?",
+            "type": "single",
+            "options": [
+                "Anti-Sandbox / Anti-Analysis Evasion",
+                "Hardware Failure",
+                "Screen Saver Activation",
+                "Operating System Defragmentation"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests malware sandbox detection and evasion techniques.",
+                "why_correct": "Malware authors incorporate anti-analysis checks (detecting virtualized hypervisors, checking mouse movement, looking for debuggers, checking uptime). If a sandbox is detected, the malware stays benign to trick analysts into classifying it as harmless.",
+                "options_breakdown": {
+                    "Anti-Sandbox / Anti-Analysis Evasion": "Correct. Malware checks for virtual machines and analyst indicators to conceal malicious activity during sandbox tests.",
+                    "Hardware Failure": "Incorrect. The program is deliberately executing programmed evasion logic.",
+                    "Screen Saver Activation": "Incorrect. The malware is probing environment conditions, not activating screen savers.",
+                    "Operating System Defragmentation": "Incorrect. Defragmentation organizes storage clusters on physical drives."
+                },
+                "key_term": "Anti-Sandbox Evasion: Techniques used by malware to detect if it is being run in an automated virtual analysis environment and alter its behavior accordingly."
+            }
+        },
+        {
+            "id": "m5_h_47",
+            "raw_id": 47,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "DoS and DDoS attacks",
+            "is_scenario": true,
+            "scenario": "An attacker launches an attack against a web application by sending thousands of HTTP GET requests that specify deeply nested, recursive GraphQL queries. The application server's CPU spikes to 100% and crashes while attempting to resolve the exponential relational database queries.",
+            "question": "What type of denial-of-service attack is this?",
+            "type": "single",
+            "options": [
+                "Asymmetric Application-Layer (Layer 7) DoS Attack",
+                "ICMP Flood Attack",
+                "ARP Cache Poisoning",
+                "SYN Flood Attack"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of asymmetric application-layer DoS (algorithmic complexity attacks).",
+                "why_correct": "Layer 7 asymmetric attacks require very little bandwidth from the attacker (a few small nested GraphQL or regex queries) but consume massive computing resources on the server to process, crashing backend databases.",
+                "options_breakdown": {
+                    "Asymmetric Application-Layer (Layer 7) DoS Attack": "Correct. A tiny client payload forces massive server-side computational exhaustion.",
+                    "ICMP Flood Attack": "Incorrect. ICMP floods saturate Layer 3 network links with ping requests.",
+                    "ARP Cache Poisoning": "Incorrect. ARP poisoning corrupts Layer 2 MAC tables.",
+                    "SYN Flood Attack": "Incorrect. SYN floods exhaust Layer 4 half-open TCP connection tables."
+                },
+                "key_term": "Application-Layer DoS: A denial of service attack that targets specific computational weaknesses in applications (like regex or nested queries) rather than saturating bandwidth."
+            }
+        },
+        {
+            "id": "m5_h_48",
+            "raw_id": 48,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "A penetration tester exploits an Active Directory environment by requesting Kerberos Service Principal Name (SPN) tickets for service accounts, extracting the encrypted ticket granting service (TGS) tickets from memory, and cracking them offline on a GPU cluster.",
+            "question": "What classic Active Directory attack technique is being executed?",
+            "type": "single",
+            "options": [
+                "Kerberoasting",
+                "Pass-the-Ticket",
+                "Golden Ticket",
+                "AS-REP Roasting"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the Kerberoasting attack in Windows Active Directory.",
+                "why_correct": "Kerberoasting allows any authenticated domain user to request Kerberos TGS tickets for services with registered SPNs. Because the ticket is encrypted with the service account's password hash, the attacker can extract it and crack the password offline without generating network noise.",
+                "options_breakdown": {
+                    "Kerberoasting": "Correct. Kerberoasting requests and cracks Kerberos TGS tickets offline to compromise service account credentials.",
+                    "Pass-the-Ticket": "Incorrect. Pass-the-Ticket reuses a stolen ticket directly without cracking.",
+                    "Golden Ticket": "Incorrect. A Golden Ticket forges a Kerberos TGT using the compromised krbtgt domain key.",
+                    "AS-REP Roasting": "Incorrect. AS-REP Roasting targets user accounts that do not require Kerberos pre-authentication."
+                },
+                "key_term": "Kerberoasting: A post-exploitation technique used to extract Kerberos TGS ticket hashes for service accounts to crack passwords offline."
+            }
+        },
+        {
+            "id": "m5_h_49",
+            "raw_id": 49,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Phishing",
+            "is_scenario": true,
+            "scenario": "An adversary compromises the corporate Microsoft 365 tenant of an executive and configures hidden mailbox inbox rules that automatically forward all emails containing keywords like 'wire', 'invoice', and 'payment' to an external anonymous address.",
+            "question": "What email threat technique is this?",
+            "type": "single",
+            "options": [
+                "Automated Email Exfiltration / Mailbox Forwarding Rule Abuse",
+                "Denial of Service",
+                "SQL Injection",
+                "SYN Flooding"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests detecting post-compromise email forwarding persistence.",
+                "why_correct": "Once an attacker breaches a cloud mailbox via phishing or credential stuffing, they establish forwarding rules to maintain covert persistence and intercept financial transactions even if the user changes their password.",
+                "options_breakdown": {
+                    "Automated Email Exfiltration / Mailbox Forwarding Rule Abuse": "Correct. Attackers manipulate mailbox rules to silently exfiltrate sensitive messages.",
+                    "Denial of Service": "Incorrect. The attacker wants the mailbox functioning normally so transactions continue.",
+                    "SQL Injection": "Incorrect. This manipulates cloud email inbox forwarding rules, not database queries.",
+                    "SYN Flooding": "Incorrect. SYN flooding is a network transport attack."
+                },
+                "key_term": "Mailbox Rule Abuse: A persistence and exfiltration tactic where an adversary creates forwarding or deletion rules within an email client."
+            }
+        },
+        {
+            "id": "m5_h_50",
+            "raw_id": 50,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "An attacker sends an email alerting employees to an urgent critical software update, providing a link to a website with a typosquatted domain name that looks nearly identical to the legitimate company domain (e.g., 'micros0ft.com' using the numeral '0' instead of the letter 'o').",
+            "question": "What domain deception technique is being employed?",
+            "type": "single",
+            "options": [
+                "Typosquatting (URL Hijacking / Combosquatting)",
+                "DNSSEC Validation",
+                "Border Gateway Protocol routing",
+                "Packet Fragmentation"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognition of typosquatting in phishing campaigns.",
+                "why_correct": "Typosquatting relies on common typing mistakes, homoglyphs (lookalike characters), or subtle misspellings (micros0ft.com) to register deceptive domains that trick victims into believing they are visiting an authentic website.",
+                "options_breakdown": {
+                    "Typosquatting (URL Hijacking / Combosquatting)": "Correct. Typosquatting registers misleading domains targeting spelling or visual confusion.",
+                    "DNSSEC Validation": "Incorrect. DNSSEC provides cryptographic authentication for DNS records.",
+                    "Border Gateway Protocol routing": "Incorrect. BGP routes internet traffic between autonomous systems.",
+                    "Packet Fragmentation": "Incorrect. Packet fragmentation splits large packets to match MTU limits."
+                },
+                "key_term": "Typosquatting: A form of cybersquatting which relies on mistakes such as typographical errors made by Internet users when inputting a website address."
+            }
+        },
+        {
+            "id": "m5_h_51",
+            "raw_id": 51,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Malware",
+            "is_scenario": true,
+            "scenario": "An attacker crafts a sophisticated cyber espionage weapon (such as Stuxnet or Olympic Games) designed to sabotage industrial programmable logic controllers (PLCs) in a uranium enrichment facility.",
+            "question": "Which operational technology architecture separates enterprise IT networks from physical industrial ICS/SCADA control networks?",
+            "type": "single",
+            "options": [
+                "The Purdue Model (ISA-95 Architecture)",
+                "The OSI 7-Layer Model",
+                "The TCP/IP 4-Layer Model",
+                "The Agile Scrum Framework"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests industrial cybersecurity and OT network segmentation.",
+                "why_correct": "The Purdue Model (ISA-95) organizes industrial control systems into strict hierarchical levels (Level 0 physical sensors up to Level 4/5 corporate enterprise), enforcing firewalls and DMZs between business IT and industrial operational technology (OT).",
+                "options_breakdown": {
+                    "The Purdue Model (ISA-95 Architecture)": "Correct. The Purdue Model segments critical industrial OT systems from general IT networks.",
+                    "The OSI 7-Layer Model": "Incorrect. The OSI model standardizes network protocol abstraction, not industrial factory zoning.",
+                    "The TCP/IP 4-Layer Model": "Incorrect. TCP/IP is a network protocol stack, not an industrial facility zoning architecture.",
+                    "The Agile Scrum Framework": "Incorrect. Agile Scrum is a project management methodology for software development."
+                },
+                "key_term": "Purdue Model: A structural model for Industrial Control System (ICS) network segmentation, dividing automation architectures into distinct operational security levels."
+            }
+        },
+        {
+            "id": "m5_h_52",
+            "raw_id": 52,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "A threat actor creates a malicious open-source package named 'collorama' (a deliberate typo of the popular Python package 'colorama') and uploads it to the public PyPI repository. When developers accidentally type 'pip install collorama', their workstations execute an embedded credential stealer.",
+            "question": "What specific supply chain attack vector has occurred?",
+            "type": "single",
+            "options": [
+                "Typosquatting in Public Software Registries",
+                "SQL Injection",
+                "Buffer Overflow",
+                "Replay Attack"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of software registry typosquatting (PyPI/NPM).",
+                "why_correct": "Attackers upload malicious packages with names visually similar to popular open-source libraries to public repositories (PyPI, npm, RubyGems). When developers make a typing error, the malicious package executes during installation.",
+                "options_breakdown": {
+                    "Typosquatting in Public Software Registries": "Correct. Naming malicious packages after popular libraries targets developer typos during package installation.",
+                    "SQL Injection": "Incorrect. SQL injection targets relational databases.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a memory corruption bug.",
+                    "Replay Attack": "Incorrect. Replay attacks reuse captured network tokens."
+                },
+                "key_term": "Package Typosquatting: An attack in which an adversary publishes malicious software packages to public repositories using names confusingly similar to popular legitimate libraries."
+            }
+        },
+        {
+            "id": "m5_h_53",
+            "raw_id": 53,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "DoS and DDoS attacks",
+            "is_scenario": true,
+            "scenario": "An attacker discovers an exposed Memcached server on the Internet with UDP port 11211 enabled. By sending a 15-byte request, the Memcached server returns a massive 750,000-byte response directed at a victim IP.",
+            "question": "What is the approximate amplification factor demonstrated in this extreme DDoS attack?",
+            "type": "single",
+            "options": [
+                "Approximately 50,000x amplification factor",
+                "Exactly 2x amplification factor",
+                "Zero amplification factor",
+                "10x amplification factor"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests quantitative analysis of Memcached amplification attacks.",
+                "why_correct": "Memcached UDP amplification attacks can achieve astronomical amplification factors up to 50,000x: a tiny 15-byte request produces 750 KB of payload traffic (750,000 / 15 = 50,000x), generating terabit-per-second DDoS floods.",
+                "options_breakdown": {
+                    "Approximately 50,000x amplification factor": "Correct. 750,000 bytes divided by 15 bytes yields an amplification factor of 50,000x.",
+                    "Exactly 2x amplification factor": "Incorrect. 2x would only produce 30 bytes.",
+                    "Zero amplification factor": "Incorrect. Zero amplification means response size equals request size.",
+                    "10x amplification factor": "Incorrect. 10x would produce 150 bytes."
+                },
+                "key_term": "Memcached Amplification: A massive distributed denial-of-service attack leveraging misconfigured Memcached UDP servers to achieve amplification factors up to 50,000x."
+            }
+        },
+        {
+            "id": "m5_h_54",
+            "raw_id": 54,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Fileless Malware' attack and how does it evade traditional disk-based antivirus scanners?",
+            "type": "single",
+            "options": [
+                "It executes entirely in volatile system RAM using legitimate operating system tools (like PowerShell or WMI) without writing executable binary files to the physical hard drive",
+                "It operates only when the computer is unplugged from the wall",
+                "It deletes all files on the hard drive before executing",
+                "It only infects computers with solid-state drives"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the mechanics of fileless in-memory malware.",
+                "why_correct": "Fileless malware injects malicious shellcode directly into running memory processes (RAM) or memory-resident scripts, leaving no binary files on disk for traditional signature-based antivirus scanners to detect.",
+                "options_breakdown": {
+                    "It executes entirely in volatile system RAM using legitimate operating system tools (like PowerShell or WMI) without writing executable binary files to the physical hard drive": "Correct. Fileless malware operates strictly in memory to bypass file-based antivirus scans.",
+                    "It operates only when the computer is unplugged from the wall": "Incorrect. Computers must have power to run in-memory malware.",
+                    "It deletes all files on the hard drive before executing": "Incorrect. Fileless malware does not wipe disks; it avoids writing binaries.",
+                    "It only infects computers with solid-state drives": "Incorrect. In-memory execution applies equally across SSD and HDD systems."
+                },
+                "key_term": "Fileless Malware: A type of malicious software that uses legitimate programs to infect a computer without leaving executable files on the system's hard drive."
+            }
+        },
+        {
+            "id": "m5_h_55",
+            "raw_id": 55,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Insider threats",
+            "is_scenario": true,
+            "scenario": "A database administrator with privileged access abuses their authorized credentials to extract 10,000 customer Social Security numbers, writing them to a password-protected zip file and uploading them to personal cloud storage.",
+            "question": "Why are traditional perimeter firewalls completely ineffective at preventing this attack?",
+            "type": "single",
+            "options": [
+                "The administrator already possessed legitimate, authenticated credentials and authorized internal access to the database, so perimeter firewalls saw only authorized traffic",
+                "Firewalls cannot inspect packets on Mondays",
+                "Firewalls only protect against wireless radio signals",
+                "The administrator used a wooden keyboard"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of why perimeter security fails against authorized insider threats.",
+                "why_correct": "Perimeter firewalls filter traffic entering from outside the network. A malicious insider already sits inside the perimeter with valid administrative credentials, rendering boundary firewalls blind to authorized database queries.",
+                "options_breakdown": {
+                    "The administrator already possessed legitimate, authenticated credentials and authorized internal access to the database, so perimeter firewalls saw only authorized traffic": "Correct. Insiders abuse valid privileges from within the perimeter, bypassing boundary defenses.",
+                    "Firewalls cannot inspect packets on Mondays": "Incorrect. Firewalls operate 24/7/365.",
+                    "Firewalls only protect against wireless radio signals": "Incorrect. Firewalls inspect IP network packets across wired and wireless networks.",
+                    "The administrator used a wooden keyboard": "Incorrect. Physical keyboard materials have no relation to packet filtering."
+                },
+                "key_term": "Privileged Insider Abuse: When an authorized individual misuses their legitimate elevated credentials to perform unauthorized actions or steal data."
+            }
+        },
+        {
+            "id": "m5_h_56",
+            "raw_id": 56,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Attack vectors",
+            "is_scenario": true,
+            "scenario": "An adversary compromises a corporate Active Directory forest by using the stolen password hash of the built-in 'krbtgt' service account to forge a Kerberos Ticket Granting Ticket (TGT) valid for 10 years with arbitrary enterprise administrative privileges.",
+            "question": "What devastating Active Directory persistence attack was executed?",
+            "type": "single",
+            "options": [
+                "Golden Ticket Attack",
+                "Silver Ticket Attack",
+                "Pass-the-Hash",
+                "Kerberoasting"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the Golden Ticket attack.",
+                "why_correct": "A Golden Ticket attack uses the compromised password hash of the domain 'krbtgt' account to forge a Kerberos Ticket Granting Ticket (TGT). The attacker can grant themselves any group memberships (e.g., Domain Admins) and remain persistent indefinitely.",
+                "options_breakdown": {
+                    "Golden Ticket Attack": "Correct. Golden Tickets forge TGTs using the krbtgt hash for unlimited domain access.",
+                    "Silver Ticket Attack": "Incorrect. Silver Tickets forge service-specific TGS tickets using individual service account hashes, not krbtgt.",
+                    "Pass-the-Hash": "Incorrect. Pass-the-Hash uses NTLM hashes, not forged Kerberos TGTs.",
+                    "Kerberoasting": "Incorrect. Kerberoasting extracts service tickets for offline password cracking."
+                },
+                "key_term": "Golden Ticket Attack: An attack in which an adversary uses a stolen krbtgt account hash to forge Kerberos Ticket Granting Tickets, providing unrestricted access across an Active Directory domain."
+            }
+        },
+        {
+            "id": "m5_h_57",
+            "raw_id": 57,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Brute-force attacks",
+            "is_scenario": true,
+            "scenario": "A security engineer analyzes login logs and discovers an attacker submitting passwords to an API endpoint with mathematically varying delays designed to measure the microsecond duration of server response times.",
+            "question": "What specific type of attack is attempting to deduce valid usernames based on whether the server returns in 5ms (invalid user) or 85ms (valid user whose password hash was computed)?",
+            "type": "single",
+            "options": [
+                "Timing-based Username Enumeration",
+                "SQL Injection",
+                "SYN Flood",
+                "Cross-Site Scripting"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of timing side-channel attacks during authentication.",
+                "why_correct": "When a server immediately rejects non-existent usernames (5ms) but spends 80ms hashing a password for existing users before rejecting bad passwords, the timing difference allows attackers to enumerate valid usernames.",
+                "options_breakdown": {
+                    "Timing-based Username Enumeration": "Correct. Timing discrepancies in authentication response times leak information about whether a username exists.",
+                    "SQL Injection": "Incorrect. SQL injection manipulates SQL syntax.",
+                    "SYN Flood": "Incorrect. SYN flood is a network DoS attack.",
+                    "Cross-Site Scripting": "Incorrect. XSS injects malicious client-side scripts."
+                },
+                "key_term": "Username Enumeration: An attack technique where an adversary uses system responses or response times to identify valid usernames in an application."
+            }
+        },
+        {
+            "id": "m5_h_58",
+            "raw_id": 58,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Social engineering",
+            "is_scenario": true,
+            "scenario": "An executive assistant receives a phone call from what sounds exactly like their CEO's authentic voice, created using an AI deepfake voice clone from public conference recordings, ordering an immediate confidential wire transfer.",
+            "question": "What emerging social engineering threat does this represent?",
+            "type": "single",
+            "options": [
+                "AI Deepfake Voice Impersonation (Vishing 2.0)",
+                "Buffer Overflow",
+                "ARP Cache Poisoning",
+                "DNSSEC Spoofing"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of emerging AI deepfake voice cloning in executive social engineering.",
+                "why_correct": "Generative AI voice synthesis models can clone a target's voice with just seconds of audio. Attackers use deepfakes in vishing to impersonate trusted executives and authorize fraudulent wire transfers.",
+                "options_breakdown": {
+                    "AI Deepfake Voice Impersonation (Vishing 2.0)": "Correct. Deepfake audio clones mimic trusted voices to execute convincing wire fraud.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a binary software exploit.",
+                    "ARP Cache Poisoning": "Incorrect. ARP poisoning corrupts Layer 2 MAC tables.",
+                    "DNSSEC Spoofing": "Incorrect. DNSSEC provides cryptographic authentication for DNS records."
+                },
+                "key_term": "Deepfake Social Engineering: The use of artificial intelligence and machine learning to generate realistic audio or video impersonations for social engineering fraud."
+            }
+        },
+        {
+            "id": "m5_h_59",
+            "raw_id": 59,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Malware",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Downloader, an Infostealer, and a Remote Access Trojan (RAT)?",
+            "type": "single",
+            "options": [
+                "A Downloader retrieves additional payloads; an Infostealer extracts stored browser passwords and crypto wallets; a RAT provides interactive command-and-control GUI access over the victim",
+                "A Downloader only works on mobile phones; an Infostealer only works on televisions; a RAT only works on smartwatches",
+                "They are identical names for the exact same computer program",
+                "A RAT is a physical mechanical rodent that chews computer cables"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish the primary specialized roles of modern malware families.",
+                "why_correct": "Downloaders focus on delivery and persistence; Infostealers (e.g., RedLine, Racoon) silently vacuum saved credentials, session tokens, and wallets; RATs (e.g., Cobalt Strike, Warzone) give attackers full interactive remote shell and GUI control.",
+                "options_breakdown": {
+                    "A Downloader retrieves additional payloads; an Infostealer extracts stored browser passwords and crypto wallets; a RAT provides interactive command-and-control GUI access over the victim": "Correct. Each represents a distinct malware specialization with dedicated operational objectives.",
+                    "A Downloader only works on mobile phones; an Infostealer only works on televisions; a RAT only works on smartwatches": "Incorrect. All three families operate across major PC and server platforms.",
+                    "They are identical names for the exact same computer program": "Incorrect. They have fundamentally different code architectures and objectives.",
+                    "A RAT is a physical mechanical rodent that chews computer cables": "Incorrect. RAT stands for Remote Access Trojan, a software malware tool."
+                },
+                "key_term": "Remote Access Trojan (RAT): A type of malware that allows threat actors to remotely control a compromised computer system as if they had physical access to it."
+            }
+        },
+        {
+            "id": "m5_h_60",
+            "raw_id": 60,
+            "module_id": 5,
+            "difficulty": "hard",
+            "topic": "Attack vectors",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are recognized mitigation strategies to defend against Software Supply Chain Attacks? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Enforcing Software Bill of Materials (SBOM) to track all third-party dependencies",
+                "Cryptographically signing and verifying code and software build artifacts",
+                "Locking package dependency versions and using private, curated artifact repositories",
+                "Unplugging all computer screens from the wall when writing code"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about effective supply chain defense countermeasures.",
+                "why_correct": "Defending supply chains requires transparency through Software Bills of Materials (SBOMs), cryptographic build provenance and signing (e.g., Sigstore), and pinning/vetting third-party dependencies in private artifact mirrors. Unplugging displays has zero defensive value.",
+                "options_breakdown": {
+                    "Enforcing Software Bill of Materials (SBOM) to track all third-party dependencies": "Correct. SBOMs provide visibility into all open-source libraries and transitive dependencies.",
+                    "Cryptographically signing and verifying code and software build artifacts": "Correct. Code signing ensures that software updates have not been tampered with in transit.",
+                    "Locking package dependency versions and using private, curated artifact repositories": "Correct. Pinned dependencies and private mirrors prevent automated pulling of poisoned public packages.",
+                    "Unplugging all computer screens from the wall when writing code": "Incorrect. Displays do not secure software build pipelines."
+                },
+                "key_term": "SBOM (Software Bill of Materials): A formal, structured inventory listing all components, libraries, and modules that make up a piece of software."
+            }
+        }
+    ]
+}

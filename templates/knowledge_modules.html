@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% block title %}Knowledge Check Modules | Threat Vector{% endblock %}
+
+{% block content %}
+<div class="soc-container" style="max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem;">
+
+    <!-- Top Knowledge Check Header -->
+    <div style="background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-lg); padding: 2.25rem 2rem; margin-bottom: 2rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -40px; right: -40px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; position: relative; z-index: 1;">
+            <div>
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--accent-cyan); font-size: 1.2rem;">
+                        📚
+                    </span>
+                    <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;">
+                        SELF-PACED CYBERSECURITY ASSESSMENT
+                    </span>
+                </div>
+                <h1 style="font-size: 2.1rem; font-weight: 800; color: #FFFFFF; margin: 0 0 0.5rem 0; letter-spacing: -0.02em;">
+                    Knowledge Check System
+                </h1>
+                <p style="color: var(--text-secondary); font-size: 1.02rem; margin: 0; max-width: 780px; line-height: 1.6;">
+                    Master core computing and defensive security principles across 8 comprehensive modules. Test your real-world readiness through 480 challenging questions with immediate explanations, option breakdowns, and key technical concepts.
+                </p>
+            </div>
+            
+            <div>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; font-weight: 600;">
+                    &larr; Back to Dashboard
+                </a>
+            </div>
+        </div>
+
+        <!-- Trainee Aggregate Metrics Bar -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+            <div style="background: rgba(11, 15, 25, 0.65); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Modules Cleared</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF; font-family: var(--font-mono); margin-top: 0.25rem;">
+                    <span style="color: var(--accent-cyan);">{{ progress.summary.modules_fully_completed }}</span> / 8
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">All 3 levels completed</div>
+            </div>
+
+            <div style="background: rgba(11, 15, 25, 0.65); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Levels Passed</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF; font-family: var(--font-mono); margin-top: 0.25rem;">
+                    <span style="color: var(--threat-safe);">{{ progress.summary.total_levels_completed }}</span> / 24
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Score &ge; 12/20 (60%+)</div>
+            </div>
+
+            <div style="background: rgba(11, 15, 25, 0.65); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Total Questions Available</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF; font-family: var(--font-mono); margin-top: 0.25rem;">
+                    480 <span style="font-size: 0.9rem; color: var(--accent-cyan); font-weight: 600;">(60 / mod)</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">20 Easy • 20 Inter • 20 Hard</div>
+            </div>
+
+            <div style="background: rgba(11, 15, 25, 0.65); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.25rem;">
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Best Knowledge Score</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF; font-family: var(--font-mono); margin-top: 0.25rem;">
+                    <span style="color: var(--threat-warning);">{{ progress.summary.total_best_score }}</span> / 480
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">{{ progress.summary.total_attempts }} total assessments taken</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modules Grid (Exact 8 modules) -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+        {% for m in modules %}
+        {% set m_prog = progress.modules.get(m.id) %}
+        <div class="cyber-card-kc" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s ease; position: relative;">
+            
+            <div>
+                <!-- Top Badge Row -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan); background: rgba(56, 189, 248, 0.12); padding: 0.25rem 0.65rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-weight: 700;">
+                            MODULE 0{{ m.id }}
+                        </span>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">
+                            60 Questions
+                        </span>
+                    </div>
+
+                    {% if m_prog and m_prog.is_module_completed %}
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--threat-safe); background: var(--threat-safe-bg); border: 1px solid rgba(16, 185, 129, 0.35); padding: 0.25rem 0.65rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.35rem;">
+                        &#10003; All Levels Cleared
+                    </span>
+                    {% elif m_prog and m_prog.completed_count > 0 %}
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--threat-warning); background: var(--threat-warning-bg); border: 1px solid rgba(245, 158, 11, 0.35); padding: 0.25rem 0.65rem; border-radius: 9999px;">
+                        {{ m_prog.completed_count }}/3 Completed
+                    </span>
+                    {% else %}
+                    <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); background: rgba(255, 255, 255, 0.05); padding: 0.25rem 0.65rem; border-radius: 9999px;">
+                        Not Started
+                    </span>
+                    {% endif %}
+                </div>
+
+                <!-- Module Title & Subtitle -->
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0; line-height: 1.35;">
+                    {{ m.title }}
+                </h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0 0 1rem 0; line-height: 1.55; min-height: 48px;">
+                    {{ m.description }}
+                </p>
+
+                <!-- Topics Covered Tags -->
+                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;">
+                    {% for topic in m.topics[:5] %}
+                    <span style="font-size: 0.72rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07); padding: 0.2rem 0.5rem; border-radius: 4px;">
+                        {{ topic }}
+                    </span>
+                    {% endfor %}
+                    {% if m.topics|length > 5 %}
+                    <span style="font-size: 0.72rem; color: var(--accent-cyan); background: rgba(56, 189, 248, 0.08); padding: 0.2rem 0.5rem; border-radius: 4px;">
+                        +{{ m.topics|length - 5 }} more
+                    </span>
+                    {% endif %}
+                </div>
+
+                <!-- 3 Difficulty Level Status Bars -->
+                <div style="background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 1.25rem;">
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Difficulty Status:
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; text-align: center;">
+                        <!-- Easy -->
+                        <div style="padding: 0.4rem; border-radius: 6px; background: {% if m_prog and m_prog.Easy.completed %}rgba(16, 185, 129, 0.15){% else %}rgba(255,255,255,0.03){% endif %}; border: 1px solid {% if m_prog and m_prog.Easy.completed %}rgba(16, 185, 129, 0.35){% else %}rgba(255,255,255,0.08){% endif %};">
+                            <div style="font-size: 0.72rem; color: var(--threat-safe); font-weight: 700;">Easy</div>
+                            <div style="font-size: 0.8rem; font-family: var(--font-mono); font-weight: 700; color: #FFFFFF; margin-top: 0.15rem;">
+                                {% if m_prog and m_prog.Easy.attempts_count > 0 %}{{ m_prog.Easy.best_score }}/20{% else %}--{% endif %}
+                            </div>
+                        </div>
+
+                        <!-- Intermediate -->
+                        <div style="padding: 0.4rem; border-radius: 6px; background: {% if m_prog and m_prog.Intermediate.completed %}rgba(56, 189, 248, 0.15){% else %}rgba(255,255,255,0.03){% endif %}; border: 1px solid {% if m_prog and m_prog.Intermediate.completed %}rgba(56, 189, 248, 0.35){% else %}rgba(255,255,255,0.08){% endif %};">
+                            <div style="font-size: 0.72rem; color: var(--accent-cyan); font-weight: 700;">Inter</div>
+                            <div style="font-size: 0.8rem; font-family: var(--font-mono); font-weight: 700; color: #FFFFFF; margin-top: 0.15rem;">
+                                {% if m_prog and m_prog.Intermediate.attempts_count > 0 %}{{ m_prog.Intermediate.best_score }}/20{% else %}--{% endif %}
+                            </div>
+                        </div>
+
+                        <!-- Hard -->
+                        <div style="padding: 0.4rem; border-radius: 6px; background: {% if m_prog and m_prog.Hard.completed %}rgba(245, 158, 11, 0.15){% else %}rgba(255,255,255,0.03){% endif %}; border: 1px solid {% if m_prog and m_prog.Hard.completed %}rgba(245, 158, 11, 0.35){% else %}rgba(255,255,255,0.08){% endif %};">
+                            <div style="font-size: 0.72rem; color: var(--threat-warning); font-weight: 700;">Hard</div>
+                            <div style="font-size: 0.8rem; font-family: var(--font-mono); font-weight: 700; color: #FFFFFF; margin-top: 0.15rem;">
+                                {% if m_prog and m_prog.Hard.attempts_count > 0 %}{{ m_prog.Hard.best_score }}/20{% else %}--{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer CTA -->
+            <div>
+                <a href="{{ url_for('knowledge_difficulty', module_id=m.id) }}" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; font-weight: 600; text-decoration: none;">
+                    <span>Select Difficulty</span>
+                    <span style="font-size: 1.1rem; line-height: 1;">&rarr;</span>
+                </a>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Recent Attempts Section (if any) -->
+    {% if recent_attempts %}
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem; margin-top: 2rem;">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            <span>⏱️</span> Your Recent Assessments
+        </h3>
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                <thead>
+                    <tr style="border-bottom: 1px solid var(--border-subtle); text-align: left; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <th style="padding: 0.75rem 1rem;">Module</th>
+                        <th style="padding: 0.75rem 1rem;">Difficulty</th>
+                        <th style="padding: 0.75rem 1rem;">Score</th>
+                        <th style="padding: 0.75rem 1rem;">Percentage</th>
+                        <th style="padding: 0.75rem 1rem;">Completed At</th>
+                        <th style="padding: 0.75rem 1rem; text-align: right;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for att in recent_attempts %}
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
+                        <td style="padding: 0.85rem 1rem; color: #FFFFFF; font-weight: 600;">
+                            Module {{ att.module_id }}
+                        </td>
+                        <td style="padding: 0.85rem 1rem;">
+                            <span class="badge {% if att.difficulty == 'Easy' %}badge-green{% elif att.difficulty == 'Intermediate' %}badge-cyan{% else %}badge-amber{% endif %}">
+                                {{ att.difficulty }}
+                            </span>
+                        </td>
+                        <td style="padding: 0.85rem 1rem; font-family: var(--font-mono); font-weight: 700; color: #FFFFFF;">
+                            {{ att.score }} / {{ att.total_questions }}
+                        </td>
+                        <td style="padding: 0.85rem 1rem;">
+                            <span style="font-weight: 700; color: {% if att.percentage >= 90 %}var(--threat-safe){% elif att.percentage >= 60 %}var(--accent-cyan){% else %}var(--threat-warning){% endif %}; font-family: var(--font-mono);">
+                                {{ att.percentage }}%
+                            </span>
+                        </td>
+                        <td style="padding: 0.85rem 1rem; color: var(--text-muted); font-size: 0.82rem;">
+                            {{ att.created_at }}
+                        </td>
+                        <td style="padding: 0.85rem 1rem; text-align: right;">
+                            <a href="{{ url_for('knowledge_review', attempt_id=att.id) }}" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                                Review Answers &rarr;
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+<style>
+.cyber-card-kc:hover {
+    border-color: rgba(56, 189, 248, 0.5) !important;
+    box-shadow: 0 8px 30px rgba(56, 189, 248, 0.12);
+    transform: translateY(-2px);
+}
+</style>
+{% endblock %}

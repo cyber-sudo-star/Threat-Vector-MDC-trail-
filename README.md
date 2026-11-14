@@ -33,27 +33,35 @@ skills/
 ├── app.py                  # Main Flask application and route handlers
 ├── database.py             # SQLite schema, seed data, and query helper functions
 ├── train_model.py          # Scikit-learn TF-IDF + Logistic Regression training script
-├── test_app.py             # Automated unit test suite (8 tests)
+├── test_app.py             # Automated unit test suite (18 tests)
 ├── database.db             # Local SQLite database (auto-generated on launch)
 ├── model.pkl               # Serialized ML threat classifier pipeline
 │
 ├── templates/              # Jinja2 HTML templates
 │   ├── base.html           # Unified navigation bar, user HUD, flash alerts, and footer
 │   ├── login.html          # Clean authentication entry point (Sign In & Register)
-│   ├── index.html          # Main SOC Dashboard (metrics, launchpad, audit log)
+│   ├── index.html          # Main SOC Dashboard (metrics, 6 core feature launchpads, audit log)
 │   ├── drill.html          # Interactive Drill Runner (email simulator, indicator checklist)
 │   ├── feedback.html       # Instant explainability, MITRE ATT&CK mapping, "Next Drill"
 │   ├── inspector.html      # AI Threat Inspector (Multi-modal uploads & Professional Threat Report)
 │   ├── ctf.html            # CTF Tactical Range (log forensics, web shells, ciphers)
 │   ├── war_room.html       # Incident Response War Room (multi-phase crisis containment)
 │   ├── leaderboard.html    # Defense Leaderboard (peer ranking, dynamic accuracy, tier medals)
+│   ├── knowledge_modules.html    # Knowledge Check (8 modules overview & progress tracking)
+│   ├── knowledge_difficulty.html # Knowledge Check (Easy / Intermediate / Hard tier selector)
+│   ├── knowledge_quiz.html       # Knowledge Check (interactive quiz engine with instant feedback)
+│   ├── knowledge_results.html    # Knowledge Check (mastery score & full 20-question review)
 │   └── profile.html        # Analytics & Risk Profile (weakness diagnosis & certificate)
 │
 ├── static/
 │   └── style.css           # Custom SOC dark-mode theme stylesheet (v2.5 High-Contrast)
 │
 └── data/
-    └── scenarios.csv       # 28 realistic simulation scenarios (Phishing, OTP, BEC, etc.)
+    ├── scenarios.csv       # 28 realistic simulation scenarios (Phishing, OTP, BEC, etc.)
+    └── knowledge_bank/     # 480 technical questions across 8 modules (60 Qs/mod: 20E, 20I, 20H)
+        ├── loader.py       # Topic interleaving, caching, and option shuffling
+        ├── module1.json & .py ... module8.json & .py
+        └── IMPLEMENTATION_STATUS.md
 ```
 
 ---
@@ -95,8 +103,8 @@ flowchart TD
     D --> E2["🔍 2. AI Threat Inspector (/inspector)"]
     D --> E3["🚩 3. CTF Tactical Range (/ctf)"]
     D --> E4["🚨 4. Incident War Room (/war-room)"]
-    D --> E5["🏆 5. Defense Leaderboard (/leaderboard)"]
-    D --> E6["📈 6. Threat Analytics (/profile)"]
+    D --> E5["📈 5. Analytics & Risk Profile (/profile)"]
+    D --> E6["📚 6. Knowledge Check (/knowledge-check)"]
 ```
 
 ---
@@ -138,16 +146,27 @@ flowchart TD
   - **Phase 3: Eradication**
   - **Phase 4: Recovery & Post-Mortem**
 
-### 5. Cybersecurity Defense Leaderboard
-- Real-time ranking ladder benchmarking active trainees against peer SOC analysts.
-- Dynamically reflects live trainee scores, drills completed, CTF flags captured, and computed **Accuracy Rates** directly from SQLite.
-- Displays Gold, Silver, and Bronze rank medals and gamified tier badges (*Security Cadet*, *SOC Analyst*, *Threat Hunter*, *CISO Defender*).
-
-### 6. Analytics & Personal Risk Profile
+### 5. Analytics & Personal Risk Profile
 - Diagnostic threat readiness scorecard (Overall Readiness Index 0-100).
-- Category-wise proficiency bars across all 7 attack vectors.
+- Category-wise proficiency bars across all attack vectors.
 - **Automated SOC Weakness Diagnosis:** Detects the trainee's weakest category (e.g. *"High Susceptibility to Urgency Vectors"*) and provides specific behavioral remediation tips.
 - Displays a formal **Certificate of Defense Readiness** suitable for export or printing.
+
+### 6. Knowledge Check (Structured Self-Paced Training & Assessment)
+- **8 Comprehensive Cybersecurity Modules:**
+  1. *Computer Fundamentals* (Hardware, CPU, RAM/ROM, OS, Storage, Cloud)
+  2. *Networking Fundamentals* (OSI/TCP-IP Models, IPs, Subnets, DNS, DHCP, Ports)
+  3. *Operating Systems & Linux* (Kernel, Permissions, Bash commands, Processes, Logs)
+  4. *Cybersecurity Fundamentals* (CIA Triad, MFA, Symmetric/Asymmetric Encryption, Hashing)
+  5. *Cyber Threats & Attacks* (Ransomware, Trojans, Quishing, MITM, DDoS, Brute Force)
+  6. *Network & Web Security* (Firewalls, IDS/IPS, TLS, OWASP Top 10, SQLi, XSS, CSRF)
+  7. *Security Tools & Practical Skills* (Nmap, Wireshark, tcpdump, PCAP forensics)
+  8. *Security Operations & GRC* (SOC tiers, SIEM, Incident Handling, NIST CSF, ISO 27001)
+- **480 Original Technical Questions:** Exactly 60 questions per module (20 Easy, 20 Intermediate, 20 Hard).
+- **Diverse Question Types:** Single-choice MCQs, Multiple-select challenges, and realistic operational incident scenarios.
+- **Instant Option-by-Option Explanations:** Real-time feedback revealing why the correct answer succeeds, why each incorrect distractor fails (`options_breakdown` for options A, B, C, D), and definitions for key technical terminology.
+- **Dynamic Shuffling & Session Persistence:** Questions and options are shuffled dynamically per attempt while preserving answer mappings. Active sessions are tracked in SQLite so trainee progress survives page reloads.
+- **Defense Score Rewards & Review:** Awards +5 Defense Score points per correct answer, determines mastery badges, and provides a full question-by-question accordion review with custom filters.
 
 ---
 
@@ -156,7 +175,7 @@ Run the automated test suite to verify all endpoints and features:
 ```bash
 python test_app.py
 ```
-*Output: `Ran 8 tests in 0.8s ... OK`*
+*Output: `Ran 18 tests in 0.8s ... OK (100% Passing)`*
 
 ---
 

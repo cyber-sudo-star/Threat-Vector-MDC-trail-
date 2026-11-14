@@ -132,7 +132,7 @@
             <a href="{{ url_for('reset_war_room', incident_id=active_incident.id) }}" class="btn btn-secondary" style="margin-right: 0.75rem;">
                 🔄 Replay Scenario
             </a>
-            <a href="{{ url_for('war_room') }}" class="btn btn-primary">
+            <a href="{{ url_for('war_room', incident_id=next_incident_id) }}" class="btn btn-primary">
                 Next War Room Scenario &rarr;
             </a>
         </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Threat Vector | Cybersecurity Awareness & Training{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=5.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,25 +13,55 @@
 
     {% block navbar %}
     {% if active_page == 'dashboard' %}
-    <!-- 1. TOP HEADER (IN-BOUNDS): Main Dashboard View -->
-    <header class="top-header-bar">
-        <div class="top-header-container">
-            <div class="top-header-brand">
-                <a href="{{ url_for('index') }}" class="header-brand-link">
-                    <span class="header-brand-icon">⚡</span>
-                    <h1 class="header-main-title">THREAT VECTOR</h1>
+    <!-- 1. TOP HEADER: Premium Cyber Navigation Matching Reference Design -->
+    <header class="top-header-bar-ref">
+        <div class="top-header-container-ref">
+            <!-- Left Branding: Shield with Lock + Brand Typography -->
+            <div class="top-header-brand-ref">
+                <a href="{{ url_for('index') }}" class="header-brand-link-ref">
+                    <div class="header-shield-wrap">
+                        <svg viewBox="0 0 28 32" class="header-shield-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer Cyan Glowing Shield -->
+                            <path d="M14 2L3 6.8V15.5C3 22.2 7.8 28.3 14 30C20.2 28.3 25 22.2 25 15.5V6.8L14 2Z" 
+                                  stroke="#00d2ff" stroke-width="2.2" fill="rgba(0, 210, 255, 0.12)" stroke-linejoin="round"/>
+                            <!-- Inner Padlock Icon -->
+                            <rect x="10" y="14" width="8" height="6.5" rx="1.5" stroke="#ffffff" stroke-width="1.8" fill="rgba(14, 165, 233, 0.3)"/>
+                            <path d="M11.5 14V11.5C11.5 10.1 12.6 9 14 9C15.4 9 16.5 10.1 16.5 11.5V14" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+                            <circle cx="14" cy="17" r="1" fill="#00d2ff"/>
+                        </svg>
+                    </div>
+                    <div class="header-brand-info">
+                        <div class="header-title-row">
+                            <span class="brand-word-white">THREAT</span>
+                            <span class="brand-word-cyan">VECTOR</span>
+                        </div>
+                        <span class="header-subline">Cybersecurity Awareness &amp; Defensive Training Platform</span>
+                    </div>
                 </a>
-                <p class="header-tagline">Interactive Cybersecurity Awareness &amp; Defensive Training Platform</p>
             </div>
 
+            <!-- Right: Dynamic User Greeting + Logout -->
             {% if session.get('username') or session.get('user_id') %}
-            <div class="top-header-user">
-                <div class="header-user-badge">
-                    <span class="user-status-dot"></span>
-                    <span class="header-user-label">User:</span>
-                    <span class="header-user-name">{{ session.get('username') or (current_user.username if current_user else 'Cadet') }}</span>
+            <div class="top-header-actions-ref">
+                <div class="header-user-status-pill">
+                    <div class="user-avatar-icon-wrap">
+                        <svg viewBox="0 0 24 24" class="user-avatar-svg" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <span class="welcome-text-muted">Welcome,</span>
+                    <strong class="user-display-name">{{ current_user.username if current_user else session.get('username', 'Analyst') }}</strong>
+                    <span class="dropdown-chevron-symbol" aria-hidden="true">&#x2304;</span>
                 </div>
-                <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+                <a href="{{ url_for('logout') }}" class="btn-logout-pill">
+                    <svg viewBox="0 0 24 24" class="logout-icon-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                        <polyline points="16 17 21 12 16 7"/>
+                        <line x1="21" y1="12" x2="9" y2="12"/>
+                    </svg>
+                    <span>Logout</span>
+                </a>
             </div>
             {% endif %}
         </div>
@@ -52,8 +82,8 @@
                 <li><a href="{{ url_for('inspector') }}" class="nav-link {% if active_page == 'inspector' %}active{% endif %}">🔍 AI Inspector</a></li>
                 <li><a href="{{ url_for('ctf') }}" class="nav-link {% if active_page == 'ctf' %}active{% endif %}">🚩 CTF Range</a></li>
                 <li><a href="{{ url_for('war_room') }}" class="nav-link {% if active_page == 'war_room' %}active{% endif %}">🚨 War Room</a></li>
-                <li><a href="{{ url_for('leaderboard') }}" class="nav-link {% if active_page == 'leaderboard' %}active{% endif %}">🏆 Leaderboard</a></li>
                 <li><a href="{{ url_for('profile') }}" class="nav-link {% if active_page == 'profile' %}active{% endif %}">📈 Analytics</a></li>
+                <li><a href="{{ url_for('knowledge_modules') }}" class="nav-link {% if active_page == 'knowledge' %}active{% endif %}">📚 Knowledge Check</a></li>
             </ul>
 
             <div class="nav-user-panel">
@@ -71,11 +101,11 @@
     {% endblock %}
 
     <!-- Main Content Area -->
-    <main class="main-wrapper">
+    <main class="{% if active_page == 'dashboard' %}dashboard-fullwidth-wrapper{% else %}main-wrapper{% endif %}">
         <!-- Flash Alerts -->
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
-                <div class="flash-container">
+                <div class="flash-container {% if active_page == 'dashboard' %}dashboard-flash-container{% endif %}">
                     {% for category, message in messages %}
                         <div class="alert alert-{{ category if category != 'error' else 'danger' }}">
                             <span>{{ message }}</span>
@@ -88,13 +118,38 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- SOC Footer -->
-    <footer class="soc-footer">
-        <div>
-            <strong>Threat Vector</strong> &mdash; Interactive Cybersecurity Awareness & Defensive Training Platform
-        </div>
-        <div style="margin-top: 0.35rem; color: var(--text-muted); font-size: 0.78rem;">
-            Built with Python Flask, SQLite & Scikit-learn Machine Learning &bull; College Capstone Project &bull; Fully Local Architecture
+    <!-- SOC Footer Matching Reference Design -->
+    <footer class="soc-footer-ref">
+        <div class="footer-ref-container">
+            <!-- Left Cyan Decorative Hazard Stripes -->
+            <div class="footer-hazard-stripes left" aria-hidden="true">
+                <span class="stripe-bar"></span>
+                <span class="stripe-bar"></span>
+                <span class="stripe-bar"></span>
+                <span class="stripe-bar"></span>
+            </div>
+
+            <!-- Center Brand & Motto -->
+            <div class="footer-ref-brand">
+                <div class="footer-shield-wrap">
+                    <svg viewBox="0 0 24 24" class="footer-shield-svg" fill="none" stroke="#00d2ff" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L4 5.5V11.5C4 16.5 7.4 21 12 22C16.6 21 20 16.5 20 11.5V5.5L12 2Z" fill="rgba(0, 210, 255, 0.12)"/>
+                        <rect x="9.5" y="11" width="5" height="4" rx="1" stroke="#ffffff" stroke-width="1.4"/>
+                        <path d="M10.5 11V9.5C10.5 8.7 11.2 8 12 8C12.8 8 13.5 8.7 13.5 9.5V11" stroke="#ffffff" stroke-width="1.4"/>
+                    </svg>
+                </div>
+                <strong class="footer-brand-title">THREAT VECTOR</strong>
+                <span class="footer-dot-separator">&bull;</span>
+                <span class="footer-tagline-text">Learn | Practice | Defend</span>
+            </div>
+
+            <!-- Right Cyan Decorative Hazard Stripes -->
+            <div class="footer-hazard-stripes right" aria-hidden="true">
+                <span class="stripe-bar"></span>
+                <span class="stripe-bar"></span>
+                <span class="stripe-bar"></span>
+                <span class="stripe-bar"></span>
+            </div>
         </div>
     </footer>
 

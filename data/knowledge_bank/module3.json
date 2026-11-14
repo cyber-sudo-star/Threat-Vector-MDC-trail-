@@ -1,0 +1,1885 @@
+{
+    "module_id": 3,
+    "title": "Operating Systems & Linux",
+    "description": "Understand how operating systems work, explore the basics of Linux, and become familiar with commands, files, permissions, and processes.",
+    "topics": [
+        "Introduction to operating systems",
+        "Windows and Linux",
+        "Linux distributions",
+        "File systems",
+        "Linux terminal",
+        "Basic Linux commands",
+        "Users and permissions",
+        "Processes",
+        "Package management",
+        "System logs"
+    ],
+    "questions": [
+        {
+            "id": "m3_e_01",
+            "raw_id": 1,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Introduction to operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary core component of an operating system that directly manages hardware resources such as CPU scheduling, physical memory, and device drivers?",
+            "type": "single",
+            "options": [
+                "The Kernel",
+                "The Web Browser",
+                "The Desktop Wallpaper",
+                "The Power Supply Unit"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the foundational core software layer of an OS.",
+                "why_correct": "The kernel is the essential core of an operating system with complete control over everything in the system, bridging applications to physical hardware.",
+                "options_breakdown": {
+                    "The Kernel": "Correct. The kernel is the central low-level software that manages CPU, memory, and hardware access.",
+                    "The Web Browser": "Incorrect. A web browser is an application running in user space.",
+                    "The Desktop Wallpaper": "Incorrect. Wallpaper is a decorative graphic in the graphical desktop environment.",
+                    "The Power Supply Unit": "Incorrect. The PSU is an external electrical hardware component."
+                },
+                "key_term": "Kernel: The essential foundational center of a computer operating system that directly controls system hardware resources."
+            }
+        },
+        {
+            "id": "m3_e_02",
+            "raw_id": 2,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which Linux command is used to display the current directory path you are working in?",
+            "type": "single",
+            "options": [
+                "pwd (print working directory)",
+                "ls (list)",
+                "cd (change directory)",
+                "rm (remove)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the standard command that prints your active directory location.",
+                "why_correct": "'pwd' stands for 'print working directory'. It outputs the full absolute path from the root directory to your current working folder.",
+                "options_breakdown": {
+                    "pwd (print working directory)": "Correct. 'pwd' outputs the active working directory pathname to the terminal.",
+                    "ls (list)": "Incorrect. 'ls' lists the contents (files and subfolders) inside a directory.",
+                    "cd (change directory)": "Incorrect. 'cd' changes your working directory to another folder.",
+                    "rm (remove)": "Incorrect. 'rm' deletes files or directories."
+                },
+                "key_term": "pwd: A standard Linux/Unix terminal command that outputs the current working directory path."
+            }
+        },
+        {
+            "id": "m3_e_03",
+            "raw_id": 3,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command lists files and subdirectories located within the current directory in Linux?",
+            "type": "single",
+            "options": [
+                "ls",
+                "pwd",
+                "mkdir",
+                "whoami"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests basic Linux navigation commands.",
+                "why_correct": "'ls' lists files and directories. Adding flags like '-la' shows hidden files and long permissions.",
+                "options_breakdown": {
+                    "ls": "Correct. 'ls' lists the contents of the target or current directory.",
+                    "pwd": "Incorrect. 'pwd' displays the current folder path.",
+                    "mkdir": "Incorrect. 'mkdir' creates a new directory.",
+                    "whoami": "Incorrect. 'whoami' prints the username of the current logged-in user."
+                },
+                "key_term": "ls: The directory listing command in Unix-like operating systems."
+            }
+        },
+        {
+            "id": "m3_e_04",
+            "raw_id": 4,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command is used to navigate or change your working directory in the Linux terminal?",
+            "type": "single",
+            "options": [
+                "cd",
+                "mv",
+                "cp",
+                "touch"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks which command changes directories.",
+                "why_correct": "'cd' (change directory) moves your terminal context to another folder path (e.g., 'cd /var/log').",
+                "options_breakdown": {
+                    "cd": "Correct. 'cd' changes the terminal shell's working directory.",
+                    "mv": "Incorrect. 'mv' moves or renames files.",
+                    "cp": "Incorrect. 'cp' copies files or directories.",
+                    "touch": "Incorrect. 'touch' creates an empty file or updates timestamps."
+                },
+                "key_term": "cd: The shell built-in command used to change the current working directory."
+            }
+        },
+        {
+            "id": "m3_e_05",
+            "raw_id": 5,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the name of the supreme superuser account in Linux that possesses unrestricted administrative privileges across the entire system?",
+            "type": "single",
+            "options": [
+                "root",
+                "administrator",
+                "guest",
+                "daemon"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of the default superuser identity in Unix/Linux.",
+                "why_correct": "The 'root' user (User ID 0) is the administrative superuser with unrestricted read, write, and execute permissions across all files and kernel operations.",
+                "options_breakdown": {
+                    "root": "Correct. The root account has full system privileges across the entire Linux OS.",
+                    "administrator": "Incorrect. 'Administrator' is the default superuser account name in Microsoft Windows, not Linux.",
+                    "guest": "Incorrect. 'guest' is typically a heavily restricted temporary account.",
+                    "daemon": "Incorrect. 'daemon' is a generic system account used to run background background services."
+                },
+                "key_term": "root: The conventional username or account that by default has access to all commands and files on a Linux/Unix system."
+            }
+        },
+        {
+            "id": "m3_e_06",
+            "raw_id": 6,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Linux distributions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are popular, widely-used Linux distributions? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Ubuntu (Debian-based)",
+                "Red Hat Enterprise Linux / Fedora",
+                "Arch Linux",
+                "Microsoft Windows 11"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify legitimate Linux distributions.",
+                "why_correct": "Ubuntu, Red Hat/Fedora, and Arch Linux are all popular distributions built on the Linux kernel. Windows 11 is a proprietary operating system built on the Windows NT kernel by Microsoft.",
+                "options_breakdown": {
+                    "Ubuntu (Debian-based)": "Correct. Ubuntu is one of the most widely deployed Debian-based Linux distributions.",
+                    "Red Hat Enterprise Linux / Fedora": "Correct. RHEL and Fedora are leading enterprise and community Linux distributions.",
+                    "Arch Linux": "Correct. Arch is a lightweight, rolling-release Linux distribution popular among power users.",
+                    "Microsoft Windows 11": "Incorrect. Windows 11 is a proprietary operating system developed by Microsoft using the Windows NT kernel."
+                },
+                "key_term": "Linux Distribution (Distro): An operating system made from a software collection that is based on the Linux kernel and package management systems."
+            }
+        },
+        {
+            "id": "m3_e_07",
+            "raw_id": 7,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "File systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What character represents the top-level parent 'root' directory of the entire Linux hierarchical file system?",
+            "type": "single",
+            "options": [
+                "/ (Forward slash)",
+                "\\ (Backslash)",
+                "C:\\",
+                "~ (Tilde)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks how the root directory is represented in Linux.",
+                "why_correct": "In Linux and Unix, the entire file system branches downward from a single top-level root directory denoted simply by a single forward slash ('/').",
+                "options_breakdown": {
+                    "/ (Forward slash)": "Correct. The forward slash '/' designates the absolute root directory of the file system.",
+                    "\\ (Backslash)": "Incorrect. Backslashes are used for file paths in Windows, not Linux root.",
+                    "C:\\": "Incorrect. 'C:\\' is a drive letter mount point in Windows, not Linux.",
+                    "~ (Tilde)": "Incorrect. The tilde '~' is a shell shortcut representing the current user's home directory (e.g., /home/user)."
+                },
+                "key_term": "Root Directory (/): The top-most directory in Unix-like file hierarchies from which all other directories branch."
+            }
+        },
+        {
+            "id": "m3_e_08",
+            "raw_id": 8,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command creates a new empty directory in Linux?",
+            "type": "single",
+            "options": [
+                "mkdir",
+                "rmdir",
+                "touch",
+                "cat"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the directory creation command in Linux.",
+                "why_correct": "'mkdir' stands for 'make directory'. It creates one or more new directories.",
+                "options_breakdown": {
+                    "mkdir": "Correct. 'mkdir' creates a new directory folder.",
+                    "rmdir": "Incorrect. 'rmdir' removes empty directories.",
+                    "touch": "Incorrect. 'touch' creates empty regular files, not directories.",
+                    "cat": "Incorrect. 'cat' concatenates and prints file contents to the screen."
+                },
+                "key_term": "mkdir: The standard command used to create new directories on Unix/Linux file systems."
+            }
+        },
+        {
+            "id": "m3_e_09",
+            "raw_id": 9,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command outputs the contents of a plain text file directly onto the terminal screen?",
+            "type": "single",
+            "options": [
+                "cat",
+                "rm",
+                "kill",
+                "chmod"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks which tool displays text files in the terminal.",
+                "why_correct": "'cat' (concatenate) reads files sequentially and writes them to standard output on the terminal.",
+                "options_breakdown": {
+                    "cat": "Correct. 'cat filename.txt' displays the text file contents in the terminal.",
+                    "rm": "Incorrect. 'rm' deletes files.",
+                    "kill": "Incorrect. 'kill' sends termination signals to running processes.",
+                    "chmod": "Incorrect. 'chmod' modifies file access permissions."
+                },
+                "key_term": "cat: A standard Unix utility used to view, concatenate, and print file contents."
+            }
+        },
+        {
+            "id": "m3_e_10",
+            "raw_id": 10,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Windows and Linux",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a fundamental architectural difference in how Windows and Linux organize storage drives?",
+            "type": "single",
+            "options": [
+                "Windows uses drive letters (C:, D:) while Linux unifies all drives under a single hierarchical root tree (/)",
+                "Linux only runs on smartphones while Windows only runs on supercomputers",
+                "Windows requires no electrical power while Linux requires high-voltage generators",
+                "Linux cannot store text files while Windows can only store music files"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about drive letter mounting versus unified file system mounting.",
+                "why_correct": "Windows assigns discrete drive letters (C:, D:, E:) for separate partitions and drives. Linux mounts all physical drives, partitions, and network shares into a single unified directory tree branching from root ('/').",
+                "options_breakdown": {
+                    "Windows uses drive letters (C:, D:) while Linux unifies all drives under a single hierarchical root tree (/)": "Correct. Linux mounts all drives under directory mount points in a unified tree.",
+                    "Linux only runs on smartphones while Windows only runs on supercomputers": "Incorrect. Linux powers over 90% of the world's top 500 supercomputers and millions of servers.",
+                    "Windows requires no electrical power while Linux requires high-voltage generators": "Incorrect. Both run on standard computing hardware requiring normal power.",
+                    "Linux cannot store text files while Windows can only store music files": "Incorrect. Both systems support all standard file formats."
+                },
+                "key_term": "Mount Point: A directory in a Linux file system where an additional storage device or partition is attached to the unified tree."
+            }
+        },
+        {
+            "id": "m3_e_11",
+            "raw_id": 11,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Linux terminal",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary role of a Linux command-line shell such as Bash or Zsh?",
+            "type": "single",
+            "options": [
+                "To interpret user commands typed in the terminal and pass them to the operating system for execution",
+                "To physically clean dust off the computer motherboard",
+                "To block all internet connections permanently",
+                "To print physical paper documents without a printer"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition and role of a command-line interpreter (shell).",
+                "why_correct": "A shell (like Bash or Zsh) is a command language interpreter that executes commands read from standard input devices or from script files.",
+                "options_breakdown": {
+                    "To interpret user commands typed in the terminal and pass them to the operating system for execution": "Correct. The shell acts as the user interface translating command strings into system calls.",
+                    "To physically clean dust off the computer motherboard": "Incorrect. A shell is software and cannot physically clean hardware.",
+                    "To block all internet connections permanently": "Incorrect. Firewalls filter network connections, not the standard user shell.",
+                    "To print physical paper documents without a printer": "Incorrect. A shell cannot physically print paper."
+                },
+                "key_term": "Shell: A command-line interpreter that provides an interface between the user and the operating system kernel."
+            }
+        },
+        {
+            "id": "m3_e_12",
+            "raw_id": 12,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Processes",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What unique identifier does an operating system assign to every active running program or process?",
+            "type": "single",
+            "options": [
+                "Process ID (PID)",
+                "MAC Address",
+                "ISBN Number",
+                "Credit Card Number"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests process tracking terminology.",
+                "why_correct": "Every active task or program in Linux and Windows is assigned an integer known as a Process Identifier (PID), used by the kernel to manage scheduling and memory.",
+                "options_breakdown": {
+                    "Process ID (PID)": "Correct. The PID is the unique numeric identifier assigned to each active process.",
+                    "MAC Address": "Incorrect. A MAC address identifies a physical network interface card.",
+                    "ISBN Number": "Incorrect. An ISBN identifies published commercial books.",
+                    "Credit Card Number": "Incorrect. Credit cards are financial payment instruments."
+                },
+                "key_term": "Process ID (PID): A unique number assigned by the operating system kernel to identify an active running process."
+            }
+        },
+        {
+            "id": "m3_e_13",
+            "raw_id": 13,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Package management",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which package manager tool is used by default on Debian, Ubuntu, and Linux Mint to install, update, and remove software packages?",
+            "type": "single",
+            "options": [
+                "apt (Advanced Package Tool)",
+                "pacman",
+                "brew",
+                "winget"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests basic Linux package management tools.",
+                "why_correct": "'apt' (and 'apt-get') is the default command-line package management system on Debian and Ubuntu distributions.",
+                "options_breakdown": {
+                    "apt (Advanced Package Tool)": "Correct. 'apt' is the standard package manager for Debian and Ubuntu derivatives.",
+                    "pacman": "Incorrect. 'pacman' is the package manager for Arch Linux.",
+                    "brew": "Incorrect. 'brew' (Homebrew) is primarily used on macOS and third-party Linux setups.",
+                    "winget": "Incorrect. 'winget' is the official Windows Package Manager developed by Microsoft."
+                },
+                "key_term": "APT (Advanced Package Tool): The package management system used by Debian, Ubuntu, and their derivatives to manage deb software packages."
+            }
+        },
+        {
+            "id": "m3_e_14",
+            "raw_id": 14,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "System logs",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In standard Linux distributions, in which system directory are log files typically stored?",
+            "type": "single",
+            "options": [
+                "/var/log",
+                "/home/desktop",
+                "/bin",
+                "/boot"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the standard Filesystem Hierarchy Standard (FHS) log location.",
+                "why_correct": "Under the Linux Filesystem Hierarchy Standard, system and service log files (such as syslog, auth.log, and nginx logs) are stored in '/var/log'.",
+                "options_breakdown": {
+                    "/var/log": "Correct. '/var/log' is the dedicated directory for system, authentication, and application log files.",
+                    "/home/desktop": "Incorrect. User desktop shortcuts reside in /home/username/Desktop.",
+                    "/bin": "Incorrect. '/bin' stores essential binary executable commands like ls and cat.",
+                    "/boot": "Incorrect. '/boot' stores the bootloader, initial RAM disk (initrd), and kernel image files."
+                },
+                "key_term": "/var/log: The standardized directory location where Linux operating systems store historical event logs."
+            }
+        },
+        {
+            "id": "m3_e_15",
+            "raw_id": 15,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command temporarily runs a command with administrative superuser (root) privileges in Ubuntu and Debian?",
+            "type": "single",
+            "options": [
+                "sudo",
+                "pwd",
+                "exit",
+                "echo"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests administrative privilege elevation in Linux.",
+                "why_correct": "'sudo' ('superuser do') allows a permitted user to execute a command as root (or another user) securely after entering their password.",
+                "options_breakdown": {
+                    "sudo": "Correct. 'sudo' grants temporary administrative rights for the executed command.",
+                    "pwd": "Incorrect. 'pwd' outputs the active working directory.",
+                    "exit": "Incorrect. 'exit' closes the current terminal session or shell.",
+                    "echo": "Incorrect. 'echo' prints strings of text to the terminal screen."
+                },
+                "key_term": "sudo: A program for Unix-like computer operating systems that enables users to run programs with the security privileges of root."
+            }
+        },
+        {
+            "id": "m3_e_16",
+            "raw_id": 16,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command creates a new blank text file or updates the timestamp of an existing file?",
+            "type": "single",
+            "options": [
+                "touch",
+                "rmdir",
+                "uname",
+                "reboot"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the 'touch' utility.",
+                "why_correct": "'touch filename' creates an empty file if it does not already exist, or updates its access and modification timestamps if it does.",
+                "options_breakdown": {
+                    "touch": "Correct. 'touch' creates an empty file or refreshes file timestamps.",
+                    "rmdir": "Incorrect. 'rmdir' removes empty directories.",
+                    "uname": "Incorrect. 'uname' prints system kernel and architecture information.",
+                    "reboot": "Incorrect. 'reboot' restarts the computer."
+                },
+                "key_term": "touch: A Unix utility used to create empty files and update file timestamps."
+            }
+        },
+        {
+            "id": "m3_e_17",
+            "raw_id": 17,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command is used to delete or remove a regular file in Linux?",
+            "type": "single",
+            "options": [
+                "rm",
+                "cd",
+                "cp",
+                "mv"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the file deletion command.",
+                "why_correct": "'rm' removes (unlinks) files. Caution is required because Linux command-line deletions bypass a recycle bin and cannot be easily undone.",
+                "options_breakdown": {
+                    "rm": "Correct. 'rm' deletes specified files or directory trees.",
+                    "cd": "Incorrect. 'cd' changes the current working directory.",
+                    "cp": "Incorrect. 'cp' makes a copy of a file.",
+                    "mv": "Incorrect. 'mv' moves or renames a file."
+                },
+                "key_term": "rm: The Unix command-line utility used to remove files or directories."
+            }
+        },
+        {
+            "id": "m3_e_18",
+            "raw_id": 18,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Processes",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command displays a real-time, dynamic view of running system processes, CPU utilization, and memory consumption in Linux?",
+            "type": "single",
+            "options": [
+                "top",
+                "pwd",
+                "echo",
+                "hostname"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about interactive terminal process monitors.",
+                "why_correct": "'top' (and its colorful counterpart 'htop') provides an interactive, real-time updated display of CPU usage, memory consumption, load averages, and active process PIDs.",
+                "options_breakdown": {
+                    "top": "Correct. 'top' displays real-time interactive process and resource metrics.",
+                    "pwd": "Incorrect. 'pwd' shows the directory path.",
+                    "echo": "Incorrect. 'echo' prints text to the screen.",
+                    "hostname": "Incorrect. 'hostname' prints the computer's network name."
+                },
+                "key_term": "top: A terminal task manager program that displays dynamic real-time information about system performance and active processes."
+            }
+        },
+        {
+            "id": "m3_e_19",
+            "raw_id": 19,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "File systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In Linux, which directory contains essential binary command-line executables used by all users (such as ls, cp, and bash)?",
+            "type": "single",
+            "options": [
+                "/bin",
+                "/tmp",
+                "/dev",
+                "/opt"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of the Linux Filesystem Hierarchy Standard.",
+                "why_correct": "'/bin' contains essential command binaries that must be available in single-user mode for all system users.",
+                "options_breakdown": {
+                    "/bin": "Correct. '/bin' stores core executable binaries like ls, cat, and rm.",
+                    "/tmp": "Incorrect. '/tmp' stores temporary scratch files cleared on reboot.",
+                    "/dev": "Incorrect. '/dev' contains special device files representing physical hardware.",
+                    "/opt": "Incorrect. '/opt' stores optional third-party add-on application software."
+                },
+                "key_term": "/bin: The directory containing essential user command binaries in Unix-like operating systems."
+            }
+        },
+        {
+            "id": "m3_e_20",
+            "raw_id": 20,
+            "module_id": 3,
+            "difficulty": "easy",
+            "topic": "Basic Linux commands",
+            "is_scenario": true,
+            "scenario": "A cybersecurity student opens a Linux terminal and wants to see which user account they are currently operating as.",
+            "question": "Which command outputs the current user's effective username?",
+            "type": "single",
+            "options": [
+                "whoami",
+                "hostname",
+                "uname",
+                "uptime"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests user identity verification in the terminal.",
+                "why_correct": "The 'whoami' command prints the effective username of the currently logged-in shell user.",
+                "options_breakdown": {
+                    "whoami": "Correct. 'whoami' prints the username of the current user session.",
+                    "hostname": "Incorrect. 'hostname' prints the computer's network device name.",
+                    "uname": "Incorrect. 'uname' prints kernel version and architecture details.",
+                    "uptime": "Incorrect. 'uptime' shows how long the system has been continuously running."
+                },
+                "key_term": "whoami: A command that prints the user name associated with the current effective user ID."
+            }
+        },
+        {
+            "id": "m3_i_21",
+            "raw_id": 21,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In the Linux file permission string '-rwxr-xr--', what permissions does the 'group' possess?",
+            "type": "single",
+            "options": [
+                "Read and Execute (r-x)",
+                "Read, Write, and Execute (rwx)",
+                "Read Only (r--)",
+                "No permissions (---)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests decoding standard Linux 9-character permission strings.",
+                "why_correct": "The 9 characters divide into three triads: Owner (chars 2-4: 'rwx'), Group (chars 5-7: 'r-x'), and Others (chars 8-10: 'r--'). The group has 'r-x', meaning Read and Execute.",
+                "options_breakdown": {
+                    "Read and Execute (r-x)": "Correct. The middle triad 'r-x' grants the assigned group Read and Execute permissions.",
+                    "Read, Write, and Execute (rwx)": "Incorrect. 'rwx' is assigned to the file Owner, not the group.",
+                    "Read Only (r--)": "Incorrect. 'r--' is assigned to Others (everyone else).",
+                    "No permissions (---)": "Incorrect. The group has read and execute access."
+                },
+                "key_term": "Permission Triad: The three-character groups in Linux representing Owner, Group, and Others permissions."
+            }
+        },
+        {
+            "id": "m3_i_22",
+            "raw_id": 22,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What numeric octal permission value corresponds to Read, Write, and Execute for Owner (7), Read and Execute for Group (5), and Read Only for Others (4)?",
+            "type": "single",
+            "options": [
+                "754",
+                "777",
+                "644",
+                "700"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests calculation of octal permissions (r=4, w=2, x=1).",
+                "why_correct": "Owner: 4+2+1 = 7. Group: 4+0+1 = 5. Others: 4+0+0 = 4. Together, they form octal 754.",
+                "options_breakdown": {
+                    "754": "Correct. 7 (rwx) for owner, 5 (r-x) for group, and 4 (r--) for others equals 754.",
+                    "777": "Incorrect. 777 grants full read, write, and execute permissions to everyone.",
+                    "644": "Incorrect. 644 is rw-r--r--, common for standard text documents.",
+                    "700": "Incorrect. 700 grants rwx to owner and no permissions (---) to group and others."
+                },
+                "key_term": "Octal Permissions: A numeric notation where read=4, write=2, and execute=1 combine into a three-digit permission code."
+            }
+        },
+        {
+            "id": "m3_i_23",
+            "raw_id": 23,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between the redirection operators '>' and '>>' in the Bash terminal?",
+            "type": "single",
+            "options": [
+                "'>' overwrites the destination file, while '>>' appends new text to the end of the file",
+                "'>' deletes the file, while '>>' encrypts it",
+                "'>' is for Linux, while '>>' is only for Windows",
+                "'>' prints to the screen, while '>>' prints to paper"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about stream redirection operators in command-line shells.",
+                "why_correct": "Single chevron '>' redirects stdout to a file, truncating and overwriting any existing contents. Double chevron '>>' appends stdout to the bottom of the file without deleting existing data.",
+                "options_breakdown": {
+                    "'>' overwrites the destination file, while '>>' appends new text to the end of the file": "Correct. '>' overwrites/truncates, while '>>' appends safely.",
+                    "'>' deletes the file, while '>>' encrypts it": "Incorrect. Neither operator encrypts data.",
+                    "'>' is for Linux, while '>>' is only for Windows": "Incorrect. Both operators exist in both Linux Bash and Windows PowerShell.",
+                    "'>' prints to the screen, while '>>' prints to paper": "Incorrect. Both redirect stream output to storage files, not printers."
+                },
+                "key_term": "Redirection: A feature in command-line interpreters that can redirect standard streams (stdin, stdout, stderr) to user-specified locations."
+            }
+        },
+        {
+            "id": "m3_i_24",
+            "raw_id": 24,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Linux terminal",
+            "is_scenario": true,
+            "scenario": "A security analyst wants to inspect running processes and filter specifically for the 'ssh' daemon.",
+            "question": "Which command line pipeline correctly accomplishes this?",
+            "type": "single",
+            "options": [
+                "ps aux | grep ssh",
+                "cat /var/log/messages",
+                "rm -rf /ssh",
+                "chmod 777 ssh"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests combining process listing with pattern searching via pipes.",
+                "why_correct": "'ps aux' lists all active system processes with details. Piping ('|') that output into 'grep ssh' filters the stream to display only lines containing the term 'ssh'.",
+                "options_breakdown": {
+                    "ps aux | grep ssh": "Correct. This pipes the process table into grep to locate running SSH processes.",
+                    "cat /var/log/messages": "Incorrect. This prints system log messages, not active process tables.",
+                    "rm -rf /ssh": "Incorrect. This attempts to recursively delete a directory, which is dangerous and irrelevant.",
+                    "chmod 777 ssh": "Incorrect. This changes file permissions to open access."
+                },
+                "key_term": "Pipe (|): A mechanism in Unix shells that connects the standard output (stdout) of one command directly to the standard input (stdin) of another."
+            }
+        },
+        {
+            "id": "m3_i_25",
+            "raw_id": 25,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Processes",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which kill signal number represents SIGKILL (forcefully and immediately terminating a process without allowing cleanup)?",
+            "type": "single",
+            "options": [
+                "Signal 9",
+                "Signal 15 (SIGTERM)",
+                "Signal 1 (SIGHUP)",
+                "Signal 2 (SIGINT)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests Unix process signal numbers.",
+                "why_correct": "SIGKILL (kill -9) forcefully terminates a process immediately at the kernel level; the process cannot catch, block, or ignore this signal.",
+                "options_breakdown": {
+                    "Signal 9": "Correct. Signal 9 (SIGKILL) forces immediate process termination by the kernel.",
+                    "Signal 15 (SIGTERM)": "Incorrect. Signal 15 is SIGTERM, the standard polite termination request that allows clean shutdown.",
+                    "Signal 1 (SIGHUP)": "Incorrect. Signal 1 is SIGHUP (hangup), often used to reload daemon configuration files.",
+                    "Signal 2 (SIGINT)": "Incorrect. Signal 2 is SIGINT (interrupt), triggered by pressing Ctrl+C in the terminal."
+                },
+                "key_term": "SIGKILL: Signal 9 in Unix-like systems that causes immediate uncatchable process termination."
+            }
+        },
+        {
+            "id": "m3_i_26",
+            "raw_id": 26,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Users and permissions",
+            "is_scenario": true,
+            "scenario": "A system administrator wants to change the ownership of a file named 'report.txt' so that user 'dhriti' and group 'security' own it.",
+            "question": "Which command should the administrator execute?",
+            "type": "single",
+            "options": [
+                "chown dhriti:security report.txt",
+                "chmod 755 report.txt",
+                "chgrp dhriti report.txt",
+                "passwd dhriti report.txt"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests ownership modification using chown.",
+                "why_correct": "'chown user:group filename' changes both the owner user and the owner group of the target file simultaneously.",
+                "options_breakdown": {
+                    "chown dhriti:security report.txt": "Correct. 'chown' updates file user and group ownership.",
+                    "chmod 755 report.txt": "Incorrect. 'chmod' modifies file access permissions, not owner identity.",
+                    "chgrp dhriti report.txt": "Incorrect. 'chgrp' only changes group ownership, not user ownership.",
+                    "passwd dhriti report.txt": "Incorrect. 'passwd' changes user account passwords."
+                },
+                "key_term": "chown (change owner): A Unix command used to change file owner, group, or both."
+            }
+        },
+        {
+            "id": "m3_i_27",
+            "raw_id": 27,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Where are hashed user passwords securely stored in modern Linux systems, accessible only by the root user?",
+            "type": "single",
+            "options": [
+                "/etc/shadow",
+                "/etc/passwd",
+                "/var/passwords.txt",
+                "/home/desktop/keys.doc"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of Linux password storage architecture.",
+                "why_correct": "User account definitions are in '/etc/passwd' (world-readable), but cryptographic password hashes and salt values are stored in '/etc/shadow', which is restricted to root only (permission 640 or 000).",
+                "options_breakdown": {
+                    "/etc/shadow": "Correct. '/etc/shadow' holds salted password hashes and is strictly protected from non-root users.",
+                    "/etc/passwd": "Incorrect. '/etc/passwd' is readable by all users and contains user metadata; it historically held passwords before /etc/shadow was introduced.",
+                    "/var/passwords.txt": "Incorrect. Standard Linux systems never store passwords in arbitrary text files.",
+                    "/home/desktop/keys.doc": "Incorrect. This is not a standard system path."
+                },
+                "key_term": "/etc/shadow: The secured configuration file in Linux that stores encrypted user password hashes and account expiration rules."
+            }
+        },
+        {
+            "id": "m3_i_28",
+            "raw_id": 28,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Package management",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which package management tool is used natively by Red Hat Enterprise Linux, CentOS, and Fedora distributions?",
+            "type": "single",
+            "options": [
+                "dnf / yum (RPM-based)",
+                "apt / dpkg",
+                "pacman",
+                "apk"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about Red Hat family package managers.",
+                "why_correct": "Red Hat systems (RHEL, Fedora, CentOS) utilize RPM packages managed by 'yum' and modern 'dnf' (Dandified YUM).",
+                "options_breakdown": {
+                    "dnf / yum (RPM-based)": "Correct. 'dnf' and 'yum' are the native package managers for the Red Hat family.",
+                    "apt / dpkg": "Incorrect. 'apt' and 'dpkg' are used by Debian and Ubuntu.",
+                    "pacman": "Incorrect. 'pacman' is the package manager for Arch Linux.",
+                    "apk": "Incorrect. 'apk' is the Alpine Linux package manager."
+                },
+                "key_term": "RPM / DNF: The package format and package management utility utilized in Red Hat and Fedora distributions."
+            }
+        },
+        {
+            "id": "m3_i_29",
+            "raw_id": 29,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "System logs",
+            "is_scenario": true,
+            "scenario": "An administrator suspects someone attempted to brute-force a server's SSH login over the weekend.",
+            "question": "Which log file on Ubuntu/Debian records SSH authentication attempts and sudo privilege escalations?",
+            "type": "single",
+            "options": [
+                "/var/log/auth.log",
+                "/var/log/dpkg.log",
+                "/var/log/boot.log",
+                "/var/log/nginx/access.log"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of system authentication logging.",
+                "why_correct": "On Debian and Ubuntu, '/var/log/auth.log' (or '/var/log/secure' on RHEL/CentOS) records all authentication events, including SSH logins, failed password attempts, and sudo commands.",
+                "options_breakdown": {
+                    "/var/log/auth.log": "Correct. '/var/log/auth.log' tracks system authentication and authorization activity.",
+                    "/var/log/dpkg.log": "Incorrect. 'dpkg.log' logs software package installation and removal events.",
+                    "/var/log/boot.log": "Incorrect. 'boot.log' contains hardware and service initialization messages from system startup.",
+                    "/var/log/nginx/access.log": "Incorrect. This file records web requests to the Nginx HTTP server, not SSH logins."
+                },
+                "key_term": "auth.log: The system authentication log file tracking logins, privilege escalations, and PAM events."
+            }
+        },
+        {
+            "id": "m3_i_30",
+            "raw_id": 30,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Linux terminal",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which keyboard shortcut in the Linux terminal immediately sends a SIGINT signal to terminate the currently running foreground program?",
+            "type": "single",
+            "options": [
+                "Ctrl + C",
+                "Ctrl + Z",
+                "Ctrl + D",
+                "Alt + F4"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests common terminal control keystrokes.",
+                "why_correct": "'Ctrl + C' sends an Interrupt signal (SIGINT) to the active foreground process, halting its execution.",
+                "options_breakdown": {
+                    "Ctrl + C": "Correct. 'Ctrl + C' sends SIGINT to stop the active foreground command.",
+                    "Ctrl + Z": "Incorrect. 'Ctrl + Z' suspends (pauses) the process and sends it to the background with SIGTSTP.",
+                    "Ctrl + D": "Incorrect. 'Ctrl + D' sends an EOF (End of File) indicator, closing the shell or input stream.",
+                    "Alt + F4": "Incorrect. 'Alt + F4' is a desktop GUI window close shortcut."
+                },
+                "key_term": "Ctrl + C (SIGINT): The standard terminal keyboard interrupt sequence that halts a running foreground process."
+            }
+        },
+        {
+            "id": "m3_i_31",
+            "raw_id": 31,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "File systems",
+            "is_scenario": true,
+            "scenario": "A Linux administrator mounts a USB flash drive formatted with Microsoft Windows NTFS.",
+            "question": "Which command is used to safely unmount the storage device before physically unplugging it?",
+            "type": "single",
+            "options": [
+                "umount /mnt/usb",
+                "eject --hard-crash",
+                "rmdir /mnt/usb",
+                "format /mnt/usb"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario asks how storage drives are unmounted in Linux.",
+                "why_correct": "The 'umount' command (note the spelling without the first 'n') flushes pending write caches to disk and detaches the mounted file system cleanly.",
+                "options_breakdown": {
+                    "umount /mnt/usb": "Correct. 'umount' cleanly unmounts the file system.",
+                    "eject --hard-crash": "Incorrect. This is not a real Linux command.",
+                    "rmdir /mnt/usb": "Incorrect. 'rmdir' cannot remove a directory while a device is actively mounted to it.",
+                    "format /mnt/usb": "Incorrect. Linux does not have a generic 'format' command; formatting is done via mkfs."
+                },
+                "key_term": "umount: The Linux command used to unmount file systems from their mount points."
+            }
+        },
+        {
+            "id": "m3_i_32",
+            "raw_id": 32,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command is used to search for specific text patterns inside files using regular expressions in Linux?",
+            "type": "single",
+            "options": [
+                "grep",
+                "find",
+                "locate",
+                "diff"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the pattern-searching utility grep.",
+                "why_correct": "'grep' (Global Regular Expression Print) searches plain text files or stream inputs for lines matching a specified pattern.",
+                "options_breakdown": {
+                    "grep": "Correct. 'grep' searches text files and streams for regular expression pattern matches.",
+                    "find": "Incorrect. 'find' searches directory hierarchies for files based on filenames, size, or timestamps, not text content.",
+                    "locate": "Incorrect. 'locate' looks up file paths in a pre-built indexed database.",
+                    "diff": "Incorrect. 'diff' compares two files line by line to show differences."
+                },
+                "key_term": "grep: A powerful Unix command-line utility used to search text for matching regular expressions."
+            }
+        },
+        {
+            "id": "m3_i_33",
+            "raw_id": 33,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Processes",
+            "is_scenario": true,
+            "scenario": "A web server process becomes unresponsive and ignores standard termination requests. An administrator needs to find its Process ID (PID) and terminate it.",
+            "question": "Which command pair allows finding the PID and forcefully stopping it?",
+            "type": "single",
+            "options": [
+                "'pgrep' or 'pidof' to find PID, followed by 'kill -9 <PID>'",
+                "'ls' followed by 'rm <PID>'",
+                "'pwd' followed by 'cd <PID>'",
+                "'echo' followed by 'cat <PID>'"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests locating and terminating rogue processes in Linux.",
+                "why_correct": "'pgrep <name>' finds the PID matching a process name. 'kill -9 <PID>' sends SIGKILL to forcefully terminate the hung process.",
+                "options_breakdown": {
+                    "'pgrep' or 'pidof' to find PID, followed by 'kill -9 <PID>'": "Correct. 'pgrep' resolves the process name to a PID, and 'kill -9' terminates it immediately.",
+                    "'ls' followed by 'rm <PID>'": "Incorrect. PIDs are kernel identifiers, not regular files to delete with rm.",
+                    "'pwd' followed by 'cd <PID>'": "Incorrect. PIDs are not directories.",
+                    "'echo' followed by 'cat <PID>'": "Incorrect. Echo and cat do not control process execution."
+                },
+                "key_term": "pgrep: A command-line utility that looks through currently running processes and lists the process IDs matching selection criteria."
+            }
+        },
+        {
+            "id": "m3_i_34",
+            "raw_id": 34,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "File systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In the Linux Filesystem Hierarchy, what is the dedicated purpose of the '/etc' directory?",
+            "type": "single",
+            "options": [
+                "Host-specific system-wide configuration files",
+                "User personal downloaded MP3 files",
+                "Temporary internet browser cookies",
+                "Hardware device driver firmware code only"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of the /etc directory role.",
+                "why_correct": "'/etc' contains system-wide configuration files and startup scripts (e.g., /etc/passwd, /etc/hosts, /etc/fstab).",
+                "options_breakdown": {
+                    "Host-specific system-wide configuration files": "Correct. '/etc' houses central configuration files controlling system services and behavior.",
+                    "User personal downloaded MP3 files": "Incorrect. User media is stored in user home folders under /home/username.",
+                    "Temporary internet browser cookies": "Incorrect. Browser cookies are stored in user profile directories.",
+                    "Hardware device driver firmware code only": "Incorrect. Device nodes reside in /dev and firmware in /lib/firmware."
+                },
+                "key_term": "/etc: The standard directory in Unix systems reserved for system configuration files."
+            }
+        },
+        {
+            "id": "m3_i_35",
+            "raw_id": 35,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Linux terminal",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following statements about standard streams (I/O) in Linux are correct? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "File descriptor 0 represents Standard Input (stdin)",
+                "File descriptor 1 represents Standard Output (stdout)",
+                "File descriptor 2 represents Standard Error (stderr)",
+                "File descriptor 3 represents the computer's graphics monitor directly"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about the three standard POSIX I/O streams.",
+                "why_correct": "In Unix/Linux, every process opens three standard file descriptors: 0 for stdin, 1 for stdout, and 2 for stderr. File descriptor 3 is not reserved for the monitor.",
+                "options_breakdown": {
+                    "File descriptor 0 represents Standard Input (stdin)": "Correct. Stdin (0) receives keyboard or piped stream input.",
+                    "File descriptor 1 represents Standard Output (stdout)": "Correct. Stdout (1) outputs normal program results.",
+                    "File descriptor 2 represents Standard Error (stderr)": "Correct. Stderr (2) outputs error and diagnostic messages independently of stdout.",
+                    "File descriptor 3 represents the computer's graphics monitor directly": "Incorrect. FD 3 is simply the first available descriptor for opened files."
+                },
+                "key_term": "Standard Streams: The preconnected input and output communication channels between a computer program and its environment (stdin, stdout, stderr)."
+            }
+        },
+        {
+            "id": "m3_i_36",
+            "raw_id": 36,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What occurs when you set file permissions to 'chmod 600 private.key' on an SSH private key file?",
+            "type": "single",
+            "options": [
+                "The file owner has Read and Write access, while Group and Others have zero access",
+                "All users on the network can view and edit the private key",
+                "The key is automatically published to public GitHub repositories",
+                "The file is deleted and replaced with a random password"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests permission hardening for private cryptographic keys.",
+                "why_correct": "600 translates to 'rw-------': Read (4) + Write (2) = 6 for the file owner, and 0 for group and others, ensuring only the owner can read or modify the sensitive key.",
+                "options_breakdown": {
+                    "The file owner has Read and Write access, while Group and Others have zero access": "Correct. 600 restricts sensitive files so only the owning account has access.",
+                    "All users on the network can view and edit the private key": "Incorrect. That would be 666 or 777.",
+                    "The key is automatically published to public GitHub repositories": "Incorrect. File permissions are local filesystem attributes with no connection to external Git remotes.",
+                    "The file is deleted and replaced with a random password": "Incorrect. 'chmod' modifies permission bits; it never deletes file content."
+                },
+                "key_term": "chmod 600: A hardened permission setting granting read/write strictly to the file owner, mandatory for SSH private keys."
+            }
+        },
+        {
+            "id": "m3_i_37",
+            "raw_id": 37,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Linux terminal",
+            "is_scenario": true,
+            "scenario": "A user wants to view the last 20 lines of a rapidly updating web server log file in real time as new requests arrive.",
+            "question": "Which command accomplishes this continuous monitoring?",
+            "type": "single",
+            "options": [
+                "tail -f -n 20 /var/log/nginx/access.log",
+                "head -n 20 /var/log/nginx/access.log",
+                "cat /var/log/nginx/access.log",
+                "nano /var/log/nginx/access.log"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests continuous log tailing.",
+                "why_correct": "'tail -f' (follow) outputs the appended data as the file grows, allowing administrators to monitor live system events.",
+                "options_breakdown": {
+                    "tail -f -n 20 /var/log/nginx/access.log": "Correct. 'tail -f' follows file growth in real time.",
+                    "head -n 20 /var/log/nginx/access.log": "Incorrect. 'head' outputs the top lines of a file and exits immediately without following.",
+                    "cat /var/log/nginx/access.log": "Incorrect. 'cat' dumps the entire static file and stops.",
+                    "nano /var/log/nginx/access.log": "Incorrect. 'nano' is a text editor and does not automatically refresh live incoming logs."
+                },
+                "key_term": "tail -f: The command flag that outputs appended log entries in real-time as they are written to disk."
+            }
+        },
+        {
+            "id": "m3_i_38",
+            "raw_id": 38,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "File systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Hard Link and a Symbolic (Soft) Link in Linux?",
+            "type": "single",
+            "options": [
+                "A Hard Link shares the exact same inode number as the original file, while a Symbolic Link is a separate pointer file containing a path string",
+                "A Hard Link is stored in physical RAM, while a Symbolic Link is stored on an optical disc",
+                "Symbolic Links only work on weekends, while Hard Links work on weekdays",
+                "Hard Links can link across different physical disk drives, while Symbolic Links cannot"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the architectural differences between Unix hard links and symlinks.",
+                "why_correct": "A Hard link is an additional directory entry pointing directly to the existing file inode (cannot span filesystems). A Symbolic Link (created with 'ln -s') is an independent small file that contains the target path as its content and can cross filesystems.",
+                "options_breakdown": {
+                    "A Hard Link shares the exact same inode number as the original file, while a Symbolic Link is a separate pointer file containing a path string": "Correct. Hard links share inodes; symlinks are distinct pointer files.",
+                    "A Hard Link is stored in physical RAM, while a Symbolic Link is stored on an optical disc": "Incorrect. Both reside on standard file systems.",
+                    "Symbolic Links only work on weekends, while Hard Links work on weekdays": "Incorrect. Both operate continuously without calendar restrictions.",
+                    "Hard Links can link across different physical disk drives, while Symbolic Links cannot": "Incorrect. The exact opposite is true: hard links cannot span filesystems, but symlinks can."
+                },
+                "key_term": "Inode: A data structure on a Unix filesystem that stores all metadata about a file except its name and actual content."
+            }
+        },
+        {
+            "id": "m3_i_39",
+            "raw_id": 39,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Processes",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command shows the hierarchical parent-child process tree in a clean graphical ASCII layout in the terminal?",
+            "type": "single",
+            "options": [
+                "pstree",
+                "pwd",
+                "tree /boot",
+                "df -h"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests tools for inspecting process lineage.",
+                "why_correct": "'pstree' displays running processes as a tree diagram, showing which child processes were spawned by which parent processes (all branching from PID 1 / systemd).",
+                "options_breakdown": {
+                    "pstree": "Correct. 'pstree' renders active processes in a tree structure showing parent-child hierarchy.",
+                    "pwd": "Incorrect. 'pwd' shows the directory path.",
+                    "tree /boot": "Incorrect. 'tree /boot' displays directory file trees, not running processes.",
+                    "df -h": "Incorrect. 'df -h' reports disk space usage on mounted filesystems."
+                },
+                "key_term": "pstree: A Linux command that displays active processes in a tree representation rooted at PID 1."
+            }
+        },
+        {
+            "id": "m3_i_40",
+            "raw_id": 40,
+            "module_id": 3,
+            "difficulty": "intermediate",
+            "topic": "Introduction to operating systems",
+            "is_scenario": true,
+            "scenario": "An operating system switches the CPU from executing one running process to another process, saving the first process's registers and program counter to memory and loading the second process's state.",
+            "question": "What is this core operating system mechanism called?",
+            "type": "single",
+            "options": [
+                "Context Switching",
+                "Clock Overclocking",
+                "Disk Defragmentation",
+                "Packet Sniffing"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of multitasking and CPU context switching.",
+                "why_correct": "A Context Switch is the process of storing the state of a process or thread so that it can be restored and resume execution later, allowing a single CPU core to multitask multiple programs.",
+                "options_breakdown": {
+                    "Context Switching": "Correct. Context switching enables multitasking by swapping CPU register states between processes.",
+                    "Clock Overclocking": "Incorrect. Overclocking is increasing physical clock frequency, not OS process scheduling.",
+                    "Disk Defragmentation": "Incorrect. Defragmentation organizes storage blocks on spinning disks.",
+                    "Packet Sniffing": "Incorrect. Packet sniffing captures network traffic."
+                },
+                "key_term": "Context Switch: The computational process of storing and restoring the state of a CPU so that multiple processes can share a single CPU core."
+            }
+        },
+        {
+            "id": "m3_h_41",
+            "raw_id": 41,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Users and permissions",
+            "is_scenario": true,
+            "scenario": "A penetration tester discovers a binary with the SUID (Set Owner User ID) bit set owned by root ('-rwsr-xr-x').",
+            "question": "What security risk does a misconfigured SUID root binary pose on a Linux system?",
+            "type": "single",
+            "options": [
+                "Any regular unprivileged user executing the binary runs it with full root privileges, potentially allowing local privilege escalation",
+                "It prevents the computer from connecting to any Wi-Fi network",
+                "It locks the root account permanently and requires reinstalling Linux",
+                "It deletes all system log files every time a user logs in"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests deep understanding of SUID bit exploitation and privilege escalation.",
+                "why_correct": "The SUID bit ('s' in owner execute) instructs the kernel to execute the file with the permissions of the file owner (root) rather than the executing user. If the binary has flaws or can spawn shells, an attacker gains instant root access.",
+                "options_breakdown": {
+                    "Any regular unprivileged user executing the binary runs it with full root privileges, potentially allowing local privilege escalation": "Correct. SUID executes binaries under the file owner's privileges, creating high privilege escalation risks if misconfigured.",
+                    "It prevents the computer from connecting to any Wi-Fi network": "Incorrect. SUID bits have no relation to Wi-Fi radios.",
+                    "It locks the root account permanently and requires reinstalling Linux": "Incorrect. SUID does not disable or lock user accounts.",
+                    "It deletes all system log files every time a user logs in": "Incorrect. SUID binaries only perform their programmed actions when executed."
+                },
+                "key_term": "SUID (SetUID): A special file permission bit that allows users to run an executable with the permissions of the executable's owner."
+            }
+        },
+        {
+            "id": "m3_h_42",
+            "raw_id": 42,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the purpose of the 'Sticky Bit' permission ('chmod +t' or 1777) set on the public shared directory '/tmp'?",
+            "type": "single",
+            "options": [
+                "It prevents users from deleting or renaming files owned by other users, even though the directory is writable by everyone",
+                "It glues all files permanently so they can never be modified by anyone, including root",
+                "It automatically backs up all files to cloud storage every 5 minutes",
+                "It restricts access to the directory only to users physically using the laptop keyboard"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the specialized protective role of the Sticky Bit.",
+                "why_correct": "In a world-writable directory like '/tmp' (permission 777), any user could delete other users' files. Setting the Sticky Bit ('1777' or 'drwxrwxrwt') ensures that only the file owner (or root) can delete or rename files within that directory.",
+                "options_breakdown": {
+                    "It prevents users from deleting or renaming files owned by other users, even though the directory is writable by everyone": "Correct. The sticky bit protects files in shared directories like /tmp from unauthorized deletion by peers.",
+                    "It glues all files permanently so they can never be modified by anyone, including root": "Incorrect. File owners and root can still modify and delete their own files.",
+                    "It automatically backs up all files to cloud storage every 5 minutes": "Incorrect. The sticky bit is a local file permission, not a cloud backup tool.",
+                    "It restricts access to the directory only to users physically using the laptop keyboard": "Incorrect. Permissions apply uniformly across local and remote SSH sessions."
+                },
+                "key_term": "Sticky Bit: A permission bit that can be set on directories to prevent unprivileged users from deleting or renaming other users' files."
+            }
+        },
+        {
+            "id": "m3_h_43",
+            "raw_id": 43,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Processes",
+            "is_scenario": true,
+            "scenario": "During a server performance audit, a Linux engineer observes several processes marked with state 'Z' (Zombie) in the 'ps' table.",
+            "question": "What is a Zombie process, and what resource does it continue to occupy until its parent process calls 'wait()'?",
+            "type": "single",
+            "options": [
+                "A process that has finished execution but remains in the process table to report its exit status to its parent, holding a PID slot",
+                "A malicious worm that takes over webcams and printers",
+                "A process that has frozen the physical power button on the server chassis",
+                "A process that has been converted into an analog paper document"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of process lifecycle states (Zombie/Defunct processes).",
+                "why_correct": "A Zombie process has terminated execution, but its exit status has not yet been read by its parent via the 'wait()' system call. It consumes no CPU or memory, but it occupies an entry in the kernel process table and a PID.",
+                "options_breakdown": {
+                    "A process that has finished execution but remains in the process table to report its exit status to its parent, holding a PID slot": "Correct. Zombies linger in the process table until reaped by their parent or adopted by PID 1 (init/systemd).",
+                    "A malicious worm that takes over webcams and printers": "Incorrect. 'Zombie' in OS terminology is an exited process awaiting status reaping, not botnet malware.",
+                    "A process that has frozen the physical power button on the server chassis": "Incorrect. Software processes do not physically freeze hardware switches.",
+                    "A process that has been converted into an analog paper document": "Incorrect. Digital processes exist in kernel memory."
+                },
+                "key_term": "Zombie Process: An inactive process in Unix-like systems that has completed execution but still has an entry in the process table."
+            }
+        },
+        {
+            "id": "m3_h_44",
+            "raw_id": 44,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "File systems",
+            "is_scenario": true,
+            "scenario": "A system administrator receives an alert that a server disk is returning 'No space left on device', yet the 'df -h' command reports 40% free disk storage capacity available.",
+            "question": "What underlying file system resource has been completely exhausted?",
+            "type": "single",
+            "options": [
+                "Inodes (exhausted by millions of tiny files)",
+                "Physical RAM slots on the motherboard",
+                "Internet bandwidth quota",
+                "The computer monitor's refresh rate"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests file system troubleshooting (inode table exhaustion).",
+                "why_correct": "File systems allocate a fixed number of inodes during creation. If a system generates millions of tiny zero-byte files, all available inodes are consumed ('df -i' shows 100% inode use), preventing new files from being created even if gigabytes of raw disk space remain.",
+                "options_breakdown": {
+                    "Inodes (exhausted by millions of tiny files)": "Correct. When inode tables fill up, no new directory entries or files can be created regardless of free byte capacity.",
+                    "Physical RAM slots on the motherboard": "Incorrect. RAM slots are physical hardware sockets and do not cause disk storage errors.",
+                    "Internet bandwidth quota": "Incorrect. Network bandwidth does not dictate local disk write capacity.",
+                    "The computer monitor's refresh rate": "Incorrect. Monitor refresh rates have no relation to disk file system allocation."
+                },
+                "key_term": "Inode Exhaustion: A condition where all available inode numbers on a filesystem are consumed, preventing new file creation despite available free space."
+            }
+        },
+        {
+            "id": "m3_h_45",
+            "raw_id": 45,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "System logs",
+            "is_scenario": true,
+            "scenario": "On a modern systemd-based Linux distribution (like Ubuntu 22.04 or RHEL 9), which command queries and filters the centralized binary system journal for logs generated specifically by the 'nginx' service since yesterday?",
+            "question": "On a modern systemd-based Linux distribution (like Ubuntu 22.04 or RHEL 9), which command queries and filters the centralized binary system journal for logs generated specifically by the 'nginx' service since yesterday?",
+            "type": "single",
+            "options": [
+                "journalctl -u nginx --since yesterday",
+                "cat /var/log/syslog | grep nginx",
+                "tail -n 100 /etc/nginx/nginx.conf",
+                "systemctl status nginx --clean"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests systemd journal querying.",
+                "why_correct": "'journalctl' is the native utility for querying systemd's binary journal logs. The '-u' flag filters by systemd unit, and '--since' filters by timestamp (e.g., 'yesterday' or '2 hours ago').",
+                "options_breakdown": {
+                    "journalctl -u nginx --since yesterday": "Correct. 'journalctl -u <unit> --since <time>' queries systemd logs for that specific unit and time window.",
+                    "cat /var/log/syslog | grep nginx": "Incorrect. Modern systemd distros rely primarily on binary journald logs, and syslog may not filter by exact timestamp.",
+                    "tail -n 100 /etc/nginx/nginx.conf": "Incorrect. nginx.conf is a configuration file, not an event log.",
+                    "systemctl status nginx --clean": "Incorrect. 'systemctl status' shows the current running state and only the last few log lines; '--clean' is not a valid flag."
+                },
+                "key_term": "journalctl: A command-line utility for querying and displaying logs from systemd-journald."
+            }
+        },
+        {
+            "id": "m3_h_46",
+            "raw_id": 46,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Introduction to operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What security protection does modern CPU hardware provide by separating execution into 'User Mode' (Ring 3) and 'Kernel Mode' (Ring 0)?",
+            "type": "single",
+            "options": [
+                "It prevents user applications from directly accessing critical hardware or memory, forcing them to make controlled System Calls to the kernel",
+                "It prevents computers from connecting to the Internet without an administrator password",
+                "It encrypts the user's hard drive automatically when the lid is closed",
+                "It doubles the physical battery life of laptop computers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about CPU ring architectures and memory protection.",
+                "why_correct": "Ring 0 (Kernel Mode) has complete access to CPU instructions and memory. User applications run in Ring 3 (User Mode) with restricted privileges. If an app crashes or misbehaves, it cannot crash the kernel or corrupt other processes.",
+                "options_breakdown": {
+                    "It prevents user applications from directly accessing critical hardware or memory, forcing them to make controlled System Calls to the kernel": "Correct. Ring separation ensures applications cannot directly manipulate hardware or corrupt kernel memory.",
+                    "It prevents computers from connecting to the Internet without an administrator password": "Incorrect. Ring architectures govern CPU instruction privileges, not internet access policies.",
+                    "It encrypts the user's hard drive automatically when the lid is closed": "Incorrect. Disk encryption is handled by software/TPM modules, not basic CPU privilege rings.",
+                    "It doubles the physical battery life of laptop computers": "Incorrect. Ring architectures are a memory protection and stability design, not a battery doubling feature."
+                },
+                "key_term": "Ring 0 / Kernel Mode: The privileged processor execution mode where the operating system kernel runs with direct access to hardware instructions."
+            }
+        },
+        {
+            "id": "m3_h_47",
+            "raw_id": 47,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Users and permissions",
+            "is_scenario": true,
+            "scenario": "An administrator needs to grant user 'alice' read and write access to a sensitive file '/opt/audit.log', without changing the file's primary owner or group.",
+            "question": "Which Linux utility managing POSIX Access Control Lists (ACLs) should the administrator use?",
+            "type": "single",
+            "options": [
+                "setfacl -m u:alice:rw /opt/audit.log",
+                "chmod 777 /opt/audit.log",
+                "chown alice /opt/audit.log",
+                "passwd -u alice /opt/audit.log"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests extending standard Linux permissions with POSIX Access Control Lists (ACLs).",
+                "why_correct": "Traditional Linux permissions only support one owner, one group, and others. POSIX ACLs ('setfacl') allow granting specific granular permissions to additional arbitrary users or groups without changing existing ownership.",
+                "options_breakdown": {
+                    "setfacl -m u:alice:rw /opt/audit.log": "Correct. 'setfacl -m' modifies the ACL to grant specific permissions to an individual user.",
+                    "chmod 777 /opt/audit.log": "Incorrect. 'chmod 777' makes the file world-writable to all users on the system, violating least privilege.",
+                    "chown alice /opt/audit.log": "Incorrect. 'chown' alters the primary file owner, which the question specified must not be changed.",
+                    "passwd -u alice /opt/audit.log": "Incorrect. 'passwd -u' unlocks a user account password."
+                },
+                "key_term": "POSIX ACLs: Fine-grained access control lists extending standard Unix file permissions to multiple arbitrary users and groups."
+            }
+        },
+        {
+            "id": "m3_h_48",
+            "raw_id": 48,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Processes",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the designated Process ID (PID) of the primary 'init' or 'systemd' process that is started by the kernel and serves as the ancestor of all other user-space processes?",
+            "type": "single",
+            "options": [
+                "PID 1",
+                "PID 0",
+                "PID 100",
+                "PID 65535"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of the root process of user space.",
+                "why_correct": "PID 1 is the first user-space process started by the kernel at boot (e.g., systemd or init). All other user processes descend from PID 1, and PID 1 adopts orphaned child processes.",
+                "options_breakdown": {
+                    "PID 1": "Correct. PID 1 is the primary ancestor of all user-space processes in Unix-like systems.",
+                    "PID 0": "Incorrect. PID 0 is typically the internal kernel scheduler / swapper process, not a user-space process.",
+                    "PID 100": "Incorrect. PID 100 is an arbitrary process ID assigned later during boot.",
+                    "PID 65535": "Incorrect. 65535 is the maximum 16-bit integer, not the root init PID."
+                },
+                "key_term": "PID 1 (Init / Systemd): The first process spawned by the Linux kernel during bootstrap that initializes all system services."
+            }
+        },
+        {
+            "id": "m3_h_49",
+            "raw_id": 49,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "File systems",
+            "is_scenario": true,
+            "scenario": "A forensic investigator finds an attacker modified file timestamps to match surrounding legitimate files (a technique called 'Timestomping').",
+            "question": "Which Linux timestamp cannot be directly altered or forged by standard user-space tools like 'touch' without modifying the raw filesystem block directly?",
+            "type": "single",
+            "options": [
+                "ctime (Change time / Inode metadata change)",
+                "atime (Access time)",
+                "mtime (Modification time)",
+                "dtime (Download time)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests digital forensics understanding of Linux MACB timestamps.",
+                "why_correct": "While 'touch' can freely alter 'atime' (access time) and 'mtime' (content modification time), 'ctime' (metadata change time) is updated automatically by the kernel whenever file attributes change and cannot be set directly via standard system calls.",
+                "options_breakdown": {
+                    "ctime (Change time / Inode metadata change)": "Correct. The kernel automatically records ctime on inode changes; user-space tools like touch cannot forge it directly.",
+                    "atime (Access time)": "Incorrect. 'atime' can easily be forged or set to arbitrary dates using 'touch -a -t'.",
+                    "mtime (Modification time)": "Incorrect. 'mtime' can easily be set to arbitrary historical dates using 'touch -m -t'.",
+                    "dtime (Download time)": "Incorrect. 'dtime' is an ext4 deletion timestamp, not a standard user-space timestamp."
+                },
+                "key_term": "ctime: Inode metadata change timestamp in Linux that is updated automatically by the kernel and cannot be set arbitrarily via touch."
+            }
+        },
+        {
+            "id": "m3_h_50",
+            "raw_id": 50,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Linux terminal",
+            "is_scenario": true,
+            "scenario": "An engineer writes a bash automation script and wants to redirect both standard output (stdout) and standard error (stderr) into a single log file named 'install.log'.",
+            "question": "Which redirection syntax achieves this?",
+            "type": "single",
+            "options": [
+                "command > install.log 2>&1  (or command &> install.log)",
+                "command >> 2> install.log",
+                "command 1+2=log",
+                "command | install.log"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests combining and redirecting stdout and stderr in Bash.",
+                "why_correct": "'command > install.log 2>&1' redirects stdout (descriptor 1) to install.log, and then redirects stderr (descriptor 2) to wherever stdout is currently pointing (&1). Bash also supports the shorthand '&> install.log'.",
+                "options_breakdown": {
+                    "command > install.log 2>&1  (or command &> install.log)": "Correct. This cleanly merges both stdout and stderr streams into the specified destination file.",
+                    "command >> 2> install.log": "Incorrect. This is invalid shell syntax that causes a parser error.",
+                    "command 1+2=log": "Incorrect. This is not valid stream redirection syntax.",
+                    "command | install.log": "Incorrect. The pipe '|' expects an executable program on the right side, not a text file."
+                },
+                "key_term": "2>&1: A shell redirection syntax that redirects Standard Error (file descriptor 2) to Standard Output (file descriptor 1)."
+            }
+        },
+        {
+            "id": "m3_h_51",
+            "raw_id": 51,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Introduction to operating systems",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What occurs during a 'Kernel Panic' in a Linux operating system?",
+            "type": "single",
+            "options": [
+                "The kernel encounters an unrecoverable internal error or hardware fault and halts system execution to prevent data corruption",
+                "The computer switches on its webcam and flashes emergency red lights",
+                "All files on the hard drive are immediately erased permanently",
+                "The operating system uninstalls itself and replaces itself with MS-DOS"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of fatal operating system exception handling.",
+                "why_correct": "A Kernel Panic is a safety mechanism triggered when the kernel detects an unrecoverable error (similar to a Windows Blue Screen of Death). The OS halts to prevent hardware damage or silent storage corruption.",
+                "options_breakdown": {
+                    "The kernel encounters an unrecoverable internal error or hardware fault and halts system execution to prevent data corruption": "Correct. The kernel halts execution safely when it detects fatal hardware faults or corrupted kernel memory.",
+                    "The computer switches on its webcam and flashes emergency red lights": "Incorrect. Panic handlers do not turn on webcams or flash lights.",
+                    "All files on the hard drive are immediately erased permanently": "Incorrect. A kernel panic halts operations specifically to prevent data loss or drive corruption.",
+                    "The operating system uninstalls itself and replaces itself with MS-DOS": "Incorrect. Panics halt execution in memory; they do not install other operating systems."
+                },
+                "key_term": "Kernel Panic: A safety measure taken by an operating system kernel upon detecting an internal fatal error from which it cannot safely recover."
+            }
+        },
+        {
+            "id": "m3_h_52",
+            "raw_id": 52,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Package management",
+            "is_scenario": true,
+            "scenario": "A developer downloads a raw Debian software package file named 'custom-agent.deb'.",
+            "question": "Which low-level package tool is used to install this local .deb file directly without downloading dependencies from online repositories?",
+            "type": "single",
+            "options": [
+                "dpkg -i custom-agent.deb",
+                "apt-get remove custom-agent.deb",
+                "rpm -Uvh custom-agent.deb",
+                "pip install custom-agent.deb"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests low-level package installation on Debian/Ubuntu systems.",
+                "why_correct": "'dpkg -i' (install) is the underlying low-level tool that unpacks and installs local .deb archives directly. Unlike 'apt', 'dpkg' does not resolve remote network dependencies.",
+                "options_breakdown": {
+                    "dpkg -i custom-agent.deb": "Correct. 'dpkg -i' installs local .deb package files directly.",
+                    "apt-get remove custom-agent.deb": "Incorrect. 'apt-get remove' uninstalls packages rather than installing local files.",
+                    "rpm -Uvh custom-agent.deb": "Incorrect. 'rpm' manages Red Hat .rpm packages, not Debian .deb packages.",
+                    "pip install custom-agent.deb": "Incorrect. 'pip' installs Python modules from PyPI, not OS binary deb packages."
+                },
+                "key_term": "dpkg: The software that forms the low-level foundation of the package management system in Debian and its derivatives."
+            }
+        },
+        {
+            "id": "m3_h_53",
+            "raw_id": 53,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Users and permissions",
+            "is_scenario": true,
+            "scenario": "A security analyst reviews scheduled tasks and discovers a root cron job in '/etc/cron.d/backup' executing a world-writable bash script located in '/tmp/backup.sh' ('-rwxrwxrwx').",
+            "question": "How can an unprivileged local attacker exploit this configuration to achieve full root compromise?",
+            "type": "single",
+            "options": [
+                "The attacker can edit '/tmp/backup.sh' to insert malicious commands (e.g. adding a new root user), which the root cron daemon will automatically execute",
+                "The attacker can format the server's optical drive with an analog magnet",
+                "The attacker can force the root cron job to print blank paper sheets",
+                "The attacker cannot do anything because cron ignores files in /tmp"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of insecure cron job permissions leading to local privilege escalation.",
+                "why_correct": "Because the script executed by root is world-writable, any low-privileged user can modify its contents. When cron runs the script with root privileges, the attacker's payload executes as root, granting full system compromise.",
+                "options_breakdown": {
+                    "The attacker can edit '/tmp/backup.sh' to insert malicious commands (e.g. adding a new root user), which the root cron daemon will automatically execute": "Correct. Insecure write permissions on root-executed scripts permit trivial privilege escalation.",
+                    "The attacker can format the server's optical drive with an analog magnet": "Incorrect. This describes physical media vandalism, not a cyber attack.",
+                    "The attacker can force the root cron job to print blank paper sheets": "Incorrect. Privilege escalation targets system control, not printer paper waste.",
+                    "The attacker cannot do anything because cron ignores files in /tmp": "Incorrect. Cron faithfully executes whatever file path is specified in its configuration."
+                },
+                "key_term": "Cron Privilege Escalation: A security vulnerability where a scheduled root task executes a file or script that can be modified by lower-privileged users."
+            }
+        },
+        {
+            "id": "m3_h_54",
+            "raw_id": 54,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Basic Linux commands",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which command searches the entire Linux file system for files larger than 100 Megabytes modified within the last 7 days?",
+            "type": "single",
+            "options": [
+                "find / -type f -size +100M -mtime -7",
+                "grep -r +100M /var/log",
+                "locate --size 100M --days 7",
+                "ls -lha / --bigger-than 100M"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests complex file search syntax using 'find'.",
+                "why_correct": "'find / -type f -size +100M -mtime -7' searches starting from root ('/') for regular files ('-type f') exceeding 100 Megabytes ('-size +100M') whose modification time is within the last 7 days ('-mtime -7').",
+                "options_breakdown": {
+                    "find / -type f -size +100M -mtime -7": "Correct. This accurately combines size, type, and modification timestamp filters.",
+                    "grep -r +100M /var/log": "Incorrect. 'grep' searches text strings inside files, not file metadata like size or timestamps.",
+                    "locate --size 100M --days 7": "Incorrect. 'locate' does not support dynamic size or timestamp filtering.",
+                    "ls -lha / --bigger-than 100M": "Incorrect. 'ls' does not have a '--bigger-than' filter option."
+                },
+                "key_term": "find: A command-line utility that searches one or more directory trees of a file system using criteria like size, type, and modification date."
+            }
+        },
+        {
+            "id": "m3_h_55",
+            "raw_id": 55,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Operating systems",
+            "is_scenario": true,
+            "scenario": "When a user program needs to read data from a physical disk drive, it cannot access hardware directly. It must execute a special CPU instruction to request this from the kernel.",
+            "question": "What is this programmatic mechanism called?",
+            "type": "single",
+            "options": [
+                "System Call (syscall)",
+                "Network Broadcast",
+                "Buffer Overflow",
+                "Denial of Service"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of user-to-kernel boundary transitions via system calls.",
+                "why_correct": "A System Call (syscall) is the programmatic interface between an unprivileged user process and the privileged operating system kernel (e.g., read, write, open, fork).",
+                "options_breakdown": {
+                    "System Call (syscall)": "Correct. System calls provide the controlled gateway for user applications to request kernel services.",
+                    "Network Broadcast": "Incorrect. A network broadcast sends data frames to all local network hosts.",
+                    "Buffer Overflow": "Incorrect. A buffer overflow is a memory corruption vulnerability.",
+                    "Denial of Service": "Incorrect. DoS is an attack disrupting service availability."
+                },
+                "key_term": "System Call (syscall): The programmatic way in which a computer program requests a service from the kernel of the operating system."
+            }
+        },
+        {
+            "id": "m3_h_56",
+            "raw_id": 56,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Linux terminal",
+            "is_scenario": true,
+            "scenario": "An engineer runs an intensive long-running script over an SSH connection, but worries that if their laptop Wi-Fi drops, the SSH session will disconnect and kill the script.",
+            "question": "Which terminal multiplexer utility allows creating detached, persistent terminal sessions that survive SSH disconnects?",
+            "type": "single",
+            "options": [
+                "tmux (or screen)",
+                "telnet",
+                "nano",
+                "ping"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests terminal multiplexers (tmux/screen) for resilient remote administration.",
+                "why_correct": "'tmux' (Terminal Multiplexer) and GNU 'screen' manage persistent terminal sessions inside background daemons. If an SSH connection drops, the process continues running undisturbed and can be reattached later.",
+                "options_breakdown": {
+                    "tmux (or screen)": "Correct. 'tmux' decouples terminal sessions from active SSH connections, preventing disconnect terminations.",
+                    "telnet": "Incorrect. Telnet is an insecure, legacy cleartext remote access protocol.",
+                    "nano": "Incorrect. 'nano' is a simple command-line text editor.",
+                    "ping": "Incorrect. 'ping' tests network packet reachability."
+                },
+                "key_term": "tmux: A terminal multiplexer that lets users switch between multiple programs in one terminal, detach them, and reattach them to a different terminal."
+            }
+        },
+        {
+            "id": "m3_h_57",
+            "raw_id": 57,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Processes",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between an Orphan Process and a Zombie Process in Linux?",
+            "type": "single",
+            "options": [
+                "An Orphan process is still actively running after its parent dies (and is adopted by PID 1), while a Zombie process has finished running and is merely waiting for its exit code to be read",
+                "An Orphan process is a computer virus, while a Zombie process is an antivirus program",
+                "An Orphan process is stored in the cloud, while a Zombie process is stored on a flash drive",
+                "There is zero difference between Orphan and Zombie processes"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the critical distinction between Orphan and Zombie process states.",
+                "why_correct": "An Orphan process continues running after its parent process terminates; the kernel re-parents it to PID 1 (init/systemd). A Zombie process has completed its execution, consumes no CPU, and simply awaits status reaping.",
+                "options_breakdown": {
+                    "An Orphan process is still actively running after its parent dies (and is adopted by PID 1), while a Zombie process has finished running and is merely waiting for its exit code to be read": "Correct. Orphans actively execute under PID 1 adoption; zombies are dead processes awaiting status reaping.",
+                    "An Orphan process is a computer virus, while a Zombie process is an antivirus program": "Incorrect. Both are standard operating system process lifecycle states, not malware or antivirus.",
+                    "An Orphan process is stored in the cloud, while a Zombie process is stored on a flash drive": "Incorrect. Both reside in local system memory.",
+                    "There is zero difference between Orphan and Zombie processes": "Incorrect. They represent completely different execution states."
+                },
+                "key_term": "Orphan Process: A computer process whose parent process has finished or terminated, causing it to be adopted by the init process (PID 1)."
+            }
+        },
+        {
+            "id": "m3_h_58",
+            "raw_id": 58,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "File systems",
+            "is_scenario": true,
+            "scenario": "A Linux server suffers an unexpected power loss. Upon reboot, which file system feature allows modern file systems (such as ext4, XFS, and NTFS) to quickly recover without scanning the entire hard drive?",
+            "question": "A Linux server suffers an unexpected power loss. Upon reboot, which file system feature allows modern file systems (such as ext4, XFS, and NTFS) to quickly recover without scanning the entire hard drive?",
+            "type": "single",
+            "options": [
+                "Journaling",
+                "Defragmentation",
+                "Overclocking",
+                "Optical scanning"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of journaling file systems.",
+                "why_correct": "A Journaling file system (like ext4 or XFS) logs metadata changes to a dedicated 'journal' on disk before committing them to the main filesystem. Following a crash, the OS simply replays the journal in seconds without needing a full fsck scan.",
+                "options_breakdown": {
+                    "Journaling": "Correct. Journaling logs pending operations to ensure rapid consistency recovery after crashes.",
+                    "Defragmentation": "Incorrect. Defragmentation rearranges scattered data blocks for sequential read performance.",
+                    "Overclocking": "Incorrect. Overclocking increases hardware clock frequencies and can actually cause instability.",
+                    "Optical scanning": "Incorrect. Optical scanning refers to physical laser disc reading or document imaging."
+                },
+                "key_term": "Journaling File System: A file system that keeps track of changes not yet committed to the main storage pool by recording the intentions in a dedicated circular journal."
+            }
+        },
+        {
+            "id": "m3_h_59",
+            "raw_id": 59,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "System logs",
+            "is_scenario": true,
+            "scenario": "A security analyst examines log rotation settings in '/etc/logrotate.conf'.",
+            "question": "Why is log rotation essential for system stability and operational security?",
+            "type": "single",
+            "options": [
+                "It compresses, archives, and prunes old log files so they do not grow indefinitely and exhaust available disk storage space",
+                "It translates old log files into foreign languages",
+                "It automatically emails all logs to the local newspaper",
+                "It changes the computer's MAC address every midnight"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of logrotate and disk space protection.",
+                "why_correct": "Unmanaged log files will eventually consume 100% of available disk space, crashing databases and operating systems. 'logrotate' automatically rotates, compresses, and purges older logs based on age or file size.",
+                "options_breakdown": {
+                    "It compresses, archives, and prunes old log files so they do not grow indefinitely and exhaust available disk storage space": "Correct. Log rotation prevents log files from exhausting filesystem storage capacity.",
+                    "It translates old log files into foreign languages": "Incorrect. Logrotate does not perform language translation.",
+                    "It automatically emails all logs to the local newspaper": "Incorrect. Logs are kept confidential and not sent to public media.",
+                    "It changes the computer's MAC address every midnight": "Incorrect. Log rotation manages log text files and does not modify network hardware MAC addresses."
+                },
+                "key_term": "Logrotate: A system utility designed to facilitate the administration of systems that generate large numbers of log files through automatic rotation and compression."
+            }
+        },
+        {
+            "id": "m3_h_60",
+            "raw_id": 60,
+            "module_id": 3,
+            "difficulty": "hard",
+            "topic": "Users and permissions",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following commands are commonly used by system administrators to audit and manage user accounts and groups on Linux? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "useradd / adduser to create new user accounts",
+                "usermod to modify user groups and account parameters",
+                "passwd -l to lock a compromised user account's password",
+                "format C: to reset all Linux user accounts"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify legitimate Linux account management commands.",
+                "why_correct": "'useradd' creates accounts, 'usermod' updates group memberships and shells, and 'passwd -l' locks accounts to prevent password login. 'format C:' is an old DOS/Windows drive formatting command with no role in Linux account management.",
+                "options_breakdown": {
+                    "useradd / adduser to create new user accounts": "Correct. 'useradd' creates new user accounts and home directories.",
+                    "usermod to modify user groups and account parameters": "Correct. 'usermod' alters user attributes such as group memberships.",
+                    "passwd -l to lock a compromised user account's password": "Correct. 'passwd -l' prepends an exclamation mark to the password hash in /etc/shadow, locking the account.",
+                    "format C: to reset all Linux user accounts": "Incorrect. 'format C:' is a DOS/Windows command, not a Linux user administration tool."
+                },
+                "key_term": "Account Administration: The operational practice of provisioning, configuring, auditing, and disabling user accounts on an operating system."
+            }
+        }
+    ]
+}

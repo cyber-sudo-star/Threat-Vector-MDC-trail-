@@ -1,0 +1,1886 @@
+{
+    "module_id": 8,
+    "title": "Security Operations & GRC",
+    "description": "Understand how organisations manage cybersecurity, monitor security events, respond to incidents, assess risks, and maintain security policies and compliance.",
+    "topics": [
+        "Security Operations Centre (SOC)",
+        "SIEM",
+        "Security alerts",
+        "Threat detection",
+        "Incident response",
+        "Risk assessment",
+        "Security policies",
+        "Access control",
+        "Compliance",
+        "NIST Cybersecurity Framework",
+        "Governance, Risk, and Compliance (GRC)"
+    ],
+    "questions": [
+        {
+            "id": "m8_e_01",
+            "raw_id": 1,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Security Operations Centre (SOC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary mission of an enterprise Security Operations Center (SOC)?",
+            "type": "single",
+            "options": [
+                "To continuously monitor, detect, analyze, and respond to cybersecurity incidents 24/7 across an organization's digital assets",
+                "To sell physical computer laptops to retail customers",
+                "To design marketing advertisements for social media platforms",
+                "To provide physical plumbing and electrical wiring for office buildings"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the fundamental purpose of a Security Operations Center (SOC).",
+                "why_correct": "A Security Operations Center (SOC) is a centralized command facility housing information security professionals responsible for monitoring, analyzing, and protecting organizational assets from cyber threats on a 24/7 basis.",
+                "options_breakdown": {
+                    "To continuously monitor, detect, analyze, and respond to cybersecurity incidents 24/7 across an organization's digital assets": "Correct. SOCs continuously safeguard enterprise networks and systems from threats.",
+                    "To sell physical computer laptops to retail customers": "Incorrect. Retail sales are commercial storefront operations, not security operations.",
+                    "To design marketing advertisements for social media platforms": "Incorrect. Marketing teams manage advertising, not cybersecurity monitoring.",
+                    "To provide physical plumbing and electrical wiring for office buildings": "Incorrect. Facilities management handles physical building utilities."
+                },
+                "key_term": "Security Operations Center (SOC): A centralized function within an organization employing people, processes, and technology to continuously monitor and improve an organization's security posture."
+            }
+        },
+        {
+            "id": "m8_e_02",
+            "raw_id": 2,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What do the three letters in the cybersecurity acronym 'GRC' stand for?",
+            "type": "single",
+            "options": [
+                "Governance, Risk, and Compliance",
+                "General Routing and Control",
+                "Global Resource Center",
+                "Government Regulations Council"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of the universal management umbrella GRC.",
+                "why_correct": "GRC stands for Governance (aligning security with business goals), Risk (managing and mitigating risks), and Compliance (adhering to legal and regulatory mandates).",
+                "options_breakdown": {
+                    "Governance, Risk, and Compliance": "Correct. GRC unifies corporate governance, risk management, and regulatory compliance.",
+                    "General Routing and Control": "Incorrect. This sounds like network routing, not executive security management.",
+                    "Global Resource Center": "Incorrect. This is a generic business phrase.",
+                    "Government Regulations Council": "Incorrect. This is a fabricated regulatory agency name."
+                },
+                "key_term": "GRC (Governance, Risk, and Compliance): An integrated strategy to manage an organization's overall governance, enterprise risk management, and compliance with regulations."
+            }
+        },
+        {
+            "id": "m8_e_03",
+            "raw_id": 3,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Security alerts",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'False Positive' in the context of security alerts triggered in a SOC?",
+            "type": "single",
+            "options": [
+                "An alert that incorrectly flags benign, harmless user or system activity as malicious",
+                "An alert that correctly detects an ongoing ransomware attack",
+                "An alert that is sent directly to the local police department",
+                "A security alert that deletes all files on the server"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of a false positive alert.",
+                "why_correct": "A False Positive occurs when a monitoring sensor or rule mistakenly flags legitimate, non-malicious activity (e.g., an IT administrator running a legitimate remote backup script) as a cyber attack.",
+                "options_breakdown": {
+                    "An alert that incorrectly flags benign, harmless user or system activity as malicious": "Correct. False positives waste analyst time by misidentifying normal activity as threats.",
+                    "An alert that correctly detects an ongoing ransomware attack": "Incorrect. That is a True Positive.",
+                    "An alert that is sent directly to the local police department": "Incorrect. False positives are internal operational categorization errors.",
+                    "A security alert that deletes all files on the server": "Incorrect. Alerts notify human analysts; they do not wipe storage drives."
+                },
+                "key_term": "False Positive: An alert triggered by a security tool indicating an attack or compromise has occurred when in fact it has not."
+            }
+        },
+        {
+            "id": "m8_e_04",
+            "raw_id": 4,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Security Operations Centre (SOC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In a traditional tiered SOC structure, what is the primary responsibility of a Tier 1 (Triage) Security Analyst?",
+            "type": "single",
+            "options": [
+                "Reviewing incoming alerts, filtering out false positives, performing initial triage, and escalating confirmed incidents to Tier 2",
+                "Negotiating million-dollar cyber insurance contracts with banks",
+                "Writing raw assembly language to create zero-day exploits",
+                "Physically guarding the server room door with a badge scanner"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests SOC analyst hierarchy and duties (Tier 1 vs Tier 2 vs Tier 3).",
+                "why_correct": "Tier 1 analysts monitor the SIEM alert queue 24/7, triage notifications, discard obvious false positives, gather preliminary context, and escalate legitimate incidents to Tier 2 responders.",
+                "options_breakdown": {
+                    "Reviewing incoming alerts, filtering out false positives, performing initial triage, and escalating confirmed incidents to Tier 2": "Correct. Tier 1 handles frontline alert monitoring and initial incident triage.",
+                    "Negotiating million-dollar cyber insurance contracts with banks": "Incorrect. Executive leadership and legal counsel negotiate insurance policies.",
+                    "Writing raw assembly language to create zero-day exploits": "Incorrect. That is offensive exploit development, not defensive SOC alert triage.",
+                    "Physically guarding the server room door with a badge scanner": "Incorrect. Physical security guards handle physical door access."
+                },
+                "key_term": "Tier 1 SOC Analyst: A frontline security specialist who triages incoming SIEM alerts and escalates confirmed incidents."
+            }
+        },
+        {
+            "id": "m8_e_05",
+            "raw_id": 5,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Incident response",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "According to standard incident response frameworks (such as NIST SP 800-61), what is the correct chronological sequence of Incident Response phases?",
+            "type": "single",
+            "options": [
+                "Preparation -> Detection & Analysis -> Containment, Eradication & Recovery -> Post-Incident Activity (Lessons Learned)",
+                "Post-Mortem -> Attack -> Panic -> Delete All Files",
+                "Recovery -> Preparation -> Detection -> Containment",
+                "Containment -> Preparation -> Recovery -> Detection"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the standardized 4-phase incident response lifecycle defined in NIST SP 800-61.",
+                "why_correct": "The NIST incident handling lifecycle consists of: 1. Preparation, 2. Detection & Analysis, 3. Containment, Eradication & Recovery, and 4. Post-Incident Activity (Lessons Learned).",
+                "options_breakdown": {
+                    "Preparation -> Detection & Analysis -> Containment, Eradication & Recovery -> Post-Incident Activity (Lessons Learned)": "Correct. This is the official NIST SP 800-61 incident response lifecycle sequence.",
+                    "Post-Mortem -> Attack -> Panic -> Delete All Files": "Incorrect. Panicking and deleting files violates professional incident handling procedures.",
+                    "Recovery -> Preparation -> Detection -> Containment": "Incorrect. Preparation must occur before detection and recovery.",
+                    "Containment -> Preparation -> Recovery -> Detection": "Incorrect. You cannot contain an incident before detecting it."
+                },
+                "key_term": "NIST Incident Response Lifecycle: A four-phase structured methodology for preparing for, responding to, and recovering from cybersecurity incidents."
+            }
+        },
+        {
+            "id": "m8_e_06",
+            "raw_id": 6,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "NIST Cybersecurity Framework",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What are the five core functions of the classic NIST Cybersecurity Framework (CSF)?",
+            "type": "single",
+            "options": [
+                "Identify, Protect, Detect, Respond, Recover",
+                "Scan, Attack, Hack, Delete, Reinstall",
+                "Hardware, Software, Firmware, Network, Storage",
+                "Police, Court, Jail, Fine, Probation"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the core functions of the NIST Cybersecurity Framework.",
+                "why_correct": "The NIST CSF organizes cybersecurity activities into five core functions: Identify (assets/risks), Protect (safeguards), Detect (identify occurrences), Respond (take action), and Recover (restore operations). (Note: CSF 2.0 added 'Govern' as a 6th pillar).",
+                "options_breakdown": {
+                    "Identify, Protect, Detect, Respond, Recover": "Correct. These five functions form the backbone of the NIST Cybersecurity Framework.",
+                    "Scan, Attack, Hack, Delete, Reinstall": "Incorrect. These are offensive attack phrases, not the NIST defensive framework.",
+                    "Hardware, Software, Firmware, Network, Storage": "Incorrect. These are IT asset categories, not cybersecurity operational functions.",
+                    "Police, Court, Jail, Fine, Probation": "Incorrect. These are criminal justice terms, not the NIST CSF."
+                },
+                "key_term": "NIST CSF: The National Institute of Standards and Technology Cybersecurity Framework, providing guidelines and best practices to help organizations manage cybersecurity risk."
+            }
+        },
+        {
+            "id": "m8_e_07",
+            "raw_id": 7,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Security policies",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is an 'Acceptable Use Policy' (AUP) in an enterprise?",
+            "type": "single",
+            "options": [
+                "A formal document stipulating the rules, restrictions, and authorized behaviors employees must agree to when using company computers, internet, and devices",
+                "An agreement granting employees permission to install pirate software",
+                "A policy stating that employees can view whatever they want on company laptops without monitoring",
+                "A contract where employees agree to buy their own office desks"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition and purpose of an Acceptable Use Policy (AUP).",
+                "why_correct": "An Acceptable Use Policy (AUP) outlines acceptable and prohibited uses of organizational equipment, internet networks, email, and data, establishing legal standards for employee behavior.",
+                "options_breakdown": {
+                    "A formal document stipulating the rules, restrictions, and authorized behaviors employees must agree to when using company computers, internet, and devices": "Correct. An AUP sets expectations for safe and authorized use of corporate IT resources.",
+                    "An agreement granting employees permission to install pirate software": "Incorrect. An AUP explicitly forbids installing unauthorized or pirated software.",
+                    "A policy stating that employees can view whatever they want on company laptops without monitoring": "Incorrect. An AUP reserves the company's legal right to monitor corporate network activity.",
+                    "A contract where employees agree to buy their own office desks": "Incorrect. Physical desk purchasing is outside IT acceptable use policies."
+                },
+                "key_term": "Acceptable Use Policy (AUP): A set of rules applied by the owner, creator, or administrator of a network, website, or service, that restricts the ways in which the network, site or system may be used."
+            }
+        },
+        {
+            "id": "m8_e_08",
+            "raw_id": 8,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Compliance",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Compliance' in the context of cybersecurity and information technology?",
+            "type": "single",
+            "options": [
+                "The process of ensuring that an organization adheres to applicable federal laws, government regulations, and industry security standards (e.g., GDPR, HIPAA, PCI-DSS)",
+                "Agreeing with everything your manager says without asking questions",
+                "Making sure all computer monitors are physically manufactured in the same state",
+                "Turning off the server whenever it rains"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of regulatory compliance.",
+                "why_correct": "Compliance means adhering to mandatory legal requirements, regulatory frameworks, contracts, and industry standards that govern data privacy, protection, and operational security.",
+                "options_breakdown": {
+                    "The process of ensuring that an organization adheres to applicable federal laws, government regulations, and industry security standards (e.g., GDPR, HIPAA, PCI-DSS)": "Correct. Compliance aligns organizational practices with legal and regulatory mandates.",
+                    "Agreeing with everything your manager says without asking questions": "Incorrect. Compliance refers to adherence to legal and regulatory frameworks, not personal deference.",
+                    "Making sure all computer monitors are physically manufactured in the same state": "Incorrect. Equipment origin has no bearing on IT security compliance.",
+                    "Turning off the server whenever it rains": "Incorrect. Weather events do not dictate compliance requirements."
+                },
+                "key_term": "Compliance: The adherence to legal, regulatory, industry, and contractual requirements governing information security and privacy."
+            }
+        },
+        {
+            "id": "m8_e_09",
+            "raw_id": 9,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "SIEM",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why do modern Security Operations Centers deploy SIEM (Security Information and Event Management) platforms?",
+            "type": "single",
+            "options": [
+                "To aggregate event logs from disparate systems into a centralized repository and correlate events in real time to detect complex cyber attacks",
+                "To automatically play background music in the office building",
+                "To replace all human employees with autonomous mechanical robots",
+                "To eliminate the need for computer passwords"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the core justification and operational value of deploying a SIEM.",
+                "why_correct": "Enterprises generate billions of raw log events daily across firewalls, servers, databases, and endpoints. A SIEM aggregates, normalizes, and correlates these logs to identify multi-stage attacks that would otherwise remain hidden.",
+                "options_breakdown": {
+                    "To aggregate event logs from disparate systems into a centralized repository and correlate events in real time to detect complex cyber attacks": "Correct. Centralized log aggregation and correlation enable comprehensive threat visibility.",
+                    "To automatically play background music in the office building": "Incorrect. Audio systems handle music, not SIEM security platforms.",
+                    "To replace all human employees with autonomous mechanical robots": "Incorrect. SIEM empowers human analysts rather than replacing them with robots.",
+                    "To eliminate the need for computer passwords": "Incorrect. Passwords and MFA are still required for identity management."
+                },
+                "key_term": "Log Correlation: The process of connecting the dots across disparate log sources in a SIEM to identify complex, distributed cyber attacks."
+            }
+        },
+        {
+            "id": "m8_e_10",
+            "raw_id": 10,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Threat detection",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is an 'Indicator of Compromise' (IoC) in threat detection?",
+            "type": "single",
+            "options": [
+                "A piece of digital evidence or artifact (such as a known malicious IP address, malware file hash, or domain name) that signals a system has been breached",
+                "A certificate of excellence awarded to cybersecurity employees",
+                "A physical indicator light showing that a computer monitor is turned on",
+                "A document listing employee vacation schedules"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of an Indicator of Compromise (IoC).",
+                "why_correct": "An Indicator of Compromise (IoC) is forensic evidence of potential unauthorized access or malware infection on a host or network, such as known malicious C2 IPs, domain names, file hashes, or registry keys.",
+                "options_breakdown": {
+                    "A piece of digital evidence or artifact (such as a known malicious IP address, malware file hash, or domain name) that signals a system has been breached": "Correct. IoCs provide actionable forensic artifacts indicating a breach.",
+                    "A certificate of excellence awarded to cybersecurity employees": "Incorrect. That is an employee recognition award.",
+                    "A physical indicator light showing that a computer monitor is turned on": "Incorrect. Hardware LED lights indicate power status, not cyber compromise.",
+                    "A document listing employee vacation schedules": "Incorrect. HR vacation schedules are not indicators of cyber compromise."
+                },
+                "key_term": "Indicator of Compromise (IoC): An artifact observed on a network or in an operating system that, with high confidence, indicates a computer intrusion."
+            }
+        },
+        {
+            "id": "m8_e_11",
+            "raw_id": 11,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Access control",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the Principle of 'Separation of Duties' in access control governance?",
+            "type": "single",
+            "options": [
+                "Dividing critical tasks and authorizations among multiple individuals so that no single person possesses total control to commit fraud or sabotage undetected",
+                "Forcing male and female employees to sit in separate rooms",
+                "Requiring employees to have two separate computer monitors on their desks",
+                "Turning off company computers on weekends"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the governance principle of Separation of Duties.",
+                "why_correct": "Separation of Duties prevents fraud and errors by ensuring that critical operations require authorization from at least two different people (e.g., one person initiates a wire transfer, while a different manager approves it).",
+                "options_breakdown": {
+                    "Dividing critical tasks and authorizations among multiple individuals so that no single person possesses total control to commit fraud or sabotage undetected": "Correct. Dividing duties prevents single individuals from committing undetected fraud or catastrophic errors.",
+                    "Forcing male and female employees to sit in separate rooms": "Incorrect. Physical gender segregation has no role in cybersecurity access governance.",
+                    "Requiring employees to have two separate computer monitors on their desks": "Incorrect. Dual monitors are an ergonomic display choice.",
+                    "Turning off company computers on weekends": "Incorrect. Power-saving habits do not define internal access control controls."
+                },
+                "key_term": "Separation of Duties (SoD): The concept of having more than one person required to complete a task to prevent fraud and error."
+            }
+        },
+        {
+            "id": "m8_e_12",
+            "raw_id": 12,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "A SOC analyst detects an active ransomware infection encrypting files on a single finance department workstation.",
+            "question": "What immediate containment action should the analyst take to prevent the ransomware from spreading laterally across the corporate network?",
+            "type": "single",
+            "options": [
+                "Immediately isolate the infected workstation from the network (unplug the Ethernet cable and disconnect Wi-Fi)",
+                "Reboot the workstation 10 times consecutively",
+                "Forward the ransom note email to all 5,000 employees in the company",
+                "Turn off the building's emergency fire sprinklers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests immediate incident response containment actions for active ransomware.",
+                "why_correct": "When active ransomware is detected, the immediate containment priority is severing network connectivity (unplugging the cable or isolating the host via EDR) to stop lateral propagation across file shares and domain controllers.",
+                "options_breakdown": {
+                    "Immediately isolate the infected workstation from the network (unplug the Ethernet cable and disconnect Wi-Fi)": "Correct. Disconnecting network links isolates the host, preventing worm-like lateral spread.",
+                    "Reboot the workstation 10 times consecutively": "Incorrect. Rebooting can accelerate ransomware encryption on startup and destroys volatile RAM evidence.",
+                    "Forward the ransom note email to all 5,000 employees in the company": "Incorrect. Broadcasting malicious emails causes widespread panic and risks further accidental clicks.",
+                    "Turn off the building's emergency fire sprinklers": "Incorrect. Facility fire safety systems must never be tampered with during cyber incidents."
+                },
+                "key_term": "Host Isolation: The act of disconnecting a compromised computer from all networks to prevent malware propagation and lateral movement."
+            }
+        },
+        {
+            "id": "m8_e_13",
+            "raw_id": 13,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Risk assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Qualitative Risk Assessment and a Quantitative Risk Assessment?",
+            "type": "single",
+            "options": [
+                "Qualitative uses descriptive risk ratings (e.g., Low, Medium, High); Quantitative calculates monetary numerical values (e.g., Annualized Loss Expectancy in dollars)",
+                "Qualitative is legal, while Quantitative is illegal",
+                "Qualitative only checks software; Quantitative only checks physical cables",
+                "There is zero difference; both are identical terms"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the two primary methodologies for assessing security risks.",
+                "why_correct": "Qualitative risk assessment ranks risks using subjective categories (Low/Medium/High or 1-5 matrix) based on experience. Quantitative risk assessment assigns concrete financial figures (monetary asset value, single loss expectancy, annualized loss expectancy).",
+                "options_breakdown": {
+                    "Qualitative uses descriptive risk ratings (e.g., Low, Medium, High); Quantitative calculates monetary numerical values (e.g., Annualized Loss Expectancy in dollars)": "Correct. Qualitative evaluates descriptive severity; quantitative computes financial numbers.",
+                    "Qualitative is legal, while Quantitative is illegal": "Incorrect. Both are standard, authorized risk assessment frameworks.",
+                    "Qualitative only checks software; Quantitative only checks physical cables": "Incorrect. Both assess risks across all assets (people, processes, technology).",
+                    "There is zero difference; both are identical terms": "Incorrect. They utilize completely different scoring methodologies."
+                },
+                "key_term": "Qualitative vs Quantitative Risk: Qualitative assessment evaluates scenarios based on descriptive impact/likelihood; quantitative assessment evaluates risks using concrete numerical data and monetary loss calculations."
+            }
+        },
+        {
+            "id": "m8_e_14",
+            "raw_id": 14,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Security policies",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why must an organization formally review and update its cybersecurity policies on an annual basis?",
+            "type": "single",
+            "options": [
+                "To adapt to evolving cyber threats, new technology adoption (like cloud/AI), changes in privacy regulations, and organizational growth",
+                "Because computer monitors physically expire after 12 months",
+                "Because the United States government changes all letters in the alphabet every year",
+                "To ensure all employees forget their old passwords"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the necessity of periodic security policy reviews.",
+                "why_correct": "Cyber threats, cloud architectures, AI tools, and global regulatory mandates evolve continuously. Annual policy reviews ensure that security rules remain relevant, legally compliant, and aligned with operational reality.",
+                "options_breakdown": {
+                    "To adapt to evolving cyber threats, new technology adoption (like cloud/AI), changes in privacy regulations, and organizational growth": "Correct. Policies must evolve to address new technology, emerging threats, and shifting compliance standards.",
+                    "Because computer monitors physically expire after 12 months": "Incorrect. Displays have lifespans of many years.",
+                    "Because the United States government changes all letters in the alphabet every year": "Incorrect. The English alphabet remains constant.",
+                    "To ensure all employees forget their old passwords": "Incorrect. Forgetting passwords causes operational disruption."
+                },
+                "key_term": "Policy Lifecycle Management: The continuous process of creating, reviewing, approving, distributing, and updating organizational policies."
+            }
+        },
+        {
+            "id": "m8_e_15",
+            "raw_id": 15,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Compliance",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the ISO/IEC 27001 standard in enterprise cybersecurity?",
+            "type": "single",
+            "options": [
+                "An internationally recognized standard that specifies the requirements for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS)",
+                "A standard specification for building physical concrete highways",
+                "A software protocol for sending video files over Bluetooth",
+                "A law that forbids students from playing computer games on weekends"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of the ISO/IEC 27001 standard.",
+                "why_correct": "ISO/IEC 27001 is the global gold standard for information security management, defining a structured framework of controls and risk management processes for an organization's Information Security Management System (ISMS).",
+                "options_breakdown": {
+                    "An internationally recognized standard that specifies the requirements for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS)": "Correct. ISO 27001 defines requirements for an enterprise Information Security Management System.",
+                    "A standard specification for building physical concrete highways": "Incorrect. Civil engineering standards govern highway construction, not ISO 27001.",
+                    "A software protocol for sending video files over Bluetooth": "Incorrect. Bluetooth SIG specifications govern wireless data transfer.",
+                    "A law that forbids students from playing computer games on weekends": "Incorrect. ISO standards do not regulate video game playing."
+                },
+                "key_term": "ISO/IEC 27001: The international standard that provides the specification for a best-practice Information Security Management System (ISMS)."
+            }
+        },
+        {
+            "id": "m8_e_16",
+            "raw_id": 16,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Incident response",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the purpose of conducting a 'Lessons Learned' (Post-Incident Review) meeting following the resolution of a major cyber incident?",
+            "type": "single",
+            "options": [
+                "To evaluate how well the response team performed, identify procedural or technical gaps, and update incident response plans to improve future defense",
+                "To publicly yell at and fire the employee who clicked the phishing link",
+                "To celebrate by turning off all firewalls for the rest of the week",
+                "To permanently delete all incident documentation so auditors never find out"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the purpose of the Lessons Learned phase in incident response.",
+                "why_correct": "The Lessons Learned meeting provides a constructive, blameless retrospective analyzing what happened, why it happened, how effectively the team responded, and what improvements (patching, detection rules, training) are needed to prevent recurrence.",
+                "options_breakdown": {
+                    "To evaluate how well the response team performed, identify procedural or technical gaps, and update incident response plans to improve future defense": "Correct. Post-incident reviews identify root causes and improve organizational resilience.",
+                    "To publicly yell at and fire the employee who clicked the phishing link": "Incorrect. Punitive cultures discourage employees from reporting incidents promptly.",
+                    "To celebrate by turning off all firewalls for the rest of the week": "Incorrect. Disabling firewalls leaves systems completely vulnerable.",
+                    "To permanently delete all incident documentation so auditors never find out": "Incorrect. Deleting incident evidence is illegal and violates compliance frameworks."
+                },
+                "key_term": "Lessons Learned Meeting: A meeting held after an incident is resolved to discuss what occurred, what went well, and what could be improved."
+            }
+        },
+        {
+            "id": "m8_e_17",
+            "raw_id": 17,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Access control",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Privileged Access Management' (PAM) in enterprise cybersecurity?",
+            "type": "single",
+            "options": [
+                "A dedicated security strategy and toolset used to secure, control, monitor, and audit elevated administrative accounts (like root, Domain Admins, and database superusers)",
+                "A program that gives every employee an executive parking space",
+                "A software tool that orders lunch for the IT department",
+                "A password manager used exclusively for personal Facebook accounts"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of Privileged Access Management (PAM).",
+                "why_correct": "Privileged Access Management (PAM) encompasses specialized controls (like CyberArk or HashiCorp Vault) designed to protect administrative credentials, enforce just-in-time access, rotate root passwords, and record privileged administrative sessions.",
+                "options_breakdown": {
+                    "A dedicated security strategy and toolset used to secure, control, monitor, and audit elevated administrative accounts (like root, Domain Admins, and database superusers)": "Correct. PAM secures and audits high-value administrative superuser accounts.",
+                    "A program that gives every employee an executive parking space": "Incorrect. Parking spaces are physical facility perks, not digital access management.",
+                    "A software tool that orders lunch for the IT department": "Incorrect. Meal ordering is office administrative support.",
+                    "A password manager used exclusively for personal Facebook accounts": "Incorrect. PAM protects high-privilege enterprise infrastructure accounts."
+                },
+                "key_term": "Privileged Access Management (PAM): Cybersecurity strategies and technologies for exerting control over the elevated privileges and permissions of administrative accounts."
+            }
+        },
+        {
+            "id": "m8_e_18",
+            "raw_id": 18,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Threat detection",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'True Positive' in threat detection and security alert triage?",
+            "type": "single",
+            "options": [
+                "A security alert that correctly identifies an actual, genuine malicious activity or security incident",
+                "An alert that mistakenly flags benign software as malware",
+                "An alert that causes a computer screen to flash yellow",
+                "An alert that uninstalls the operating system"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests recognition of a True Positive detection.",
+                "why_correct": "A True Positive occurs when a detection sensor correctly identifies a real security incident (e.g., an alert triggers on an actual mimikatz execution, and the threat is confirmed real).",
+                "options_breakdown": {
+                    "A security alert that correctly identifies an actual, genuine malicious activity or security incident": "Correct. A True Positive is an accurate alert matching real malicious activity.",
+                    "An alert that mistakenly flags benign software as malware": "Incorrect. That is a False Positive.",
+                    "An alert that causes a computer screen to flash yellow": "Incorrect. Alert visual rendering depends on UI design.",
+                    "An alert that uninstalls the operating system": "Incorrect. Detection alerts notify analysts; they do not wipe the OS."
+                },
+                "key_term": "True Positive: An alert that indicates an actual vulnerability, attack, or unauthorized activity has taken place."
+            }
+        },
+        {
+            "id": "m8_e_19",
+            "raw_id": 19,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Security policies",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Password Policy' and what rules does it typically enforce?",
+            "type": "single",
+            "options": [
+                "A formal security policy specifying minimum password length, complexity requirements (numbers/symbols), expiration rules, and banning common dictionary words",
+                "A policy that requires all users to write their passwords on sticky notes attached to their monitors",
+                "A rule requiring users to use their dog's name as their password",
+                "A policy that makes passwords completely optional for all users"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about standard enterprise password policy controls.",
+                "why_correct": "A password policy sets mandatory rules governing passphrase length (e.g., minimum 14 characters), prohibiting password reuse, blocking breached wordlists, and enforcing MFA.",
+                "options_breakdown": {
+                    "A formal security policy specifying minimum password length, complexity requirements (numbers/symbols), expiration rules, and banning common dictionary words": "Correct. Password policies govern credential strength and lifecycle standards.",
+                    "A policy that requires all users to write their passwords on sticky notes attached to their monitors": "Incorrect. Writing passwords on sticky notes violates basic physical security.",
+                    "A rule requiring users to use their dog's name as their password": "Incorrect. Predictable pet names make passwords easily guessable.",
+                    "A policy that makes passwords completely optional for all users": "Incorrect. Making passwords optional completely destroys authentication security."
+                },
+                "key_term": "Password Policy: A set of rules designed to enhance computer security by encouraging users to employ strong passwords and use them properly."
+            }
+        },
+        {
+            "id": "m8_e_20",
+            "raw_id": 20,
+            "module_id": 8,
+            "difficulty": "easy",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are recognized pillars and objectives of an effective GRC framework? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Governance: Aligning security strategies with executive business objectives and corporate accountability",
+                "Risk: Identifying, assessing, prioritizing, and mitigating operational and cybersecurity risks",
+                "Compliance: Ensuring the organization adheres to mandatory legal, statutory, and regulatory obligations",
+                "Disruption: Encouraging employees to accidentally delete production databases once a week"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the core components of Governance, Risk, and Compliance.",
+                "why_correct": "GRC brings together Governance, Risk Management, and Regulatory Compliance into an integrated management framework. Deliberately encouraging database destruction is malicious and violates all governance principles.",
+                "options_breakdown": {
+                    "Governance: Aligning security strategies with executive business objectives and corporate accountability": "Correct. Governance ensures organizational accountability and strategic alignment.",
+                    "Risk: Identifying, assessing, prioritizing, and mitigating operational and cybersecurity risks": "Correct. Risk management identifies and treats business threats.",
+                    "Compliance: Ensuring the organization adheres to mandatory legal, statutory, and regulatory obligations": "Correct. Compliance ensures adherence to legal standards and laws.",
+                    "Disruption: Encouraging employees to accidentally delete production databases once a week": "Incorrect. Destroying production systems is sabotage and catastrophic operational failure."
+                },
+                "key_term": "GRC Pillars: The three interrelated facets of GRC: Governance (leadership direction), Risk Management (threat mitigation), and Compliance (statutory adherence)."
+            }
+        },
+        {
+            "id": "m8_i_21",
+            "raw_id": 21,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Threat detection",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the MITRE ATT&CK framework and how is it used in Security Operations?",
+            "type": "single",
+            "options": [
+                "A globally-accessible knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world cyber attack observations, used to map detections and test defenses",
+                "A database of retail prices for computer monitors",
+                "A video game tournament for ethical hackers",
+                "A law that criminalizes the possession of computers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of the MITRE ATT&CK framework.",
+                "why_correct": "MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) is a curated knowledge base detailing real-world adversary behavior across the entire attack lifecycle (from Initial Access to Exfiltration), enabling SOCs to map detection coverage and identify gaps.",
+                "options_breakdown": {
+                    "A globally-accessible knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world cyber attack observations, used to map detections and test defenses": "Correct. MITRE ATT&CK provides a standardized taxonomy of real-world adversary techniques.",
+                    "A database of retail prices for computer monitors": "Incorrect. Commercial hardware pricing is unrelated to adversary TTPs.",
+                    "A video game tournament for ethical hackers": "Incorrect. MITRE ATT&CK is an authoritative threat modeling framework.",
+                    "A law that criminalizes the possession of computers": "Incorrect. MITRE ATT&CK is an industry knowledge base, not criminal legislation."
+                },
+                "key_term": "MITRE ATT&CK: A curated knowledge base and model for cyber adversary behavior, reflecting the various phases of an adversary's attack lifecycle."
+            }
+        },
+        {
+            "id": "m8_i_22",
+            "raw_id": 22,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Threat detection",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What are 'YARA Rules' used for in threat detection and digital forensics?",
+            "type": "single",
+            "options": [
+                "Writing pattern-matching descriptions (text strings, regex, and hex sequences) to identify and classify malware samples and malicious files based on their contents",
+                "Automating payroll deposits for software developers",
+                "Designing graphical user interfaces for mobile websites",
+                "Configuring physical Wi-Fi routers in home offices"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about YARA rules in malware classification.",
+                "why_correct": "YARA is the 'pattern matching Swiss army knife' for malware researchers. Security teams write YARA rules using strings, regular expressions, and hexadecimal patterns to identify and classify malware families across file systems and memory dumps.",
+                "options_breakdown": {
+                    "Writing pattern-matching descriptions (text strings, regex, and hex sequences) to identify and classify malware samples and malicious files based on their contents": "Correct. YARA rules identify and categorize malware based on textual and binary patterns.",
+                    "Automating payroll deposits for software developers": "Incorrect. Accounting software handles payroll.",
+                    "Designing graphical user interfaces for mobile websites": "Incorrect. CSS and JavaScript design user interfaces.",
+                    "Configuring physical Wi-Fi routers in home offices": "Incorrect. Network administration handles router setup."
+                },
+                "key_term": "YARA: A tool aimed at helping malware researchers identify and classify malware samples through rule-based pattern matching."
+            }
+        },
+        {
+            "id": "m8_i_23",
+            "raw_id": 23,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "During an incident investigation, a digital forensics investigator captures an exact, bit-for-bit forensic image of a suspect laptop's hard drive.",
+            "question": "What critical procedure must be maintained to legally prove that the digital evidence was never altered, tampered with, or swapped while in custody?",
+            "type": "single",
+            "options": [
+                "Maintaining a strict Chain of Custody document and calculating cryptographic SHA-256 hashes of the drive image before and after analysis",
+                "Posting the laptop's serial number on social media",
+                "Reformatting the laptop drive with clean zeroes before inspecting it",
+                "Allowing all employees in the building to borrow the laptop overnight"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of forensic Chain of Custody and evidence integrity verification.",
+                "why_correct": "Chain of Custody is a chronological documentation trail recording who collected, handled, transferred, and analyzed physical evidence. Computing SHA-256 hashes of the forensic image before and after examination proves mathematically that evidence was never altered.",
+                "options_breakdown": {
+                    "Maintaining a strict Chain of Custody document and calculating cryptographic SHA-256 hashes of the drive image before and after analysis": "Correct. Chain of custody documentation and hash verification guarantee courtroom admissibility.",
+                    "Posting the laptop's serial number on social media": "Incorrect. Public social media posts do not satisfy legal evidence handling standards.",
+                    "Reformatting the laptop drive with clean zeroes before inspecting it": "Incorrect. Zeroing the drive permanently destroys all evidence.",
+                    "Allowing all employees in the building to borrow the laptop overnight": "Incorrect. Lending evidence breaks chain of custody and permits evidence tampering."
+                },
+                "key_term": "Chain of Custody: The chronological documentation that shows the custody, control, transfer, analysis, and disposition of physical or electronic evidence."
+            }
+        },
+        {
+            "id": "m8_i_24",
+            "raw_id": 24,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Compliance",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a SOC 2 Type 1 report and a SOC 2 Type 2 report in third-party vendor risk compliance?",
+            "type": "single",
+            "options": [
+                "A Type 1 report evaluates whether security controls were suitably designed at a single point in time; a Type 2 report tests the operational effectiveness of those controls over a continuous historical period (typically 6 to 12 months)",
+                "A Type 1 report is for hardware, while a Type 2 report is for software",
+                "A Type 1 report is free, while a Type 2 report costs $1 billion",
+                "There is zero difference; both examine identical timeframes"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between SOC 2 Type I and Type II audit reports.",
+                "why_correct": "A SOC 2 Type 1 report is a snapshot auditing whether controls are properly designed on a specific date. A SOC 2 Type 2 report audits whether those controls operated effectively over an extended period (usually 6-12 months), providing far higher assurance.",
+                "options_breakdown": {
+                    "A Type 1 report evaluates whether security controls were suitably designed at a single point in time; a Type 2 report tests the operational effectiveness of those controls over a continuous historical period (typically 6 to 12 months)": "Correct. Type 1 is a point-in-time design audit; Type 2 proves operational effectiveness over time.",
+                    "A Type 1 report is for hardware, while a Type 2 report is for software": "Incorrect. Both evaluate the AICPA Trust Services Criteria (Security, Availability, Confidentiality, etc.).",
+                    "A Type 1 report is free, while a Type 2 report costs $1 billion": "Incorrect. Both require professional audit firm fees, but not billions.",
+                    "There is zero difference; both examine identical timeframes": "Incorrect. Type 1 is a single date; Type 2 spans 6-12 months."
+                },
+                "key_term": "SOC 2 Type 2: An auditing procedure that ensures a service provider securely manages data to protect the interests and privacy of its clients over an extended operational window."
+            }
+        },
+        {
+            "id": "m8_i_25",
+            "raw_id": 25,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "Following an incident where an adversary breached a server via an unpatched Apache vulnerability, the incident response team replaces the vulnerable software with the latest patched version, hardens the OS configuration, and removes all attacker backdoors.",
+            "question": "Which phase of the incident response lifecycle did the team just execute?",
+            "type": "single",
+            "options": [
+                "Eradication",
+                "Preparation",
+                "Detection & Analysis",
+                "Initial Reconnaissance"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identifying the Eradication phase of incident handling.",
+                "why_correct": "Eradication involves eliminating the root cause of the incident, removing all malware, artifacts, and backdoors deposited by the adversary, and patching the vulnerabilities exploited to gain entry.",
+                "options_breakdown": {
+                    "Eradication": "Correct. Eradication removes malware, deletes backdoors, and remediates exploited vulnerabilities.",
+                    "Preparation": "Incorrect. Preparation establishes tools, policies, and training before incidents occur.",
+                    "Detection & Analysis": "Incorrect. Detection & Analysis identifies and scopes the breach.",
+                    "Initial Reconnaissance": "Incorrect. Reconnaissance is an offensive attacker phase, not a defensive incident response stage."
+                },
+                "key_term": "Eradication Phase: The phase of incident response focused on completely removing the threat, artifacts, and backdoors from the affected environment."
+            }
+        },
+        {
+            "id": "m8_i_26",
+            "raw_id": 26,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Threat detection",
+            "is_scenario": true,
+            "scenario": "A SOC manager observes that Tier 1 analysts are overwhelmed by 10,000 low-priority alerts per day, resulting in real threats being missed due to cognitive exhaustion.",
+            "question": "What operational challenge is the SOC experiencing, and how can it be mitigated?",
+            "type": "single",
+            "options": [
+                "Alert Fatigue; mitigated by tuning SIEM detection rules to reduce noise, aggregating related alerts, and automating low-risk triage using SOAR playbooks",
+                "Host Overclocking; mitigated by installing larger cooling fans",
+                "Network Latency; mitigated by replacing all copper cables with gold cables",
+                "Data Exfiltration; mitigated by unplugging the internet every afternoon"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Alert Fatigue in modern SOC environments.",
+                "why_correct": "Alert Fatigue occurs when analysts are inundated with high volumes of low-fidelity or false-positive alerts, causing burnout and delayed response to real incidents. Mitigations include threshold tuning, suppression, correlation, and automated SOAR triage.",
+                "options_breakdown": {
+                    "Alert Fatigue; mitigated by tuning SIEM detection rules to reduce noise, aggregating related alerts, and automating low-risk triage using SOAR playbooks": "Correct. Rule tuning and SOAR automation reduce alert noise and mitigate analyst burnout.",
+                    "Host Overclocking; mitigated by installing larger cooling fans": "Incorrect. Alert volume is a software telemetry issue, not hardware overclocking.",
+                    "Network Latency; mitigated by replacing all copper cables with gold cables": "Incorrect. Alert fatigue is a cognitive workflow problem, not a cable transmission delay.",
+                    "Data Exfiltration; mitigated by unplugging the internet every afternoon": "Incorrect. Disconnecting the internet disrupts legitimate business operations."
+                },
+                "key_term": "Alert Fatigue: The mental exhaustion experienced by security analysts caused by an overwhelming volume of frequent, redundant, or false-positive security alerts."
+            }
+        },
+        {
+            "id": "m8_i_27",
+            "raw_id": 27,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": true,
+            "scenario": "An organization creates a 'Risk Register'. What is the purpose of maintaining a Risk Register in enterprise risk management?",
+            "question": "An organization creates a 'Risk Register'. What is the purpose of maintaining a Risk Register in enterprise risk management?",
+            "type": "single",
+            "options": [
+                "A centralized master document tracking all identified risks, their likelihood and impact scores, risk owners, treatment plans, and current mitigation status",
+                "A cash register used to collect payments from retail customers",
+                "A list of computer passwords written on a piece of paper",
+                "A database of all employees who have ever been late for work"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the enterprise Risk Register.",
+                "why_correct": "A Risk Register (or Risk Log) is a fundamental GRC repository that logs every identified organizational risk, evaluated likelihood/impact scores, assigned risk owners, chosen treatment strategies (mitigate/accept/transfer/avoid), and residual risk levels.",
+                "options_breakdown": {
+                    "A centralized master document tracking all identified risks, their likelihood and impact scores, risk owners, treatment plans, and current mitigation status": "Correct. The risk register is the primary tool for tracking and managing organizational risks.",
+                    "A cash register used to collect payments from retail customers": "Incorrect. In GRC, a register is a formal tracking ledger, not a physical cash register.",
+                    "A list of computer passwords written on a piece of paper": "Incorrect. Storing passwords on paper violates security policy.",
+                    "A database of all employees who have ever been late for work": "Incorrect. Employee attendance tracking is an HR function."
+                },
+                "key_term": "Risk Register: A central repository for all risks identified within an organization, including risk ownership, assessment scores, and mitigation actions."
+            }
+        },
+        {
+            "id": "m8_i_28",
+            "raw_id": 28,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Incident response",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Business Continuity Plan (BCP) and a Disaster Recovery (DR) Plan?",
+            "type": "single",
+            "options": [
+                "BCP focuses on maintaining critical business operations and functions during a disruption; DR focuses specifically on the technical restoration of IT infrastructure, servers, and data",
+                "BCP is only for banks, while DR is only for software companies",
+                "BCP is software, while DR is physical hardware",
+                "There is zero difference; both terms are legally identical"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between Business Continuity (BCP) and Disaster Recovery (DR).",
+                "why_correct": "Business Continuity Planning (BCP) is holistic and broad, addressing how the entire organization keeps operating (relocating staff, alternate supply chains, crisis communications). Disaster Recovery (DR) is a technical subset of BCP focused on restoring IT systems and data.",
+                "options_breakdown": {
+                    "BCP focuses on maintaining critical business operations and functions during a disruption; DR focuses specifically on the technical restoration of IT infrastructure, servers, and data": "Correct. BCP ensures overall business survival; DR restores technical IT systems.",
+                    "BCP is only for banks, while DR is only for software companies": "Incorrect. All enterprise organizations require both BCP and DR.",
+                    "BCP is software, while DR is physical hardware": "Incorrect. Both are organizational plans, policies, and technical procedures.",
+                    "There is zero difference; both terms are legally identical": "Incorrect. They address different scopes of operational resilience."
+                },
+                "key_term": "BCP vs DR: BCP focuses on keeping the business operational during an outage; Disaster Recovery focuses on restoring IT systems and data after an incident."
+            }
+        },
+        {
+            "id": "m8_i_29",
+            "raw_id": 29,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Access control",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why is performing regular, scheduled 'Access Certification Reviews' (User Access Reviews) an essential governance control in corporate identity management?",
+            "type": "single",
+            "options": [
+                "To identify and revoke 'Privilege Creep' (accumulated permissions from past internal role changes) and ensure terminated employees no longer have active system accounts",
+                "To ensure all employees change their desktop wallpaper once a month",
+                "To count how many keyboards are physically plugged into computers",
+                "To automatically reset all company passwords to 'Welcome123'"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the purpose of periodic user access reviews.",
+                "why_correct": "Over time, employees accumulate excess permissions when changing departments ('privilege creep'), and terminated workers may retain lingering accounts. Regular access reviews require managers to formally re-certify that accounts and permissions remain necessary.",
+                "options_breakdown": {
+                    "To identify and revoke 'Privilege Creep' (accumulated permissions from past internal role changes) and ensure terminated employees no longer have active system accounts": "Correct. Access reviews eliminate stale accounts and revoke accumulated unnecessary permissions.",
+                    "To ensure all employees change their desktop wallpaper once a month": "Incorrect. Desktop wallpaper has zero access control governance value.",
+                    "To count how many keyboards are physically plugged into computers": "Incorrect. Physical hardware inventory is an asset management function.",
+                    "To automatically reset all company passwords to 'Welcome123'": "Incorrect. Setting default weak passwords severely violates security best practices."
+                },
+                "key_term": "Privilege Creep: The gradual accumulation of access rights beyond what an individual needs to do their current job."
+            }
+        },
+        {
+            "id": "m8_i_30",
+            "raw_id": 30,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Compliance",
+            "is_scenario": true,
+            "scenario": "An organization stores EU citizen personal data. Under GDPR Article 33, within how many hours must the organization report a personal data breach to the supervisory authority after becoming aware of it?",
+            "question": "An organization stores EU citizen personal data. Under GDPR Article 33, within how many hours must the organization report a personal data breach to the supervisory authority after becoming aware of it?",
+            "type": "single",
+            "options": [
+                "Within 72 hours",
+                "Within 30 days",
+                "Within 1 year",
+                "Zero hours (immediate reporting within 1 second)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of GDPR breach notification timelines.",
+                "why_correct": "GDPR Article 33 mandates that in the case of a personal data breach, the data controller must notify the competent supervisory authority without undue delay and, where feasible, not later than 72 hours after having become aware of it.",
+                "options_breakdown": {
+                    "Within 72 hours": "Correct. GDPR Article 33 specifies a strict 72-hour regulatory breach notification window.",
+                    "Within 30 days": "Incorrect. 30 days is common for data subject access requests, not data breach reporting.",
+                    "Within 1 year": "Incorrect. Waiting a year incurs massive statutory regulatory penalties.",
+                    "Zero hours (immediate reporting within 1 second)": "Incorrect. 72 hours is provided to verify and scope preliminary breach details."
+                },
+                "key_term": "GDPR 72-Hour Rule: The legal obligation under GDPR Article 33 requiring data breaches to be reported to supervisory authorities within 72 hours."
+            }
+        },
+        {
+            "id": "m8_i_31",
+            "raw_id": 31,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Threat detection",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Sigma' in threat detection engineering?",
+            "type": "single",
+            "options": [
+                "An open-source, generic signature format that allows analysts to write detection rules once and convert them automatically into SIEM-specific queries (like Splunk, Elastic, or Sentinel)",
+                "A Greek letter used only in calculus formulas",
+                "A proprietary firewall sold exclusively by Cisco",
+                "A hardware processor designed to run video games"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of Sigma rules in detection engineering.",
+                "why_correct": "Sigma is the 'YARA for log files'. It is an open, standardized YAML-based rule format for describing log detection signatures that can be automatically compiled into target query languages for Splunk, Microsoft Sentinel, Elasticsearch, and QRadar.",
+                "options_breakdown": {
+                    "An open-source, generic signature format that allows analysts to write detection rules once and convert them automatically into SIEM-specific queries (like Splunk, Elastic, or Sentinel)": "Correct. Sigma provides a universal signature language for log-based threat detection.",
+                    "A Greek letter used only in calculus formulas": "Incorrect. While Sigma is a Greek letter, in cybersecurity it is a universal detection format.",
+                    "A proprietary firewall sold exclusively by Cisco": "Incorrect. Sigma is an open-source community specification.",
+                    "A hardware processor designed to run video games": "Incorrect. Sigma is a software rule standard."
+                },
+                "key_term": "Sigma Rules: A generic and open signature format for describing relevant log events in a straightforward manner, independent of any specific SIEM platform."
+            }
+        },
+        {
+            "id": "m8_i_32",
+            "raw_id": 32,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "An enterprise incident response team uses the 'Pyramid of Pain' (by David Bianco) to prioritize threat indicators.",
+            "question": "According to the Pyramid of Pain, which indicator category is the 'Tough' or hardest for an adversary to change when defenders detect and block it?",
+            "type": "single",
+            "options": [
+                "Tactics, Techniques, and Procedures (TTPs)",
+                "Hash values (e.g., MD5/SHA-256)",
+                "IP addresses",
+                "Domain names"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of David Bianco's Pyramid of Pain.",
+                "why_correct": "Hash values, IP addresses, and domains are trivial or simple for attackers to change. At the pinnacle of the pyramid sit TTPs (how the adversary operates). Forcing an adversary to change their entire behaviors and operational playbooks causes maximum pain.",
+                "options_breakdown": {
+                    "Tactics, Techniques, and Procedures (TTPs)": "Correct. TTPs represent core adversary behavior and are the hardest and most painful for attackers to change.",
+                    "Hash values (e.g., MD5/SHA-256)": "Incorrect. Hash values sit at the bottom of the pyramid and are trivial for attackers to change with 1 bit of code variation.",
+                    "IP addresses": "Incorrect. IP addresses sit near the bottom and can be easily changed using proxies or cloud hosting.",
+                    "Domain names": "Incorrect. Domain names are simple to re-register using dynamic DNS or DGA algorithms."
+                },
+                "key_term": "Pyramid of Pain: A conceptual model devised by David Bianco that illustrates the amount of pain a defender causes an adversary by blocking various indicators."
+            }
+        },
+        {
+            "id": "m8_i_33",
+            "raw_id": 33,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Risk assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In risk management, what is a 'Risk Matrix' (Heat Map)?",
+            "type": "single",
+            "options": [
+                "A visual graphical grid mapping the Likelihood of an event against its Potential Impact to determine an overall severity rating (e.g., Low, Medium, High, Critical)",
+                "A spreadsheet listing employee home addresses",
+                "A thermal sensor showing the physical temperature of a server",
+                "A mathematical matrix used to render 3D video game characters"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of a risk heat map / matrix.",
+                "why_correct": "A Risk Matrix maps Likelihood (e.g., Rare to Almost Certain) along one axis and Impact (e.g., Negligible to Catastrophic) along the other, producing a color-coded heat map that prioritizes which risks require immediate executive mitigation.",
+                "options_breakdown": {
+                    "A visual graphical grid mapping the Likelihood of an event against its Potential Impact to determine an overall severity rating (e.g., Low, Medium, High, Critical)": "Correct. A risk matrix visually categorizes risk severity based on likelihood and impact.",
+                    "A spreadsheet listing employee home addresses": "Incorrect. Employee contact lists are HR directories, not risk matrices.",
+                    "A thermal sensor showing the physical temperature of a server": "Incorrect. Hardware temperature monitors are hardware sensors.",
+                    "A mathematical matrix used to render 3D video game characters": "Incorrect. Computer graphics matrices handle geometric transformations."
+                },
+                "key_term": "Risk Heat Map: A visual tool used in qualitative risk assessments to illustrate the likelihood and severity of potential risks."
+            }
+        },
+        {
+            "id": "m8_i_34",
+            "raw_id": 34,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Access control",
+            "is_scenario": true,
+            "scenario": "A financial company requires that whenever an employee in finance requests access to wire transfer permissions, their department manager and the compliance officer must both digitally sign approval before access is provisioned.",
+            "question": "What identity governance control is demonstrated?",
+            "type": "single",
+            "options": [
+                "Dual Authorization / Multi-Party Approval Workflow",
+                "Discretionary Access Control alone",
+                "Biometric Password Reset",
+                "Default Open Access"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests multi-party approval workflows in access governance.",
+                "why_correct": "Dual authorization (four-eyes principle / multi-party approval) ensures that high-risk permissions or actions require independent verification and sign-off from two distinct authorized parties, preventing unilateral unauthorized privilege grants.",
+                "options_breakdown": {
+                    "Dual Authorization / Multi-Party Approval Workflow": "Correct. Dual authorization enforces independent multi-party approval for high-risk access requests.",
+                    "Discretionary Access Control alone": "Incorrect. DAC allows single resource owners to assign permissions unilaterally without governance workflows.",
+                    "Biometric Password Reset": "Incorrect. This describes an authentication reset, not an authorization workflow.",
+                    "Default Open Access": "Incorrect. Default open access grants access without approvals, completely violating security."
+                },
+                "key_term": "Dual Authorization: A security requirement that two authorized individuals must confirm or approve a sensitive request before it can be executed."
+            }
+        },
+        {
+            "id": "m8_i_35",
+            "raw_id": 35,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are recognized components of an enterprise Information Security Policy hierarchy? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "High-level Security Policies (mandatory executive directives)",
+                "Standards and Baselines (mandatory technical requirements)",
+                "Guidelines (recommended best practices and suggestions)",
+                "Personal employee diary entries regarding weekend vacations"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about the classic four-tier policy framework: Policies, Standards, Procedures, and Guidelines.",
+                "why_correct": "Security governance structures documentation into high-level Policies (mandatory), Standards/Baselines (mandatory technical specifications), Procedures (step-by-step instructions), and Guidelines (discretionary recommendations). Personal diaries have no governance role.",
+                "options_breakdown": {
+                    "High-level Security Policies (mandatory executive directives)": "Correct. Policies establish executive security directives and accountability.",
+                    "Standards and Baselines (mandatory technical requirements)": "Correct. Standards set measurable, mandatory technical configurations.",
+                    "Guidelines (recommended best practices and suggestions)": "Correct. Guidelines provide flexible advice and best-practice recommendations.",
+                    "Personal employee diary entries regarding weekend vacations": "Incorrect. Personal diary entries are private personal writings outside organizational governance."
+                },
+                "key_term": "Policy Hierarchy: The structured framework of Policies, Standards, Procedures, and Guidelines used to govern organizational information security."
+            }
+        },
+        {
+            "id": "m8_i_36",
+            "raw_id": 36,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Security Operations Centre (SOC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between an Internal (In-House) SOC and a Managed Security Service Provider (MSSP)?",
+            "type": "single",
+            "options": [
+                "An Internal SOC is owned and operated by the organization's own employees; an MSSP is an outsourced third-party service providing shared monitoring and triage across multiple clients",
+                "An Internal SOC is illegal, while an MSSP is legal",
+                "An Internal SOC only works on Mondays, while an MSSP works on Tuesdays",
+                "There is zero difference; both are identical terms"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the operational distinction between dedicated in-house SOCs and outsourced MSSP models.",
+                "why_correct": "An Internal SOC gives an organization dedicated, customized security monitoring staffed by full-time internal personnel. An MSSP provides outsourced, shared-tier security monitoring, useful for smaller companies lacking 24/7 internal staffing budgets.",
+                "options_breakdown": {
+                    "An Internal SOC is owned and operated by the organization's own employees; an MSSP is an outsourced third-party service providing shared monitoring and triage across multiple clients": "Correct. In-house SOCs are dedicated and internally staffed; MSSPs provide outsourced monitoring.",
+                    "An Internal SOC is illegal, while an MSSP is legal": "Incorrect. Both are legitimate, authorized operational models.",
+                    "An Internal SOC only works on Mondays, while an MSSP works on Tuesdays": "Incorrect. Modern SOC operations operate 24/7/365.",
+                    "There is zero difference; both are identical terms": "Incorrect. They represent fundamentally different staffing, cost, and governance structures."
+                },
+                "key_term": "MSSP (Managed Security Service Provider): An outsourced service that provides security monitoring and management for other organizations."
+            }
+        },
+        {
+            "id": "m8_i_37",
+            "raw_id": 37,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "A corporate incident response team discovers an active command-and-control connection communicating with an external malicious IP `203.0.113.50` across corporate firewalls.",
+            "question": "What network-level containment action quickly stops this ongoing communication without taking down the server's local subnet access?",
+            "type": "single",
+            "options": [
+                "Adding an egress firewall rule or blackhole route (null route) blocking all outbound traffic to IP `203.0.113.50`",
+                "Turning off the server room lights",
+                "Deleting all files on the web server",
+                "Buying a new computer monitor"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests tactical network containment options.",
+                "why_correct": "Blocking outbound traffic to the attacker's specific C2 IP address at the perimeter firewall (or null routing the IP via BGP) severs the adversary's remote control tunnel while allowing the affected server to remain accessible on the local network for live forensic memory capture.",
+                "options_breakdown": {
+                    "Adding an egress firewall rule or blackhole route (null route) blocking all outbound traffic to IP `203.0.113.50`": "Correct. Egress filtering blocks C2 communications while preserving internal network access for forensic analysis.",
+                    "Turning off the server room lights": "Incorrect. Room lighting has no effect on network packet routing.",
+                    "Deleting all files on the web server": "Incorrect. Deleting server files destroys evidence and causes unnecessary outages.",
+                    "Buying a new computer monitor": "Incorrect. Purchasing monitors has zero impact on active network C2 sockets."
+                },
+                "key_term": "Egress Filtering: The practice of monitoring and potentially restricting the flow of information outbound from one network to another."
+            }
+        },
+        {
+            "id": "m8_i_38",
+            "raw_id": 38,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Threat detection",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between Threat Hunting and Reactive Alert Triage in a SOC?",
+            "type": "single",
+            "options": [
+                "Alert Triage responds to alerts triggered by automated rules; Threat Hunting is a proactive, hypothesis-driven human search for undetected adversaries lurking inside the network",
+                "Alert Triage is illegal; Threat Hunting is legal",
+                "Threat Hunting only uses physical dogs to search office buildings",
+                "There is zero difference; both are identical automated tasks"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about reactive alert triage vs proactive threat hunting.",
+                "why_correct": "Reactive triage responds to known alerts already detected by existing SIEM/EDR rules. Threat hunting assumes the network is already breached by an adversary who bypassed automated alerts, proactively searching telemetry to uncover stealthy intrusions.",
+                "options_breakdown": {
+                    "Alert Triage responds to alerts triggered by automated rules; Threat Hunting is a proactive, hypothesis-driven human search for undetected adversaries lurking inside the network": "Correct. Triage is reactive to known alerts; threat hunting is a proactive search for undetected threats.",
+                    "Alert Triage is illegal; Threat Hunting is legal": "Incorrect. Both are standard, authorized defensive security operations.",
+                    "Threat Hunting only uses physical dogs to search office buildings": "Incorrect. Threat hunting is a digital data analysis practice, not physical animal tracking.",
+                    "There is zero difference; both are identical automated tasks": "Incorrect. Threat hunting relies on human hypothesis testing and manual data exploration."
+                },
+                "key_term": "Threat Hunting: The proactive, iterative search through networks and endpoints to detect and isolate advanced threats that evade existing automated security solutions."
+            }
+        },
+        {
+            "id": "m8_i_39",
+            "raw_id": 39,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Risk assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'Residual Risk' in risk management governance?",
+            "type": "single",
+            "options": [
+                "The remaining amount of risk that exists after security controls and countermeasures have been implemented",
+                "The risk of a server catching fire in the rain",
+                "The total financial cost of buying a new laptop",
+                "The risk that was completely eliminated 100% with no leftovers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of Residual Risk.",
+                "why_correct": "No security control can eliminate 100% of risk. Inherent Risk is the raw risk before controls. Residual Risk is the leftover risk that remains after implementing defenses, which executive leadership must formally accept.",
+                "options_breakdown": {
+                    "The remaining amount of risk that exists after security controls and countermeasures have been implemented": "Correct. Residual risk is the remaining exposure following control implementation.",
+                    "The risk of a server catching fire in the rain": "Incorrect. This is an arbitrary environmental hazard.",
+                    "The total financial cost of buying a new laptop": "Incorrect. Equipment cost is a hardware expense, not a risk calculation.",
+                    "The risk that was completely eliminated 100% with no leftovers": "Incorrect. Zero risk is impossible in real-world systems."
+                },
+                "key_term": "Residual Risk: The threat that remains after all efforts to identify and eliminate risk have been carried out."
+            }
+        },
+        {
+            "id": "m8_i_40",
+            "raw_id": 40,
+            "module_id": 8,
+            "difficulty": "intermediate",
+            "topic": "Incident response",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why must incident response teams take forensic RAM and volatile memory captures BEFORE powering down or rebooting a compromised computer?",
+            "type": "single",
+            "options": [
+                "Volatile RAM data (active network connections, injected malware code, decrypted keys, running processes) is permanently lost when power is removed",
+                "Because powering off a computer makes the hard drive explode",
+                "Because computer monitors cannot display text after being turned off once",
+                "Because rebooting a computer uninstalls the operating system"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests Order of Volatility in digital forensics (RFC 3227).",
+                "why_correct": "Under the Order of Volatility, data that disappears fastest must be captured first. Volatile RAM holds running processes, unencrypted memory passwords, decrypted keys, and network sockets that evaporate as soon as power is cut.",
+                "options_breakdown": {
+                    "Volatile RAM data (active network connections, injected malware code, decrypted keys, running processes) is permanently lost when power is removed": "Correct. Powering off destroys volatile RAM, permanently erasing critical forensic evidence.",
+                    "Because powering off a computer makes the hard drive explode": "Incorrect. Shutting down hardware does not cause physical explosions.",
+                    "Because computer monitors cannot display text after being turned off once": "Incorrect. Displays resume normal output upon rebooting.",
+                    "Because rebooting a computer uninstalls the operating system": "Incorrect. Standard reboots reload the operating system from non-volatile storage."
+                },
+                "key_term": "Order of Volatility: The sequence in which digital evidence should be collected from a system, starting with the most fragile (volatile) data like RAM."
+            }
+        },
+        {
+            "id": "m8_h_41",
+            "raw_id": 41,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "During an enterprise Active Directory compromise, an adversary compromised the 'krbtgt' account password hash, enabling Golden Ticket forgery.",
+            "question": "What specific, complex remediation action is required to fully eradicate the adversary's persistence and invalidate all existing forged Kerberos tickets?",
+            "type": "single",
+            "options": [
+                "Resetting the 'krbtgt' account password TWICE, with a sufficient delay between resets to allow Active Directory replication and ticket expiration",
+                "Reinstalling Windows on a single receptionist laptop",
+                "Renaming the company domain from `.local` to `.com`",
+                "Deleting all user email inboxes"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Golden Ticket remediation procedures in Active Directory.",
+                "why_correct": "Because Kerberos ticket granting tickets are signed with the krbtgt key and Active Directory maintains the previous password for replication history, resetting krbtgt once still allows tickets signed with the previous key to validate. It must be reset twice to clear the history.",
+                "options_breakdown": {
+                    "Resetting the 'krbtgt' account password TWICE, with a sufficient delay between resets to allow Active Directory replication and ticket expiration": "Correct. A double krbtgt password reset is mandatory to invalidate forged Golden Tickets.",
+                    "Reinstalling Windows on a single receptionist laptop": "Incorrect. Reimaging a single client does not remediate compromised domain-level Kerberos keys.",
+                    "Renaming the company domain from `.local` to `.com`": "Incorrect. Domain renaming is disruptive and does not revoke forged Kerberos tickets.",
+                    "Deleting all user email inboxes": "Incorrect. Golden Tickets abuse Active Directory Kerberos authentication, not email storage."
+                },
+                "key_term": "krbtgt Double Reset: The mandatory Active Directory recovery procedure of resetting the krbtgt account password twice to invalidate forged Kerberos Golden Tickets."
+            }
+        },
+        {
+            "id": "m8_h_42",
+            "raw_id": 42,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Threat detection",
+            "is_scenario": true,
+            "scenario": "A threat intelligence analyst evaluates an Advanced Persistent Threat (APT) campaign using the 'Diamond Model of Intrusion Analysis'.",
+            "question": "What are the four core vertices (nodes) that define every malicious event in the Diamond Model?",
+            "type": "single",
+            "options": [
+                "Adversary, Capability, Infrastructure, and Victim",
+                "CPU, RAM, Hard Drive, and Monitor",
+                "Firewall, Antivirus, SIEM, and Password",
+                "Police, Court, Judge, and Jury"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the Diamond Model of Intrusion Analysis.",
+                "why_correct": "The Diamond Model establishes that every cyber event is characterized by an Adversary deploying a Capability (malware/exploit) over an Infrastructure (C2, domains) against a Victim.",
+                "options_breakdown": {
+                    "Adversary, Capability, Infrastructure, and Victim": "Correct. These four interconnected vertices define the core structure of the Diamond Model.",
+                    "CPU, RAM, Hard Drive, and Monitor": "Incorrect. These are computer hardware components, not intrusion analysis nodes.",
+                    "Firewall, Antivirus, SIEM, and Password": "Incorrect. These are defensive security controls.",
+                    "Police, Court, Judge, and Jury": "Incorrect. These are legal courtroom entities."
+                },
+                "key_term": "Diamond Model of Intrusion Analysis: A cognitive framework for cyber threat analysis that emphasizes relationships between four core features: adversary, capability, infrastructure, and victim."
+            }
+        },
+        {
+            "id": "m8_h_43",
+            "raw_id": 43,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Security Operations Centre (SOC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In security operations performance metrics, what do MTTD (Mean Time to Detect) and MTTR (Mean Time to Respond / Remediate) measure?",
+            "type": "single",
+            "options": [
+                "MTTD measures the average time from initial adversary compromise until security teams discover it; MTTR measures the average time taken from discovery to fully contain and remediate the threat",
+                "MTTD measures the time taken to buy new computers; MTTR measures the time taken to clean office floors",
+                "MTTD is the cost of insurance; MTTR is the cost of salaries",
+                "There is zero difference; both measure how fast internet cables transmit data"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests core SOC efficiency and maturity metrics (MTTD and MTTR).",
+                "why_correct": "Mean Time to Detect (MTTD) measures dwell time (how long an adversary operates undetected). Mean Time to Respond / Remediate (MTTR) measures how quickly defenders isolate and eradicate the threat after detection.",
+                "options_breakdown": {
+                    "MTTD measures the average time from initial adversary compromise until security teams discover it; MTTR measures the average time taken from discovery to fully contain and remediate the threat": "Correct. MTTD evaluates detection speed; MTTR evaluates response agility.",
+                    "MTTD measures the time taken to buy new computers; MTTR measures the time taken to clean office floors": "Incorrect. These are general facility maintenance tasks.",
+                    "MTTD is the cost of insurance; MTTR is the cost of salaries": "Incorrect. MTTD and MTTR are time metrics, not financial figures.",
+                    "There is zero difference; both measure how fast internet cables transmit data": "Incorrect. Network bandwidth is measured in Gbps, not incident handling mean times."
+                },
+                "key_term": "MTTD and MTTR: Essential security operations metrics measuring operational efficacy in discovering (MTTD) and mitigating (MTTR) cyber incidents."
+            }
+        },
+        {
+            "id": "m8_h_44",
+            "raw_id": 44,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": true,
+            "scenario": "An organization implements the NIST SP 800-37 Risk Management Framework (RMF) for its enterprise information systems.",
+            "question": "What are the seven steps of the NIST RMF lifecycle in correct sequence?",
+            "type": "single",
+            "options": [
+                "Prepare -> Categorize -> Select -> Implement -> Assess -> Authorize -> Monitor",
+                "Attack -> Breach -> Panic -> Hide -> Deny -> Blame -> Pay",
+                "Install -> Update -> Delete -> Reinstall -> Reboot -> Scan -> Format",
+                "Plan -> Build -> Test -> Deploy -> Sell -> Retire -> Close"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the 7-step lifecycle of the NIST Risk Management Framework (RMF).",
+                "why_correct": "NIST RMF (SP 800-37 Rev 2) guides organizations through: 1. Prepare, 2. Categorize system/data, 3. Select controls, 4. Implement controls, 5. Assess control effectiveness, 6. Authorize system operation (ATO), and 7. Monitor controls continuously.",
+                "options_breakdown": {
+                    "Prepare -> Categorize -> Select -> Implement -> Assess -> Authorize -> Monitor": "Correct. These seven steps define the official NIST RMF process.",
+                    "Attack -> Breach -> Panic -> Hide -> Deny -> Blame -> Pay": "Incorrect. This is an adversarial disaster sequence, not a risk management framework.",
+                    "Install -> Update -> Delete -> Reinstall -> Reboot -> Scan -> Format": "Incorrect. This describes repetitive computer troubleshooting.",
+                    "Plan -> Build -> Test -> Deploy -> Sell -> Retire -> Close": "Incorrect. That is a general software development/commercial lifecycle."
+                },
+                "key_term": "NIST Risk Management Framework (RMF): A structured, seven-step process that integrates security, privacy, and cyber supply chain risk management into the system development lifecycle."
+            }
+        },
+        {
+            "id": "m8_h_45",
+            "raw_id": 45,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "An organization's executive crisis management team conducts a 'Tabletop Exercise' (TTX) simulating a massive ransomware attack.",
+            "question": "What is the primary objective of conducting a Tabletop Exercise?",
+            "type": "single",
+            "options": [
+                "To walk through a simulated cyber disaster scenario in a non-operational discussion environment to test leadership decision-making, communication flows, and incident response readiness without technical disruption",
+                "To physically build furniture for the server room",
+                "To play computer video games during business hours",
+                "To test the physical strength of the conference room table"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Tabletop Exercises (TTX) in crisis management.",
+                "why_correct": "A Tabletop Exercise is an informal, discussion-based walkthrough where key stakeholders (executives, legal, communications, IT, SOC) work through a simulated cyber crisis scenario, identifying gaps in plans, roles, and communication protocols.",
+                "options_breakdown": {
+                    "To walk through a simulated cyber disaster scenario in a non-operational discussion environment to test leadership decision-making, communication flows, and incident response readiness without technical disruption": "Correct. Tabletop exercises validate incident readiness and decision-making in a risk-free environment.",
+                    "To physically build furniture for the server room": "Incorrect. In cybersecurity, 'tabletop' refers to discussion around a conference table.",
+                    "To play computer video games during business hours": "Incorrect. Tabletop exercises are structured, professional crisis simulations.",
+                    "To test the physical strength of the conference room table": "Incorrect. Furniture structural testing is not a cybersecurity exercise."
+                },
+                "key_term": "Tabletop Exercise (TTX): A structured discussion where key personnel review their roles and responses to a simulated emergency or cyber incident."
+            }
+        },
+        {
+            "id": "m8_h_46",
+            "raw_id": 46,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "When capturing physical storage drives for forensic analysis, a forensics technician attaches a specialized hardware device between the suspect hard drive and the forensic analysis workstation.",
+            "question": "What is the function of this hardware 'Write Blocker'?",
+            "type": "single",
+            "options": [
+                "It permits read-only commands while intercepting and physically blocking any write commands, guaranteeing that the analysis workstation cannot alter or corrupt the original evidence drive",
+                "It writes random zeroes to the suspect drive to sanitize it",
+                "It doubles the physical capacity of the suspect hard drive",
+                "It cracks the user's password using high-voltage electrical pulses"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests forensic preservation techniques using write blockers.",
+                "why_correct": "Operating systems automatically write hidden files (metadata, volume timestamps) when a drive is attached. A hardware write blocker physically suppresses all write signals at the controller level, ensuring zero bits on the original evidence drive are altered.",
+                "options_breakdown": {
+                    "It permits read-only commands while intercepting and physically blocking any write commands, guaranteeing that the analysis workstation cannot alter or corrupt the original evidence drive": "Correct. Write blockers physically prevent write commands from modifying original digital evidence.",
+                    "It writes random zeroes to the suspect drive to sanitize it": "Incorrect. Sanitizing a drive destroys all forensic evidence.",
+                    "It doubles the physical capacity of the suspect hard drive": "Incorrect. Write blockers protect data integrity; they do not alter physical drive geometry.",
+                    "It cracks the user's password using high-voltage electrical pulses": "Incorrect. High voltage fries electronics and destroys data."
+                },
+                "key_term": "Write Blocker: A specialized computer hardware or software tool that allows read-only access to storage devices without allowing modification of data."
+            }
+        },
+        {
+            "id": "m8_h_47",
+            "raw_id": 47,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": true,
+            "scenario": "A publicly traded corporation in the United States experiences a material cybersecurity breach resulting in operational disruption and customer data loss.",
+            "question": "Under 2023 SEC (Securities and Exchange Commission) cybersecurity disclosure rules, within how many business days must the company file a Form 8-K disclosing the material breach to investors?",
+            "type": "single",
+            "options": [
+                "Within four (4) business days of determining the incident is material",
+                "Within 90 calendar days",
+                "Within 10 years",
+                "Zero days (immediate filing within 1 minute)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests compliance with modern SEC cybersecurity disclosure rules.",
+                "why_correct": "In 2023, the US Securities and Exchange Commission (SEC) adopted rules requiring publicly traded companies to disclose material cybersecurity incidents on Item 1.05 of Form 8-K within four business days after determining the incident is material.",
+                "options_breakdown": {
+                    "Within four (4) business days of determining the incident is material": "Correct. The SEC mandates Form 8-K disclosure within four business days of materiality determination.",
+                    "Within 90 calendar days": "Incorrect. 90 days violates SEC timeliness mandates.",
+                    "Within 10 years": "Incorrect. Waiting years incurs severe federal civil and criminal penalties.",
+                    "Zero days (immediate filing within 1 minute)": "Incorrect. The rule provides four business days from materiality determination."
+                },
+                "key_term": "SEC Form 8-K Item 1.05: The regulatory reporting requirement mandating public disclosure of material cybersecurity incidents within four business days."
+            }
+        },
+        {
+            "id": "m8_h_48",
+            "raw_id": 48,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Threat detection",
+            "is_scenario": true,
+            "scenario": "A threat hunter analyzes Windows event logs to detect suspicious process execution and lateral movement.",
+            "question": "Which Windows Event ID generated by the Security log (or Sysmon Event ID 1) specifically records 'A new process has been created', including parent PID, command-line arguments, and user identity?",
+            "type": "single",
+            "options": [
+                "Windows Security Event ID 4688",
+                "Windows Security Event ID 4624",
+                "Windows Security Event ID 4625",
+                "Windows Security Event ID 1102"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of critical Windows Security Event IDs for threat detection.",
+                "why_correct": "Event ID 4688 records new process creation. When command-line auditing is enabled, it records the exact full command-line arguments, parent process, and executing user, vital for identifying LOLBin abuse and malware execution.",
+                "options_breakdown": {
+                    "Windows Security Event ID 4688": "Correct. Event ID 4688 records process creation and command-line execution parameters.",
+                    "Windows Security Event ID 4624": "Incorrect. Event ID 4624 records successful account logins.",
+                    "Windows Security Event ID 4625": "Incorrect. Event ID 4625 records failed account login attempts.",
+                    "Windows Security Event ID 1102": "Incorrect. Event ID 1102 records when the security audit log has been cleared (tampering indicator)."
+                },
+                "key_term": "Windows Event ID 4688: A vital Windows security audit event indicating that a new process has been spawned on the system."
+            }
+        },
+        {
+            "id": "m8_h_49",
+            "raw_id": 49,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Compliance",
+            "is_scenario": true,
+            "scenario": "An enterprise assesses cybersecurity risks across its third-party software vendors, SaaS providers, and contractors.",
+            "question": "Which standardized questionnaire framework (maintained by the Shared Assessments program) is widely used by enterprise GRC teams to assess third-party vendor security controls?",
+            "type": "single",
+            "options": [
+                "Standardized Information Gathering (SIG) Questionnaire",
+                "The SAT College Admissions Exam",
+                "A commercial driver's license test",
+                "A customer loyalty survey"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests Vendor Risk Management (VRM) frameworks.",
+                "why_correct": "The Standardized Information Gathering (SIG) questionnaire (developed by Shared Assessments) is the industry standard for evaluating third-party service provider risks across 18 cybersecurity domains.",
+                "options_breakdown": {
+                    "Standardized Information Gathering (SIG) Questionnaire": "Correct. SIG is the global standard for third-party cyber risk assessment questionnaires.",
+                    "The SAT College Admissions Exam": "Incorrect. The SAT is an academic high school aptitude test.",
+                    "A commercial driver's license test": "Incorrect. CDL tests evaluate commercial motor vehicle drivers.",
+                    "A customer loyalty survey": "Incorrect. Customer surveys measure marketing satisfaction, not security controls."
+                },
+                "key_term": "SIG (Standardized Information Gathering): A comprehensive toolset for assessing third-party risk and vendor cybersecurity maturity."
+            }
+        },
+        {
+            "id": "m8_h_50",
+            "raw_id": 50,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Security Operations Centre (SOC)",
+            "is_scenario": true,
+            "scenario": "A SOC deploys a honeypot system inside the corporate network with no legitimate production business purpose. Any traffic attempting to connect to this honeypot is immediately flagged as malicious reconnaissance.",
+            "question": "What deception technology term describes decoy credentials, fake files, or honeytokens placed intentionally to detect unauthorized internal intruder activity?",
+            "type": "single",
+            "options": [
+                "Deception Technology / Honeytokens (Canary Tokens)",
+                "Buffer Overflow",
+                "SQL Injection",
+                "Distributed Denial of Service"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of cyber deception technology and honeytokens.",
+                "why_correct": "Canary tokens and honeytokens are deliberate decoy assets (fake AWS API keys, fake database records, fake internal servers) that have zero legitimate operational use. The moment an attacker accesses or interacts with them, high-fidelity alerts trigger immediately.",
+                "options_breakdown": {
+                    "Deception Technology / Honeytokens (Canary Tokens)": "Correct. Honeytokens and canary decoys provide high-fidelity alerts when intruders interact with them.",
+                    "Buffer Overflow": "Incorrect. Buffer overflow is a memory corruption vulnerability.",
+                    "SQL Injection": "Incorrect. SQL injection manipulates backend database queries.",
+                    "Distributed Denial of Service": "Incorrect. DDoS floods network bandwidth."
+                },
+                "key_term": "Honeytoken: A decoy piece of digital information placed deliberately in an environment to detect unauthorized access or data exfiltration."
+            }
+        },
+        {
+            "id": "m8_h_51",
+            "raw_id": 51,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Access control",
+            "is_scenario": true,
+            "scenario": "An organization implements Just-in-Time (JIT) access within its cloud infrastructure (AWS/Azure).",
+            "question": "How does Just-in-Time (JIT) privileged access reduce security risk compared to standing permanent administrative privileges?",
+            "type": "single",
+            "options": [
+                "Administrative privileges are granted only on-demand for a limited time window (e.g., 2 hours) upon approved request, automatically expiring to eliminate persistent standing privileges that attackers could exploit",
+                "It requires administrators to type passwords using only their left hand",
+                "It forces computers to run on solar power during business hours",
+                "It deletes user accounts immediately upon login"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests modern cloud identity governance (Just-in-Time Privileged Access).",
+                "why_correct": "Standing privileges represent permanent exposure; if an admin account is compromised, the attacker has permanent access. JIT access ensures accounts have zero standing rights by default, granting temporary elevated roles only when requested and approved, expiring automatically.",
+                "options_breakdown": {
+                    "Administrative privileges are granted only on-demand for a limited time window (e.g., 2 hours) upon approved request, automatically expiring to eliminate persistent standing privileges that attackers could exploit": "Correct. JIT access eliminates standing privileges and minimizes attack windows.",
+                    "It requires administrators to type passwords using only their left hand": "Incorrect. Hand dexterity has no relation to identity governance.",
+                    "It forces computers to run on solar power during business hours": "Incorrect. Power infrastructure is unrelated to privileged access management.",
+                    "It deletes user accounts immediately upon login": "Incorrect. Deleting accounts prevents authorized staff from completing work."
+                },
+                "key_term": "Just-in-Time (JIT) Access: An identity governance practice where elevated access rights are granted dynamically on-demand for a temporary window rather than granted permanently."
+            }
+        },
+        {
+            "id": "m8_h_52",
+            "raw_id": 52,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "During an incident response engagement involving a sophisticated Advanced Persistent Threat (APT), an executive suggests immediately rebuilding a single infected web server and resuming business as usual.",
+            "question": "Why is piecemeal, premature remediation dangerous when dealing with advanced threat actors who have established multiple persistence mechanisms across a domain?",
+            "type": "single",
+            "options": [
+                "Remediating only one asset alerts the adversary that they have been detected, causing them to deploy backup persistence, encrypt systems, or destroy forensic evidence across remaining compromised hosts",
+                "Because rebuilding a server causes all network cables in the building to catch fire",
+                "Because antivirus programs refuse to install on rebuilt servers",
+                "Because domain controllers cannot communicate with clean servers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests strategic eradication coordination in advanced incident response.",
+                "why_correct": "Remediating one compromised system 'tips off' the attacker. In major enterprise breaches, defenders must maintain stealth while scoping the full extent of adversary presence, executing coordinated eradication across all compromised hosts and persistence mechanisms simultaneously.",
+                "options_breakdown": {
+                    "Remediating only one asset alerts the adversary that they have been detected, causing them to deploy backup persistence, encrypt systems, or destroy forensic evidence across remaining compromised hosts": "Correct. Tipping off an adversary before full scoping causes them to burrow deeper or execute destructive wiper attacks.",
+                    "Because rebuilding a server causes all network cables in the building to catch fire": "Incorrect. Reimaging systems has zero physical thermal impact on network cabling.",
+                    "Because antivirus programs refuse to install on rebuilt servers": "Incorrect. Clean images install security agents normally.",
+                    "Because domain controllers cannot communicate with clean servers": "Incorrect. Rebuilt domain members communicate normally."
+                },
+                "key_term": "Coordinated Eradication: The strategic practice of neutralizing all adversary footholds, accounts, and backdoors across an enterprise simultaneously to prevent retaliation."
+            }
+        },
+        {
+            "id": "m8_h_53",
+            "raw_id": 53,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Security Policy, a Security Standard, and a Security Procedure in GRC documentation?",
+            "type": "single",
+            "options": [
+                "A Policy is a high-level executive mandate (WHAT must be done); a Standard defines mandatory technical requirements (WHAT thresholds to meet); a Procedure provides step-by-step instructions (HOW to execute it)",
+                "A Policy is software; a Standard is hardware; a Procedure is a printer",
+                "A Policy is optional; a Standard is recommended; a Procedure is illegal",
+                "There is zero difference; all three words mean the exact same thing"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the governance hierarchy distinguishing Policies, Standards, and Procedures.",
+                "why_correct": "Policies define high-level organizational intent and rules (mandatory). Standards establish concrete technical requirements (e.g., minimum AES-256 encryption, 14-char passwords). Procedures provide step-by-step operating instructions (SOPs) for execution.",
+                "options_breakdown": {
+                    "A Policy is a high-level executive mandate (WHAT must be done); a Standard defines mandatory technical requirements (WHAT thresholds to meet); a Procedure provides step-by-step instructions (HOW to execute it)": "Correct. Policy dictates what; standard specifies parameters; procedure details how.",
+                    "A Policy is software; a Standard is hardware; a Procedure is a printer": "Incorrect. All three are organizational governance documents.",
+                    "A Policy is optional; a Standard is recommended; a Procedure is illegal": "Incorrect. Policies and standards are mandatory within organizations.",
+                    "There is zero difference; all three words mean the exact same thing": "Incorrect. They serve distinct hierarchical functions in GRC."
+                },
+                "key_term": "GRC Hierarchy: The operational alignment of Policies (rules), Standards (specifications), Procedures (instructions), and Guidelines (advice)."
+            }
+        },
+        {
+            "id": "m8_h_54",
+            "raw_id": 54,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Threat detection",
+            "is_scenario": true,
+            "scenario": "A threat hunter searches for anomalous process execution involving `cmd.exe` or `powershell.exe` spawned as child processes of `w3wp.exe` (Microsoft IIS web server) or `httpd.exe` (Apache).",
+            "question": "What critical attack technique is indicated when a web server daemon spawns an interactive command shell?",
+            "type": "single",
+            "options": [
+                "Web Shell Execution / Server Exploitation (Remote Code Execution)",
+                "Legitimate operating system defragmentation",
+                "A user printing an email document",
+                "An automated clock time synchronization"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests detection engineering for web shells and RCE.",
+                "why_correct": "Web server processes (IIS `w3wp.exe`, Apache `httpd`, Nginx) should never naturally spawn command shells (`cmd.exe`, `powershell.exe`, `/bin/sh`). When this occurs, it indicates that an attacker has exploited a web vulnerability or uploaded a web shell to execute operating system commands.",
+                "options_breakdown": {
+                    "Web Shell Execution / Server Exploitation (Remote Code Execution)": "Correct. Web servers spawning command shells indicates active web shell or RCE exploitation.",
+                    "Legitimate operating system defragmentation": "Incorrect. Disk defragmenters do not spawn shells from web server worker processes.",
+                    "A user printing an email document": "Incorrect. Print spoolers do not spawn web server command interpreters.",
+                    "An automated clock time synchronization": "Incorrect. NTP updates clock registers and does not spawn command shells from IIS."
+                },
+                "key_term": "Web Shell Detection: Identifying unauthorized web backdoor scripts by monitoring anomalous child processes spawned by web server services."
+            }
+        },
+        {
+            "id": "m8_h_55",
+            "raw_id": 55,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Risk assessment",
+            "is_scenario": true,
+            "scenario": "An enterprise performs quantitative risk analysis. An asset has an Asset Value (AV) of $500,000. A cyber attack has an Exposure Factor (EF) of 40%, and historical threat intelligence estimates an Annualized Rate of Occurrence (ARO) of 0.20 (once every 5 years).",
+            "question": "What is the Single Loss Expectancy (SLE) and Annualized Loss Expectancy (ALE)?",
+            "type": "single",
+            "options": [
+                "SLE = $200,000; ALE = $40,000 per year",
+                "SLE = $500,000; ALE = $100,000 per year",
+                "SLE = $40,000; ALE = $200,000 per year",
+                "SLE = $50,000; ALE = $5,000 per year"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests quantitative risk calculations: SLE = AV * EF, and ALE = SLE * ARO.",
+                "why_correct": "Single Loss Expectancy (SLE) = Asset Value ($500,000) * Exposure Factor (0.40) = $200,000. Annualized Loss Expectancy (ALE) = SLE ($200,000) * ARO (0.20) = $40,000 per year.",
+                "options_breakdown": {
+                    "SLE = $200,000; ALE = $40,000 per year": "Correct. SLE = $500,000 * 0.40 = $200,000. ALE = $200,000 * 0.20 = $40,000.",
+                    "SLE = $500,000; ALE = $100,000 per year": "Incorrect. $500,000 is the unmitigated full asset value, not the single loss expectancy.",
+                    "SLE = $40,000; ALE = $200,000 per year": "Incorrect. This inverts SLE and ALE.",
+                    "SLE = $50,000; ALE = $5,000 per year": "Incorrect. This represents a mathematical calculation error."
+                },
+                "key_term": "Quantitative Risk Formulas: SLE = AV * EF; ALE = SLE * ARO; used to calculate expected annual financial loss for risk management decisions."
+            }
+        },
+        {
+            "id": "m8_h_56",
+            "raw_id": 56,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Incident response",
+            "is_scenario": true,
+            "scenario": "A forensic analyst verifies the integrity of an E01 forensic disk image before and after analysis.",
+            "question": "If the SHA-256 hash of the evidence image computed after the analysis differs by even a single character from the original hash computed at collection time, what is the legal consequence?",
+            "type": "single",
+            "options": [
+                "The evidence is considered tainted and compromised, and may be deemed inadmissible in a court of law",
+                "The analyst receives an award for creative computation",
+                "The computer automatically explodes with sparks",
+                "There is zero legal consequence; hashes are optional suggestions"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of digital evidence integrity in legal proceedings.",
+                "why_correct": "If cryptographic hashes do not match perfectly, defense attorneys can successfully argue that evidence was altered, fabricated, or contaminated, rendering it inadmissible under rules of evidence (e.g., Federal Rules of Evidence 901/902).",
+                "options_breakdown": {
+                    "The evidence is considered tainted and compromised, and may be deemed inadmissible in a court of law": "Correct. Mismatched hashes indicate evidence contamination, destroying legal admissibility.",
+                    "The analyst receives an award for creative computation": "Incorrect. Altering evidence destroys professional credibility and breaches legal standards.",
+                    "The computer automatically explodes with sparks": "Incorrect. Software hash differences do not trigger physical hardware explosions.",
+                    "There is zero legal consequence; hashes are optional suggestions": "Incorrect. Cryptographic hash verification is mandatory in digital forensics."
+                },
+                "key_term": "Evidence Integrity: The principle that digital evidence must remain unaltered from collection through presentation in court, verified via cryptographic hashing."
+            }
+        },
+        {
+            "id": "m8_h_57",
+            "raw_id": 57,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Compliance",
+            "is_scenario": true,
+            "scenario": "A healthcare technology company complies with HIPAA Security Rule specifications. Which administrative safeguard requires workforce clearance procedures, authorization verification, and termination procedures?",
+            "question": "A healthcare technology company complies with HIPAA Security Rule specifications. Which administrative safeguard requires workforce clearance procedures, authorization verification, and termination procedures?",
+            "type": "single",
+            "options": [
+                "Workforce Security (45 CFR \u00a7 164.308(a)(3))",
+                "Physical Facility Security (45 CFR \u00a7 164.310)",
+                "Transmission Security (45 CFR \u00a7 164.312(e))",
+                "Device and Media Controls (45 CFR \u00a7 164.310(d))"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of HIPAA Administrative Safeguards.",
+                "why_correct": "HIPAA Administrative Safeguard 45 CFR \u00a7 164.308(a)(3) mandates Workforce Security, requiring policies for screening employees, ensuring appropriate authorization to ePHI, and timely offboarding/termination of access.",
+                "options_breakdown": {
+                    "Workforce Security (45 CFR \u00a7 164.308(a)(3))": "Correct. Workforce Security governs personnel clearance, authorization, and termination procedures.",
+                    "Physical Facility Security (45 CFR \u00a7 164.310)": "Incorrect. Physical facility security governs door locks and server room physical access.",
+                    "Transmission Security (45 CFR \u00a7 164.312(e))": "Incorrect. Transmission security mandates encryption of ePHI in transit over networks.",
+                    "Device and Media Controls (45 CFR \u00a7 164.310(d))": "Incorrect. Device and media controls govern the sanitization and reuse of hardware media."
+                },
+                "key_term": "HIPAA Workforce Security: An administrative safeguard requiring covered entities to ensure that all members of its workforce have appropriate access to electronic protected health information."
+            }
+        },
+        {
+            "id": "m8_h_58",
+            "raw_id": 58,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Threat detection",
+            "is_scenario": true,
+            "scenario": "A threat hunter analyzes DNS server query logs and calculates the Shannon Entropy of requested subdomain strings.",
+            "question": "Why does calculating high Shannon Entropy (measure of randomness) reliably identify algorithmically generated domains (DGA) used by malware command-and-control networks?",
+            "type": "single",
+            "options": [
+                "Human-registered domain names contain predictable language patterns and syllables (low entropy); DGA domains consist of mathematically random character sequences with high randomness (high entropy)",
+                "High entropy domains physically heat up the computer processor",
+                "Shannon entropy was invented by cybercriminals to bypass firewalls",
+                "DGA domains only use the letters X, Y, and Z"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests detection of Domain Generation Algorithms (DGA) via Shannon entropy analysis.",
+                "why_correct": "Domain Generation Algorithms (DGAs) generate hundreds of randomized domains (e.g., `xjk8291fznq.com`). Claude Shannon's information entropy measures randomness. Natural language domains have low entropy, while pseudo-random DGA strings have high entropy, enabling statistical detection.",
+                "options_breakdown": {
+                    "Human-registered domain names contain predictable language patterns and syllables (low entropy); DGA domains consist of mathematically random character sequences with high randomness (high entropy)": "Correct. High entropy distinguishes mathematically random DGA domains from human-readable domain names.",
+                    "High entropy domains physically heat up the computer processor": "Incorrect. Entropy is a statistical mathematical property, not hardware thermal heating.",
+                    "Shannon entropy was invented by cybercriminals to bypass firewalls": "Incorrect. Claude Shannon invented information theory and entropy in 1948 as a mathematical science.",
+                    "DGA domains only use the letters X, Y, and Z": "Incorrect. DGAs use all alphanumeric characters."
+                },
+                "key_term": "Shannon Entropy: A mathematical measure of randomness or unpredictability in a set of data, widely used in security to detect DGA domains and packed malware."
+            }
+        },
+        {
+            "id": "m8_h_59",
+            "raw_id": 59,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Governance, Risk, and Compliance (GRC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between an Audit and an Assessment in GRC?",
+            "type": "single",
+            "options": [
+                "An Audit is a formal, independent evaluation against a strict compliance standard with legally binding pass/fail certification; an Assessment is a broader, diagnostic evaluation aimed at identifying improvement opportunities",
+                "An Audit is illegal, while an Assessment is legal",
+                "An Audit only checks hardware, while an Assessment only checks software",
+                "There is zero difference; both terms are legally identical"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the governance distinction between audits and assessments.",
+                "why_correct": "An Audit is formal, systematic, and independent (conducted by certified external auditors like CPA firms for SOC 2), evaluating evidence against strict pass/fail criteria. An Assessment is a collaborative, diagnostic evaluation (like an internal maturity assessment) aimed at understanding current posture.",
+                "options_breakdown": {
+                    "An Audit is a formal, independent evaluation against a strict compliance standard with legally binding pass/fail certification; an Assessment is a broader, diagnostic evaluation aimed at identifying improvement opportunities": "Correct. Audits provide formal independent verification; assessments provide diagnostic guidance.",
+                    "An Audit is illegal, while an Assessment is legal": "Incorrect. Both are standard, authorized corporate governance practices.",
+                    "An Audit only checks hardware, while an Assessment only checks software": "Incorrect. Both evaluate people, processes, and technology.",
+                    "There is zero difference; both terms are legally identical": "Incorrect. Audits carry formal legal, regulatory, and certification weight."
+                },
+                "key_term": "Security Audit vs Assessment: An audit evaluates compliance against a formal standard; an assessment evaluates maturity and risk to guide improvements."
+            }
+        },
+        {
+            "id": "m8_h_60",
+            "raw_id": 60,
+            "module_id": 8,
+            "difficulty": "hard",
+            "topic": "Security Operations Centre (SOC)",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are recognized operational tiers and specialized roles within a modern enterprise Security Operations Center (SOC)? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Tier 1 Alert Triage Analyst (frontline alert triage and false-positive filtering)",
+                "Tier 2 Incident Responder (deep investigation and containment of confirmed incidents)",
+                "Tier 3 Threat Hunter / Detection Engineer (proactive hunting, advanced forensics, and custom detection engineering)",
+                "Tier 4 Professional Video Gamer (playing video games during work hours)"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about the recognized functional tiers of a modern SOC team.",
+                "why_correct": "Standard SOC operational structures organize analysts into Tier 1 (Triage/Monitoring), Tier 2 (Incident Response/Deep Dive), and Tier 3 (Threat Hunting/Detection Engineering/Forensics). Playing video games is not an operational SOC tier.",
+                "options_breakdown": {
+                    "Tier 1 Alert Triage Analyst (frontline alert triage and false-positive filtering)": "Correct. Tier 1 handles frontline triage and ticket categorization.",
+                    "Tier 2 Incident Responder (deep investigation and containment of confirmed incidents)": "Correct. Tier 2 investigates, scopes, and remediates confirmed security incidents.",
+                    "Tier 3 Threat Hunter / Detection Engineer (proactive hunting, advanced forensics, and custom detection engineering)": "Correct. Tier 3 handles deep forensics, proactive threat hunting, and custom rule development.",
+                    "Tier 4 Professional Video Gamer (playing video games during work hours)": "Incorrect. Video gaming is recreational and has no role in SOC security operations."
+                },
+                "key_term": "SOC Tiered Structure: The organizational model dividing SOC operations into Tier 1 (Triage), Tier 2 (Incident Response), and Tier 3 (Threat Hunting/Engineering)."
+            }
+        }
+    ]
+}

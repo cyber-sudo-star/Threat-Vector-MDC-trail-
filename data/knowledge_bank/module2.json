@@ -1,0 +1,1889 @@
+{
+    "module_id": 2,
+    "title": "Networking Fundamentals",
+    "description": "Learn how computers communicate with each other, how networks are structured, and how different protocols help transfer information.",
+    "topics": [
+        "Introduction to computer networks",
+        "LAN and WAN",
+        "Routers and switches",
+        "IP and MAC addresses",
+        "DNS and DHCP",
+        "Ports",
+        "TCP and UDP",
+        "OSI model",
+        "TCP/IP model",
+        "Common network protocols"
+    ],
+    "questions": [
+        {
+            "id": "m2_e_01",
+            "raw_id": 1,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Introduction to computer networks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary purpose of connecting multiple computers together in a network?",
+            "type": "single",
+            "options": [
+                "To share resources, files, and communicate with other systems",
+                "To double the physical CPU speed of every connected device",
+                "To eliminate the need for computer power cables",
+                "To turn mechanical hard drives into solid-state drives"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the fundamental benefit and reason for creating computer networks.",
+                "why_correct": "Computer networks are built so independent computers can exchange digital data, share hardware like printers, access centralized files, and communicate seamlessly.",
+                "options_breakdown": {
+                    "To share resources, files, and communicate with other systems": "Correct. Networks exist primarily to facilitate rapid data communication and resource sharing.",
+                    "To double the physical CPU speed of every connected device": "Incorrect. Networking does not physically increase individual CPU clock frequency.",
+                    "To eliminate the need for computer power cables": "Incorrect. Computers still require power regardless of whether they are networked.",
+                    "To turn mechanical hard drives into solid-state drives": "Incorrect. Networking cannot change the physical hardware technology of a storage drive."
+                },
+                "key_term": "Computer Network: A collection of interconnected computing devices that exchange data and share resources using digital communications links."
+            }
+        },
+        {
+            "id": "m2_e_02",
+            "raw_id": 2,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "LAN and WAN",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which type of network spans a small, limited geographical area such as a single home, classroom, or office building?",
+            "type": "single",
+            "options": [
+                "Local Area Network (LAN)",
+                "Wide Area Network (WAN)",
+                "Global Area Network (GAN)",
+                "Interplanetary Internet"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between small localized networks and large-scale networks.",
+                "why_correct": "A Local Area Network (LAN) connects computers and devices within a limited physical radius, such as an office, school, or residence.",
+                "options_breakdown": {
+                    "Local Area Network (LAN)": "Correct. LANs cover small geographical areas like homes and individual office floors.",
+                    "Wide Area Network (WAN)": "Incorrect. A WAN connects multiple distant LANs across cities, countries, or continents.",
+                    "Global Area Network (GAN)": "Incorrect. A GAN spans worldwide satellite or undersea fiber connections.",
+                    "Interplanetary Internet": "Incorrect. This refers to specialized deep-space communication research."
+                },
+                "key_term": "LAN (Local Area Network): A private, high-speed computer network confined to a localized physical perimeter."
+            }
+        },
+        {
+            "id": "m2_e_03",
+            "raw_id": 3,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a MAC address in computer networking?",
+            "type": "single",
+            "options": [
+                "A permanent physical hardware identifier burned into a Network Interface Card (NIC)",
+                "An address created by Apple for MacBooks only",
+                "A web address used to open online search engines",
+                "A temporary username assigned by an Internet Service Provider"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition and role of a Media Access Control (MAC) address.",
+                "why_correct": "A MAC address is a 48-bit physical identifier assigned by the manufacturer and permanently etched into a device's network card (NIC) for Layer 2 identification.",
+                "options_breakdown": {
+                    "A permanent physical hardware identifier burned into a Network Interface Card (NIC)": "Correct. A MAC address is the hardware Layer 2 physical address of a network adapter.",
+                    "An address created by Apple for MacBooks only": "Incorrect. MAC stands for Media Access Control, used on all standard Ethernet and Wi-Fi devices, not just Apple products.",
+                    "A web address used to open online search engines": "Incorrect. That is a URL (Uniform Resource Locator).",
+                    "A temporary username assigned by an Internet Service Provider": "Incorrect. MAC addresses are hardware numbers, not ISP account credentials."
+                },
+                "key_term": "MAC Address: A unique 12-digit hexadecimal physical address permanently assigned to each network interface card."
+            }
+        },
+        {
+            "id": "m2_e_04",
+            "raw_id": 4,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Routers and switches",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which device is primarily responsible for directing data packets between different IP networks, such as connecting your home LAN to the Internet?",
+            "type": "single",
+            "options": [
+                "Router",
+                "Network Switch",
+                "HDMI Splitter",
+                "USB Hub"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks which network device routes traffic across different networks.",
+                "why_correct": "A router operates at Layer 3 (Network Layer) and inspects destination IP addresses to forward traffic between different networks (e.g., your home LAN and your ISP's WAN).",
+                "options_breakdown": {
+                    "Router": "Correct. Routers forward packets between distinct networks based on IP routing tables.",
+                    "Network Switch": "Incorrect. A switch forwards frames within the same local network using MAC addresses.",
+                    "HDMI Splitter": "Incorrect. An HDMI splitter duplicates video signals to multiple monitors.",
+                    "USB Hub": "Incorrect. A USB hub expands universal serial bus peripheral ports, not network IP routes."
+                },
+                "key_term": "Router: A network device that routes data packets across multiple interconnected networks using IP addresses."
+            }
+        },
+        {
+            "id": "m2_e_05",
+            "raw_id": 5,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "DNS and DHCP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary role of the Domain Name System (DNS) on the Internet?",
+            "type": "single",
+            "options": [
+                "To translate human-friendly domain names (like threatvector.com) into machine-readable IP addresses",
+                "To assign electrical power to network cables",
+                "To encrypt credit card numbers stored on local hard drives",
+                "To clean viruses off computer monitors"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the function of DNS as the 'phonebook' of the internet.",
+                "why_correct": "Computers communicate using numeric IP addresses, but humans prefer easy-to-remember names. DNS translates domain names (like example.com) into numerical IP addresses (like 93.184.216.34).",
+                "options_breakdown": {
+                    "To translate human-friendly domain names (like threatvector.com) into machine-readable IP addresses": "Correct. DNS acts as a distributed lookup directory resolving domain names to IP addresses.",
+                    "To assign electrical power to network cables": "Incorrect. Power over Ethernet (PoE) provides power, not DNS.",
+                    "To encrypt credit card numbers stored on local hard drives": "Incorrect. Cryptographic software handles encryption, not DNS name resolution.",
+                    "To clean viruses off computer monitors": "Incorrect. DNS is a network protocol, not an antivirus or cleaning tool."
+                },
+                "key_term": "DNS (Domain Name System): The hierarchical protocol that resolves human-readable hostnames to IP addresses."
+            }
+        },
+        {
+            "id": "m2_e_06",
+            "raw_id": 6,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "DNS and DHCP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which protocol automatically assigns an IP address, subnet mask, and default gateway to a computer when it connects to a network?",
+            "type": "single",
+            "options": [
+                "Dynamic Host Configuration Protocol (DHCP)",
+                "Simple Mail Transfer Protocol (SMTP)",
+                "File Transfer Protocol (FTP)",
+                "Hypertext Transfer Protocol (HTTP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of automatic network host configuration.",
+                "why_correct": "DHCP (Dynamic Host Configuration Protocol) automatically leases an IP address, subnet mask, DNS servers, and gateway IP to client devices when they join a network.",
+                "options_breakdown": {
+                    "Dynamic Host Configuration Protocol (DHCP)": "Correct. DHCP automates IP configuration so users do not need to configure addresses manually.",
+                    "Simple Mail Transfer Protocol (SMTP)": "Incorrect. SMTP is used exclusively for transmitting outgoing emails.",
+                    "File Transfer Protocol (FTP)": "Incorrect. FTP is used to upload and download files.",
+                    "Hypertext Transfer Protocol (HTTP)": "Incorrect. HTTP delivers web pages to web browsers."
+                },
+                "key_term": "DHCP: A network management protocol that automatically dynamically assigns IP addresses and configuration parameters to devices."
+            }
+        },
+        {
+            "id": "m2_e_07",
+            "raw_id": 7,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Ports",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a port number in computer networking?",
+            "type": "single",
+            "options": [
+                "A numerical identifier that directs network traffic to a specific software service or application on a host",
+                "The physical hole on the back of a computer where you plug in headphones",
+                "The serial number of the computer processor",
+                "The total number of computers currently online in your country"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks what a logical port number represents in TCP/IP networking.",
+                "why_correct": "In transport protocols (TCP/UDP), a port number (from 0 to 65535) acts as an endpoint address directing incoming data to the exact listening software application.",
+                "options_breakdown": {
+                    "A numerical identifier that directs network traffic to a specific software service or application on a host": "Correct. Port numbers identify the specific application process receiving traffic.",
+                    "The physical hole on the back of a computer where you plug in headphones": "Incorrect. That is an analog audio 3.5mm jack.",
+                    "The serial number of the computer processor": "Incorrect. That is a CPU hardware serial number.",
+                    "The total number of computers currently online in your country": "Incorrect. Port numbers range from 0 to 65,535 and identify local services."
+                },
+                "key_term": "Port Number: A 16-bit unsigned integer identifying a specific application or process endpoint within an operating system."
+            }
+        },
+        {
+            "id": "m2_e_08",
+            "raw_id": 8,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "TCP and UDP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which protocol is connection-oriented, guarantees delivery of packets, and retransmits lost data?",
+            "type": "single",
+            "options": [
+                "Transmission Control Protocol (TCP)",
+                "User Datagram Protocol (UDP)",
+                "Internet Control Message Protocol (ICMP)",
+                "Address Resolution Protocol (ARP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the core difference between reliable (TCP) and best-effort (UDP) transport protocols.",
+                "why_correct": "TCP establishes a formal 3-way handshake connection, tracks packets using sequence numbers, requires acknowledgments, and retransmits lost packets to guarantee complete delivery.",
+                "options_breakdown": {
+                    "Transmission Control Protocol (TCP)": "Correct. TCP provides reliable, ordered, error-checked delivery of a stream of packets.",
+                    "User Datagram Protocol (UDP)": "Incorrect. UDP is connectionless and does not guarantee delivery or packet order.",
+                    "Internet Control Message Protocol (ICMP)": "Incorrect. ICMP is used for diagnostic reporting (such as ping), not reliable data streaming.",
+                    "Address Resolution Protocol (ARP)": "Incorrect. ARP maps IP addresses to physical MAC addresses on local subnets."
+                },
+                "key_term": "TCP: A reliable, connection-oriented transport protocol that ensures complete and ordered data delivery."
+            }
+        },
+        {
+            "id": "m2_e_09",
+            "raw_id": 9,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "TCP and UDP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why do real-time voice calls, online video streaming, and multiplayer gaming frequently choose UDP over TCP?",
+            "type": "single",
+            "options": [
+                "UDP offers lower latency because it does not wait for acknowledgments or retransmit dropped packets",
+                "UDP makes internet connection cables physically shorter",
+                "UDP automatically translates English speech into other languages",
+                "UDP encrypts all traffic with uncrackable military passwords"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks why latency-sensitive applications prefer lightweight UDP.",
+                "why_correct": "UDP transmits datagrams without a connection handshake or retransmission delays. For real-time audio or gaming, an old dropped packet is useless, so low latency is prioritized over retransmission.",
+                "options_breakdown": {
+                    "UDP offers lower latency because it does not wait for acknowledgments or retransmit dropped packets": "Correct. UDP drops overhead and latency, making it ideal for live media and games.",
+                    "UDP makes internet connection cables physically shorter": "Incorrect. Protocols are software rules and do not affect physical cable lengths.",
+                    "UDP automatically translates English speech into other languages": "Incorrect. UDP has no natural language processing capabilities.",
+                    "UDP encrypts all traffic with uncrackable military passwords": "Incorrect. Base UDP has no built-in encryption."
+                },
+                "key_term": "UDP: A lightweight, connectionless transport protocol prioritized for real-time speed and low latency."
+            }
+        },
+        {
+            "id": "m2_e_10",
+            "raw_id": 10,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "OSI model",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How many layers are in the standard Open Systems Interconnection (OSI) reference model?",
+            "type": "single",
+            "options": [
+                "7 layers",
+                "4 layers",
+                "10 layers",
+                "12 layers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests basic knowledge of the OSI model structure.",
+                "why_correct": "The OSI model defines 7 distinct layers: Physical (1), Data Link (2), Network (3), Transport (4), Session (5), Presentation (6), and Application (7).",
+                "options_breakdown": {
+                    "7 layers": "Correct. The OSI model standardizes network communication into exactly 7 conceptual layers.",
+                    "4 layers": "Incorrect. The TCP/IP model has 4 layers, but the OSI model has 7.",
+                    "10 layers": "Incorrect. The standard OSI reference model contains 7 layers.",
+                    "12 layers": "Incorrect. 12 is not the layer count for any standard networking reference model."
+                },
+                "key_term": "OSI Model: A conceptual framework established by ISO describing seven layers of computer network functions."
+            }
+        },
+        {
+            "id": "m2_e_11",
+            "raw_id": 11,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Common network protocols",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which default well-known port number is used for unencrypted HTTP web traffic?",
+            "type": "single",
+            "options": [
+                "Port 80",
+                "Port 443",
+                "Port 22",
+                "Port 21"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the standard port assigned to standard HTTP.",
+                "why_correct": "Port 80 is the universally assigned standard port for plain text HTTP web communication.",
+                "options_breakdown": {
+                    "Port 80": "Correct. Standard unencrypted HTTP web traffic runs on port 80.",
+                    "Port 443": "Incorrect. Port 443 is assigned to encrypted HTTPS (HTTP over TLS).",
+                    "Port 22": "Incorrect. Port 22 is used for Secure Shell (SSH) remote administration.",
+                    "Port 21": "Incorrect. Port 21 is used for File Transfer Protocol (FTP) command control."
+                },
+                "key_term": "Port 80: The default TCP port used worldwide for unencrypted Hypertext Transfer Protocol (HTTP) web pages."
+            }
+        },
+        {
+            "id": "m2_e_12",
+            "raw_id": 12,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Common network protocols",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which default port number is used by secure HTTPS traffic protected with SSL/TLS encryption?",
+            "type": "single",
+            "options": [
+                "Port 443",
+                "Port 80",
+                "Port 25",
+                "Port 53"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the standard port assigned to encrypted HTTPS.",
+                "why_correct": "Port 443 is the standard TCP port for secure web traffic encrypted using TLS/SSL.",
+                "options_breakdown": {
+                    "Port 443": "Correct. HTTPS connections default to TCP port 443 for encrypted web browsing.",
+                    "Port 80": "Incorrect. Port 80 is used for unencrypted HTTP traffic.",
+                    "Port 25": "Incorrect. Port 25 is used for SMTP email relays.",
+                    "Port 53": "Incorrect. Port 53 is used for DNS queries."
+                },
+                "key_term": "Port 443: The standard port reserved for HTTPS encrypted web communications."
+            }
+        },
+        {
+            "id": "m2_e_13",
+            "raw_id": 13,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How many bits comprise a standard Internet Protocol version 4 (IPv4) address?",
+            "type": "single",
+            "options": [
+                "32 bits",
+                "64 bits",
+                "128 bits",
+                "16 bits"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests basic knowledge of IPv4 address length.",
+                "why_correct": "An IPv4 address consists of 32 bits divided into four 8-bit octets (e.g., 192.168.1.1), providing approximately 4.3 billion unique addresses.",
+                "options_breakdown": {
+                    "32 bits": "Correct. IPv4 addresses are exactly 32 bits (4 bytes) long.",
+                    "64 bits": "Incorrect. 64 bits is not standard for IPv4 or IPv6.",
+                    "128 bits": "Incorrect. 128 bits is the address length of IPv6, not IPv4.",
+                    "16 bits": "Incorrect. 16 bits is the size of a port number, not an IP address."
+                },
+                "key_term": "IPv4 Address: A 32-bit numerical label assigned to devices connected to a computer network."
+            }
+        },
+        {
+            "id": "m2_e_14",
+            "raw_id": 14,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How many bits comprise an Internet Protocol version 6 (IPv6) address?",
+            "type": "single",
+            "options": [
+                "128 bits",
+                "32 bits",
+                "64 bits",
+                "256 bits"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of IPv6 address size.",
+                "why_correct": "IPv6 addresses are 128 bits long, written as eight groups of four hexadecimal digits, creating an immense pool of 2^128 unique addresses.",
+                "options_breakdown": {
+                    "128 bits": "Correct. IPv6 uses 128-bit addresses to solve the global address exhaustion of IPv4.",
+                    "32 bits": "Incorrect. 32 bits is the length of an older IPv4 address.",
+                    "64 bits": "Incorrect. 64 bits only represents the network routing prefix of an IPv6 subnet.",
+                    "256 bits": "Incorrect. Standard IP addresses do not use 256 bits."
+                },
+                "key_term": "IPv6: The modern IP standard using 128-bit addresses to provide virtually unlimited network addresses."
+            }
+        },
+        {
+            "id": "m2_e_15",
+            "raw_id": 15,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Routers and switches",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which device operates primarily at Layer 2 (Data Link) and forwards data inside a local office network using MAC addresses?",
+            "type": "single",
+            "options": [
+                "Network Switch",
+                "Network Router",
+                "Power Strip",
+                "Microphone"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of Layer 2 network switches.",
+                "why_correct": "A network switch maintains a MAC address table to forward incoming frames directly to the specific destination port on a local LAN.",
+                "options_breakdown": {
+                    "Network Switch": "Correct. Switches connect devices on the same local subnet using Layer 2 MAC addresses.",
+                    "Network Router": "Incorrect. Routers operate at Layer 3 using IP addresses to connect different networks.",
+                    "Power Strip": "Incorrect. A power strip supplies electricity, not network frame forwarding.",
+                    "Microphone": "Incorrect. A microphone captures acoustic audio input."
+                },
+                "key_term": "Switch: A Layer 2 network device that filters and forwards frames based on hardware MAC addresses."
+            }
+        },
+        {
+            "id": "m2_e_16",
+            "raw_id": 16,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Common network protocols",
+            "is_scenario": true,
+            "scenario": "A network technician opens a command prompt and types 'ping 8.8.8.8' to check if an external server is reachable.",
+            "question": "Which network protocol does the 'ping' utility use to send Echo Request and Echo Reply messages?",
+            "type": "single",
+            "options": [
+                "Internet Control Message Protocol (ICMP)",
+                "Simple Network Management Protocol (SNMP)",
+                "Post Office Protocol (POP3)",
+                "Border Gateway Protocol (BGP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the protocol powering the popular 'ping' diagnostic command.",
+                "why_correct": "Ping uses ICMP (Internet Control Message Protocol) Type 8 (Echo Request) and Type 0 (Echo Reply) packets to test IP connectivity and round-trip delay.",
+                "options_breakdown": {
+                    "Internet Control Message Protocol (ICMP)": "Correct. ICMP handles network operational error and diagnostic messaging like ping.",
+                    "Simple Network Management Protocol (SNMP)": "Incorrect. SNMP is used for monitoring network hardware performance metrics.",
+                    "Post Office Protocol (POP3)": "Incorrect. POP3 is an email protocol used by email clients to retrieve inbox mail.",
+                    "Border Gateway Protocol (BGP)": "Incorrect. BGP is an exterior gateway protocol routing traffic across the global Internet backbone."
+                },
+                "key_term": "ICMP: A supporting network protocol used by routers and hosts to send error and operational status messages like ping."
+            }
+        },
+        {
+            "id": "m2_e_17",
+            "raw_id": 17,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Common network protocols",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which protocol is used by secure command-line remote access tools to administer servers safely over an encrypted port 22 tunnel?",
+            "type": "single",
+            "options": [
+                "Secure Shell (SSH)",
+                "Telnet",
+                "Trivial File Transfer Protocol (TFTP)",
+                "Network Time Protocol (NTP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks which encrypted protocol replaced legacy cleartext Telnet for terminal access.",
+                "why_correct": "SSH (Secure Shell) provides strong cryptographic authentication and encrypted terminal sessions on port 22, replacing unencrypted Telnet.",
+                "options_breakdown": {
+                    "Secure Shell (SSH)": "Correct. SSH encrypts terminal administration traffic, protecting passwords and commands from eavesdropping.",
+                    "Telnet": "Incorrect. Telnet transmits all keystrokes and passwords in plain text, making it insecure.",
+                    "Trivial File Transfer Protocol (TFTP)": "Incorrect. TFTP is a lightweight UDP file transfer tool without encryption.",
+                    "Network Time Protocol (NTP)": "Incorrect. NTP synchronizes clock time across network devices."
+                },
+                "key_term": "SSH (Secure Shell): A cryptographic network protocol for secure command-line login and server administration."
+            }
+        },
+        {
+            "id": "m2_e_18",
+            "raw_id": 18,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "TCP/IP model",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which layer of the 4-layer TCP/IP model corresponds to user-facing protocols like HTTP, DNS, and SMTP?",
+            "type": "single",
+            "options": [
+                "Application Layer",
+                "Transport Layer",
+                "Internet Layer",
+                "Network Access Layer"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks which TCP/IP layer high-level end-user protocols reside in.",
+                "why_correct": "In the 4-layer TCP/IP model, the Application layer handles high-level protocols including HTTP, DNS, FTP, and SSH that interface with software applications.",
+                "options_breakdown": {
+                    "Application Layer": "Correct. The TCP/IP Application layer contains all application-level networking protocols.",
+                    "Transport Layer": "Incorrect. The Transport layer contains TCP and UDP.",
+                    "Internet Layer": "Incorrect. The Internet layer contains IP, ICMP, and ARP.",
+                    "Network Access Layer": "Incorrect. The Network Access layer encompasses physical media and Ethernet/Wi-Fi frame protocols."
+                },
+                "key_term": "TCP/IP Model: A four-layer networking framework consisting of Network Access, Internet, Transport, and Application layers."
+            }
+        },
+        {
+            "id": "m2_e_19",
+            "raw_id": 19,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following is a designated Private IPv4 address used only on internal home and corporate LANs?",
+            "type": "single",
+            "options": [
+                "192.168.1.100",
+                "8.8.8.8",
+                "1.1.1.1",
+                "142.250.190.46"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks to identify an RFC 1918 private IPv4 address that cannot be routed across the public Internet.",
+                "why_correct": "192.168.1.100 belongs to the RFC 1918 private range (192.168.0.0/16) reserved for local home and business networks.",
+                "options_breakdown": {
+                    "192.168.1.100": "Correct. 192.168.0.0 through 192.168.255.255 is an RFC 1918 private IPv4 network range.",
+                    "8.8.8.8": "Incorrect. 8.8.8.8 is a public IP address owned by Google's Public DNS.",
+                    "1.1.1.1": "Incorrect. 1.1.1.1 is a public IP address operated by Cloudflare.",
+                    "142.250.190.46": "Incorrect. This is a public IP address belonging to Google web services."
+                },
+                "key_term": "Private IP Address: An IP address reserved by RFC 1918 for internal use on local networks, not directly routeable on the public Internet."
+            }
+        },
+        {
+            "id": "m2_e_20",
+            "raw_id": 20,
+            "module_id": 2,
+            "difficulty": "easy",
+            "topic": "Introduction to computer networks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following statements about computer networks are correct? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Networks allow multiple users to share expensive hardware such as network printers",
+                "Networks allow rapid digital communication through email, chat, and video calls",
+                "Plugging a computer into an Ethernet cable automatically doubles its physical RAM memory",
+                "A network can connect computers located across the room or across different continents"
+            ],
+            "correct": [
+                0,
+                1,
+                3
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify legitimate functions and characteristics of computer networks.",
+                "why_correct": "Networks allow sharing hardware (printers), sharing files, enabling real-time communications, and connecting computers across any geographical distance. They do not increase physical computer RAM.",
+                "options_breakdown": {
+                    "Networks allow multiple users to share expensive hardware such as network printers": "Correct. Resource sharing is a cornerstone benefit of networking.",
+                    "Networks allow rapid digital communication through email, chat, and video calls": "Correct. Networks provide the digital transport for all modern messaging and media.",
+                    "Plugging a computer into an Ethernet cable automatically doubles its physical RAM memory": "Incorrect. Networking cables transmit data bits, not physical semiconductor RAM memory.",
+                    "A network can connect computers located across the room or across different continents": "Correct. Networks scale from localized LANs to global WANs spanning continents."
+                },
+                "key_term": "Resource Sharing: The capability of a computer network to make hardware, software, and data available to multiple authorized systems."
+            }
+        },
+        {
+            "id": "m2_i_21",
+            "raw_id": 21,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "TCP and UDP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What are the three exact control flags exchanged in sequence during a normal TCP Three-Way Handshake?",
+            "type": "single",
+            "options": [
+                "SYN -> SYN-ACK -> ACK",
+                "ACK -> NACK -> FIN",
+                "HELLO -> READY -> CONNECT",
+                "START -> PING -> PONG"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests technical knowledge of the TCP connection establishment sequence.",
+                "why_correct": "TCP establishes a reliable connection by exchanging three control segments: Client sends SYN (Synchronize), Server replies with SYN-ACK (Synchronize-Acknowledge), and Client finalizes with ACK (Acknowledge).",
+                "options_breakdown": {
+                    "SYN -> SYN-ACK -> ACK": "Correct. This is the universal 3-way handshake establishing sequence numbers for both directions.",
+                    "ACK -> NACK -> FIN": "Incorrect. NACK is not used in standard TCP connection setup, and FIN tears down a connection.",
+                    "HELLO -> READY -> CONNECT": "Incorrect. These are generic words, not TCP header control flags.",
+                    "START -> PING -> PONG": "Incorrect. TCP does not use START or PING/PONG control packets for connection setup."
+                },
+                "key_term": "Three-Way Handshake: The process used by TCP to agree upon sequence numbers and initialize a reliable session."
+            }
+        },
+        {
+            "id": "m2_i_22",
+            "raw_id": 22,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "DNS and DHCP",
+            "is_scenario": true,
+            "scenario": "A user types 'www.bank.com' into their web browser. Before any HTTP data can be fetched, the browser must discover the website's numeric IP address.",
+            "question": "Which DNS record type is returned when resolving an IPv4 address for a hostname?",
+            "type": "single",
+            "options": [
+                "A Record",
+                "AAAA Record",
+                "MX Record",
+                "CNAME Record"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of DNS record types for IPv4 resolution.",
+                "why_correct": "An 'A' (Address) record maps a hostname to a 32-bit IPv4 address. An 'AAAA' record maps a hostname to a 128-bit IPv6 address.",
+                "options_breakdown": {
+                    "A Record": "Correct. The 'A' record returns the 32-bit IPv4 address corresponding to the queried hostname.",
+                    "AAAA Record": "Incorrect. The 'AAAA' (quad-A) record returns a 128-bit IPv6 address.",
+                    "MX Record": "Incorrect. MX (Mail Exchange) records specify mail servers responsible for receiving domain emails.",
+                    "CNAME Record": "Incorrect. A CNAME (Canonical Name) record aliases one domain name to another domain name, not directly to an IP."
+                },
+                "key_term": "A Record: A DNS record that maps an Internet domain name directly to an IPv4 host address."
+            }
+        },
+        {
+            "id": "m2_i_23",
+            "raw_id": 23,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "IP and MAC addresses",
+            "is_scenario": true,
+            "scenario": "An office computer with IP address 192.168.1.50 needs to send a data packet to a network printer at 192.168.1.90 on the same local subnet, but it does not yet know the printer's MAC address.",
+            "question": "Which protocol broadcasts a request asking 'Who has 192.168.1.90? Tell 192.168.1.50'?",
+            "type": "single",
+            "options": [
+                "Address Resolution Protocol (ARP)",
+                "Reverse Domain Name System (rDNS)",
+                "Network Time Protocol (NTP)",
+                "Simple Network Management Protocol (SNMP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario asks how a host discovers a hardware MAC address on a local Ethernet subnet.",
+                "why_correct": "ARP (Address Resolution Protocol) broadcasts an Ethernet frame asking who owns a particular IP address. The matching host responds with its physical MAC address, which is then cached in the local ARP table.",
+                "options_breakdown": {
+                    "Address Resolution Protocol (ARP)": "Correct. ARP resolves an unknown local Layer 2 MAC address from a known Layer 3 IP address.",
+                    "Reverse Domain Name System (rDNS)": "Incorrect. rDNS resolves an IP address back to a domain name, not a hardware MAC address.",
+                    "Network Time Protocol (NTP)": "Incorrect. NTP synchronizes clock time across network servers.",
+                    "Simple Network Management Protocol (SNMP)": "Incorrect. SNMP polls network hardware for health metrics and traffic statistics."
+                },
+                "key_term": "ARP (Address Resolution Protocol): The protocol used to map an IP network address to a physical MAC address on a local subnet."
+            }
+        },
+        {
+            "id": "m2_i_24",
+            "raw_id": 24,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "LAN and WAN",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary role of Network Address Translation (NAT) running on a home broadband router?",
+            "type": "single",
+            "options": [
+                "It maps multiple private local IP addresses to a single public IP address assigned by the ISP",
+                "It translates English text on websites into binary machine code",
+                "It increases the physical download speed of the fiber optic cable by 500%",
+                "It prevents all wireless radio waves from leaving your house"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the purpose and function of Network Address Translation (NAT).",
+                "why_correct": "NAT allows dozens of internal devices sharing RFC 1918 private IPs (e.g., 192.168.1.x) to share a single routable public IP address when accessing the Internet.",
+                "options_breakdown": {
+                    "It maps multiple private local IP addresses to a single public IP address assigned by the ISP": "Correct. NAT conserves public IPv4 addresses by multiplexing private LAN IPs through one public IP.",
+                    "It translates English text on websites into binary machine code": "Incorrect. Compilers and interpreters convert code, not NAT network routing.",
+                    "It increases the physical download speed of the fiber optic cable by 500%": "Incorrect. NAT does not increase physical ISP bandwidth.",
+                    "It prevents all wireless radio waves from leaving your house": "Incorrect. Physical shielding (Faraday cages) blocks radio waves, not NAT routing."
+                },
+                "key_term": "NAT (Network Address Translation): A method of remapping one IP address space into another by modifying network address information in packet headers."
+            }
+        },
+        {
+            "id": "m2_i_25",
+            "raw_id": 25,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Routers and switches",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How does a managed switch isolate network broadcast traffic and logically segment devices on different departments without physical cabling changes?",
+            "type": "single",
+            "options": [
+                "By configuring Virtual Local Area Networks (VLANs)",
+                "By unplugging the power supply halfway",
+                "By wrapping the Ethernet cords in aluminum foil",
+                "By renaming the Windows desktop wallpaper"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about logical Layer 2 network segmentation using VLANs.",
+                "why_correct": "A Virtual LAN (VLAN) partitions a physical switch into distinct logical broadcast domains, keeping department traffic separated for security and performance.",
+                "options_breakdown": {
+                    "By configuring Virtual Local Area Networks (VLANs)": "Correct. VLANs segment physical switch ports into logically isolated broadcast domains.",
+                    "By unplugging the power supply halfway": "Incorrect. Damaging power input causes equipment failure, not logical segmentation.",
+                    "By wrapping the Ethernet cords in aluminum foil": "Incorrect. Shielding protects against physical EMI noise, not logical Layer 2 isolation.",
+                    "By renaming the Windows desktop wallpaper": "Incorrect. Desktop wallpaper has zero impact on network switch forwarding tables."
+                },
+                "key_term": "VLAN (Virtual LAN): A logical subnetwork that groups collections of devices across separate physical ports into isolated broadcast domains."
+            }
+        },
+        {
+            "id": "m2_i_26",
+            "raw_id": 26,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "OSI model",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which layer of the OSI model is responsible for end-to-end flow control, segmentation, reassembly, and error detection (housing TCP and UDP)?",
+            "type": "single",
+            "options": [
+                "Transport Layer (Layer 4)",
+                "Data Link Layer (Layer 2)",
+                "Physical Layer (Layer 1)",
+                "Session Layer (Layer 5)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests layer duties in the 7-layer OSI model.",
+                "why_correct": "Layer 4 (Transport Layer) provides host-to-host communications services, segmenting application data, managing flow control, and overseeing reliable delivery (TCP).",
+                "options_breakdown": {
+                    "Transport Layer (Layer 4)": "Correct. Layer 4 manages end-to-end transport, port numbers, TCP segmentation, and UDP datagrams.",
+                    "Data Link Layer (Layer 2)": "Incorrect. Layer 2 handles MAC addressing, Ethernet framing, and local switch forwarding.",
+                    "Physical Layer (Layer 1)": "Incorrect. Layer 1 handles physical electrical pulses, radio frequencies, and fiber optic photons.",
+                    "Session Layer (Layer 5)": "Incorrect. Layer 5 establishes, maintains, and terminates communication sessions between software applications."
+                },
+                "key_term": "Transport Layer: Layer 4 in the OSI model that governs end-to-end data delivery, reliability, and application multiplexing."
+            }
+        },
+        {
+            "id": "m2_i_27",
+            "raw_id": 27,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Common network protocols",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following transport and application protocol pairs are correctly matched? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "DNS uses UDP port 53 for standard short query resolution",
+                "HTTPS uses TCP port 443 for encrypted web browsing",
+                "SSH uses TCP port 22 for secure terminal management",
+                "HTTP uses UDP port 21 for secure online banking"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to verify well-known protocol ports and transport types.",
+                "why_correct": "DNS uses UDP 53 for fast queries (and TCP for large zone transfers). HTTPS uses TCP 443. SSH uses TCP 22. HTTP uses TCP 80 (not UDP 21; port 21 is FTP control).",
+                "options_breakdown": {
+                    "DNS uses UDP port 53 for standard short query resolution": "Correct. DNS relies on lightweight UDP port 53 for rapid queries.",
+                    "HTTPS uses TCP port 443 for encrypted web browsing": "Correct. HTTPS uses TCP 443 for reliable encrypted web delivery.",
+                    "SSH uses TCP port 22 for secure terminal management": "Correct. SSH runs over TCP 22 to guarantee reliable command transport.",
+                    "HTTP uses UDP port 21 for secure online banking": "Incorrect. HTTP uses TCP 80 (HTTPS uses TCP 443). Port 21 is FTP."
+                },
+                "key_term": "Well-Known Ports: Standard port numbers (0 to 1023) assigned by IANA to specific core internet services."
+            }
+        },
+        {
+            "id": "m2_i_28",
+            "raw_id": 28,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the usable host IP address range for the subnet 192.168.10.0/24?",
+            "type": "single",
+            "options": [
+                "192.168.10.1 through 192.168.10.254",
+                "192.168.10.0 through 192.168.10.255",
+                "192.168.10.1 through 192.168.10.256",
+                "192.168.10.10 through 192.168.10.100"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests basic IPv4 subnet calculations for a /24 network.",
+                "why_correct": "In a /24 subnet (255.255.255.0), the first address (.0) is reserved as the Network ID and the last address (.255) is reserved as the Subnet Broadcast address. This leaves 254 usable host addresses: .1 to .254.",
+                "options_breakdown": {
+                    "192.168.10.1 through 192.168.10.254": "Correct. 254 addresses are usable for assignable hosts after excluding Network (.0) and Broadcast (.255).",
+                    "192.168.10.0 through 192.168.10.255": "Incorrect. .0 is the Network address and .255 is the Broadcast address; neither can be assigned to a host.",
+                    "192.168.10.1 through 192.168.10.256": "Incorrect. An IPv4 octet cannot exceed 255.",
+                    "192.168.10.10 through 192.168.10.100": "Incorrect. This is an arbitrary subset, not the full usable address range."
+                },
+                "key_term": "Subnetting: The practice of dividing a network into two or more smaller, more efficient logical sub-networks."
+            }
+        },
+        {
+            "id": "m2_i_29",
+            "raw_id": 29,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "DNS and DHCP",
+            "is_scenario": true,
+            "scenario": "A client device on a company network connects to Wi-Fi and begins broadcasting DHCP messages to obtain an IP configuration.",
+            "question": "What is the correct 4-step message sequence in standard DHCP negotiation (DORA)?",
+            "type": "single",
+            "options": [
+                "Discover -> Offer -> Request -> Acknowledge",
+                "Dial -> Open -> Receive -> Accept",
+                "Detect -> Order -> Route -> Assign",
+                "Download -> Overwrite -> Restart -> Apply"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of the standard DHCP DORA state machine.",
+                "why_correct": "DHCP negotiation follows DORA: 1. DHCP Discover (Client broadcast), 2. DHCP Offer (Server response), 3. DHCP Request (Client choice), 4. DHCP Acknowledge (Server commits IP lease).",
+                "options_breakdown": {
+                    "Discover -> Offer -> Request -> Acknowledge": "Correct. DORA represents the four successive phases of DHCP client address lease assignment.",
+                    "Dial -> Open -> Receive -> Accept": "Incorrect. These terms are not part of the DHCP RFC standard.",
+                    "Detect -> Order -> Route -> Assign": "Incorrect. These are made-up words not matching DHCP protocol specifications.",
+                    "Download -> Overwrite -> Restart -> Apply": "Incorrect. This sounds like an operating system update sequence, not DHCP."
+                },
+                "key_term": "DHCP DORA: The 4-step sequence (Discover, Offer, Request, Acknowledge) used to assign network configurations."
+            }
+        },
+        {
+            "id": "m2_i_30",
+            "raw_id": 30,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Ports",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why are port numbers partitioned into Well-Known (0-1023), Registered (1024-49151), and Dynamic/Ephemeral (49152-65535)?",
+            "type": "single",
+            "options": [
+                "To reserve low ports for standardized core services while allowing client operating systems to dynamically allocate high ports for temporary outgoing sessions",
+                "Because early computers only had enough memory to count up to 1024",
+                "To prevent home users from accessing the Internet without paying extra fees",
+                "To ensure government agencies own all port numbers above 1024"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the organizational structure of IANA port ranges.",
+                "why_correct": "Standardized services (HTTP, SSH, DNS) listen on Well-Known ports (0-1023) so clients always know where to connect. Clients bind temporary high Ephemeral ports (49152-65535) for their outgoing connection sessions.",
+                "options_breakdown": {
+                    "To reserve low ports for standardized core services while allowing client operating systems to dynamically allocate high ports for temporary outgoing sessions": "Correct. This enables predictable service locations alongside temporary client port multiplexing.",
+                    "Because early computers only had enough memory to count up to 1024": "Incorrect. Early computers could count far beyond 1024; port standards were structured logically.",
+                    "To prevent home users from accessing the Internet without paying extra fees": "Incorrect. Port numbers are an open engineering standard, not an ISP billing tier.",
+                    "To ensure government agencies own all port numbers above 1024": "Incorrect. Registered and dynamic ports are used by private software vendors and local operating systems."
+                },
+                "key_term": "Ephemeral Ports: Short-lived transport ports allocated dynamically by a client OS for outbound network communication."
+            }
+        },
+        {
+            "id": "m2_i_31",
+            "raw_id": 31,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "OSI model",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "At which layer of the OSI model does data encapsulation produce an Ethernet 'Frame' with a MAC header and Frame Check Sequence (FCS) trailer?",
+            "type": "single",
+            "options": [
+                "Data Link Layer (Layer 2)",
+                "Network Layer (Layer 3)",
+                "Transport Layer (Layer 4)",
+                "Presentation Layer (Layer 6)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests data encapsulation terminology across the OSI stack.",
+                "why_correct": "At Layer 2 (Data Link), data is encapsulated into 'Frames'. At Layer 3 it is 'Packets', at Layer 4 it is 'Segments' (TCP) or 'Datagrams' (UDP), and at Layer 1 it is 'Bits'.",
+                "options_breakdown": {
+                    "Data Link Layer (Layer 2)": "Correct. Layer 2 packages data into frames with source/destination MACs and an FCS checksum.",
+                    "Network Layer (Layer 3)": "Incorrect. Layer 3 packages data into Packets with IP headers.",
+                    "Transport Layer (Layer 4)": "Incorrect. Layer 4 packages data into Segments (TCP) or Datagrams (UDP).",
+                    "Presentation Layer (Layer 6)": "Incorrect. Layer 6 handles syntax, compression, and encryption, not Ethernet framing."
+                },
+                "key_term": "Frame: The protocol data unit (PDU) at the Data Link layer containing source/destination MAC addresses and payload data."
+            }
+        },
+        {
+            "id": "m2_i_32",
+            "raw_id": 32,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Common network protocols",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which email protocol downloads messages to a local client device and typically deletes them from the mail server by default?",
+            "type": "single",
+            "options": [
+                "Post Office Protocol 3 (POP3)",
+                "Internet Message Access Protocol (IMAP)",
+                "Simple Mail Transfer Protocol (SMTP)",
+                "Dynamic Host Configuration Protocol (DHCP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests differences between POP3, IMAP, and SMTP.",
+                "why_correct": "POP3 (port 110/995) downloads emails to a single local device and historically removes them from the server. IMAP (port 143/993) syncs emails continuously across multiple devices while keeping mail stored on the server.",
+                "options_breakdown": {
+                    "Post Office Protocol 3 (POP3)": "Correct. POP3 downloads messages to one client and typically removes them from the mail server.",
+                    "Internet Message Access Protocol (IMAP)": "Incorrect. IMAP syncs folders and keeps mail centralized on the server for multi-device access.",
+                    "Simple Mail Transfer Protocol (SMTP)": "Incorrect. SMTP is used to push/send mail from client to server or between mail relays.",
+                    "Dynamic Host Configuration Protocol (DHCP)": "Incorrect. DHCP assigns IP addresses, not email messages."
+                },
+                "key_term": "POP3: An older mail retrieval protocol that downloads emails to a local drive rather than keeping them synchronized on the server."
+            }
+        },
+        {
+            "id": "m2_i_33",
+            "raw_id": 33,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Introduction to computer networks",
+            "is_scenario": true,
+            "scenario": "A company network admin observes that whenever one computer on an old network sends data, every other computer's collision light flashes and network performance plummets.",
+            "question": "Which obsolete legacy hardware device is responsible for repeating electrical signals out of every port without checking MAC addresses?",
+            "type": "single",
+            "options": [
+                "Network Hub",
+                "Managed Switch",
+                "Core Router",
+                "Stateful Firewall"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of old collision-prone network hubs versus modern switches.",
+                "why_correct": "A Hub is a Layer 1 multiport repeater that blindly copies incoming electrical signals out of every other port, creating a single shared collision domain where packets collide.",
+                "options_breakdown": {
+                    "Network Hub": "Correct. Hubs operate at Layer 1 and flood all traffic out all ports, causing high collision rates.",
+                    "Managed Switch": "Incorrect. A switch creates dedicated micro-segmented collision domains per port using MAC tables.",
+                    "Core Router": "Incorrect. Routers separate broadcast and collision domains at Layer 3.",
+                    "Stateful Firewall": "Incorrect. Firewalls inspect packet state and filter traffic, not repeat signals blindly."
+                },
+                "key_term": "Collision Domain: A network segment where data packets can collide with one another when sent simultaneously."
+            }
+        },
+        {
+            "id": "m2_i_34",
+            "raw_id": 34,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "TCP and UDP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What mechanism in TCP prevents a fast sender from overwhelming a slow receiver's internal buffer memory?",
+            "type": "single",
+            "options": [
+                "Flow Control using TCP Window Size",
+                "Overclocking the client CPU",
+                "Deleting half of all incoming files",
+                "Rebooting the network switch every 10 seconds"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about TCP flow control mechanisms.",
+                "why_correct": "TCP Flow Control uses a sliding 'Window Size' field in TCP headers. The receiver constantly informs the sender how many bytes of buffer space it currently has available.",
+                "options_breakdown": {
+                    "Flow Control using TCP Window Size": "Correct. Window Size advertisements throttle sender rate to match receiver capacity.",
+                    "Overclocking the client CPU": "Incorrect. Flow control is managed by protocol signaling, not hardware overclocking.",
+                    "Deleting half of all incoming files": "Incorrect. TCP guarantees delivery and does not randomly delete valid data.",
+                    "Rebooting the network switch every 10 seconds": "Incorrect. Rebooting switches disrupts connectivity and drops links."
+                },
+                "key_term": "Flow Control: A mechanism that regulates the speed of data transmission between sender and receiver to prevent buffer overflow."
+            }
+        },
+        {
+            "id": "m2_i_35",
+            "raw_id": 35,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Common network protocols",
+            "is_scenario": true,
+            "scenario": "An IT technician notices network clocks drifting across servers, leading to mismatched event timestamps in security audit logs.",
+            "question": "Which network protocol running on UDP port 123 should be configured to maintain synchronized system clocks?",
+            "type": "single",
+            "options": [
+                "Network Time Protocol (NTP)",
+                "Real-time Transport Protocol (RTP)",
+                "File Transfer Protocol (FTP)",
+                "Terminal Access Controller Access-Control System (TACACS+)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario asks how enterprise networks synchronize system clocks across all servers and firewalls.",
+                "why_correct": "NTP (Network Time Protocol) synchronizes device clocks with atomic clock reference servers over UDP port 123, ensuring accurate timestamps for logs and forensics.",
+                "options_breakdown": {
+                    "Network Time Protocol (NTP)": "Correct. NTP provides precision time synchronization across networked servers.",
+                    "Real-time Transport Protocol (RTP)": "Incorrect. RTP transports live audio and video streaming packets.",
+                    "File Transfer Protocol (FTP)": "Incorrect. FTP transfers files between clients and servers.",
+                    "Terminal Access Controller Access-Control System (TACACS+)": "Incorrect. TACACS+ handles AAA (Authentication, Authorization, Accounting) for network admins."
+                },
+                "key_term": "NTP (Network Time Protocol): A networking protocol for clock synchronization between computer systems over packet-switched data networks."
+            }
+        },
+        {
+            "id": "m2_i_36",
+            "raw_id": 36,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following IPv4 address blocks are officially reserved for private non-routable networks under RFC 1918? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "10.0.0.0 to 10.255.255.255 (10.0.0.0/8)",
+                "172.16.0.0 to 172.31.255.255 (172.16.0.0/12)",
+                "192.168.0.0 to 192.168.255.255 (192.168.0.0/16)",
+                "100.0.0.0 to 100.255.255.255 (100.0.0.0/8)"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the three official RFC 1918 private IPv4 address allocations.",
+                "why_correct": "RFC 1918 specifies exactly three private address spaces: 10.0.0.0/8 (Class A), 172.16.0.0/12 (Class B), and 192.168.0.0/16 (Class C). 100.x.x.x is Carrier-Grade NAT (RFC 6598), not RFC 1918 private space.",
+                "options_breakdown": {
+                    "10.0.0.0 to 10.255.255.255 (10.0.0.0/8)": "Correct. The 10.0.0.0/8 block is the largest RFC 1918 private allocation, containing over 16 million addresses.",
+                    "172.16.0.0 to 172.31.255.255 (172.16.0.0/12)": "Correct. The 172.16.0.0/12 block is an RFC 1918 private network space.",
+                    "192.168.0.0 to 192.168.255.255 (192.168.0.0/16)": "Correct. The 192.168.0.0/16 block is the standard RFC 1918 space used in homes and small businesses.",
+                    "100.0.0.0 to 100.255.255.255 (100.0.0.0/8)": "Incorrect. 100.64.0.0/10 is Carrier-Grade NAT, not an RFC 1918 private enterprise block."
+                },
+                "key_term": "RFC 1918: The Internet engineering document defining private IPv4 address blocks that are never routed on the public Internet."
+            }
+        },
+        {
+            "id": "m2_i_37",
+            "raw_id": 37,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "DNS and DHCP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the function of the 'Default Gateway' configured in a computer's network settings?",
+            "type": "single",
+            "options": [
+                "The local router IP address where packets destined for external, non-local networks are forwarded",
+                "The password required to unlock a Windows laptop",
+                "The website that automatically opens when launching Google Chrome",
+                "The physical brand name of the fiber optic wall jack"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition and operational purpose of a Default Gateway.",
+                "why_correct": "When a host needs to communicate with an IP address outside its local subnet mask, it sends the packet to the Default Gateway (the local router interface), which routes it towards its destination.",
+                "options_breakdown": {
+                    "The local router IP address where packets destined for external, non-local networks are forwarded": "Correct. The default gateway is the exit portal out of the local subnet.",
+                    "The password required to unlock a Windows laptop": "Incorrect. That is a local user login password.",
+                    "The website that automatically opens when launching Google Chrome": "Incorrect. That is the browser homepage.",
+                    "The physical brand name of the fiber optic wall jack": "Incorrect. Hardware manufacturer branding has no relation to IP routing."
+                },
+                "key_term": "Default Gateway: An access point or router that serves as the forwarding host to other networks when no other route specification matches."
+            }
+        },
+        {
+            "id": "m2_i_38",
+            "raw_id": 38,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Routers and switches",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What prevents a network switch loop from crashing an entire local network when redundant cables are accidentally plugged between two switches?",
+            "type": "single",
+            "options": [
+                "Spanning Tree Protocol (STP)",
+                "Border Gateway Protocol (BGP)",
+                "Simple Mail Transfer Protocol (SMTP)",
+                "File Allocation Table (FAT32)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks how Layer 2 switches prevent fatal broadcast storms caused by physical cable loops.",
+                "why_correct": "STP (Spanning Tree Protocol, IEEE 802.1D) detects physical bridge loops and selectively places redundant switch ports into a blocking state, preventing catastrophic broadcast storms.",
+                "options_breakdown": {
+                    "Spanning Tree Protocol (STP)": "Correct. STP disables looping switch paths to maintain a single loop-free logical forwarding tree.",
+                    "Border Gateway Protocol (BGP)": "Incorrect. BGP routes traffic between autonomous systems on the Internet, not inside local switches.",
+                    "Simple Mail Transfer Protocol (SMTP)": "Incorrect. SMTP handles email transport.",
+                    "File Allocation Table (FAT32)": "Incorrect. FAT32 is a legacy file system for storage disks."
+                },
+                "key_term": "STP (Spanning Tree Protocol): A Layer 2 network protocol that creates a loop-free logical topology for Ethernet networks."
+            }
+        },
+        {
+            "id": "m2_i_39",
+            "raw_id": 39,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "TCP/IP model",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How does the 4-layer TCP/IP model map to the 7-layer OSI reference model?",
+            "type": "single",
+            "options": [
+                "The TCP/IP Application layer combines OSI Layers 5 (Session), 6 (Presentation), and 7 (Application)",
+                "The TCP/IP model deletes the Network layer entirely",
+                "The TCP/IP model runs backwards starting from the physical wire up to the keyboard",
+                "There is zero correlation between TCP/IP and the OSI model"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the architectural relationship between the 4-layer TCP/IP model and the 7-layer OSI model.",
+                "why_correct": "The 4-layer TCP/IP model groups Session, Presentation, and Application functions into a single top Application Layer, and groups Physical and Data Link into Network Access.",
+                "options_breakdown": {
+                    "The TCP/IP Application layer combines OSI Layers 5 (Session), 6 (Presentation), and 7 (Application)": "Correct. TCP/IP collapses OSI layers 5, 6, and 7 into one comprehensive Application layer.",
+                    "The TCP/IP model deletes the Network layer entirely": "Incorrect. TCP/IP contains the Internet Layer, which directly corresponds to OSI Network Layer 3.",
+                    "The TCP/IP model runs backwards starting from the physical wire up to the keyboard": "Incorrect. Both models sequence from lowest physical transmission to highest user software.",
+                    "There is zero correlation between TCP/IP and the OSI model": "Incorrect. The two models map closely to one another."
+                },
+                "key_term": "Protocol Stack Mapping: The architectural comparison showing how practical TCP/IP layers align with theoretical OSI layers."
+            }
+        },
+        {
+            "id": "m2_i_40",
+            "raw_id": 40,
+            "module_id": 2,
+            "difficulty": "intermediate",
+            "topic": "Common network protocols",
+            "is_scenario": true,
+            "scenario": "An administrator uses the command 'nslookup threatvector.local' to check internal server records, but receives an error stating 'Server failed: query refused'.",
+            "question": "Which service running on port 53 is either misconfigured or offline?",
+            "type": "single",
+            "options": [
+                "Domain Name System (DNS) server",
+                "Dynamic Host Configuration Protocol (DHCP) server",
+                "Remote Desktop Protocol (RDP) service",
+                "Network Time Protocol (NTP) service"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of diagnostic tools like nslookup and their associated services.",
+                "why_correct": "The 'nslookup' command queries DNS name servers on port 53 to resolve domain names to IP addresses. A query refusal indicates a DNS server configuration issue.",
+                "options_breakdown": {
+                    "Domain Name System (DNS) server": "Correct. nslookup directly tests and troubleshoots DNS servers on port 53.",
+                    "Dynamic Host Configuration Protocol (DHCP) server": "Incorrect. DHCP operates on ports 67/68, not queried by nslookup.",
+                    "Remote Desktop Protocol (RDP) service": "Incorrect. RDP operates on port 3389 for graphical desktop control.",
+                    "Network Time Protocol (NTP) service": "Incorrect. NTP operates on port 123 for clock synchronization."
+                },
+                "key_term": "nslookup: A network administration command-line tool for querying the Domain Name System (DNS) to obtain domain name or IP address mappings."
+            }
+        },
+        {
+            "id": "m2_h_41",
+            "raw_id": 41,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "IP and MAC addresses",
+            "is_scenario": true,
+            "scenario": "An engineer plans subnets for a new branch office that requires exactly 55 usable host IP addresses. Which CIDR subnet mask provides enough addresses while wasting the fewest possible unallocated IP addresses?",
+            "question": "An engineer plans subnets for a new branch office that requires exactly 55 usable host IP addresses. Which CIDR subnet mask provides enough addresses while wasting the fewest possible unallocated IP addresses?",
+            "type": "single",
+            "options": [
+                "/26 (255.255.255.192)",
+                "/27 (255.255.255.224)",
+                "/25 (255.255.255.128)",
+                "/24 (255.255.255.0)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests precise variable-length subnet masking (VLSM) calculations.",
+                "why_correct": "A /26 subnet leaves 32 - 26 = 6 host bits. 2^6 = 64 total addresses, minus 2 (network and broadcast) = 62 usable host addresses. This accommodates 55 hosts with only 7 spare addresses. A /27 only provides 30 hosts (insufficient), while /25 and /24 waste far more addresses.",
+                "options_breakdown": {
+                    "/26 (255.255.255.192)": "Correct. 2^6 - 2 = 62 usable hosts, which satisfies the 55-host requirement with minimal waste.",
+                    "/27 (255.255.255.224)": "Incorrect. 2^5 - 2 = 30 usable hosts, which cannot accommodate 55 hosts.",
+                    "/25 (255.255.255.128)": "Incorrect. /25 provides 126 usable hosts, wasting 71 unused IP addresses.",
+                    "/24 (255.255.255.0)": "Incorrect. /24 provides 254 usable hosts, wasting nearly 200 addresses."
+                },
+                "key_term": "CIDR (Classless Inter-Domain Routing): A method for allocating IP addresses and routing IP packets that replaces the old rigid Class A/B/C system."
+            }
+        },
+        {
+            "id": "m2_h_42",
+            "raw_id": 42,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "TCP and UDP",
+            "is_scenario": true,
+            "scenario": "During a security audit, a network engineer captures traffic showing an attacker flooding a server with thousands of TCP SYN packets from spoofed source IPs without ever sending the completing ACK packets.",
+            "question": "What type of denial-of-service attack is occurring, and how does it harm the victim server?",
+            "type": "single",
+            "options": [
+                "TCP SYN Flood; it exhausts the server's connection state memory buffer (SYN backlog queue)",
+                "UDP amplification; it overclocks the server's graphics card until it overheats",
+                "DNS Poisoning; it changes the website's logo into an image of a skull",
+                "ARP Spoofing; it deletes all optical fiber cables in the building"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of TCP connection state exhaustion attacks.",
+                "why_correct": "A SYN Flood exploits the half-open state of TCP. The server allocates kernel memory for each incoming SYN and waits for the final ACK. When thousands of spoofed SYNs arrive with no ACK, the SYN queue fills up, preventing legitimate users from connecting.",
+                "options_breakdown": {
+                    "TCP SYN Flood; it exhausts the server's connection state memory buffer (SYN backlog queue)": "Correct. The half-open connection backlog table fills up, rejecting new legitimate TCP connections.",
+                    "UDP amplification; it overclocks the server's graphics card until it overheats": "Incorrect. SYN packets are TCP, not UDP, and do not overclock GPUs.",
+                    "DNS Poisoning; it changes the website's logo into an image of a skull": "Incorrect. SYN floods do not tamper with DNS zone records.",
+                    "ARP Spoofing; it deletes all optical fiber cables in the building": "Incorrect. Cyber attacks cannot physically disintegrate glass fiber optic lines."
+                },
+                "key_term": "SYN Flood: A form of denial-of-service attack where an attacker sends a succession of SYN requests in order to consume enough server resources to make the system unresponsive."
+            }
+        },
+        {
+            "id": "m2_h_43",
+            "raw_id": 43,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Common network protocols",
+            "is_scenario": true,
+            "scenario": "A security analyst captures Wireshark traffic on a local network and observes multiple unprovoked ARP replies asserting that the Default Gateway's IP address is now mapped to an attacker's laptop MAC address.",
+            "question": "What attack technique is being executed, and what does it enable the attacker to do?",
+            "type": "single",
+            "options": [
+                "ARP Cache Poisoning / Spoofing; it allows the attacker to execute a Man-in-the-Middle (MitM) eavesdropping attack",
+                "Smurf Attack; it floods the local printer with blank paper sheets",
+                "SQL Injection; it dumps the database passwords onto the bathroom mirrors",
+                "Cross-Site Scripting; it injects popups into the router's power button"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Layer 2 ARP poisoning and Man-in-the-Middle attacks.",
+                "why_correct": "ARP lacks cryptographic authentication; systems blindly trust incoming ARP replies. By poisoning the ARP cache of victims, an attacker fools them into sending all external gateway traffic through the attacker's machine, enabling full interception (MitM).",
+                "options_breakdown": {
+                    "ARP Cache Poisoning / Spoofing; it allows the attacker to execute a Man-in-the-Middle (MitM) eavesdropping attack": "Correct. ARP spoofing misdirects local subnet traffic through the attacker's NIC for packet interception.",
+                    "Smurf Attack; it floods the local printer with blank paper sheets": "Incorrect. A Smurf attack is an ICMP broadcast amplification DoS attack.",
+                    "SQL Injection; it dumps the database passwords onto the bathroom mirrors": "Incorrect. SQL injection targets application databases, not Layer 2 Ethernet ARP.",
+                    "Cross-Site Scripting; it injects popups into the router's power button": "Incorrect. XSS targets web browser script execution, not hardware buttons."
+                },
+                "key_term": "ARP Spoofing: An attack where an adversary sends spoofed ARP messages onto a LAN to associate the attacker's MAC with the IP of a legitimate server or gateway."
+            }
+        },
+        {
+            "id": "m2_h_44",
+            "raw_id": 44,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Introduction to computer networks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What occurs when an IP packet exceeds the Maximum Transmission Unit (MTU) size of 1500 bytes on a router path where the 'Don't Fragment' (DF) IP header flag is set to 1?",
+            "type": "single",
+            "options": [
+                "The router drops the packet and sends an ICMP 'Fragmentation Needed and DF set' message back to the sender",
+                "The router compresses the packet using zip algorithms and continues transmission",
+                "The router physically burns the network cable to prevent future traffic",
+                "The router ignores the DF flag and fragments the packet anyway"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests Path MTU Discovery and packet fragmentation mechanics.",
+                "why_correct": "When a packet exceeds an interface MTU and the DF (Don't Fragment) bit is set, the router cannot fragment it. It must discard the packet and return an ICMP Destination Unreachable (Type 3, Code 4: Fragmentation Needed and DF set) to notify the sender to reduce packet size.",
+                "options_breakdown": {
+                    "The router drops the packet and sends an ICMP 'Fragmentation Needed and DF set' message back to the sender": "Correct. This mechanism powers Path MTU Discovery (PMTUD).",
+                    "The router compresses the packet using zip algorithms and continues transmission": "Incorrect. Routers do not dynamically zip arbitrary transit IP payloads.",
+                    "The router physically burns the network cable to prevent future traffic": "Incorrect. Electronic routers cannot physically incinerate cabling.",
+                    "The router ignores the DF flag and fragments the packet anyway": "Incorrect. Violating the DF bit breaks RFC standards and causes host reassembly errors."
+                },
+                "key_term": "Path MTU Discovery (PMTUD): A standardized technique in computer networking for determining the maximum transmission unit size on the network path between two IP hosts."
+            }
+        },
+        {
+            "id": "m2_h_45",
+            "raw_id": 45,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Routers and switches",
+            "is_scenario": true,
+            "scenario": "A network engineer configures an 802.1Q trunk port connecting two enterprise switches. Which field is inserted into the standard Ethernet frame header by 802.1Q encapsulation?",
+            "question": "A network engineer configures an 802.1Q trunk port connecting two enterprise switches. Which field is inserted into the standard Ethernet frame header by 802.1Q encapsulation?",
+            "type": "single",
+            "options": [
+                "A 4-byte 802.1Q Tag containing a 12-bit VLAN ID (VID) and Priority Code Point",
+                "A 256-bit AES encryption key that decrypts the entire Internet",
+                "A digital signature signed personally by the CEO of Cisco",
+                "A JPEG photo of the network technician who plugged in the cable"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests deep technical understanding of IEEE 802.1Q VLAN trunking encapsulation.",
+                "why_correct": "IEEE 802.1Q inserts a 4-byte VLAN tag directly between the Source MAC address and EtherType fields of the Ethernet frame. The tag contains a 12-bit VLAN ID (supporting up to 4094 VLANs) and 3-bit QoS priority bits.",
+                "options_breakdown": {
+                    "A 4-byte 802.1Q Tag containing a 12-bit VLAN ID (VID) and Priority Code Point": "Correct. The 802.1Q tag adds 4 bytes identifying the frame's belonging VLAN across trunk links.",
+                    "A 256-bit AES encryption key that decrypts the entire Internet": "Incorrect. Standard 802.1Q does not encrypt payloads; it simply adds logical VLAN tags.",
+                    "A digital signature signed personally by the CEO of Cisco": "Incorrect. Networking frames do not contain corporate executive signatures.",
+                    "A JPEG photo of the network technician who plugged in the cable": "Incorrect. Image files are not embedded into Ethernet frame headers."
+                },
+                "key_term": "802.1Q: The networking standard that supports virtual LANs (VLANs) on an IEEE 802.3 Ethernet network through frame tagging."
+            }
+        },
+        {
+            "id": "m2_h_46",
+            "raw_id": 46,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "DNS and DHCP",
+            "is_scenario": true,
+            "scenario": "An attacker deploys a rogue DHCP server on a corporate Wi-Fi network that responds faster than the official DHCP server.",
+            "question": "Which network parameters will the rogue DHCP server likely assign to clients to hijack their Internet traffic?",
+            "type": "single",
+            "options": [
+                "It sets the Default Gateway and DNS server IP addresses to the attacker's own IP address",
+                "It forces the client screen brightness to zero percent",
+                "It uninstalls all antivirus programs automatically over the air",
+                "It physically disconnects the laptop battery from the motherboard"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Rogue DHCP attacks and how network parameters can be manipulated for traffic redirection.",
+                "why_correct": "In a Rogue DHCP attack, the rogue server assigns its own IP as the Default Gateway and DNS server. All client outbound traffic and domain queries are routed directly through the attacker for sniffing or credential harvesting.",
+                "options_breakdown": {
+                    "It sets the Default Gateway and DNS server IP addresses to the attacker's own IP address": "Correct. This diverts all client traffic through the attacker's interception proxy.",
+                    "It forces the client screen brightness to zero percent": "Incorrect. DHCP parameters cannot adjust client hardware display brightness.",
+                    "It uninstalls all antivirus programs automatically over the air": "Incorrect. DHCP assigns network IP settings; it cannot silently uninstall software without code execution.",
+                    "It physically disconnects the laptop battery from the motherboard": "Incorrect. Network broadcast packets have no physical mechanical reach inside device hardware."
+                },
+                "key_term": "Rogue DHCP: An unauthorized DHCP server operating on a network that distributes invalid or malicious network configurations."
+            }
+        },
+        {
+            "id": "m2_h_47",
+            "raw_id": 47,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "OSI model",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following functions are performed by the Presentation Layer (Layer 6) of the OSI model? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Data encryption and decryption (such as SSL/TLS formatting)",
+                "Data compression to reduce packet transmission volume",
+                "Data syntax translation (such as ASCII to EBCDIC or JSON/XML serialization)",
+                "Calculating IP routing metric costs across wide area networks"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about the specific responsibilities assigned to Layer 6 (Presentation) of the OSI model.",
+                "why_correct": "Layer 6 handles the syntax and semantics of data being exchanged. It handles encryption/decryption, compression, and character set / syntax formatting. Calculating IP routing costs is strictly Layer 3 (Network).",
+                "options_breakdown": {
+                    "Data encryption and decryption (such as SSL/TLS formatting)": "Correct. Cryptographic formatting and representation are classic Layer 6 functions.",
+                    "Data compression to reduce packet transmission volume": "Correct. Data compression is a Presentation layer responsibility.",
+                    "Data syntax translation (such as ASCII to EBCDIC or JSON/XML serialization)": "Correct. Layer 6 ensures data from the sender is presented in a compatible format for the receiver.",
+                    "Calculating IP routing metric costs across wide area networks": "Incorrect. Routing calculations are strictly Layer 3 (Network Layer) operations."
+                },
+                "key_term": "Presentation Layer: Layer 6 of the OSI model that serves as the data translator for the network, handling formatting, compression, and encryption."
+            }
+        },
+        {
+            "id": "m2_h_48",
+            "raw_id": 48,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "TCP and UDP",
+            "is_scenario": true,
+            "scenario": "A firewall log shows incoming packets with both the SYN and FIN control flags simultaneously enabled (known as a 'SYN-FIN' or 'XMAS' scan variant).",
+            "question": "Why do network port scanners send these illegal TCP flag combinations?",
+            "type": "single",
+            "options": [
+                "To bypass simple stateless packet-filtering firewalls and elicit distinct responses from different operating system TCP stacks (OS fingerprinting)",
+                "To automatically double the download speed of the destination web server",
+                "To download the entire hard drive of the target server in 1 millisecond",
+                "To restart the victim's electrical power generator"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of adversarial TCP packet crafting and active OS fingerprinting.",
+                "why_correct": "RFC 793 states that SYN and FIN should never occur together. By crafting non-standard flag combinations (like SYN-FIN, NULL, or XMAS scans), attackers probe for operating-system specific implementation quirks to fingerprint remote OS versions or bypass naive stateless packet filters.",
+                "options_breakdown": {
+                    "To bypass simple stateless packet-filtering firewalls and elicit distinct responses from different operating system TCP stacks (OS fingerprinting)": "Correct. Illegal flag combinations exploit RFC implementation differences to profile target systems and evade basic filters.",
+                    "To automatically double the download speed of the destination web server": "Incorrect. Crafting illegal TCP flags does not improve download throughput.",
+                    "To download the entire hard drive of the target server in 1 millisecond": "Incorrect. Port scanning packets only probe port states; they cannot transfer drive images instantaneously.",
+                    "To restart the victim's electrical power generator": "Incorrect. TCP probe packets cannot mechanically restart physical electrical generators."
+                },
+                "key_term": "TCP Fingerprinting: A method of identifying a target system's operating system by analyzing unique responses to non-standard or malformed TCP packets."
+            }
+        },
+        {
+            "id": "m2_h_49",
+            "raw_id": 49,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Common network protocols",
+            "is_scenario": true,
+            "scenario": "An administrator configures DNSSEC (Domain Name System Security Extensions) for a company domain.",
+            "question": "Which major vulnerability in traditional DNS does DNSSEC resolve through digital signatures?",
+            "type": "single",
+            "options": [
+                "DNS Cache Poisoning / Spoofing where forged IP mappings are injected into recursive resolver caches",
+                "Denial of service caused by severed undersea fiber cables",
+                "Users forgetting their Active Directory passwords",
+                "Physical theft of hard drives from corporate server rooms"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario asks what security flaw DNSSEC fixes in the DNS protocol.",
+                "why_correct": "Standard DNS queries and answers are unauthenticated cleartext. DNSSEC adds cryptographic signatures (RRSIG records) verified with public keys (DNSKEY), preventing attackers from injecting fraudulent IP mappings into DNS resolver caches.",
+                "options_breakdown": {
+                    "DNS Cache Poisoning / Spoofing where forged IP mappings are injected into recursive resolver caches": "Correct. DNSSEC cryptographically validates the authenticity and integrity of DNS responses.",
+                    "Denial of service caused by severed undersea fiber cables": "Incorrect. DNSSEC cannot repair physical severed fiber lines.",
+                    "Users forgetting their Active Directory passwords": "Incorrect. DNSSEC validates DNS records, not user password memory.",
+                    "Physical theft of hard drives from corporate server rooms": "Incorrect. Physical security guards and lockboxes mitigate physical theft, not DNSSEC."
+                },
+                "key_term": "DNSSEC: A suite of extension specifications that provide cryptographic authentication of DNS data, authenticated denial of existence, and data integrity."
+            }
+        },
+        {
+            "id": "m2_h_50",
+            "raw_id": 50,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Routers and switches",
+            "is_scenario": true,
+            "scenario": "A network switch experiences MAC Flooding, where an attacker transmits thousands of spoofed Ethernet frames with randomized source MAC addresses every second.",
+            "question": "What security failure occurs when the switch's Content Addressable Memory (CAM) table fills up to capacity?",
+            "type": "single",
+            "options": [
+                "The switch fails open, behaving like a hub and broadcasting all subsequent traffic out every port (allowing packet sniffing)",
+                "The switch explodes with a flash of sparks and smoke",
+                "The switch locks down and permanently deletes all customer email accounts",
+                "The switch encrypts all network traffic with NSA military encryption"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of switch CAM table exhaustion and fail-open behavior.",
+                "why_correct": "A switch CAM table has finite memory. When flooded with fake MACs, it runs out of space. Modern switches entering CAM overflow fail open, broadcasting all incoming frames out of all ports so traffic still flows, inadvertently allowing the attacker to sniff all LAN traffic.",
+                "options_breakdown": {
+                    "The switch fails open, behaving like a hub and broadcasting all subsequent traffic out every port (allowing packet sniffing)": "Correct. CAM overflow forces the switch into fail-open hub behavior, enabling promiscuous eavesdropping.",
+                    "The switch explodes with a flash of sparks and smoke": "Incorrect. CAM table overflow is a memory exhaustion state, not a physical combustion event.",
+                    "The switch locks down and permanently deletes all customer email accounts": "Incorrect. Network switches do not store or delete email accounts.",
+                    "The switch encrypts all network traffic with NSA military encryption": "Incorrect. Overloaded switches do not spontaneously generate encryption algorithms."
+                },
+                "key_term": "CAM Table Overflow: An attack that exhausts a switch's MAC address table, forcing the switch to flood unicast traffic to all ports like a hub."
+            }
+        },
+        {
+            "id": "m2_h_51",
+            "raw_id": 51,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the function of the 'Time to Live' (TTL) field in an IPv4 packet header (or 'Hop Limit' in IPv6)?",
+            "type": "single",
+            "options": [
+                "It is decremented by 1 at each router hop to prevent packets from looping infinitely in the event of a routing loop",
+                "It tells the computer how many minutes the user has left to finish their homework",
+                "It indicates the exact expiration date of the computer's warranty",
+                "It specifies the physical speed of the fiber optic light beam in kilometers per hour"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the vital loop-prevention role of the TTL / Hop Limit header field.",
+                "why_correct": "Each router along a path decrements the TTL value by 1. If TTL hits 0, the packet is discarded and an ICMP Time Exceeded message is sent back, ensuring looping packets die rather than saturating the network.",
+                "options_breakdown": {
+                    "It is decremented by 1 at each router hop to prevent packets from looping infinitely in the event of a routing loop": "Correct. TTL prevents routing loops from propagating packets forever.",
+                    "It tells the computer how many minutes the user has left to finish their homework": "Incorrect. TTL has nothing to do with school homework deadlines.",
+                    "It indicates the exact expiration date of the computer's warranty": "Incorrect. Packet headers do not track device hardware warranties.",
+                    "It specifies the physical speed of the fiber optic light beam in kilometers per hour": "Incorrect. The speed of light in optical fiber is a constant physical property, not an IP field."
+                },
+                "key_term": "Time to Live (TTL): An 8-bit field in the IPv4 header that specifies the packet's maximum lifespan across router hops."
+            }
+        },
+        {
+            "id": "m2_h_52",
+            "raw_id": 52,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Common network protocols",
+            "is_scenario": true,
+            "scenario": "During an incident investigation, a SOC analyst reviews internal NetFlow logs and discovers outbound connections over TCP port 53 transferring hundreds of megabytes of data to an external untrusted IP.",
+            "question": "What malicious activity is strongly indicated by large, continuous data transfers over DNS port 53?",
+            "type": "single",
+            "options": [
+                "DNS Data Exfiltration / DNS Tunneling",
+                "Legitimate NTP clock synchronization",
+                "An operating system defragmenting its hard drive",
+                "An optical laser mouse battery recharging over the network"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of DNS tunneling for covert data exfiltration.",
+                "why_correct": "Standard DNS queries are small UDP requests. When attackers tunnel data over DNS (often TCP 53), they encode stolen files into base64 subdomain queries or TXT records to bypass firewalls that naively permit all outbound port 53 traffic.",
+                "options_breakdown": {
+                    "DNS Data Exfiltration / DNS Tunneling": "Correct. Attackers encode data inside DNS queries and responses to bypass egress firewall filters.",
+                    "Legitimate NTP clock synchronization": "Incorrect. NTP synchronizes clocks on UDP port 123 and only exchanges tiny packets.",
+                    "An operating system defragmenting its hard drive": "Incorrect. Drive defragmentation is a local disk operation with no external network activity.",
+                    "An optical laser mouse battery recharging over the network": "Incorrect. Computer mice cannot recharge batteries over network DNS packets."
+                },
+                "key_term": "DNS Tunneling: A method of cyber espionage and data exfiltration that encodes other programs and stolen data inside DNS queries and responses."
+            }
+        },
+        {
+            "id": "m2_h_53",
+            "raw_id": 53,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "LAN and WAN",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between an Exterior Gateway Protocol like BGP and Interior Gateway Protocols like OSPF?",
+            "type": "single",
+            "options": [
+                "BGP routes traffic between distinct Autonomous Systems across the global Internet, whereas OSPF routes traffic inside a single organization's private network",
+                "BGP is only used for playing computer games, while OSPF is used for sending emails",
+                "BGP requires copper coaxial cables, while OSPF requires satellite dishes",
+                "BGP operates at the Physical layer, while OSPF operates at the Application layer"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the fundamental architectural distinction between IGP and EGP routing protocols.",
+                "why_correct": "Interior Gateway Protocols (IGPs like OSPF and EIGRP) calculate optimal routes within an organization's network boundary. Border Gateway Protocol (BGP) is the de facto Exterior Gateway Protocol (EGP) managing routing policies between autonomous systems across the Internet.",
+                "options_breakdown": {
+                    "BGP routes traffic between distinct Autonomous Systems across the global Internet, whereas OSPF routes traffic inside a single organization's private network": "Correct. BGP is the global glue connecting autonomous internetworks, while OSPF is an interior routing protocol.",
+                    "BGP is only used for playing computer games, while OSPF is used for sending emails": "Incorrect. Both are core network routing protocols, not games or mail apps.",
+                    "BGP requires copper coaxial cables, while OSPF requires satellite dishes": "Incorrect. Routing protocols are media-independent software protocols.",
+                    "BGP operates at the Physical layer, while OSPF operates at the Application layer": "Incorrect. Both operate above or at Layer 3 to exchange routing table data."
+                },
+                "key_term": "BGP (Border Gateway Protocol): The standardized exterior gateway protocol designed to exchange routing and reachability information between autonomous systems (AS) on the Internet."
+            }
+        },
+        {
+            "id": "m2_h_54",
+            "raw_id": 54,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "TCP and UDP",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which TCP flag is transmitted by a host to immediately and abruptly abort a connection when an unexpected or invalid packet is received?",
+            "type": "single",
+            "options": [
+                "RST (Reset)",
+                "FIN (Finish)",
+                "URG (Urgent)",
+                "PSH (Push)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of TCP control flags used for abrupt session termination.",
+                "why_correct": "The RST (Reset) flag immediately tears down a connection without the polite 4-way FIN exchange, used when a port is closed or a packet arrives out of sequence.",
+                "options_breakdown": {
+                    "RST (Reset)": "Correct. The RST flag indicates an immediate, abrupt connection termination without waiting for buffered data.",
+                    "FIN (Finish)": "Incorrect. The FIN flag initiates a graceful, orderly teardown of a TCP connection.",
+                    "URG (Urgent)": "Incorrect. The URG flag indicates that certain data within the segment should be processed immediately.",
+                    "PSH (Push)": "Incorrect. The PSH flag instructs the receiver to immediately pass buffered data up to the application."
+                },
+                "key_term": "TCP Reset (RST): A flag in the TCP header used to immediately terminate an abnormal or rejected connection."
+            }
+        },
+        {
+            "id": "m2_h_55",
+            "raw_id": 55,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Common network protocols",
+            "is_scenario": true,
+            "scenario": "An engineer observes that an unauthorized machine connected to an access switch is sending fake BPDU (Bridge Protocol Data Unit) packets claiming to be the root bridge with a priority of 0.",
+            "question": "Which switch security feature should be enabled on all user-facing access ports to immediately disable ports receiving unexpected BPDUs?",
+            "type": "single",
+            "options": [
+                "BPDU Guard",
+                "DHCP Snooping",
+                "Port Fast without security",
+                "Dynamic Trunking Protocol (DTP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests Layer 2 STP attack mitigation on enterprise switches.",
+                "why_correct": "BPDU Guard automatically shuts down (error-disables) an access port if an unexpected BPDU frame is received, preventing rogue switches or attackers from hijacking the Spanning Tree root bridge position.",
+                "options_breakdown": {
+                    "BPDU Guard": "Correct. BPDU Guard protects the spanning tree topology by shutting down edge ports that receive rogue BPDUs.",
+                    "DHCP Snooping": "Incorrect. DHCP Snooping filters untrusted DHCP server messages, not STP BPDUs.",
+                    "Port Fast without security": "Incorrect. PortFast merely bypasses STP listening/learning states on edge ports; it does not block rogue BPDUs.",
+                    "Dynamic Trunking Protocol (DTP)": "Incorrect. DTP negotiates trunking between switches and can actually introduce security risks if enabled on access ports."
+                },
+                "key_term": "BPDU Guard: A Layer 2 defensive feature that disables edge switch ports upon receipt of Spanning Tree Protocol BPDU frames."
+            }
+        },
+        {
+            "id": "m2_h_56",
+            "raw_id": 56,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "IP and MAC addresses",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the purpose of an Anycast IP address configuration in modern Content Delivery Networks (CDNs) and global DNS root servers?",
+            "type": "single",
+            "options": [
+                "The same single IP address is advertised from multiple geographic locations, and BGP routes clients to the topologically closest server",
+                "Every computer in the world receives the exact same packet simultaneously",
+                "It assigns a unique IP address to every single fish in the ocean",
+                "It permanently deletes all spam emails before they are typed"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests advanced IP routing paradigms (Anycast vs Unicast vs Multicast vs Broadcast).",
+                "why_correct": "Anycast advertises a single destination IP address from multiple distributed edge data centers via BGP. Client requests automatically route to whichever server instance is topologically nearest.",
+                "options_breakdown": {
+                    "The same single IP address is advertised from multiple geographic locations, and BGP routes clients to the topologically closest server": "Correct. Anycast provides low latency, geographic load balancing, and DDoS resilience.",
+                    "Every computer in the world receives the exact same packet simultaneously": "Incorrect. That describes global broadcast or multicast, not Anycast.",
+                    "It assigns a unique IP address to every single fish in the ocean": "Incorrect. Anycast is a network routing technique, not a marine biology tracking tool.",
+                    "It permanently deletes all spam emails before they are typed": "Incorrect. Anycast routes network packets and cannot predict or delete untyped emails."
+                },
+                "key_term": "Anycast: A network addressing and routing methodology in which a single destination address is shared by devices in multiple locations."
+            }
+        },
+        {
+            "id": "m2_h_57",
+            "raw_id": 57,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Routers and switches",
+            "is_scenario": true,
+            "scenario": "To prevent ARP poisoning on a local network, a network engineer enables Dynamic ARP Inspection (DAI) on the access switches.",
+            "question": "Which foundational switch security feature must be enabled first so DAI knows the legitimate bindings between IP addresses, MAC addresses, and switch ports?",
+            "type": "single",
+            "options": [
+                "DHCP Snooping",
+                "Port Mirroring / SPAN",
+                "Unicast Reverse Path Forwarding (uRPF)",
+                "Cisco Discovery Protocol (CDP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Layer 2 defense dependencies.",
+                "why_correct": "Dynamic ARP Inspection (DAI) validates ARP packets on untrusted ports against a database of valid IP-to-MAC bindings. This binding database is built dynamically by DHCP Snooping.",
+                "options_breakdown": {
+                    "DHCP Snooping": "Correct. DAI relies directly on the DHCP Snooping binding database to verify that ARP replies match authentic DHCP leases.",
+                    "Port Mirroring / SPAN": "Incorrect. Port mirroring copies traffic to an analyzer port; it does not build an IP-to-MAC binding database.",
+                    "Unicast Reverse Path Forwarding (uRPF)": "Incorrect. uRPF is a Layer 3 router feature that mitigates spoofed source IPs by checking routing tables.",
+                    "Cisco Discovery Protocol (CDP)": "Incorrect. CDP shares discovery information between adjacent Cisco devices, not security binding tables."
+                },
+                "key_term": "Dynamic ARP Inspection (DAI): A security feature that validates ARP packets on a network, intercepting and discarding ARP packets with invalid IP-to-MAC address bindings."
+            }
+        },
+        {
+            "id": "m2_h_58",
+            "raw_id": 58,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "OSI model",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "How does the encapsulation process operate as an outgoing email moves down from the user application to the physical network wire?",
+            "type": "single",
+            "options": [
+                "Data -> Segment (TCP) -> Packet (IP) -> Frame (Ethernet) -> Bits (Physical wire)",
+                "Bits -> Frame -> Packet -> Segment -> Data",
+                "Packet -> Frame -> Data -> Segment -> Bits",
+                "Segment -> Packet -> Bits -> Frame -> Data"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests precise knowledge of downward protocol encapsulation order and Protocol Data Unit (PDU) names.",
+                "why_correct": "Outgoing data moves downward through encapsulation: Application Data is encapsulated into a Transport Segment (TCP), which is encapsulated into a Network Packet (IP), which is encapsulated into a Data Link Frame (Ethernet), which is encoded as physical Bits on the wire.",
+                "options_breakdown": {
+                    "Data -> Segment (TCP) -> Packet (IP) -> Frame (Ethernet) -> Bits (Physical wire)": "Correct. This is the exact sequence of protocol data unit (PDU) encapsulation moving down the stack.",
+                    "Bits -> Frame -> Packet -> Segment -> Data": "Incorrect. This represents upward decapsulation upon packet arrival, not outgoing transmission.",
+                    "Packet -> Frame -> Data -> Segment -> Bits": "Incorrect. The order of PDUs is scrambled.",
+                    "Segment -> Packet -> Bits -> Frame -> Data": "Incorrect. Data starts at the application layer, not the transport segment layer."
+                },
+                "key_term": "Encapsulation: The process of adding header and trailer control information to data as it moves down through the protocol stack."
+            }
+        },
+        {
+            "id": "m2_h_59",
+            "raw_id": 59,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "TCP and UDP",
+            "is_scenario": true,
+            "scenario": "A penetration tester observes a web application whose load balancer sets a persistent cookie but uses UDP for transport via HTTP/3.",
+            "question": "Which underlying modern transport protocol provides encrypted, multiplexed, low-latency transport over UDP for HTTP/3?",
+            "type": "single",
+            "options": [
+                "QUIC protocol",
+                "SCTP protocol",
+                "IPsec Tunnel mode",
+                "GRE tunnel protocol"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests modern web networking standards (HTTP/3 and QUIC).",
+                "why_correct": "HTTP/3 replaces TCP with QUIC, an encrypted transport protocol built on top of UDP. QUIC eliminates TCP head-of-line blocking, reduces connection handshake latency to 0-RTT, and integrates TLS 1.3 natively.",
+                "options_breakdown": {
+                    "QUIC protocol": "Correct. QUIC is the UDP-based transport protocol powering modern HTTP/3.",
+                    "SCTP protocol": "Incorrect. Stream Control Transmission Protocol (SCTP) is an alternative transport protocol, but not used for HTTP/3.",
+                    "IPsec Tunnel mode": "Incorrect. IPsec operates at Layer 3 to secure IP packets, not Layer 4 for web streaming.",
+                    "GRE tunnel protocol": "Incorrect. Generic Routing Encapsulation (GRE) encapsulates multiprotocol traffic over IP, not HTTP/3."
+                },
+                "key_term": "QUIC: A general-purpose transport layer network protocol designed by Google and standardized by IETF that uses UDP to achieve low-latency web connections."
+            }
+        },
+        {
+            "id": "m2_h_60",
+            "raw_id": 60,
+            "module_id": 2,
+            "difficulty": "hard",
+            "topic": "Common network protocols",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following security mechanisms are specifically designed to protect network infrastructure from Layer 2 attacks? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "DHCP Snooping to prevent rogue DHCP servers and IP address starvation",
+                "Dynamic ARP Inspection (DAI) to prevent ARP cache poisoning and Man-in-the-Middle attacks",
+                "BPDU Guard to protect the Spanning Tree topology from unauthorized root bridge takeovers",
+                "SQL Prepared Statements to prevent database credential dumps"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish Layer 2 switch security mitigations from application-layer defenses.",
+                "why_correct": "DHCP Snooping, DAI, and BPDU Guard are classic Layer 2 switch security controls implemented on access switches. SQL Prepared Statements protect relational databases at the application layer (Layer 7).",
+                "options_breakdown": {
+                    "DHCP Snooping to prevent rogue DHCP servers and IP address starvation": "Correct. DHCP snooping validates DHCP messages and drops rogue DHCP server offers on Layer 2 switch ports.",
+                    "Dynamic ARP Inspection (DAI) to prevent ARP cache poisoning and Man-in-the-Middle attacks": "Correct. DAI prevents ARP spoofing on Layer 2 Ethernet switches.",
+                    "BPDU Guard to protect the Spanning Tree topology from unauthorized root bridge takeovers": "Correct. BPDU Guard prevents unauthorized devices from disrupting Layer 2 Spanning Tree topologies.",
+                    "SQL Prepared Statements to prevent database credential dumps": "Incorrect. SQL parameterization is a Layer 7 web application defense, not a Layer 2 network switch defense."
+                },
+                "key_term": "Layer 2 Security: A set of defensive hardening features implemented directly on Ethernet switches to protect the local Data Link layer."
+            }
+        }
+    ]
+}

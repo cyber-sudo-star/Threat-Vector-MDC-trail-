@@ -157,6 +157,58 @@ def init_db():
     )
     """)
 
+    
+    # 8. Knowledge Check: User Progress Tracking
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS knowledge_progress (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        module_id INTEGER NOT NULL,
+        difficulty TEXT NOT NULL,
+        best_score INTEGER DEFAULT 0,
+        total_questions INTEGER DEFAULT 20,
+        attempts_count INTEGER DEFAULT 0,
+        completed INTEGER DEFAULT 0,
+        last_completed_at TIMESTAMP,
+        UNIQUE(user_id, module_id, difficulty),
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    )
+    """)
+
+    # 9. Knowledge Check: Quiz Attempts History
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS knowledge_attempts (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        module_id INTEGER NOT NULL,
+        difficulty TEXT NOT NULL,
+        score INTEGER NOT NULL,
+        total_questions INTEGER DEFAULT 20,
+        percentage REAL NOT NULL,
+        answers_json TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    )
+    """)
+
+    # 10. Knowledge Check: Active In-Progress Sessions (resilience against refresh)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS knowledge_active_sessions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        session_id TEXT UNIQUE NOT NULL,
+        user_id INTEGER NOT NULL,
+        module_id INTEGER NOT NULL,
+        difficulty TEXT NOT NULL,
+        current_index INTEGER DEFAULT 0,
+        questions_json TEXT NOT NULL,
+        answers_json TEXT NOT NULL,
+        is_completed INTEGER DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    )
+    """)
+
     conn.commit()
 
     # --- SEED DATA ---
@@ -468,6 +520,315 @@ def log_audit_event(user_id, action, details="", ip="127.0.0.1"):
         conn.close()
     except Exception as e:
         print(f"[-] Audit log error: {e}")
+
+
+
+# =====================================================================
+# KNOWLEDGE CHECK HELPER FUNCTIONS
+# =====================================================================
+
+def get_user_knowledge_progress(user_id):
+    """
+    Retrieves progress across all 8 modules and 3 difficulties for a user.
+    Returns:
+        dict: {
+            'modules': {
+                module_id: {
+                    'Easy': {'best_score': 0, 'completed': False, 'attempts_count': 0},
+                    'Intermediate': {...},
+                    'Hard': {...},
+                    'completed_count': int,
+                    'is_module_completed': bool
+                } for module_id in 1..8
+            },
+            'summary': {
+                'total_levels_completed': int,
+                'total_attempts': int,
+                'modules_fully_completed': int,
+                'total_best_score': int
+            }
+        }
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT module_id, difficulty, best_score, total_questions, attempts_count, completed, last_completed_at
+        FROM knowledge_progress
+        WHERE user_id = ?
+    """, (user_id,))
+    rows = cursor.fetchall()
+    conn.close()
+
+    modules_progress = {}
+    for m_id in range(1, 9):
+        modules_progress[m_id] = {
+            "Easy": {"best_score": 0, "total_questions": 20, "completed": False, "attempts_count": 0, "last_completed_at": None},
+            "Intermediate": {"best_score": 0, "total_questions": 20, "completed": False, "attempts_count": 0, "last_completed_at": None},
+            "Hard": {"best_score": 0, "total_questions": 20, "completed": False, "attempts_count": 0, "last_completed_at": None},
+            "completed_count": 0,
+            "is_module_completed": False
+        }
+
+    total_levels_completed = 0
+    total_attempts = 0
+    total_best_score = 0
+
+    for row in rows:
+        m_id = row["module_id"]
+        diff = row["difficulty"]
+        if m_id in modules_progress and diff in modules_progress[m_id]:
+            is_comp = bool(row["completed"])
+            modules_progress[m_id][diff] = {
+                "best_score": row["best_score"] or 0,
+                "total_questions": row["total_questions"] or 20,
+                "completed": is_comp,
+                "attempts_count": row["attempts_count"] or 0,
+                "last_completed_at": row["last_completed_at"]
+            }
+            if is_comp:
+                total_levels_completed += 1
+            total_attempts += (row["attempts_count"] or 0)
+            total_best_score += (row["best_score"] or 0)
+
+    modules_fully_completed = 0
+    for m_id, m_data in modules_progress.items():
+        comp_count = sum(1 for d in ["Easy", "Intermediate", "Hard"] if m_data[d]["completed"])
+        m_data["completed_count"] = comp_count
+        m_data["is_module_completed"] = (comp_count == 3)
+        if comp_count == 3:
+            modules_fully_completed += 1
+
+    return {
+        "modules": modules_progress,
+        "summary": {
+            "total_levels_completed": total_levels_completed,
+            "total_attempts": total_attempts,
+            "modules_fully_completed": modules_fully_completed,
+            "total_best_score": total_best_score
+        }
+    }
+
+
+def get_module_knowledge_progress(user_id, module_id):
+    """Retrieves progress for a single module across Easy, Intermediate, Hard."""
+    all_prog = get_user_knowledge_progress(user_id)
+    return all_prog["modules"].get(module_id, {
+        "Easy": {"best_score": 0, "total_questions": 20, "completed": False, "attempts_count": 0},
+        "Intermediate": {"best_score": 0, "total_questions": 20, "completed": False, "attempts_count": 0},
+        "Hard": {"best_score": 0, "total_questions": 20, "completed": False, "attempts_count": 0},
+        "completed_count": 0,
+        "is_module_completed": False
+    })
+
+
+def create_or_get_active_session(session_id, user_id, module_id, difficulty, questions=None):
+    """
+    Creates or retrieves an active in-progress quiz session.
+    If session exists, returns it. If not, and questions are provided, creates it.
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT id, session_id, user_id, module_id, difficulty, current_index, questions_json, answers_json, is_completed
+        FROM knowledge_active_sessions
+        WHERE session_id = ? AND user_id = ?
+    """, (session_id, user_id))
+    row = cursor.fetchone()
+
+    if row:
+        session_data = {
+            "id": row["id"],
+            "session_id": row["session_id"],
+            "user_id": row["user_id"],
+            "module_id": row["module_id"],
+            "difficulty": row["difficulty"],
+            "current_index": row["current_index"],
+            "questions": json.loads(row["questions_json"]),
+            "answers": json.loads(row["answers_json"]),
+            "is_completed": bool(row["is_completed"])
+        }
+        conn.close()
+        return session_data
+
+    if questions is not None:
+        q_json = json.dumps(questions)
+        a_json = json.dumps([])
+        cursor.execute("""
+            INSERT INTO knowledge_active_sessions (session_id, user_id, module_id, difficulty, current_index, questions_json, answers_json, is_completed)
+            VALUES (?, ?, ?, ?, 0, ?, ?, 0)
+        """, (session_id, user_id, module_id, difficulty, q_json, a_json))
+        conn.commit()
+        conn.close()
+        return {
+            "session_id": session_id,
+            "user_id": user_id,
+            "module_id": module_id,
+            "difficulty": difficulty,
+            "current_index": 0,
+            "questions": questions,
+            "answers": [],
+            "is_completed": False
+        }
+
+    conn.close()
+    return None
+
+
+def get_active_session(session_id, user_id):
+    """Fetches an existing active session."""
+    return create_or_get_active_session(session_id, user_id, None, None, questions=None)
+
+
+def save_session_answer(session_id, user_id, question_index, answer_record):
+    """
+    Saves an answer for the given question index, updating current_index and answers_json.
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT answers_json, current_index, questions_json FROM knowledge_active_sessions
+        WHERE session_id = ? AND user_id = ?
+    """, (session_id, user_id))
+    row = cursor.fetchone()
+    if not row:
+        conn.close()
+        return False
+
+    answers = json.loads(row["answers_json"])
+    questions = json.loads(row["questions_json"])
+
+    # Ensure answers list is long enough or replace/append
+    while len(answers) <= question_index:
+        answers.append(None)
+    answers[question_index] = answer_record
+
+    next_index = question_index + 1
+    is_completed = 1 if next_index >= len(questions) else 0
+
+    cursor.execute("""
+        UPDATE knowledge_active_sessions
+        SET answers_json = ?, current_index = ?, is_completed = ?, updated_at = CURRENT_TIMESTAMP
+        WHERE session_id = ? AND user_id = ?
+    """, (json.dumps(answers), next_index, is_completed, session_id, user_id))
+    conn.commit()
+    conn.close()
+    return True
+
+
+def delete_active_session(session_id, user_id):
+    """Cleans up active session upon quiz completion or restart."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM knowledge_active_sessions WHERE session_id = ? AND user_id = ?", (session_id, user_id))
+    conn.commit()
+    conn.close()
+
+
+def save_knowledge_attempt(user_id, module_id, difficulty, score, total_questions, answers_list):
+    """
+    Saves a completed quiz attempt, updates user's knowledge_progress,
+    and awards Defense Score points to the user.
+    """
+    percentage = round((score / total_questions) * 100, 1) if total_questions > 0 else 0.0
+    passed = 1 if score >= 12 else 0  # 60% passing mark (12/20)
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # 1. Insert attempt
+    cursor.execute("""
+        INSERT INTO knowledge_attempts (user_id, module_id, difficulty, score, total_questions, percentage, answers_json)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    """, (user_id, module_id, difficulty, score, total_questions, percentage, json.dumps(answers_list)))
+    attempt_id = cursor.lastrowid
+
+    # 2. Upsert progress
+    cursor.execute("""
+        INSERT INTO knowledge_progress (user_id, module_id, difficulty, best_score, total_questions, attempts_count, completed, last_completed_at)
+        VALUES (?, ?, ?, ?, ?, 1, ?, CURRENT_TIMESTAMP)
+        ON CONFLICT(user_id, module_id, difficulty) DO UPDATE SET
+            best_score = MAX(knowledge_progress.best_score, excluded.best_score),
+            attempts_count = knowledge_progress.attempts_count + 1,
+            completed = MAX(knowledge_progress.completed, excluded.completed),
+            last_completed_at = CURRENT_TIMESTAMP
+    """, (user_id, module_id, difficulty, score, total_questions, passed))
+
+    # 3. Award defense points (e.g. 5 points per correct answer)
+    points_awarded = score * 5
+    if points_awarded > 0:
+        cursor.execute("""
+            UPDATE users
+            SET defense_score = defense_score + ?
+            WHERE id = ?
+        """, (points_awarded, user_id))
+
+    conn.commit()
+    conn.close()
+
+    # Log audit event
+    log_audit_event(
+        user_id=user_id,
+        action="KNOWLEDGE_CHECK_COMPLETED",
+        details=f"Module {module_id} ({difficulty}): {score}/{total_questions} ({percentage}%) - +{points_awarded} pts"
+    )
+
+    return attempt_id
+
+
+def get_knowledge_attempt(attempt_id, user_id):
+    """Fetches a specific attempt for historical review."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT id, user_id, module_id, difficulty, score, total_questions, percentage, answers_json, created_at
+        FROM knowledge_attempts
+        WHERE id = ? AND user_id = ?
+    """, (attempt_id, user_id))
+    row = cursor.fetchone()
+    conn.close()
+
+    if not row:
+        return None
+
+    return {
+        "id": row["id"],
+        "user_id": row["user_id"],
+        "module_id": row["module_id"],
+        "difficulty": row["difficulty"],
+        "score": row["score"],
+        "total_questions": row["total_questions"],
+        "percentage": row["percentage"],
+        "answers": json.loads(row["answers_json"]) if row["answers_json"] else [],
+        "created_at": row["created_at"]
+    }
+
+
+def get_user_knowledge_attempts(user_id, limit=20):
+    """Returns recent attempts for user."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT id, module_id, difficulty, score, total_questions, percentage, created_at
+        FROM knowledge_attempts
+        WHERE user_id = ?
+        ORDER BY created_at DESC
+        LIMIT ?
+    """, (user_id, limit))
+    rows = cursor.fetchall()
+    conn.close()
+
+    return [
+        {
+            "id": r["id"],
+            "module_id": r["module_id"],
+            "difficulty": r["difficulty"],
+            "score": r["score"],
+            "total_questions": r["total_questions"],
+            "percentage": r["percentage"],
+            "created_at": r["created_at"]
+        } for r in rows
+    ]
+
 
 if __name__ == "__main__":
     init_db()

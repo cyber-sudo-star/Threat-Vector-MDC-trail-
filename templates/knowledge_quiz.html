@@ -1,0 +1,549 @@
+{% extends "base.html" %}
+
+{% block title %}Question {{ question_index + 1 }}/{{ total_questions }} | Module {{ module.id }} ({{ difficulty }}){% endblock %}
+
+{% block content %}
+<div class="soc-container" style="max-width: 960px; margin: 0 auto; padding: 2rem 1.25rem;">
+
+    <!-- Top Assessment HUD Bar -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+        <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700;">
+                    MODULE 0{{ module.id }}: {{ module.title }}
+                </span>
+                <span class="badge {% if difficulty == 'Easy' %}badge-green{% elif difficulty == 'Intermediate' %}badge-cyan{% else %}badge-amber{% endif %}" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">
+                    {{ difficulty }} Level
+                </span>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">
+                Topic: <strong style="color: var(--text-secondary);">{{ question.topic }}</strong>
+            </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <a href="{{ url_for('knowledge_difficulty', module_id=module.id) }}" onclick="return confirmExit();" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">
+                &times; Exit Quiz
+            </a>
+        </div>
+    </div>
+
+    <!-- Progress Meter -->
+    <div style="background: rgba(11, 15, 25, 0.8); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 0.85rem;">
+            <span style="color: var(--accent-cyan); font-weight: 700;">
+                QUESTION {{ question_index + 1 }} OF {{ total_questions }}
+            </span>
+            <span style="color: var(--text-muted);">
+                {{ ((question_index + 1) / total_questions * 100)|round|int }}% Completed
+            </span>
+        </div>
+        <div style="width: 100%; height: 8px; background: rgba(255, 255, 255, 0.08); border-radius: 9999px; overflow: hidden;">
+            <div id="quizProgressBar" style="width: {{ ((question_index) / total_questions * 100)|round }}%; height: 100%; background: linear-gradient(90deg, #38BDF8 0%, #00F0FF 100%); transition: width 0.3s ease;"></div>
+        </div>
+    </div>
+
+    <!-- Main Question Box -->
+    <div class="cyber-question-container" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.25rem 2rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45); margin-bottom: 2rem;">
+
+        <!-- Question Type Header Tag -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.05); padding: 0.3rem 0.7rem; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.08);">
+                ID: {{ question.id }}
+            </span>
+
+            {% if question.is_multi_select %}
+            <span style="font-size: 0.78rem; font-weight: 700; color: #F59E0B; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.35); padding: 0.3rem 0.8rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.4rem;">
+                <span>&#9745;</span> Multiple Select &mdash; Choose ALL That Apply
+            </span>
+            {% else %}
+            <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent-cyan); background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.3rem 0.8rem; border-radius: 9999px;">
+                Single Choice &mdash; Select 1 Option
+            </span>
+            {% endif %}
+        </div>
+
+        <!-- Scenario Context Narrative (if scenario question) -->
+        {% if question.is_scenario and question.scenario %}
+        <div style="background: rgba(15, 23, 42, 0.85); border-left: 4px solid var(--accent-cyan); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border-top: 1px solid rgba(56, 189, 248, 0.15); border-right: 1px solid rgba(56, 189, 248, 0.15); border-bottom: 1px solid rgba(56, 189, 248, 0.15);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                <span>🚨</span> Operational Incident Scenario
+            </div>
+            <p style="color: #E2E8F0; font-size: 0.95rem; line-height: 1.6; margin: 0; font-family: var(--font-sans);">
+                {{ question.scenario }}
+            </p>
+        </div>
+        {% endif %}
+
+        <!-- Question Prompt -->
+        <h2 style="font-size: 1.28rem; font-weight: 700; color: #FFFFFF; line-height: 1.5; margin: 0 0 1.75rem 0;">
+            {{ question.question }}
+        </h2>
+
+        <!-- Interactive Options Form -->
+        <form id="quizForm" onsubmit="handleAnswerSubmit(event);">
+            <div id="optionsContainer" style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem;">
+                {% set letters = ['A', 'B', 'C', 'D'] %}
+                {% for opt in question.options %}
+                {% set opt_idx = loop.index0 %}
+                {% set letter = letters[opt_idx] %}
+                <label class="quiz-option-label" id="option_label_{{ opt_idx }}" for="opt_{{ opt_idx }}">
+                    <div style="display: flex; align-items: center; gap: 1rem; width: 100%;">
+                        {% if question.is_multi_select %}
+                        <input type="checkbox" name="selected_option" id="opt_{{ opt_idx }}" value="{{ opt_idx }}" class="quiz-custom-input" onchange="validateSelection();">
+                        {% else %}
+                        <input type="radio" name="selected_option" id="opt_{{ opt_idx }}" value="{{ opt_idx }}" class="quiz-custom-input" onchange="validateSelection();">
+                        {% endif %}
+                        
+                        <div class="option-badge-letter" id="badge_letter_{{ opt_idx }}">
+                            {{ letter }}
+                        </div>
+
+                        <span class="option-text-span" id="option_text_{{ opt_idx }}">
+                            {{ opt }}
+                        </span>
+
+                        <span class="option-feedback-tag" id="feedback_tag_{{ opt_idx }}" style="display: none; margin-left: auto; font-size: 0.8rem; font-weight: 700; font-family: var(--font-mono); padding: 0.25rem 0.6rem; border-radius: 4px;"></span>
+                    </div>
+                </label>
+                {% endfor %}
+            </div>
+
+            <!-- Submit Action Row -->
+            <div id="submitActionRow" style="display: flex; justify-content: flex-end; align-items: center; gap: 1rem;">
+                <button type="submit" id="btnSubmitAnswer" class="btn btn-primary" style="padding: 0.85rem 2rem; font-size: 1rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.6rem;" disabled>
+                    <span>Submit Answer</span>
+                    <span style="font-size: 1.1rem;">&rarr;</span>
+                </button>
+            </div>
+        </form>
+
+        <!-- Post-Submission Feedback & Full Explanations Panel -->
+        <div id="feedbackPanel" style="display: none; margin-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem;">
+            
+            <!-- Result Banner (Correct / Incorrect) -->
+            <div id="resultBanner" style="border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-bottom: 1.75rem; display: flex; align-items: center; gap: 1rem;">
+                <div id="resultIcon" style="font-size: 1.8rem; line-height: 1;"></div>
+                <div>
+                    <h3 id="resultTitle" style="font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem 0;"></h3>
+                    <p id="resultSub" style="font-size: 0.88rem; margin: 0;"></p>
+                </div>
+            </div>
+
+            <!-- Detailed Explanation Sections -->
+            <div style="background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem; margin-bottom: 1.75rem;">
+                
+                <!-- 1. General Overview -->
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                        <span>💡</span> General Technical Concept
+                    </div>
+                    <p id="expGeneral" style="color: #F1F5F9; font-size: 0.95rem; line-height: 1.65; margin: 0;"></p>
+                </div>
+
+                <!-- 2. Why Correct -->
+                <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--threat-safe); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 1.25rem;">
+                    <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--threat-safe); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+                        <span>&#10003;</span> Why This Is Correct
+                    </div>
+                    <p id="expWhyCorrect" style="color: #E2E8F0; font-size: 0.92rem; line-height: 1.6; margin: 0;"></p>
+                </div>
+
+                <!-- 3. Why Incorrect -->
+                <div style="background: rgba(239, 68, 68, 0.08); border-left: 3px solid var(--threat-malicious); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.8rem; font-family: var(--font-mono); color: #F87171; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+                        <span>&#10007;</span> Why Other Choices Are Incorrect
+                    </div>
+                    <p id="expWhyIncorrect" style="color: #E2E8F0; font-size: 0.92rem; line-height: 1.6; margin: 0;"></p>
+                </div>
+
+                <!-- 4. Option Breakdown (A, B, C, D) -->
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.75rem;">
+                        Option-by-Option Breakdown:
+                    </div>
+                    <div id="optionsBreakdownGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem;">
+                        <!-- Injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- 5. Key Terms Definitions -->
+                <div id="keyTermsSection" style="display: none; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.25rem;">
+                    <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--threat-warning); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+                        <span>📖</span> Key Technical Terms Defined
+                    </div>
+                    <div id="keyTermsList" style="display: flex; flex-direction: column; gap: 0.6rem;">
+                        <!-- Injected dynamically -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Next Question / View Results Action Button -->
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 1rem;">
+                <button type="button" id="btnNextQuestion" onclick="advanceNextQuestion();" class="btn btn-primary" style="padding: 0.95rem 2.25rem; font-size: 1.05rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.6rem; background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);">
+                    <span id="nextBtnText">Next Question</span>
+                    <span style="font-size: 1.2rem;">&rarr;</span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Styles for Interactive Quiz Options -->
+<style>
+.quiz-option-label {
+    display: block;
+    background: rgba(11, 15, 25, 0.6);
+    border: 1.5px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.quiz-option-label:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.quiz-custom-input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-cyan);
+    cursor: pointer;
+}
+
+.option-badge-letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.option-text-span {
+    color: #E2E8F0;
+    font-size: 0.96rem;
+    line-height: 1.5;
+}
+
+/* Selected state prior to submit */
+.quiz-option-label.is-selected {
+    border-color: var(--accent-cyan);
+    background: rgba(56, 189, 248, 0.08);
+}
+.quiz-option-label.is-selected .option-badge-letter {
+    background: var(--accent-cyan);
+    color: #0B0F19;
+    border-color: var(--accent-cyan);
+}
+
+/* Post-submit correct option */
+.quiz-option-label.is-correct-answer {
+    border-color: var(--threat-safe) !important;
+    background: rgba(16, 185, 129, 0.12) !important;
+}
+.quiz-option-label.is-correct-answer .option-badge-letter {
+    background: var(--threat-safe) !important;
+    color: #FFFFFF !important;
+    border-color: var(--threat-safe) !important;
+}
+
+/* Post-submit user incorrect option */
+.quiz-option-label.is-wrong-selection {
+    border-color: var(--threat-malicious) !important;
+    background: rgba(239, 68, 68, 0.12) !important;
+}
+.quiz-option-label.is-wrong-selection .option-badge-letter {
+    background: var(--threat-malicious) !important;
+    color: #FFFFFF !important;
+    border-color: var(--threat-malicious) !important;
+}
+
+.quiz-option-label.is-disabled {
+    cursor: default;
+    pointer-events: none;
+}
+</style>
+
+<!-- JavaScript Quiz Controller -->
+<script>
+const SESSION_ID = "{{ session_id }}";
+const QUESTION_ID = "{{ question.id }}";
+const IS_MULTI_SELECT = {{ 'true' if question.is_multi_select else 'false' }};
+const CURRENT_INDEX = {{ question_index }};
+const TOTAL_QUESTIONS = {{ total_questions }};
+let isSubmitted = false;
+
+function validateSelection() {
+    if (isSubmitted) return;
+    const inputs = document.querySelectorAll('input[name="selected_option"]:checked');
+    const btnSubmit = document.getElementById('btnSubmitAnswer');
+    
+    // Update visual classes for selected items
+    document.querySelectorAll('.quiz-option-label').forEach((label, idx) => {
+        const inp = document.getElementById('opt_' + idx);
+        if (inp && inp.checked) {
+            label.classList.add('is-selected');
+        } else {
+            label.classList.remove('is-selected');
+        }
+    });
+
+    if (inputs.length > 0) {
+        btnSubmit.disabled = false;
+    } else {
+        btnSubmit.disabled = true;
+    }
+}
+
+function confirmExit() {
+    return confirm("Are you sure you want to leave this quiz? Your answered progress will be saved in your session.");
+}
+
+async function handleAnswerSubmit(e) {
+    e.preventDefault();
+    if (isSubmitted) return;
+
+    const checkedInputs = Array.from(document.querySelectorAll('input[name="selected_option"]:checked'));
+    if (checkedInputs.length === 0) return;
+
+    let selectedValue;
+    if (IS_MULTI_SELECT) {
+        selectedValue = checkedInputs.map(inp => parseInt(inp.value));
+    } else {
+        selectedValue = parseInt(checkedInputs[0].value);
+    }
+
+    const btnSubmit = document.getElementById('btnSubmitAnswer');
+    btnSubmit.disabled = true;
+    btnSubmit.innerHTML = 'Evaluating Response...';
+
+    try {
+        const resp = await fetch("{{ url_for('knowledge_submit') }}", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                session_id: SESSION_ID,
+                question_id: QUESTION_ID,
+                selected: selectedValue
+            })
+        });
+
+        const result = await resp.json();
+        if (result.status === 'success') {
+            displayExplanation(result);
+        } else {
+            alert(result.message || "An error occurred while evaluating your response.");
+            btnSubmit.disabled = false;
+            btnSubmit.innerHTML = '<span>Submit Answer</span> &rarr;';
+        }
+    } catch (err) {
+        console.error(err);
+        alert("Network error submitting answer. Please verify your connection.");
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = '<span>Submit Answer</span> &rarr;';
+    }
+}
+
+function displayExplanation(data) {
+    isSubmitted = true;
+
+    // 1. Disable all radio/checkbox inputs
+    document.querySelectorAll('input[name="selected_option"]').forEach(inp => {
+        inp.disabled = true;
+    });
+    document.querySelectorAll('.quiz-option-label').forEach(label => {
+        label.classList.add('is-disabled');
+    });
+
+    // 2. Hide submit button row
+    document.getElementById('submitActionRow').style.display = 'none';
+
+    // 3. Highlight options
+    const correctIndices = Array.isArray(data.correct) ? data.correct : [data.correct];
+    const userSelected = Array.isArray(data.selected) ? data.selected : [data.selected];
+
+    for (let i = 0; i < 4; i++) {
+        const label = document.getElementById('option_label_' + i);
+        const tag = document.getElementById('feedback_tag_' + i);
+        const isOptCorrect = correctIndices.includes(i);
+        const isOptSelected = userSelected.includes(i);
+
+        label.classList.remove('is-selected');
+
+        if (isOptCorrect) {
+            label.classList.add('is-correct-answer');
+            tag.style.display = 'inline-block';
+            tag.style.background = 'rgba(16, 185, 129, 0.2)';
+            tag.style.color = 'var(--threat-safe)';
+            tag.style.border = '1px solid rgba(16, 185, 129, 0.4)';
+            tag.innerHTML = '&#10003; Correct Answer';
+        } else if (isOptSelected && !isOptCorrect) {
+            label.classList.add('is-wrong-selection');
+            tag.style.display = 'inline-block';
+            tag.style.background = 'rgba(239, 68, 68, 0.2)';
+            tag.style.color = '#F87171';
+            tag.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+            tag.innerHTML = '&#10007; Your Choice';
+        }
+    }
+
+    // 4. Update Result Banner
+    const banner = document.getElementById('resultBanner');
+    const icon = document.getElementById('resultIcon');
+    const title = document.getElementById('resultTitle');
+    const sub = document.getElementById('resultSub');
+
+    if (data.is_correct) {
+        banner.style.background = 'rgba(16, 185, 129, 0.15)';
+        banner.style.border = '1px solid rgba(16, 185, 129, 0.4)';
+        icon.innerHTML = '&#9989;';
+        title.style.color = 'var(--threat-safe)';
+        title.innerText = 'Correct! Tactical Analysis Confirmed.';
+        sub.style.color = '#E2E8F0';
+        sub.innerText = 'Your response aligns with cybersecurity defensive standards.';
+    } else {
+        banner.style.background = 'rgba(239, 68, 68, 0.15)';
+        banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        icon.innerHTML = '&#10060;';
+        title.style.color = '#F87171';
+        title.innerText = 'Incorrect Response.';
+        sub.style.color = '#E2E8F0';
+        sub.innerText = 'Review the detailed analysis below to understand why this vector functions differently.';
+    }
+
+    // 5. Populate Explanations
+    const exp = data.explanation;
+    document.getElementById('expGeneral').innerText = exp.general || "No general summary provided.";
+    document.getElementById('expWhyCorrect').innerText = exp.why_correct || "Verified against defensive specifications.";
+    document.getElementById('expWhyIncorrect').innerText = exp.why_incorrect || "Other selections introduce vulnerabilities or inaccurate configurations.";
+
+    // Option-by-option breakdown cards
+    const breakdownGrid = document.getElementById('optionsBreakdownGrid');
+    breakdownGrid.innerHTML = '';
+    const breakdownMap = exp.options_breakdown || {};
+    const letters = ['A', 'B', 'C', 'D'];
+    const keys = ['option_a', 'option_b', 'option_c', 'option_d'];
+
+    keys.forEach((k, idx) => {
+        const text = breakdownMap[k];
+        if (text) {
+            const card = document.createElement('div');
+            card.style.background = 'rgba(255, 255, 255, 0.03)';
+            card.style.border = '1px solid rgba(255, 255, 255, 0.08)';
+            card.style.borderRadius = '6px';
+            card.style.padding = '0.75rem 1rem';
+
+            const cardHeader = document.createElement('div');
+            cardHeader.style.display = 'flex';
+            cardHeader.style.alignItems = 'center';
+            cardHeader.style.gap = '0.5rem';
+            cardHeader.style.marginBottom = '0.35rem';
+            cardHeader.style.fontFamily = 'var(--font-mono)';
+            cardHeader.style.fontSize = '0.78rem';
+            cardHeader.style.fontWeight = '700';
+
+            const isCorrect = correctIndices.includes(idx);
+            if (isCorrect) {
+                cardHeader.style.color = 'var(--threat-safe)';
+                cardHeader.innerHTML = `<span>[Option ${letters[idx]}]</span> &bull; <span>CORRECT</span>`;
+            } else {
+                cardHeader.style.color = 'var(--text-muted)';
+                cardHeader.innerHTML = `<span>[Option ${letters[idx]}]</span> &bull; <span>INCORRECT</span>`;
+            }
+
+            const cardBody = document.createElement('div');
+            cardBody.style.color = '#CBD5E1';
+            cardBody.style.fontSize = '0.85rem';
+            cardBody.style.lineHeight = '1.5';
+            cardBody.innerText = text;
+
+            card.appendChild(cardHeader);
+            card.appendChild(cardBody);
+            breakdownGrid.appendChild(card);
+        }
+    });
+
+    // Key terms definitions
+    const keyTermsMap = exp.key_terms || {};
+    const keyTermsSection = document.getElementById('keyTermsSection');
+    const keyTermsList = document.getElementById('keyTermsList');
+    keyTermsList.innerHTML = '';
+    const terms = Object.keys(keyTermsMap);
+
+    if (terms.length > 0) {
+        keyTermsSection.style.display = 'block';
+        terms.forEach(term => {
+            const item = document.createElement('div');
+            item.style.background = 'rgba(245, 158, 11, 0.05)';
+            item.style.border = '1px solid rgba(245, 158, 11, 0.2)';
+            item.style.borderRadius = '6px';
+            item.style.padding = '0.6rem 0.9rem';
+            item.style.fontSize = '0.88rem';
+            item.innerHTML = `<strong style="color: var(--threat-warning); font-family: var(--font-mono);">${term}:</strong> <span style="color: #E2E8F0;">${keyTermsMap[term]}</span>`;
+            keyTermsList.appendChild(item);
+        });
+    }
+
+    // 6. Next Button text (Last question vs Next)
+    if (data.is_last) {
+        document.getElementById('nextBtnText').innerText = 'Finish Quiz & View Results';
+    } else {
+        document.getElementById('nextBtnText').innerText = 'Next Question (' + (data.question_index + 1) + '/' + data.total_questions + ')';
+    }
+
+    // 7. Update progress bar
+    document.getElementById('quizProgressBar').style.width = Math.round((data.question_index / data.total_questions) * 100) + '%';
+
+    // 8. Reveal Feedback Panel with smooth scroll
+    const panel = document.getElementById('feedbackPanel');
+    panel.style.display = 'block';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+async function advanceNextQuestion() {
+    const btnNext = document.getElementById('btnNextQuestion');
+    btnNext.disabled = true;
+    btnNext.innerHTML = 'Loading next question...';
+
+    try {
+        const resp = await fetch("{{ url_for('knowledge_next') }}", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                session_id: SESSION_ID
+            })
+        });
+
+        const result = await resp.json();
+        if (result.redirect) {
+            window.location.href = result.redirect;
+        } else {
+            window.location.reload();
+        }
+    } catch (err) {
+        console.error(err);
+        window.location.reload();
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,1885 @@
+{
+    "module_id": 7,
+    "title": "Security Tools & Practical Skills",
+    "description": "Become familiar with commonly used cybersecurity tools and understand how they help security professionals examine networks, analyse traffic, and identify potential vulnerabilities.",
+    "topics": [
+        "Nmap",
+        "Wireshark",
+        "tcpdump",
+        "Network scanning",
+        "Packet analysis",
+        "Log analysis",
+        "Vulnerability assessment",
+        "Basic security testing",
+        "Security monitoring",
+        "Safe introductory security labs"
+    ],
+    "questions": [
+        {
+            "id": "m7_e_01",
+            "raw_id": 1,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Nmap",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary function of the open-source cybersecurity tool 'Nmap' (Network Mapper)?",
+            "type": "single",
+            "options": [
+                "Network discovery, active host enumeration, and port scanning",
+                "Editing digital video files for YouTube",
+                "Designing 3D building architectural blueprints",
+                "Mining cryptocurrency using the graphics card"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the core identity and purpose of Nmap.",
+                "why_correct": "Nmap (Network Mapper) is a widely used open-source network discovery and vulnerability scanning tool that discovers active hosts on a network, identifies open ports, and detects running services.",
+                "options_breakdown": {
+                    "Network discovery, active host enumeration, and port scanning": "Correct. Nmap discovers network hosts, open ports, and service versions.",
+                    "Editing digital video files for YouTube": "Incorrect. Nmap is a network security tool, not a video editing application.",
+                    "Designing 3D building architectural blueprints": "Incorrect. That is Computer-Aided Design (CAD) software.",
+                    "Mining cryptocurrency using the graphics card": "Incorrect. Nmap sends network discovery packets and has nothing to do with crypto mining."
+                },
+                "key_term": "Nmap: A free and open-source utility for network discovery and vulnerability scanning."
+            }
+        },
+        {
+            "id": "m7_e_02",
+            "raw_id": 2,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Wireshark",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary role of 'Wireshark' in cybersecurity?",
+            "type": "single",
+            "options": [
+                "A graphical packet analyzer used to capture, inspect, and dissect network traffic in real time",
+                "An antivirus tool that automatically removes malware from flash drives",
+                "A software compiler that converts C++ code into machine language",
+                "A web browser used exclusively for the dark web"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition and primary role of Wireshark.",
+                "why_correct": "Wireshark is the world's most popular packet analysis software. It captures live network traffic passing through a network adapter and provides granular protocol dissection down to individual packet bytes.",
+                "options_breakdown": {
+                    "A graphical packet analyzer used to capture, inspect, and dissect network traffic in real time": "Correct. Wireshark inspects individual packet headers and payloads across all network layers.",
+                    "An antivirus tool that automatically removes malware from flash drives": "Incorrect. Wireshark analyzes network traffic; it is not an endpoint antivirus program.",
+                    "A software compiler that converts C++ code into machine language": "Incorrect. Compilers (like GCC or Clang) build code, not packet sniffers.",
+                    "A web browser used exclusively for the dark web": "Incorrect. Tor is the dark web browser; Wireshark is a packet analyzer."
+                },
+                "key_term": "Wireshark: A free and open-source packet analyzer used for network troubleshooting, analysis, software and communications protocol development, and education."
+            }
+        },
+        {
+            "id": "m7_e_03",
+            "raw_id": 3,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "tcpdump",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is 'tcpdump' and how does it differ from Wireshark?",
+            "type": "single",
+            "options": [
+                "tcpdump is a lightweight command-line packet analyzer for Linux/Unix terminals; Wireshark provides a graphical user interface (GUI)",
+                "tcpdump is an analog telephone protocol, while Wireshark is digital",
+                "tcpdump only works when computers are turned off",
+                "tcpdump was created for Microsoft Windows only"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the relationship between tcpdump and Wireshark.",
+                "why_correct": "Both tools capture and analyze network packets using the same underlying library (libpcap). However, tcpdump is a lightweight command-line terminal tool ideal for remote headless Linux servers, while Wireshark provides a rich GUI.",
+                "options_breakdown": {
+                    "tcpdump is a lightweight command-line packet analyzer for Linux/Unix terminals; Wireshark provides a graphical user interface (GUI)": "Correct. tcpdump is command-line oriented; Wireshark is graphical.",
+                    "tcpdump is an analog telephone protocol, while Wireshark is digital": "Incorrect. Both are digital packet capture tools.",
+                    "tcpdump only works when computers are turned off": "Incorrect. Packet capture requires powered, active network interface cards.",
+                    "tcpdump was created for Microsoft Windows only": "Incorrect. tcpdump is natively a Unix/Linux utility (WinDump is its Windows port)."
+                },
+                "key_term": "tcpdump: A data network packet analyzer computer program that runs under a command-line interface, allowing the user to display TCP/IP and other packets."
+            }
+        },
+        {
+            "id": "m7_e_04",
+            "raw_id": 4,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Network scanning",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does an Nmap port state of 'open' indicate?",
+            "type": "single",
+            "options": [
+                "A target application or service is actively listening on that port and accepting incoming connections",
+                "The computer has physically opened its DVD drive tray",
+                "The port is completely broken and cannot transmit data",
+                "The target computer has shut down and disconnected from the power outlet"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of basic Nmap port states.",
+                "why_correct": "An 'open' port state indicates that an application on the target machine is actively listening for connections or packets on that port, and replied with an acknowledging packet (e.g., SYN-ACK in TCP).",
+                "options_breakdown": {
+                    "A target application or service is actively listening on that port and accepting incoming connections": "Correct. 'open' means an active server process is listening on the port.",
+                    "The computer has physically opened its DVD drive tray": "Incorrect. Port status describes digital network sockets, not optical disc drive trays.",
+                    "The port is completely broken and cannot transmit data": "Incorrect. An open port is functioning properly and receiving connections.",
+                    "The target computer has shut down and disconnected from the power outlet": "Incorrect. Offline hosts produce no response or host down errors."
+                },
+                "key_term": "Open Port: A network port that is actively configured to accept incoming network packets and connection requests."
+            }
+        },
+        {
+            "id": "m7_e_05",
+            "raw_id": 5,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Network scanning",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does an Nmap port state of 'filtered' mean when scanning a remote server?",
+            "type": "single",
+            "options": [
+                "A firewall, packet filter, or network barrier is blocking the probe packets, preventing Nmap from determining whether the port is open or closed",
+                "The port has been purified of all internet pollutants",
+                "The port is running an unencrypted video streaming service",
+                "The computer monitor has applied a blue-light eye filter"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of the 'filtered' state in Nmap.",
+                "why_correct": "The 'filtered' state means that Nmap cannot tell whether the port is open because packet filtering (such as a firewall rule or router ACL) prevents probe packets from reaching the port or drops responses.",
+                "options_breakdown": {
+                    "A firewall, packet filter, or network barrier is blocking the probe packets, preventing Nmap from determining whether the port is open or closed": "Correct. 'filtered' indicates packets were dropped or blocked by a firewall without returning a response.",
+                    "The port has been purified of all internet pollutants": "Incorrect. This is a nonsensical wordplay.",
+                    "The port is running an unencrypted video streaming service": "Incorrect. Service identification is discovered via -sV, not filtered states.",
+                    "The computer monitor has applied a blue-light eye filter": "Incorrect. Display color temperature has no relation to network firewall filtering."
+                },
+                "key_term": "Filtered Port: A port state in Nmap indicating that a firewall or filter is blocking probe packets from reaching the port."
+            }
+        },
+        {
+            "id": "m7_e_06",
+            "raw_id": 6,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Packet analysis",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In order for Wireshark to capture all network packets on a local network segment (including packets not addressed to its own MAC address), what mode must the network interface card (NIC) support and enable?",
+            "type": "single",
+            "options": [
+                "Promiscuous Mode",
+                "Stealth Airplane Mode",
+                "Battery Saver Mode",
+                "Eco-Friendly Mode"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about Promiscuous Mode in packet analysis.",
+                "why_correct": "Normally, a NIC discards frames whose destination MAC does not match its own hardware address. In 'Promiscuous Mode', the NIC passes all received frames on the wire directly to the operating system, allowing packet sniffers to inspect all local traffic.",
+                "options_breakdown": {
+                    "Promiscuous Mode": "Correct. Promiscuous mode allows the NIC to capture all network traffic on the local segment regardless of destination MAC.",
+                    "Stealth Airplane Mode": "Incorrect. Airplane mode disables wireless transmitters entirely.",
+                    "Battery Saver Mode": "Incorrect. Battery saver throttles background tasks to preserve power.",
+                    "Eco-Friendly Mode": "Incorrect. This is a generic environmental appliance setting."
+                },
+                "key_term": "Promiscuous Mode: A configuration of a network interface controller that causes it to pass all traffic it receives to the central processing unit rather than only frames addressed to it."
+            }
+        },
+        {
+            "id": "m7_e_07",
+            "raw_id": 7,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Log analysis",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary purpose of 'Log Analysis' in cybersecurity operations?",
+            "type": "single",
+            "options": [
+                "Reviewing, parsing, and investigating system event records to detect security breaches, audit user activity, and troubleshoot issues",
+                "Cutting down wooden logs to build server desks",
+                "Writing personal daily diary entries in an encrypted text file",
+                "Deleting all files on a computer once a month"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the operational definition of log analysis.",
+                "why_correct": "Log analysis is the systematic process of reviewing computer-generated event logs (firewalls, servers, authentication systems, endpoints) to detect anomalous behavior, confirm breaches, and reconstruct cyber incident timelines.",
+                "options_breakdown": {
+                    "Reviewing, parsing, and investigating system event records to detect security breaches, audit user activity, and troubleshoot issues": "Correct. Log analysis reconstructs security events from system-generated historical audit records.",
+                    "Cutting down wooden logs to build server desks": "Incorrect. In computing, 'logs' are record files, not physical timber.",
+                    "Writing personal daily diary entries in an encrypted text file": "Incorrect. Log analysis evaluates automated system event streams.",
+                    "Deleting all files on a computer once a month": "Incorrect. Deleting logs impedes forensic investigations."
+                },
+                "key_term": "Log Analysis: The analysis of computer-generated records (logs) to identify patterns, anomalies, and security events."
+            }
+        },
+        {
+            "id": "m7_e_08",
+            "raw_id": 8,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Vulnerability assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is an automated Vulnerability Scanner (such as Nessus, OpenVAS, or Qualys)?",
+            "type": "single",
+            "options": [
+                "A tool that scans networks and systems against databases of known security flaws, unpatched software, and misconfigurations, generating risk reports",
+                "A software program that automatically steals credit cards from web browsers",
+                "A physical laser scanner used to check employee badges at building entrances",
+                "A hardware tool that repairs broken network cables"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the definition of vulnerability scanners.",
+                "why_correct": "Vulnerability scanners automate the process of checking target systems against known vulnerability databases (such as CVEs), testing for missing patches, default credentials, and insecure service configurations.",
+                "options_breakdown": {
+                    "A tool that scans networks and systems against databases of known security flaws, unpatched software, and misconfigurations, generating risk reports": "Correct. Vulnerability scanners identify and catalog known weaknesses.",
+                    "A software program that automatically steals credit cards from web browsers": "Incorrect. That is an infostealer or Magecart malware, not a vulnerability scanner.",
+                    "A physical laser scanner used to check employee badges at building entrances": "Incorrect. That is an optical badge reader.",
+                    "A hardware tool that repairs broken network cables": "Incorrect. That is a cable tester or crimper."
+                },
+                "key_term": "Vulnerability Scanner: Software designed to assess computers, networks or applications for known weaknesses."
+            }
+        },
+        {
+            "id": "m7_e_09",
+            "raw_id": 9,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Safe introductory security labs",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why must cybersecurity students practice penetration testing and vulnerability scanning strictly within isolated laboratory environments (such as VirtualBox or dedicated cyber ranges)?",
+            "type": "single",
+            "options": [
+                "Scanning or testing systems without explicit written legal authorization is illegal and can disrupt live production systems",
+                "Because computers explode if scanned outside a laboratory",
+                "Because security tools only function when physically located inside a university classroom",
+                "Because penetration testing is strictly prohibited by computer monitor manufacturers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of legal ethics, unauthorized access laws, and lab safety.",
+                "why_correct": "Scanning, probing, or attacking systems without explicit authorization violates computer crime laws (such as the CFAA in the US or Computer Misuse Act in the UK). Isolated virtual labs allow safe, legal hands-on learning without risking real-world damage.",
+                "options_breakdown": {
+                    "Scanning or testing systems without explicit written legal authorization is illegal and can disrupt live production systems": "Correct. Authorization is the mandatory legal boundary separating ethical hacking from criminal activity.",
+                    "Because computers explode if scanned outside a laboratory": "Incorrect. Scanning sends network packets and does not cause physical explosions.",
+                    "Because security tools only function when physically located inside a university classroom": "Incorrect. Software tools execute regardless of geographic location.",
+                    "Because penetration testing is strictly prohibited by computer monitor manufacturers": "Incorrect. Hardware manufacturers have no legal authority over software testing practices."
+                },
+                "key_term": "Rules of Engagement (RoE): A formal document specifying the boundaries, scope, authorized targets, and legal permissions governing a security test."
+            }
+        },
+        {
+            "id": "m7_e_10",
+            "raw_id": 10,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Packet analysis",
+            "is_scenario": true,
+            "scenario": "An analyst captures network traffic while a user logs into an legacy FTP server. When viewing the packet capture, the analyst reads `USER admin` and `PASS Secret123!` in clear, unencrypted text.",
+            "question": "Why was the analyst able to read the password directly from the packet capture?",
+            "type": "single",
+            "options": [
+                "Legacy FTP transmits all authentication credentials and data in unencrypted plaintext across the network",
+                "The analyst used an AI program that cracked military-grade AES encryption in 1 millisecond",
+                "Wireshark automatically decrypts all HTTPS passwords on the Internet",
+                "The server's physical Ethernet cable was plugged in backwards"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of plaintext protocols versus encrypted protocols.",
+                "why_correct": "Legacy protocols (FTP, Telnet, unencrypted HTTP) transmit credentials in raw ASCII plaintext without encryption. Anyone capturing packets on the network path can read passwords directly without cracking.",
+                "options_breakdown": {
+                    "Legacy FTP transmits all authentication credentials and data in unencrypted plaintext across the network": "Correct. FTP lacks encryption, transmitting credentials in clear text.",
+                    "The analyst used an AI program that cracked military-grade AES encryption in 1 millisecond": "Incorrect. Plain FTP does not use AES or any encryption.",
+                    "Wireshark automatically decrypts all HTTPS passwords on the Internet": "Incorrect. Wireshark cannot decrypt TLS traffic without the server private key or pre-master secret log.",
+                    "The server's physical Ethernet cable was plugged in backwards": "Incorrect. Ethernet cables are symmetric or auto-MDIX and transmit digital bits identically."
+                },
+                "key_term": "Cleartext Protocol: A network protocol that transfers data in unencrypted format, exposing content to packet sniffers."
+            }
+        },
+        {
+            "id": "m7_e_11",
+            "raw_id": 11,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Basic security testing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a 'Ping' command and a 'Traceroute' command?",
+            "type": "single",
+            "options": [
+                "Ping checks if a remote host is reachable and measures round-trip time; Traceroute identifies each intermediate router hop along the network path to the destination",
+                "Ping only works on mobile phones, while Traceroute works on smartwatches",
+                "Ping is an illegal hacking tool, while Traceroute is a video game",
+                "There is zero difference; both execute identical code"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests basic network diagnostics tools (ping vs traceroute).",
+                "why_correct": "Ping sends ICMP Echo Requests to verify end-to-end host reachability. Traceroute (tracert on Windows) sends packets with incrementing TTL values to display the IP address and latency of every router hop along the path.",
+                "options_breakdown": {
+                    "Ping checks if a remote host is reachable and measures round-trip time; Traceroute identifies each intermediate router hop along the network path to the destination": "Correct. Ping tests reachability; traceroute maps the route path hop-by-hop.",
+                    "Ping only works on mobile phones, while Traceroute works on smartwatches": "Incorrect. Both utilities are built into all standard desktop, server, and mobile operating systems.",
+                    "Ping is an illegal hacking tool, while Traceroute is a video game": "Incorrect. Both are standard, authorized network diagnostic utilities.",
+                    "There is zero difference; both execute identical code": "Incorrect. They operate with different packet headers and TTL mechanics."
+                },
+                "key_term": "Traceroute: A computer network diagnostic tool for displaying the route (path) and measuring transit delays of packets across an IP network."
+            }
+        },
+        {
+            "id": "m7_e_12",
+            "raw_id": 12,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Security monitoring",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is an EDR (Endpoint Detection and Response) security tool?",
+            "type": "single",
+            "options": [
+                "An endpoint security software agent installed on workstations and servers that continuously monitors behavioral activities, detects threats, and enables remote incident response actions",
+                "An Emergency Disaster Radio used during earthquakes",
+                "An Ethernet Driver Reinstaller that fixes broken internet cables",
+                "An email application used to send marketing newsletters"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about Endpoint Detection and Response (EDR) technology.",
+                "why_correct": "EDR solutions (like CrowdStrike Falcon, SentinelOne, Microsoft Defender for Endpoint) monitor endpoint activities (process creation, file writes, network sockets, registry changes) to detect anomalous attacker behaviors that bypass traditional antivirus.",
+                "options_breakdown": {
+                    "An endpoint security software agent installed on workstations and servers that continuously monitors behavioral activities, detects threats, and enables remote incident response actions": "Correct. EDR provides continuous endpoint telemetry and real-time threat response capabilities.",
+                    "An Emergency Disaster Radio used during earthquakes": "Incorrect. EDR is an enterprise cybersecurity software agent.",
+                    "An Ethernet Driver Reinstaller that fixes broken internet cables": "Incorrect. EDR detects threats; it is not a device driver installer.",
+                    "An email application used to send marketing newsletters": "Incorrect. EDR is a defensive security platform, not email marketing software."
+                },
+                "key_term": "EDR (Endpoint Detection and Response): An integrated endpoint security solution that combines real-time continuous monitoring and collection of endpoint data with rules-based automated response."
+            }
+        },
+        {
+            "id": "m7_e_13",
+            "raw_id": 13,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Nmap",
+            "is_scenario": true,
+            "scenario": "A student types `nmap 192.168.1.1` in their terminal.",
+            "question": "By default, approximately how many of the most common well-known ports does Nmap scan when no specific port flags are specified?",
+            "type": "single",
+            "options": [
+                "The top 1,000 most common ports",
+                "All 65,535 possible ports",
+                "Exactly 1 single port (port 80)",
+                "Every port in the entire world"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests basic Nmap default scanning behavior.",
+                "why_correct": "When invoked without specific port arguments (like `-p-` or `-p 80`), Nmap defaults to scanning the top 1,000 most frequently open TCP ports on the target host.",
+                "options_breakdown": {
+                    "The top 1,000 most common ports": "Correct. By default, Nmap scans the 1,000 most commonly open ports based on its nmap-services database.",
+                    "All 65,535 possible ports": "Incorrect. Scanning all ports requires the explicit `-p-` or `-p 1-65535` flag.",
+                    "Exactly 1 single port (port 80)": "Incorrect. Nmap scans a comprehensive list of 1,000 ports by default.",
+                    "Every port in the entire world": "Incorrect. Nmap scans the specified destination host, not the entire internet."
+                },
+                "key_term": "Default Nmap Port Range: Nmap scans the 1,000 most popular ports determined by frequency of occurrence across the internet."
+            }
+        },
+        {
+            "id": "m7_e_14",
+            "raw_id": 14,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Wireshark",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What file format extension is standard for saving and sharing captured packet capture files in Wireshark and tcpdump?",
+            "type": "single",
+            "options": [
+                ".pcap (or .pcapng)",
+                ".mp3",
+                ".docx",
+                ".exe"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of packet capture file extensions.",
+                "why_correct": "Network traffic captures are saved as `.pcap` (Packet Capture) or modern `.pcapng` (Packet Capture Next Generation) files, standardized across Wireshark, tcpdump, and network analysis tools.",
+                "options_breakdown": {
+                    ".pcap (or .pcapng)": "Correct. PCAP is the universal file format for packet capture data.",
+                    ".mp3": "Incorrect. MP3 is an audio compression format.",
+                    ".docx": "Incorrect. DOCX is a Microsoft Word document format.",
+                    ".exe": "Incorrect. EXE is a Windows executable binary file format."
+                },
+                "key_term": "PCAP: An application programming interface and file format for capturing network traffic."
+            }
+        },
+        {
+            "id": "m7_e_15",
+            "raw_id": 15,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Safe introductory security labs",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between 'Bridged Networking' and 'Host-Only Networking' when configuring a virtual machine (VM) in VirtualBox for security testing?",
+            "type": "single",
+            "options": [
+                "Host-Only networking isolates the VM entirely to communicate only with the host computer (safe for malware); Bridged networking places the VM directly on your physical home Wi-Fi network (risk of spreading infections)",
+                "Host-Only networking deletes the VM every 5 minutes; Bridged networking is permanent",
+                "Bridged networking requires physical bridge construction across a river",
+                "There is zero difference; both configure identical network adapters"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests lab networking modes for safe malware and exploit testing.",
+                "why_correct": "Host-Only networking creates a private virtual network shared exclusively between the host and virtual machines, completely isolated from external networks (preventing accidental malware spread). Bridged mode connects the VM directly to your live physical LAN.",
+                "options_breakdown": {
+                    "Host-Only networking isolates the VM entirely to communicate only with the host computer (safe for malware); Bridged networking places the VM directly on your physical home Wi-Fi network (risk of spreading infections)": "Correct. Host-only isolates virtual labs safely; bridged mode exposes production LAN devices to lab traffic.",
+                    "Host-Only networking deletes the VM every 5 minutes; Bridged networking is permanent": "Incorrect. VM persistence is governed by virtual disk files, not network adapter modes.",
+                    "Bridged networking requires physical bridge construction across a river": "Incorrect. 'Bridge' is a networking term for connecting two network segments.",
+                    "There is zero difference; both configure identical network adapters": "Incorrect. They define fundamentally different routing and security boundaries."
+                },
+                "key_term": "Host-Only Networking: A virtual networking mode that allows virtual machines to communicate only with each other and the host computer, completely isolated from the external network."
+            }
+        },
+        {
+            "id": "m7_e_16",
+            "raw_id": 16,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Packet analysis",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In Wireshark, what is the 'Packet Details' pane used for?",
+            "type": "single",
+            "options": [
+                "Displaying the hierarchical protocol tree and header fields (Ethernet, IP, TCP, HTTP) of the currently selected packet",
+                "Playing streaming videos captured from the network",
+                "Formatting the computer's hard drive",
+                "Sending email spam messages to external websites"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the layout and functionality of the Wireshark GUI.",
+                "why_correct": "Wireshark's middle pane (Packet Details) displays the decoded protocol layers of the selected packet in a collapsible tree structure, detailing Ethernet headers, IP addresses, TCP sequence numbers, and payload attributes.",
+                "options_breakdown": {
+                    "Displaying the hierarchical protocol tree and header fields (Ethernet, IP, TCP, HTTP) of the currently selected packet": "Correct. The packet details pane breaks down protocol headers field by field.",
+                    "Playing streaming videos captured from the network": "Incorrect. Wireshark inspects raw packet bytes; it is not a media player.",
+                    "Formatting the computer's hard drive": "Incorrect. Wireshark is a passive inspection tool with zero disk formatting functions.",
+                    "Sending email spam messages to external websites": "Incorrect. Wireshark captures traffic; it is not an automated spam transmission utility."
+                },
+                "key_term": "Packet Details Pane: The middle pane in Wireshark that provides a breakdown of protocols and fields contained in the selected packet."
+            }
+        },
+        {
+            "id": "m7_e_17",
+            "raw_id": 17,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Basic security testing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between 'Black Box', 'White Box', and 'Gray Box' penetration testing?",
+            "type": "single",
+            "options": [
+                "Black Box provides zero prior internal knowledge; White Box provides full access to source code and network diagrams; Gray Box provides partial knowledge (like a standard user account)",
+                "Black Box is illegal; White Box is legal; Gray Box is partly legal",
+                "Black Box only works at night; White Box only works during the day; Gray Box works on cloudy days",
+                "Black Box tests physical door locks; White Box tests firewalls; Gray Box tests printers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests penetration testing knowledge disclosure models.",
+                "why_correct": "Black Box simulates an external adversary with zero inside knowledge. White Box (Clear Box) grants complete access to architecture, credentials, and source code. Gray Box simulates an insider or authenticated user with partial access.",
+                "options_breakdown": {
+                    "Black Box provides zero prior internal knowledge; White Box provides full access to source code and network diagrams; Gray Box provides partial knowledge (like a standard user account)": "Correct. These terms describe the level of information and access provided to the tester.",
+                    "Black Box is illegal; White Box is legal; Gray Box is partly legal": "Incorrect. All three are 100% legal when executed under an authorized scope of work.",
+                    "Black Box only works at night; White Box only works during the day; Gray Box works on cloudy days": "Incorrect. The colors refer to internal visibility, not lighting conditions.",
+                    "Black Box tests physical door locks; White Box tests firewalls; Gray Box tests printers": "Incorrect. All three models apply across network, web, cloud, and physical assessments."
+                },
+                "key_term": "Penetration Testing Models: The three primary approaches to security assessments based on the amount of preliminary information provided to testers."
+            }
+        },
+        {
+            "id": "m7_e_18",
+            "raw_id": 18,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Nmap",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which basic Nmap command-line flag enables 'Operating System Detection' by analyzing network stack responses?",
+            "type": "single",
+            "options": [
+                "-O",
+                "-p",
+                "-v",
+                "-h"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests standard Nmap command-line flags.",
+                "why_correct": "The `-O` flag enables OS detection in Nmap. Nmap sends a series of TCP and UDP packets to the remote host and inspects practically every bit in the responses, matching them against its database of thousands of known operating system fingerprints.",
+                "options_breakdown": {
+                    "-O": "Correct. The capital '-O' flag enables OS fingerprinting in Nmap.",
+                    "-p": "Incorrect. The '-p' flag specifies port numbers (e.g., -p 80,443).",
+                    "-v": "Incorrect. The '-v' flag increases output verbosity.",
+                    "-h": "Incorrect. The '-h' flag displays help and usage documentation."
+                },
+                "key_term": "Nmap -O: The command flag that enables remote operating system detection via TCP/IP stack fingerprinting."
+            }
+        },
+        {
+            "id": "m7_e_19",
+            "raw_id": 19,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Security monitoring",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a SIEM (Security Information and Event Management) system used for in an enterprise Security Operations Center (SOC)?",
+            "type": "single",
+            "options": [
+                "Centrally collecting, aggregating, normalizing, and correlating event logs from hundreds of servers, firewalls, and endpoints to detect security incidents",
+                "A computer video game where players simulate building computers",
+                "An automated email software that sends marketing discounts to customers",
+                "A hardware tool that cleans dust out of server fans"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the foundational role of a SIEM system.",
+                "why_correct": "A SIEM (e.g., Splunk, Microsoft Sentinel, IBM QRadar) centralizes log collection across an enterprise, providing automated threat correlation, alerting analysts to multi-stage attacks in real time.",
+                "options_breakdown": {
+                    "Centrally collecting, aggregating, normalizing, and correlating event logs from hundreds of servers, firewalls, and endpoints to detect security incidents": "Correct. SIEM platforms correlate disparate enterprise logs to detect attacks and support investigations.",
+                    "A computer video game where players simulate building computers": "Incorrect. SIEM is a critical enterprise security software platform.",
+                    "An automated email software that sends marketing discounts to customers": "Incorrect. Marketing automation handles sales, not security logs.",
+                    "A hardware tool that cleans dust out of server fans": "Incorrect. A SIEM is an enterprise software system."
+                },
+                "key_term": "SIEM (Security Information and Event Management): A security solution that provides organizations with next-generation detection, analytics, and response by aggregating log data."
+            }
+        },
+        {
+            "id": "m7_e_20",
+            "raw_id": 20,
+            "module_id": 7,
+            "difficulty": "easy",
+            "topic": "Network scanning",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following activities are essential steps before conducting any network scanning or security assessment on a target network? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Obtaining explicit, written legal authorization and scope permission from the system owner",
+                "Defining the Rules of Engagement (RoE) including approved testing windows and out-of-scope systems",
+                "Ensuring emergency contact procedures are established in case systems experience instability",
+                "Posting the target's IP address on public hacking forums to invite strangers to attack"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question tests professional ethics, legal authorization, and rules of engagement.",
+                "why_correct": "Authorized security testing requires written permissions, defined scope boundaries, and emergency contact procedures. Inviting anonymous third parties to attack a system is illegal and dangerous.",
+                "options_breakdown": {
+                    "Obtaining explicit, written legal authorization and scope permission from the system owner": "Correct. Written permission is the prerequisite legal shield protecting testers.",
+                    "Defining the Rules of Engagement (RoE) including approved testing windows and out-of-scope systems": "Correct. Clear rules prevent testing critical production equipment outside maintenance windows.",
+                    "Ensuring emergency contact procedures are established in case systems experience instability": "Correct. Rapid communication ensures unintended outages can be halted immediately.",
+                    "Posting the target's IP address on public hacking forums to invite strangers to attack": "Incorrect. This causes unauthorized malicious attacks and constitutes criminal behavior."
+                },
+                "key_term": "Rules of Engagement: A formal contract and set of guidelines governing the scope, methods, and responsibilities during a cybersecurity assessment."
+            }
+        },
+        {
+            "id": "m7_i_21",
+            "raw_id": 21,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Nmap",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the operational difference between an Nmap TCP SYN Stealth Scan (`-sS`) and a TCP Connect Scan (`-sT`)?",
+            "type": "single",
+            "options": [
+                "The SYN Stealth scan sends a SYN and tears down the connection with an RST upon receiving SYN-ACK (never completing the 3-way handshake); the Connect scan completes the full 3-way handshake using the OS network stack",
+                "The SYN scan is only for Windows; the Connect scan is only for Linux",
+                "The SYN scan physically unplugs the Ethernet cable; the Connect scan leaves it plugged in",
+                "There is zero difference; both send identical packets"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the technical mechanics of Nmap's default SYN scan vs full TCP Connect scan.",
+                "why_correct": "The TCP SYN scan (`-sS`) is called a 'half-open' scan because it never completes the TCP handshake. Upon receiving SYN-ACK, Nmap immediately sends an RST, preventing older application servers from logging a completed connection. The `-sT` scan uses the OS `connect()` API, completing the handshake.",
+                "options_breakdown": {
+                    "The SYN Stealth scan sends a SYN and tears down the connection with an RST upon receiving SYN-ACK (never completing the 3-way handshake); the Connect scan completes the full 3-way handshake using the OS network stack": "Correct. SYN scans abort with RST before completing the handshake, minimizing logging on older systems.",
+                    "The SYN scan is only for Windows; the Connect scan is only for Linux": "Incorrect. Both scans operate across all supported operating systems.",
+                    "The SYN scan physically unplugs the Ethernet cable; the Connect scan leaves it plugged in": "Incorrect. Both are software network packet generation techniques.",
+                    "There is zero difference; both send identical packets": "Incorrect. Connect sends a final ACK and teardown, while SYN sends an immediate RST."
+                },
+                "key_term": "SYN Stealth Scan (-sS): A port scan technique in Nmap that sends SYN packets and does not complete the 3-way handshake, remaining stealthier than a full connect scan."
+            }
+        },
+        {
+            "id": "m7_i_22",
+            "raw_id": 22,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Nmap",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which Nmap flag probes open ports to determine the exact service name and version running on the target system (e.g., distinguishing Apache 2.4.41 from Nginx 1.18.0)?",
+            "type": "single",
+            "options": [
+                "-sV",
+                "-sP",
+                "-Pn",
+                "-sn"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests Nmap service version detection syntax.",
+                "why_correct": "The `-sV` (Version detection) flag instructs Nmap to interrogate open ports with protocol-specific probe queries, matching banner responses against its database to determine the exact application name and version number.",
+                "options_breakdown": {
+                    "-sV": "Correct. The '-sV' flag executes service and application version detection.",
+                    "-sP": "Incorrect. '-sP' (now '-sn') executes a ping sweep / host discovery without scanning ports.",
+                    "-Pn": "Incorrect. '-Pn' skips host discovery and treats all targets as online.",
+                    "-sn": "Incorrect. '-sn' disables port scanning, only performing host discovery."
+                },
+                "key_term": "Nmap -sV: The version detection flag in Nmap used to determine service protocol, application name, and version number on open ports."
+            }
+        },
+        {
+            "id": "m7_i_23",
+            "raw_id": 23,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Wireshark",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which Wireshark Display Filter expression filters the live packet capture to display only HTTP POST requests originating from IP address `192.168.1.50`?",
+            "type": "single",
+            "options": [
+                "ip.src == 192.168.1.50 && http.request.method == \"POST\"",
+                "port == 80 || delete all",
+                "find 192.168.1.50 with post",
+                "filter: IP=192.168.1.50, HTTP=POST"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests precise Wireshark display filter syntax.",
+                "why_correct": "Wireshark display filters use logical expressions. `ip.src == 192.168.1.50` matches source IP, `&&` is logical AND, and `http.request.method == \"POST\"` filters specifically for HTTP POST methods.",
+                "options_breakdown": {
+                    "ip.src == 192.168.1.50 && http.request.method == \"POST\"": "Correct. This combines source IP and HTTP method using valid Wireshark display filter syntax.",
+                    "port == 80 || delete all": "Incorrect. Wireshark filters do not delete packets, and syntax is malformed.",
+                    "find 192.168.1.50 with post": "Incorrect. This is plain English, not valid Wireshark filter syntax.",
+                    "filter: IP=192.168.1.50, HTTP=POST": "Incorrect. Wireshark does not use colon-prefixed command syntax."
+                },
+                "key_term": "Display Filter: An expression in Wireshark used to reduce the list of displayed packets to only those matching specific criteria."
+            }
+        },
+        {
+            "id": "m7_i_24",
+            "raw_id": 24,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "tcpdump",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which tcpdump command captures traffic on interface `eth0`, filters specifically for TCP traffic on port 80, and saves the raw capture to a file named `web.pcap` without resolving DNS hostnames?",
+            "type": "single",
+            "options": [
+                "tcpdump -i eth0 -nn -w web.pcap 'tcp port 80'",
+                "tcpdump --all-internet-save web.pcap",
+                "tcpdump download port 80 to web.pcap",
+                "tcpdump print screen > web.pcap"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests standard tcpdump command-line arguments.",
+                "why_correct": "`-i eth0` selects interface, `-nn` disables DNS hostname and service port resolution (saving CPU and preventing DNS leaks), `-w web.pcap` writes raw packet bytes to file, and `'tcp port 80'` specifies the BPF filter.",
+                "options_breakdown": {
+                    "tcpdump -i eth0 -nn -w web.pcap 'tcp port 80'": "Correct. This cleanly specifies interface, non-resolving options, output file, and BPF port filter.",
+                    "tcpdump --all-internet-save web.pcap": "Incorrect. This is not valid tcpdump syntax.",
+                    "tcpdump download port 80 to web.pcap": "Incorrect. tcpdump does not use English command verbs.",
+                    "tcpdump print screen > web.pcap": "Incorrect. Redirecting stdout produces formatted text dumps rather than valid binary PCAP files."
+                },
+                "key_term": "tcpdump BPF: Berkeley Packet Filter expressions used by tcpdump to selectively capture matching packet traffic."
+            }
+        },
+        {
+            "id": "m7_i_25",
+            "raw_id": 25,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Wireshark",
+            "is_scenario": true,
+            "scenario": "An analyst investigates a multi-packet HTTP session in Wireshark. Rather than reading dozens of individual TCP packets piece by piece, the analyst wants to reconstruct the entire human-readable client-server conversation in a single contiguous window.",
+            "question": "Which powerful Wireshark feature accomplishes this?",
+            "type": "single",
+            "options": [
+                "Follow TCP Stream",
+                "Colorize Conversation",
+                "Export Packet Bytes as Audio",
+                "Merge Capture Files"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests the 'Follow TCP Stream' feature in Wireshark.",
+                "why_correct": "The 'Follow TCP Stream' feature automatically assembles reordered TCP segments, strips protocol headers, and displays the reconstructed application-layer payload (HTTP requests and responses) in a clean text dialog.",
+                "options_breakdown": {
+                    "Follow TCP Stream": "Correct. 'Follow TCP Stream' reassembles TCP payload segments into a continuous readable dialog.",
+                    "Colorize Conversation": "Incorrect. Colorize applies visual colors to packets in the main list, but does not reassemble text streams.",
+                    "Export Packet Bytes as Audio": "Incorrect. Wireshark exports RTP audio, but not generic HTTP web conversations as sound.",
+                    "Merge Capture Files": "Incorrect. Merge combines two separate capture files on disk."
+                },
+                "key_term": "Follow TCP Stream: A Wireshark feature that reassembles all data exchanged in a TCP conversation and displays it as a readable text stream."
+            }
+        },
+        {
+            "id": "m7_i_26",
+            "raw_id": 26,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Nmap",
+            "is_scenario": true,
+            "scenario": "A firewall on a remote target drops all incoming ICMP Echo Requests (ping probes), causing standard Nmap scans to report that the host is offline.",
+            "question": "Which Nmap flag instructs the scanner to skip host discovery and treat the target as online, forcing port scanning anyway?",
+            "type": "single",
+            "options": [
+                "-Pn",
+                "-sn",
+                "-n",
+                "-sU"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests scanning hosts that block ICMP pings.",
+                "why_correct": "The `-Pn` (No Ping) flag disables Nmap's initial host discovery phase. Nmap bypasses ping checks and proceeds directly to port scanning, allowing scans against hosts protected by firewalls that drop ICMP.",
+                "options_breakdown": {
+                    "-Pn": "Correct. '-Pn' treats all target hosts as online, bypassing ICMP ping discovery.",
+                    "-sn": "Incorrect. '-sn' does the exact opposite: it only pings and skips port scanning.",
+                    "-n": "Incorrect. '-n' disables reverse DNS lookups, but still executes host discovery.",
+                    "-sU": "Incorrect. '-sU' initiates a UDP port scan."
+                },
+                "key_term": "Nmap -Pn: The command flag that tells Nmap to skip the host discovery stage and treat all specified target IP addresses as active."
+            }
+        },
+        {
+            "id": "m7_i_27",
+            "raw_id": 27,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Vulnerability assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the Common Vulnerability Scoring System (CVSS)?",
+            "type": "single",
+            "options": [
+                "A standardized, open industry framework for assessing and scoring the severity of software vulnerabilities on a scale from 0.0 to 10.0",
+                "A score assigned to students based on how fast they type",
+                "The price in dollars required to purchase an exploit on the dark web",
+                "A rating system for computer video game graphics"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of the CVSS vulnerability scoring framework.",
+                "why_correct": "CVSS (maintained by FIRST) provides an open framework for communicating the characteristics and severity of software vulnerabilities, producing a numerical score from 0.0 (None) to 10.0 (Critical) based on metrics like attack vector, complexity, privileges required, and impact.",
+                "options_breakdown": {
+                    "A standardized, open industry framework for assessing and scoring the severity of software vulnerabilities on a scale from 0.0 to 10.0": "Correct. CVSS standardizes vulnerability severity ratings globally.",
+                    "A score assigned to students based on how fast they type": "Incorrect. Typing speed is measured in words per minute (WPM).",
+                    "The price in dollars required to purchase an exploit on the dark web": "Incorrect. CVSS measures technical severity, not monetary exploit prices.",
+                    "A rating system for computer video game graphics": "Incorrect. Game graphics ratings are commercial reviews, not vulnerability frameworks."
+                },
+                "key_term": "CVSS (Common Vulnerability Scoring System): An open framework for communicating the characteristics and severity of software vulnerabilities."
+            }
+        },
+        {
+            "id": "m7_i_28",
+            "raw_id": 28,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Log analysis",
+            "is_scenario": true,
+            "scenario": "A SOC analyst examines a Linux server's `/var/log/auth.log` file using command-line text utilities.",
+            "question": "Which pipeline displays the top 10 external IP addresses generating the highest number of failed SSH login attempts?",
+            "type": "single",
+            "options": [
+                "grep 'Failed password' /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr | head -n 10",
+                "cat /var/log/auth.log | rm -rf",
+                "ls -l /var/log/auth.log",
+                "echo 'Failed password' > /var/log/auth.log"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests practical command-line log analysis using grep, awk, sort, and uniq.",
+                "why_correct": "This pipeline extracts failed password lines (`grep`), isolates the IP column (`awk`), groups identical IPs (`sort | uniq -c`), sorts them in descending order of frequency (`sort -nr`), and prints the top 10 offenders (`head -n 10`).",
+                "options_breakdown": {
+                    "grep 'Failed password' /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr | head -n 10": "Correct. This standard forensic pipeline aggregates and counts failed login IP frequencies.",
+                    "cat /var/log/auth.log | rm -rf": "Incorrect. This is dangerous and nonsensical syntax.",
+                    "ls -l /var/log/auth.log": "Incorrect. 'ls -l' only displays file size and permissions, not log contents.",
+                    "echo 'Failed password' > /var/log/auth.log": "Incorrect. This overwrites and destroys the authentication log file."
+                },
+                "key_term": "Command-Line Log Parsing: Combining standard Unix utilities (grep, awk, sort, uniq) to parse, filter, and extract intelligence from raw log files."
+            }
+        },
+        {
+            "id": "m7_i_29",
+            "raw_id": 29,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Nmap",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the function of the Nmap Scripting Engine (NSE) accessible via the `--script` flag?",
+            "type": "single",
+            "options": [
+                "It allows users to execute automated Lua scripts for advanced vulnerability detection, backdoor discovery, and network service exploitation",
+                "It allows Nmap to play mp3 audio files during scanning",
+                "It automatically types emails to the company CEO",
+                "It reformats the scanner's hard drive into MS-DOS"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the Nmap Scripting Engine (NSE).",
+                "why_correct": "The Nmap Scripting Engine (NSE) extends Nmap's capabilities using Lua scripts. Scripts are categorized into safe, discovery, vuln, exploit, and auth, automating complex tasks like checking for Heartbleed, SMB vulnerabilities, or default credentials.",
+                "options_breakdown": {
+                    "It allows users to execute automated Lua scripts for advanced vulnerability detection, backdoor discovery, and network service exploitation": "Correct. NSE automates vulnerability checking, network discovery, and advanced service probing via Lua scripts.",
+                    "It allows Nmap to play mp3 audio files during scanning": "Incorrect. Nmap does not play media files.",
+                    "It automatically types emails to the company CEO": "Incorrect. Nmap does not compose executive emails.",
+                    "It reformats the scanner's hard drive into MS-DOS": "Incorrect. Nmap is a network scanner, not a disk formatting tool."
+                },
+                "key_term": "NSE (Nmap Scripting Engine): A powerful feature of Nmap that allows users to write and share scripts to automate a wide variety of networking tasks."
+            }
+        },
+        {
+            "id": "m7_i_30",
+            "raw_id": 30,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Packet analysis",
+            "is_scenario": true,
+            "scenario": "An analyst captures a DNS lookup in Wireshark and notices that while standard DNS queries and responses are clearly visible, all subsequent HTTPS traffic on port 443 displays encrypted Application Data.",
+            "question": "Why is the DNS query visible in cleartext while the HTTPS payload is unreadable?",
+            "type": "single",
+            "options": [
+                "Traditional DNS (UDP port 53) is unencrypted cleartext, while HTTPS is encrypted using TLS",
+                "The analyst's computer ran out of memory after the DNS packet",
+                "Wireshark was designed to only decrypt UDP packets",
+                "The web server turned off encryption for the first 5 seconds"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of protocol encryption boundaries in packet captures.",
+                "why_correct": "Traditional DNS operates over unencrypted UDP port 53, leaving domain queries in plain text. Once the client connects to the web server on port 443, TLS encryption encapsulates all HTTP payloads, rendering them unreadable without decryption keys.",
+                "options_breakdown": {
+                    "Traditional DNS (UDP port 53) is unencrypted cleartext, while HTTPS is encrypted using TLS": "Correct. Traditional DNS is unencrypted; HTTPS payload data is encrypted via TLS.",
+                    "The analyst's computer ran out of memory after the DNS packet": "Incorrect. Memory availability has no effect on packet encryption status.",
+                    "Wireshark was designed to only decrypt UDP packets": "Incorrect. Wireshark inspects whatever bytes are transmitted, encrypted or unencrypted.",
+                    "The web server turned off encryption for the first 5 seconds": "Incorrect. TLS negotiation establishes full session encryption from the start."
+                },
+                "key_term": "Cleartext DNS: Standard DNS queries lack encryption, leaking requested domain names to network packet sniffers."
+            }
+        },
+        {
+            "id": "m7_i_31",
+            "raw_id": 31,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Vulnerability assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between an Authenticated (Credentialed) Vulnerability Scan and an Unauthenticated (Non-Credentialed) Scan?",
+            "type": "single",
+            "options": [
+                "An authenticated scan logs into the target system using valid credentials to inspect local patch levels and internal configurations; an unauthenticated scan inspects only externally exposed network ports and services",
+                "An authenticated scan is illegal, while an unauthenticated scan is legal",
+                "An authenticated scan deletes all user passwords",
+                "There is zero difference; both produce identical findings"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about authenticated vs unauthenticated vulnerability scanning.",
+                "why_correct": "An unauthenticated scan probes systems from the perspective of an external hacker, checking open ports and service banners. An authenticated scan logs into the OS with credentials, checking local file permissions, registry keys, software versions, and missing security patches from within.",
+                "options_breakdown": {
+                    "An authenticated scan logs into the target system using valid credentials to inspect local patch levels and internal configurations; an unauthenticated scan inspects only externally exposed network ports and services": "Correct. Credentialed scans provide deep internal host visibility; uncredentialed scans simulate external attackers.",
+                    "An authenticated scan is illegal, while an unauthenticated scan is legal": "Incorrect. Both are authorized testing methodologies when contracted by the system owner.",
+                    "An authenticated scan deletes all user passwords": "Incorrect. Vulnerability scanners inspect configurations and do not delete passwords.",
+                    "There is zero difference; both produce identical findings": "Incorrect. Authenticated scans find dramatically more internal vulnerabilities and missing patches."
+                },
+                "key_term": "Credentialed Scan: A security vulnerability scan performed using authorized system credentials to perform in-depth internal configuration and patch auditing."
+            }
+        },
+        {
+            "id": "m7_i_32",
+            "raw_id": 32,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Security monitoring",
+            "is_scenario": true,
+            "scenario": "An analyst configures a port on an enterprise network switch to copy all traffic from ports 1 through 24 and forward it to port 25, where a network intrusion detection sensor (NIDS) is listening.",
+            "question": "What switch monitoring feature was configured?",
+            "type": "single",
+            "options": [
+                "Port Mirroring / SPAN (Switched Port Analyzer)",
+                "Spanning Tree Protocol (STP)",
+                "Dynamic Trunking Protocol (DTP)",
+                "Power over Ethernet (PoE)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Port Mirroring (SPAN) for network monitoring.",
+                "why_correct": "Because switches partition collision domains, a sniffer plugged into a standard port cannot see other ports' traffic. Port Mirroring (SPAN) copies packets from designated source ports to a monitoring port connected to an IDS or packet analyzer.",
+                "options_breakdown": {
+                    "Port Mirroring / SPAN (Switched Port Analyzer)": "Correct. Port Mirroring (SPAN) sends copies of network traffic to a dedicated analysis port.",
+                    "Spanning Tree Protocol (STP)": "Incorrect. STP prevents Layer 2 switching loops.",
+                    "Dynamic Trunking Protocol (DTP)": "Incorrect. DTP negotiates trunk links between switches.",
+                    "Power over Ethernet (PoE)": "Incorrect. PoE delivers electrical power to IP phones and access points."
+                },
+                "key_term": "Port Mirroring (SPAN): A method of monitoring network traffic that forwards a copy of incoming and outgoing packets from one port on a network switch to another port."
+            }
+        },
+        {
+            "id": "m7_i_33",
+            "raw_id": 33,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Nmap",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which Nmap flag executes an aggressive scan combining OS detection (`-O`), service version detection (`-sV`), script scanning (`-sC`), and traceroute (`--traceroute`) in a single flag?",
+            "type": "single",
+            "options": [
+                "-A",
+                "-sA",
+                "-T0",
+                "-p-"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests Nmap's comprehensive aggressive scan flag.",
+                "why_correct": "The `-A` (Aggressive) flag is a convenient macro that enables OS detection (`-O`), version scanning (`-sV`), default script scanning (`-sC`), and traceroute detection (`--traceroute`) simultaneously.",
+                "options_breakdown": {
+                    "-A": "Correct. The '-A' flag enables aggressive scanning combining OS, version, script, and traceroute checks.",
+                    "-sA": "Incorrect. '-sA' performs a TCP ACK scan used to map firewall rule sets.",
+                    "-T0": "Incorrect. '-T0' sets paranoid (ultra-slow) timing.",
+                    "-p-": "Incorrect. '-p-' scans all 65,535 ports."
+                },
+                "key_term": "Nmap -A: The aggressive scan flag that enables OS detection, version detection, script scanning, and traceroute."
+            }
+        },
+        {
+            "id": "m7_i_34",
+            "raw_id": 34,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "tcpdump",
+            "is_scenario": true,
+            "scenario": "A network engineer suspects an ongoing ARP poisoning attack on the local subnet.",
+            "question": "Which tcpdump filter syntax captures only Address Resolution Protocol (ARP) packets on interface `eth0`?",
+            "type": "single",
+            "options": [
+                "tcpdump -i eth0 arp",
+                "tcpdump -i eth0 'tcp port 80'",
+                "tcpdump -i eth0 'udp port 53'",
+                "tcpdump -i eth0 'icmp'"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests tcpdump protocol filtering for ARP traffic.",
+                "why_correct": "Specifying `arp` in tcpdump isolates Layer 2 Address Resolution Protocol packets, allowing engineers to inspect ARP requests and replies for spoofing or duplicate MAC mappings.",
+                "options_breakdown": {
+                    "tcpdump -i eth0 arp": "Correct. Filtering for 'arp' captures only ARP protocol packets.",
+                    "tcpdump -i eth0 'tcp port 80'": "Incorrect. This captures HTTP web traffic, not ARP.",
+                    "tcpdump -i eth0 'udp port 53'": "Incorrect. This captures DNS traffic, not ARP.",
+                    "tcpdump -i eth0 'icmp'": "Incorrect. This captures ping and ICMP control messages, not ARP."
+                },
+                "key_term": "tcpdump Protocol Filter: Using protocol names (arp, icmp, ip, tcp, udp) to isolate specific traffic types in tcpdump."
+            }
+        },
+        {
+            "id": "m7_i_35",
+            "raw_id": 35,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Basic security testing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following activities are standard phases in the Penetration Testing Execution Standard (PTES)? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Pre-engagement Interactions (scoping and legal rules of engagement)",
+                "Intelligence Gathering (OSINT and reconnaissance)",
+                "Threat Modeling and Vulnerability Analysis",
+                "Stealing company laptops and selling them on eBay"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about the formal phases of the PTES framework.",
+                "why_correct": "PTES defines seven standardized phases: Pre-engagement, Intelligence Gathering, Threat Modeling, Vulnerability Analysis, Exploitation, Post Exploitation, and Reporting. Physical hardware theft for personal resale is criminal theft.",
+                "options_breakdown": {
+                    "Pre-engagement Interactions (scoping and legal rules of engagement)": "Correct. Pre-engagement establishes legal scope and authorized boundaries.",
+                    "Intelligence Gathering (OSINT and reconnaissance)": "Correct. Intelligence gathering collects open-source data about the target.",
+                    "Threat Modeling and Vulnerability Analysis": "Correct. Threat modeling identifies assets and maps testing approaches.",
+                    "Stealing company laptops and selling them on eBay": "Incorrect. Physical theft for profit is criminal conduct with zero testing authorization."
+                },
+                "key_term": "PTES (Penetration Testing Execution Standard): A comprehensive standard defining the core phases of a professional penetration test."
+            }
+        },
+        {
+            "id": "m7_i_36",
+            "raw_id": 36,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Safe introductory security labs",
+            "is_scenario": true,
+            "scenario": "A student downloads a live ransomware sample to study its execution behavior in a laboratory.",
+            "question": "What safety measure MUST be taken on the virtual machine's virtual network adapter before executing the malware?",
+            "type": "single",
+            "options": [
+                "Disconnect the virtual network adapter completely or isolate it to a segregated Host-Only / Internal virtual network with zero external internet routing",
+                "Bridge the adapter directly to the home Wi-Fi router",
+                "Turn the computer screen brightness to 100%",
+                "Download 5 extra web browsers on the host machine"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests lab isolation protocols when handling live malware.",
+                "why_correct": "Live malware (especially worms and ransomware) must never have access to bridged production networks or the public internet, where it could infect personal devices or connect to live C2 infrastructure. Virtual adapters must be set to Host-Only or disconnected completely.",
+                "options_breakdown": {
+                    "Disconnect the virtual network adapter completely or isolate it to a segregated Host-Only / Internal virtual network with zero external internet routing": "Correct. Complete network isolation prevents malware propagation and accidental external harm.",
+                    "Bridge the adapter directly to the home Wi-Fi router": "Incorrect. Bridging exposes your physical home LAN and router to ransomware infection.",
+                    "Turn the computer screen brightness to 100%": "Incorrect. Display settings have no isolation capability.",
+                    "Download 5 extra web browsers on the host machine": "Incorrect. Installing extra browsers does not isolate virtual malware."
+                },
+                "key_term": "Malware Lab Isolation: The practice of running malicious code in an environment physically or logically separated from all production networks."
+            }
+        },
+        {
+            "id": "m7_i_37",
+            "raw_id": 37,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Wireshark",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In Wireshark, what does the 'Capture Filter' do, and how does it differ from a 'Display Filter'?",
+            "type": "single",
+            "options": [
+                "A Capture Filter filters packets at the driver level before they are recorded to disk (discarding non-matching packets); a Display Filter filters the visual display of already captured packets without deleting them",
+                "A Capture Filter only works on Windows; a Display Filter only works on Linux",
+                "A Capture Filter is hardware; a Display Filter is software",
+                "There is zero difference between them"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the fundamental difference between Capture Filters (BPF) and Display Filters in Wireshark.",
+                "why_correct": "Capture Filters use BPF syntax and execute during capture; packets that don't match are permanently discarded and never recorded. Display Filters execute after capture; they simply hide non-matching packets from the visual screen while keeping all data in the PCAP.",
+                "options_breakdown": {
+                    "A Capture Filter filters packets at the driver level before they are recorded to disk (discarding non-matching packets); a Display Filter filters the visual display of already captured packets without deleting them": "Correct. Capture filters permanently drop non-matching packets; display filters non-destructively adjust the view.",
+                    "A Capture Filter only works on Windows; a Display Filter only works on Linux": "Incorrect. Both filter types exist across all supported platforms.",
+                    "A Capture Filter is hardware; a Display Filter is software": "Incorrect. Both are software filtering mechanisms in Wireshark.",
+                    "There is zero difference between them": "Incorrect. They use different syntax (BPF vs Wireshark display syntax) and operate at different pipeline stages."
+                },
+                "key_term": "Capture Filter vs Display Filter: Capture filters restrict what raw bytes are written to file; display filters change what is visible on screen."
+            }
+        },
+        {
+            "id": "m7_i_38",
+            "raw_id": 38,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Nmap",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why does a UDP scan (`nmap -sU`) typically take significantly longer to complete than a TCP SYN scan (`nmap -sS`)?",
+            "type": "single",
+            "options": [
+                "UDP is connectionless and open ports typically return no acknowledgment; when ports are closed, operating systems rate-limit the generation of ICMP Port Unreachable error packets",
+                "UDP requires physical satellite verification for each packet",
+                "UDP packets can only travel at 1 bit per second",
+                "UDP was designed to only run on solar-powered computers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the technical mechanics and performance challenges of UDP scanning.",
+                "why_correct": "When a UDP port is open, services rarely respond unless queried with a valid protocol payload. When closed, RFC standards mandate that operating systems (especially Linux) rate-limit ICMP Type 3 Code 3 (Port Unreachable) packets to 1 per second, making UDP scans slow.",
+                "options_breakdown": {
+                    "UDP is connectionless and open ports typically return no acknowledgment; when ports are closed, operating systems rate-limit the generation of ICMP Port Unreachable error packets": "Correct. Kernel ICMP rate-limiting and lack of acknowledgments make UDP port scans slow.",
+                    "UDP requires physical satellite verification for each packet": "Incorrect. UDP operates over standard terrestrial IP links.",
+                    "UDP packets can only travel at 1 bit per second": "Incorrect. UDP transfers data at high network wire speeds.",
+                    "UDP was designed to only run on solar-powered computers": "Incorrect. UDP runs across all standard computing hardware."
+                },
+                "key_term": "UDP Scan Timing: The inherent latency of UDP port scanning caused by kernel ICMP error packet rate-limiting and absent acknowledgments."
+            }
+        },
+        {
+            "id": "m7_i_39",
+            "raw_id": 39,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Security monitoring",
+            "is_scenario": true,
+            "scenario": "An administrator notices a surge in HTTP 404 (Not Found) errors in web server logs originating from a single IP address requesting paths like `/admin`, `/phpmyadmin`, `/.env`, and `/wp-login.php` within 3 seconds.",
+            "question": "What automated security tool was likely running against the web server?",
+            "type": "single",
+            "options": [
+                "A Web Directory Brute-Forcer / Content Discovery Tool (such as Gobuster, Feroxbuster, or Dirb)",
+                "A legitimate search engine indexing blog posts",
+                "An operating system defragmentation utility",
+                "A video conferencing client"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests recognizing automated directory brute-forcing in web logs.",
+                "why_correct": "Tools like Gobuster and Feroxbuster send rapid requests against wordlists of common paths (`/admin`, `/.git`, `/wp-login.php`). Non-existent files generate high volumes of 404 status codes, revealing active reconnaissance.",
+                "options_breakdown": {
+                    "A Web Directory Brute-Forcer / Content Discovery Tool (such as Gobuster, Feroxbuster, or Dirb)": "Correct. High-speed 404 errors for administrative paths indicate automated directory discovery scans.",
+                    "A legitimate search engine indexing blog posts": "Incorrect. Search crawlers follow links politely and do not blast brute-force administrative paths.",
+                    "An operating system defragmentation utility": "Incorrect. Defragmentation arranges disk blocks and generates zero HTTP requests.",
+                    "A video conferencing client": "Incorrect. Video clients stream UDP media, not directory brute-force requests."
+                },
+                "key_term": "Directory Brute-Forcing: An attack technique where tools systematically request thousands of common URLs to discover hidden pages and administrative portals."
+            }
+        },
+        {
+            "id": "m7_i_40",
+            "raw_id": 40,
+            "module_id": 7,
+            "difficulty": "intermediate",
+            "topic": "Basic security testing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Vulnerability Scan and an Exploitation Attempt in penetration testing?",
+            "type": "single",
+            "options": [
+                "A Vulnerability Scan verifies potential presence of weaknesses without triggering unauthorized access; an Exploitation Attempt executes weaponized payloads to actively prove access and assess real-world business impact",
+                "A Vulnerability Scan is software; an Exploitation Attempt is physical hardware",
+                "A Vulnerability Scan only tests web browsers; an Exploitation Attempt tests printers",
+                "There is zero difference; both are identical automated tasks"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the transition from vulnerability identification to active exploitation.",
+                "why_correct": "Vulnerability scanning identifies potential vulnerabilities via banner checks or non-intrusive tests. Exploitation actively executes a proof-of-concept payload (e.g., spawning a shell, dumping database tables) to validate whether the vulnerability can actually be weaponized.",
+                "options_breakdown": {
+                    "A Vulnerability Scan verifies potential presence of weaknesses without triggering unauthorized access; an Exploitation Attempt executes weaponized payloads to actively prove access and assess real-world business impact": "Correct. Scanning detects potential flaws; exploitation weaponizes them to prove tangible risk.",
+                    "A Vulnerability Scan is software; an Exploitation Attempt is physical hardware": "Incorrect. Both involve software techniques, tools, and scripts.",
+                    "A Vulnerability Scan only tests web browsers; an Exploitation Attempt tests printers": "Incorrect. Both evaluate networks, systems, databases, and applications.",
+                    "There is zero difference; both are identical automated tasks": "Incorrect. Exploitation carries operational risks and requires careful scoping."
+                },
+                "key_term": "Exploitation: The phase in a security assessment where identified vulnerabilities are actively taken advantage of to gain unauthorized access."
+            }
+        },
+        {
+            "id": "m7_h_41",
+            "raw_id": 41,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Nmap",
+            "is_scenario": true,
+            "scenario": "A penetration tester scans an enterprise perimeter protected by an Intrusion Prevention System (IPS).",
+            "question": "Which Nmap evasion technique uses the `-D` flag to blend the tester's real scanning IP address among multiple spoofed decoy IP addresses?",
+            "type": "single",
+            "options": [
+                "Decoy Scan (`nmap -D RND:10 <target>`)",
+                "Fragmentation Scan (`-f`)",
+                "Timing Template Paranoid (`-T0`)",
+                "Source Port Spoofing (`--source-port 53`)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Nmap decoy scanning.",
+                "why_correct": "The `-D` flag allows specifying decoy IP addresses (or `RND:10` for random decoys). The target and IDS see port scan probes arriving simultaneously from both the real IP and 10 fake decoys, obfuscating who the actual attacker is.",
+                "options_breakdown": {
+                    "Decoy Scan (`nmap -D RND:10 <target>`)": "Correct. Decoy scanning mixes the real scanning IP with multiple spoofed IP addresses to conceal the true source.",
+                    "Fragmentation Scan (`-f`)": "Incorrect. Fragmentation splits packet headers into small fragments to evade basic packet filters.",
+                    "Timing Template Paranoid (`-T0`)": "Incorrect. `-T0` slows down scan speed to minimize detection over long timeframes.",
+                    "Source Port Spoofing (`--source-port 53`)": "Incorrect. Source port spoofing forces outgoing traffic from a trusted port like DNS (53)."
+                },
+                "key_term": "Nmap Decoy Scan (-D): A stealth scanning option in Nmap that cloaks a port scan by sending spoofed packets from multiple decoy IP addresses."
+            }
+        },
+        {
+            "id": "m7_h_42",
+            "raw_id": 42,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Packet analysis",
+            "is_scenario": true,
+            "scenario": "A threat hunter analyzes encrypted TLS traffic in Wireshark where the payload cannot be decrypted. The hunter extracts the client's supported cipher suites, TLS version, extensions, and elliptic curve formats from the unencrypted TLS 'Client Hello' packet.",
+            "question": "What standardized fingerprinting methodology produces an MD5 hash of these Client Hello parameters to identify specific malware families or botnet clients?",
+            "type": "single",
+            "options": [
+                "JA3 / JA3S Fingerprinting",
+                "Nmap OS Fingerprinting",
+                "SHA-256 File Hashing",
+                "MAC Address OUI Lookup"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests modern encrypted traffic analysis using JA3 fingerprints.",
+                "why_correct": "JA3 creates a cryptographic fingerprint of the unencrypted TLS Client Hello parameters (TLS version, accepted ciphers, extensions, curves). Because malware often uses custom hardcoded TLS libraries (like Go or Python requests), the JA3 hash reliably identifies the specific malware family even over encrypted HTTPS.",
+                "options_breakdown": {
+                    "JA3 / JA3S Fingerprinting": "Correct. JA3 fingerprints client TLS configurations to identify specific applications and malware over encrypted channels.",
+                    "Nmap OS Fingerprinting": "Incorrect. Nmap OS fingerprinting analyzes TCP/IP stack header behavior, not TLS Client Hellos.",
+                    "SHA-256 File Hashing": "Incorrect. SHA-256 hashes files on disk, not live TLS handshake strings.",
+                    "MAC Address OUI Lookup": "Incorrect. OUI lookup identifies hardware network card manufacturers from MAC prefixes."
+                },
+                "key_term": "JA3 Fingerprinting: A method for profiling the TLS client hello packet to create a unique fingerprint that can identify the client application regardless of encryption."
+            }
+        },
+        {
+            "id": "m7_h_43",
+            "raw_id": 43,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "tcpdump",
+            "is_scenario": true,
+            "scenario": "An engineer writes a Berkeley Packet Filter (BPF) expression in tcpdump to capture only raw TCP packets that have the SYN flag enabled and the ACK flag disabled (pure connection requests).",
+            "question": "Which low-level BPF byte-offset filter expression achieves this?",
+            "type": "single",
+            "options": [
+                "tcp[tcpflags] & (tcp-syn|tcp-ack) == tcp-syn",
+                "tcp.port == 80 && syn == true",
+                "filter: syn_only",
+                "tcpdump --syn-only"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests advanced BPF byte offset filtering syntax in tcpdump.",
+                "why_correct": "`tcp[tcpflags]` examines the 13th byte of the TCP header. Performing a bitwise AND with `(tcp-syn|tcp-ack)` and testing equality to `tcp-syn` ensures that the SYN bit is set while the ACK bit is 0, isolating pure SYN connection initiation packets.",
+                "options_breakdown": {
+                    "tcp[tcpflags] & (tcp-syn|tcp-ack) == tcp-syn": "Correct. This evaluates raw TCP header flag bitmasks to isolate pure SYN packets.",
+                    "tcp.port == 80 && syn == true": "Incorrect. This resembles Wireshark display filter syntax, not tcpdump BPF.",
+                    "filter: syn_only": "Incorrect. This is not valid BPF syntax.",
+                    "tcpdump --syn-only": "Incorrect. tcpdump has no '--syn-only' command-line flag."
+                },
+                "key_term": "BPF Bitmasking: Using bitwise operations within Berkeley Packet Filters to inspect individual bits within protocol headers."
+            }
+        },
+        {
+            "id": "m7_h_44",
+            "raw_id": 44,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Wireshark",
+            "is_scenario": true,
+            "scenario": "A forensic investigator suspects data was exfiltrated via DNS tunneling. While reviewing Wireshark logs, the investigator notices thousands of anomalous DNS queries to subdomains of `malicious.com`.",
+            "question": "Which visual indicators in the DNS queries confirm active DNS data exfiltration?",
+            "type": "single",
+            "options": [
+                "Long, randomized base64 or hexadecimal strings in the subdomains (e.g., `aHByb2Qx.malicious.com`) with unusually large TXT record responses and high query volume",
+                "The DNS packets are colored bright pink",
+                "The DNS queries only arrive on Christmas Day",
+                "The word 'VIRUS' is written in capital letters inside the IP header"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests forensic identification of DNS tunneling in packet captures.",
+                "why_correct": "DNS tunneling encodes binary data into subdomain labels (e.g., `exfiltrated_data.attacker.com`). Indicators include unusually long subdomains approaching the 63-character limit, high entropy (randomness), high query frequency, and large TXT record response payloads.",
+                "options_breakdown": {
+                    "Long, randomized base64 or hexadecimal strings in the subdomains (e.g., `aHByb2Qx.malicious.com`) with unusually large TXT record responses and high query volume": "Correct. High-entropy subdomains and large TXT records are telltale indicators of DNS tunneling.",
+                    "The DNS packets are colored bright pink": "Incorrect. Packet coloring rules in Wireshark are customizable and have no inherent pink malware indicator.",
+                    "The DNS queries only arrive on Christmas Day": "Incorrect. DNS tunneling operates whenever exfiltration occurs.",
+                    "The word 'VIRUS' is written in capital letters inside the IP header": "Incorrect. Packet headers do not contain self-identifying virus text."
+                },
+                "key_term": "DNS Exfiltration Detection: Identifying covert data channels in DNS by analyzing subdomain length, entropy, record types, and request volume."
+            }
+        },
+        {
+            "id": "m7_h_45",
+            "raw_id": 45,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Vulnerability assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In the CVSS v3.1 specification, what does a vulnerability vector string of `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` indicate regarding exploitability and impact?",
+            "type": "single",
+            "options": [
+                "Network exploitable (AV:N), Low complexity (AC:L), No privileges required (PR:N), No user interaction (UI:N), with High impact across Confidentiality, Integrity, and Availability (Score: 9.8 Critical)",
+                "Local physical access required with zero impact",
+                "The vulnerability can only be exploited by government agencies",
+                "The vulnerability has been completely patched and poses no risk"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests decoding CVSS v3.1 vector strings.",
+                "why_correct": "`AV:N` = Attack Vector: Network; `AC:L` = Attack Complexity: Low; `PR:N` = Privileges Required: None; `UI:N` = User Interaction: None; `S:U` = Scope: Unchanged; `C:H/I:H/A:H` = High impact on Confidentiality, Integrity, Availability. This yields a Critical base score of 9.8.",
+                "options_breakdown": {
+                    "Network exploitable (AV:N), Low complexity (AC:L), No privileges required (PR:N), No user interaction (UI:N), with High impact across Confidentiality, Integrity, and Availability (Score: 9.8 Critical)": "Correct. This describes a worst-case, remotely exploitable critical vulnerability requiring zero authentication.",
+                    "Local physical access required with zero impact": "Incorrect. That would be AV:P with C:N/I:N/A:N.",
+                    "The vulnerability can only be exploited by government agencies": "Incorrect. CVSS vectors evaluate technical ease, not actor attribution.",
+                    "The vulnerability has been completely patched and poses no risk": "Incorrect. High impacts across C/I/A indicate severe active risk."
+                },
+                "key_term": "CVSS Vector String: A standardized text representation of the metrics used to calculate a Common Vulnerability Scoring System score."
+            }
+        },
+        {
+            "id": "m7_h_46",
+            "raw_id": 46,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Wireshark",
+            "is_scenario": true,
+            "scenario": "An investigator captures an unencrypted HTTP session where an attacker downloaded a malicious executable `malware.exe`. The investigator wants to extract the actual binary file directly from the Wireshark packet capture.",
+            "question": "Which Wireshark menu feature allows reconstructing and saving exported files transported over HTTP, SMB, or TFTP?",
+            "type": "single",
+            "options": [
+                "File -> Export Objects -> HTTP",
+                "Edit -> Find Packet -> Hex Bytes",
+                "Statistics -> Protocol Hierarchy",
+                "Capture -> Restart Capture"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests extracting carved files from network packet captures in Wireshark.",
+                "why_correct": "The 'Export Objects' feature in Wireshark reassembles reordered TCP packets and strips HTTP transport headers, allowing analysts to save transferred files (images, PDFs, executables) directly to disk for antivirus scanning or reverse engineering.",
+                "options_breakdown": {
+                    "File -> Export Objects -> HTTP": "Correct. 'Export Objects -> HTTP' carves and saves reconstructed files directly from captured HTTP streams.",
+                    "Edit -> Find Packet -> Hex Bytes": "Incorrect. Find Packet searches for strings; it does not reassemble and save files.",
+                    "Statistics -> Protocol Hierarchy": "Incorrect. Protocol Hierarchy displays statistical breakdowns of network traffic by protocol percentage.",
+                    "Capture -> Restart Capture": "Incorrect. Restarting the capture clears the session and starts a new one."
+                },
+                "key_term": "Export Objects: A Wireshark tool that extracts and reassembles transferred files from application-layer protocols like HTTP, SMB, and IMF."
+            }
+        },
+        {
+            "id": "m7_h_47",
+            "raw_id": 47,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Security monitoring",
+            "is_scenario": true,
+            "scenario": "A forensic analyst inspects volatile memory (RAM) captured from an infected endpoint to identify injected shellcode and rogue DLLs.",
+            "question": "Which industry-standard open-source memory forensics framework (using plugins like `windows.malfind` and `windows.pslist`) is designed for this task?",
+            "type": "single",
+            "options": [
+                "Volatility Framework",
+                "Wireshark",
+                "Nmap",
+                "Metasploit Framework"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of memory forensics tools (Volatility).",
+                "why_correct": "The Volatility Framework is the world's leading open-source memory forensics platform. It parses raw RAM dumps, analyzing kernel data structures to uncover hidden processes, unhooked DLLs, injected code (`malfind`), and network connections.",
+                "options_breakdown": {
+                    "Volatility Framework": "Correct. Volatility analyzes volatile RAM dumps to detect in-memory malware and rootkits.",
+                    "Wireshark": "Incorrect. Wireshark analyzes network traffic, not physical system RAM dumps.",
+                    "Nmap": "Incorrect. Nmap scans network ports and services.",
+                    "Metasploit Framework": "Incorrect. Metasploit is an exploitation and penetration testing tool, not a memory forensics analysis platform."
+                },
+                "key_term": "Volatility Framework: An open-source memory forensics framework for incident response and malware analysis."
+            }
+        },
+        {
+            "id": "m7_h_48",
+            "raw_id": 48,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Safe introductory security labs",
+            "is_scenario": true,
+            "scenario": "An analyst analyzes malware inside a sandbox VM. To prevent the malware from failing its initial internet connectivity check while still preventing it from connecting to live C2 servers, which specialized tool simulates fake internet services (DNS, HTTP, SMTP) locally inside the lab?",
+            "question": "An analyst analyzes malware inside a sandbox VM. To prevent the malware from failing its initial internet connectivity check while still preventing it from connecting to live C2 servers, which specialized tool simulates fake internet services (DNS, HTTP, SMTP) locally inside the lab?",
+            "type": "single",
+            "options": [
+                "FakeNet-NG (or INetSim)",
+                "Wireshark in monitor mode",
+                "Nmap Scripting Engine",
+                "A real external commercial VPN"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of simulated network tools for malware analysis.",
+                "why_correct": "FakeNet-NG and INetSim are specialized tools that intercept all outbound network requests from malware inside an isolated lab, simulating legitimate responses (fake DNS resolution, HTTP 200 OK responses, SSL certificates) so the malware executes its next operational stage safely.",
+                "options_breakdown": {
+                    "FakeNet-NG (or INetSim)": "Correct. FakeNet-NG simulates common internet services locally to observe malware network behavior safely.",
+                    "Wireshark in monitor mode": "Incorrect. Wireshark captures traffic passively; it does not generate simulated server responses.",
+                    "Nmap Scripting Engine": "Incorrect. Nmap scans targets; it does not emulate mock internet services.",
+                    "A real external commercial VPN": "Incorrect. Routing live malware over a commercial VPN connects it to real command-and-control servers, violating isolation."
+                },
+                "key_term": "FakeNet-NG: A tool designed for analyzing malware network behavior by intercepting and redirecting network traffic while simulating common internet services."
+            }
+        },
+        {
+            "id": "m7_h_49",
+            "raw_id": 49,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Nmap",
+            "is_scenario": true,
+            "scenario": "An engineer observes that an Nmap scan reports port 53 as `open|filtered` during a UDP scan (`-sU`).",
+            "question": "Why does Nmap output `open|filtered` for UDP ports rather than a definitive 'open' or 'closed'?",
+            "type": "single",
+            "options": [
+                "Because UDP is connectionless; Nmap received zero response to its probe, which can occur either because the port is open and the application didn't reply, OR because a firewall dropped the packet",
+                "Because the cable was disconnected during the scan",
+                "Because UDP packets only work on odd-numbered days",
+                "Because Nmap's license expired during the scan"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of ambiguous port states in UDP scanning.",
+                "why_correct": "When Nmap sends an empty UDP packet to an open port, the application usually sends nothing back. If a firewall filters the port, it also drops the packet and sends nothing back. Because both cases result in zero response, Nmap reports `open|filtered`.",
+                "options_breakdown": {
+                    "Because UDP is connectionless; Nmap received zero response to its probe, which can occur either because the port is open and the application didn't reply, OR because a firewall dropped the packet": "Correct. A lack of response in UDP can signify either an open silent port or a firewall drop.",
+                    "Because the cable was disconnected during the scan": "Incorrect. Disconnected cables cause network unreachable interface errors.",
+                    "Because UDP packets only work on odd-numbered days": "Incorrect. UDP operates continuously.",
+                    "Because Nmap's license expired during the scan": "Incorrect. Nmap is open source and does not expire."
+                },
+                "key_term": "Open|Filtered State: An Nmap port state indicating that Nmap cannot determine whether the port is open or filtered because no response was received."
+            }
+        },
+        {
+            "id": "m7_h_50",
+            "raw_id": 50,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Log analysis",
+            "is_scenario": true,
+            "scenario": "A security analyst investigates a compromised Linux web server and discovers an attacker added a hidden user account into `/etc/passwd`. The analyst wants to find the exact date and command used to add the account.",
+            "question": "Which Linux subsystem and log file records executed commands, system calls, and file modifications with immutable kernel audit records?",
+            "type": "single",
+            "options": [
+                "The Linux Audit Framework (`auditd`) and `/var/log/audit/audit.log`",
+                "The browser cookies directory",
+                "The `/dev/null` black hole",
+                "The system clock `/etc/timezone`"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the Linux kernel auditing subsystem (auditd).",
+                "why_correct": "The Linux Audit daemon (`auditd`) logs detailed security events directly from the kernel, recording system calls, executable names, parent PIDs, user IDs, and command arguments in `/var/log/audit/audit.log`.",
+                "options_breakdown": {
+                    "The Linux Audit Framework (`auditd`) and `/var/log/audit/audit.log`": "Correct. Auditd records granular kernel-level security telemetry and executed commands.",
+                    "The browser cookies directory": "Incorrect. Browser cookies store web session tokens, not OS user creation events.",
+                    "The `/dev/null` black hole": "Incorrect. `/dev/null` discards all written data immediately.",
+                    "The system clock `/etc/timezone`": "Incorrect. This file sets the local timezone, not command audit logs."
+                },
+                "key_term": "auditd: The userspace component to the Linux Auditing System that collects and writes audit records to disk."
+            }
+        },
+        {
+            "id": "m7_h_51",
+            "raw_id": 51,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Nmap",
+            "is_scenario": true,
+            "scenario": "An attacker uses Nmap to perform an 'Idle Scan' (Zombie Scan) using the `-sI` flag.",
+            "question": "What unique stealth characteristic does an Idle Scan achieve by bouncing packets off an unwitting 'zombie' host?",
+            "type": "single",
+            "options": [
+                "The scan is completely blind and attributed entirely to the zombie host's IP address, with zero packets ever sent directly from the attacker's real IP to the target",
+                "It forces the target computer to turn off its power supply",
+                "It downloads all files from the target in 1 second",
+                "It operates without requiring a computer"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of the classic Nmap Idle Scan (`-sI`).",
+                "why_correct": "The Idle Scan abuses predictable IP ID sequence increments on an idle third-party host (the zombie). All probe packets sent to the target have their source IP forged as the zombie. The target only ever sees the zombie's IP, leaving the attacker's IP completely absent from target logs.",
+                "options_breakdown": {
+                    "The scan is completely blind and attributed entirely to the zombie host's IP address, with zero packets ever sent directly from the attacker's real IP to the target": "Correct. The Idle scan forges packets from a zombie host to achieve total sender anonymity.",
+                    "It forces the target computer to turn off its power supply": "Incorrect. Idle scans probe port states and cannot power down hardware.",
+                    "It downloads all files from the target in 1 second": "Incorrect. Port scans discover port states; they do not download files.",
+                    "It operates without requiring a computer": "Incorrect. Executing Nmap requires a computing system."
+                },
+                "key_term": "Idle Scan (-sI): An extremely stealthy port scan method where packets are bounced off an idle third-party host (zombie) to conceal the attacker's identity."
+            }
+        },
+        {
+            "id": "m7_h_52",
+            "raw_id": 52,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Wireshark",
+            "is_scenario": true,
+            "scenario": "During an incident investigation, an analyst discovers that an attacker used PowerShell to execute an in-memory Cobalt Strike beacon that communicates over HTTPS.",
+            "question": "To decrypt and inspect this HTTPS traffic in Wireshark without having the web server's private key, which environment variable can be set on the client machine to dump pre-master secret keys?",
+            "type": "single",
+            "options": [
+                "`SSLKEYLOGFILE`",
+                "`DECRYPT_ALL_PASSWORDS`",
+                "`WIRESHARK_ROOT_KEY`",
+                "`OPENSSL_HACK_MODE`"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests modern TLS decryption techniques using session key logs.",
+                "why_correct": "Setting the `SSLKEYLOGFILE` environment variable instructs modern browsers, curl, and TLS libraries to log ephemeral pre-master secret keys to a text file. Wireshark loads this key log file to decrypt TLS sessions dynamically without needing the server's private key.",
+                "options_breakdown": {
+                    "`SSLKEYLOGFILE`": "Correct. SSLKEYLOGFILE dumps TLS session secret keys that Wireshark uses to decrypt modern TLS traffic.",
+                    "`DECRYPT_ALL_PASSWORDS`": "Incorrect. This is a fabricated, non-existent variable name.",
+                    "`WIRESHARK_ROOT_KEY`": "Incorrect. Wireshark relies on SSLKEYLOGFILE formatted key dumps.",
+                    "`OPENSSL_HACK_MODE`": "Incorrect. This is not a real OpenSSL variable."
+                },
+                "key_term": "SSLKEYLOGFILE: An environment variable supported by browsers and TLS libraries that logs TLS per-session master secrets for packet analysis decryption."
+            }
+        },
+        {
+            "id": "m7_h_53",
+            "raw_id": 53,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Security monitoring",
+            "is_scenario": true,
+            "scenario": "An enterprise implements an automated SOAR (Security Orchestration, Automation, and Response) platform alongside its SIEM.",
+            "question": "What is the primary role of a SOAR platform in modern Security Operations Centers?",
+            "type": "single",
+            "options": [
+                "Executing automated Playbooks to orchestrate responses across multiple security tools (such as isolating an infected host or disabling a compromised user account) with minimal human latency",
+                "Writing marketing brochures for the company website",
+                "Ordering new office chairs when employees complain",
+                "Replacing all software with paper spreadsheets"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of SOAR platforms in security operations.",
+                "why_correct": "SOAR platforms (like Splunk SOAR, Cortex XSOAR) connect disparate security tools via APIs. When the SIEM triggers an alert, the SOAR platform executes automated playbooks to enrich threat data and execute containment actions (e.g., firewall block, host isolation) in seconds.",
+                "options_breakdown": {
+                    "Executing automated Playbooks to orchestrate responses across multiple security tools (such as isolating an infected host or disabling a compromised user account) with minimal human latency": "Correct. SOAR automates incident triage, enrichment, and containment workflows.",
+                    "Writing marketing brochures for the company website": "Incorrect. SOAR is a technical security automation platform.",
+                    "Ordering new office chairs when employees complain": "Incorrect. Procurement handles furniture, not SOAR.",
+                    "Replacing all software with paper spreadsheets": "Incorrect. SOAR automates digital incident response."
+                },
+                "key_term": "SOAR: Security Orchestration, Automation, and Response technologies that enable organizations to collect inputs monitored by the security operations team and define incident analysis and response procedures in digital workflows."
+            }
+        },
+        {
+            "id": "m7_h_54",
+            "raw_id": 54,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Basic security testing",
+            "is_scenario": true,
+            "scenario": "A penetration tester completes an authorized assessment and prepares the final deliverable report for executive leadership and the technical engineering team.",
+            "question": "Which section of a penetration testing report is tailored specifically for non-technical C-suite executives, summarizing business risks, overall security posture, and strategic recommendations?",
+            "type": "single",
+            "options": [
+                "The Executive Summary",
+                "The Raw Hex Packet Dump Appendix",
+                "The Source Code Debugger Log",
+                "The Linux Bash History"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests reporting best practices in professional security testing.",
+                "why_correct": "The Executive Summary translates complex technical vulnerabilities into business risk context, financial impact, and strategic priorities for C-level executives who do not have time to read hundreds of pages of raw exploit details.",
+                "options_breakdown": {
+                    "The Executive Summary": "Correct. The Executive Summary provides high-level business risk context for executive decision-makers.",
+                    "The Raw Hex Packet Dump Appendix": "Incorrect. Raw hex dumps are low-level technical artifacts placed in technical appendices.",
+                    "The Source Code Debugger Log": "Incorrect. Debugger traces are technical diagnostic outputs.",
+                    "The Linux Bash History": "Incorrect. Terminal history is an operational test record, not an executive briefing."
+                },
+                "key_term": "Executive Summary: A short section in a penetration test report that summarizes findings and business risk for senior leadership."
+            }
+        },
+        {
+            "id": "m7_h_55",
+            "raw_id": 55,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Vulnerability assessment",
+            "is_scenario": true,
+            "scenario": "A vulnerability scanner reports a 'Critical' finding indicating that an internal server is vulnerable to the MS17-010 (EternalBlue) SMB exploit. However, a security analyst verifies that SMBv1 was completely uninstalled and disabled on that server six months ago.",
+            "question": "What type of assessment error did the vulnerability scanner report?",
+            "type": "single",
+            "options": [
+                "A False Positive",
+                "A True Positive",
+                "A False Negative",
+                "A True Negative"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests distinguishing False Positives from False Negatives.",
+                "why_correct": "A False Positive occurs when a scanner flags a vulnerability that does not actually exist on the target (e.g., basing findings solely on a generic OS banner rather than validating whether the vulnerable feature is active).",
+                "options_breakdown": {
+                    "A False Positive": "Correct. A False Positive incorrectly flags a non-existent vulnerability.",
+                    "A True Positive": "Incorrect. A True Positive correctly identifies an actual existing vulnerability.",
+                    "A False Negative": "Incorrect. A False Negative fails to detect a real vulnerability that is actually present.",
+                    "A True Negative": "Incorrect. A True Negative correctly determines that a secure system is not vulnerable."
+                },
+                "key_term": "False Positive: An error in some evaluation process in which a condition tested for is mistakenly found to be present when it is not."
+            }
+        },
+        {
+            "id": "m7_h_56",
+            "raw_id": 56,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Nmap",
+            "is_scenario": true,
+            "scenario": "An engineer observes that an Nmap scan uses the timing template `-T4`.",
+            "question": "What do Nmap timing templates (`-T0` through `-T5`) control during a scan?",
+            "type": "single",
+            "options": [
+                "They adjust probe parallelization, round-trip timeouts, and packet delay intervals, balancing speed against network congestion and detection risks",
+                "They set the time of day that the scan is allowed to run",
+                "They adjust the volume of the computer speakers",
+                "They control the temperature of the server room air conditioning"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of Nmap timing templates (`-T0` to `-T5`).",
+                "why_correct": "Nmap provides six timing templates: T0 (Paranoid - ultra slow for IDS evasion), T1 (Sneaky), T2 (Polite), T3 (Normal), T4 (Aggressive - fast, assumes reliable modern networks), and T5 (Insane - ultra fast, risks missing ports). They adjust timeouts and probe rates.",
+                "options_breakdown": {
+                    "They adjust probe parallelization, round-trip timeouts, and packet delay intervals, balancing speed against network congestion and detection risks": "Correct. Timing templates control packet pacing, probe delays, and timeout thresholds.",
+                    "They set the time of day that the scan is allowed to run": "Incorrect. Timing templates govern packet transmission pacing, not clock scheduling.",
+                    "They adjust the volume of the computer speakers": "Incorrect. Port scanners do not manage audio hardware.",
+                    "They control the temperature of the server room air conditioning": "Incorrect. HVAC systems manage environmental cooling, not Nmap."
+                },
+                "key_term": "Nmap Timing Templates: Preset configurations (-T0 to -T5) that control packet timeouts, scan speed, and parallelism in Nmap."
+            }
+        },
+        {
+            "id": "m7_h_57",
+            "raw_id": 57,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Packet analysis",
+            "is_scenario": true,
+            "scenario": "An analyst captures a suspicious HTTP file download in Wireshark and extracts the payload. Before uploading the file to public malware analysis repositories (like VirusTotal), why must the analyst exercise extreme caution?",
+            "question": "An analyst captures a suspicious HTTP file download in Wireshark and extracts the payload. Before uploading the file to public malware analysis repositories (like VirusTotal), why must the analyst exercise extreme caution?",
+            "type": "single",
+            "options": [
+                "Public repositories share submitted files with external researchers and vendors, which could inadvertently expose confidential customer data or proprietary company intellectual property embedded inside the file",
+                "Because VirusTotal automatically sends the file to the local police",
+                "Because uploading files over the internet causes physical damage to computer RAM",
+                "Because VirusTotal deletes the file from the analyst's computer"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests operational security (OPSEC) and data confidentiality when handling malware samples.",
+                "why_correct": "Files uploaded to public multiscanners (like VirusTotal) are distributed to subscribers and security researchers worldwide. If the sample is a customized spear phishing document containing internal emails, financial data, or credentials, uploading it publicly leaks sensitive corporate secrets.",
+                "options_breakdown": {
+                    "Public repositories share submitted files with external researchers and vendors, which could inadvertently expose confidential customer data or proprietary company intellectual property embedded inside the file": "Correct. Public multi-scanners distribute samples publicly, posing serious data leak risks for confidential documents.",
+                    "Because VirusTotal automatically sends the file to the local police": "Incorrect. VirusTotal shares telemetry with cybersecurity vendors, not automated law enforcement reporting.",
+                    "Because uploading files over the internet causes physical damage to computer RAM": "Incorrect. File transfers utilize normal network interfaces without physical hardware damage.",
+                    "Because VirusTotal deletes the file from the analyst's computer": "Incorrect. Uploading does not delete local files."
+                },
+                "key_term": "Operational Security (OPSEC) in Malware Analysis: Defensive practices to prevent unintended disclosure of sensitive data when analyzing and submitting suspicious artifacts."
+            }
+        },
+        {
+            "id": "m7_h_58",
+            "raw_id": 58,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Security monitoring",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between North-South network traffic and East-West network traffic in modern data centers and cloud architectures?",
+            "type": "single",
+            "options": [
+                "North-South traffic enters or leaves the data center boundary to/from the external Internet; East-West traffic flows laterally between internal servers and containers inside the data center",
+                "North-South traffic only runs in North and South America; East-West runs in Asia and Europe",
+                "North-South traffic uses copper cables; East-West traffic uses satellite dishes",
+                "There is zero difference; both are marketing directions"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests data center network traffic terminology.",
+                "why_correct": "North-South traffic crosses the perimeter boundary (clients communicating with web servers from the internet). East-West traffic travels laterally between internal database servers, microservices, and containers inside the private data center.",
+                "options_breakdown": {
+                    "North-South traffic enters or leaves the data center boundary to/from the external Internet; East-West traffic flows laterally between internal servers and containers inside the data center": "Correct. North-South is ingress/egress perimeter traffic; East-West is internal lateral server-to-server traffic.",
+                    "North-South traffic only runs in North and South America; East-West runs in Asia and Europe": "Incorrect. The terms are network topology metaphors, not geographic continents.",
+                    "North-South traffic uses copper cables; East-West traffic uses satellite dishes": "Incorrect. Both use modern fiber and high-speed switching infrastructure.",
+                    "There is zero difference; both are marketing directions": "Incorrect. They dictate completely different firewall and monitoring architectures."
+                },
+                "key_term": "North-South vs East-West Traffic: Network architecture terms distinguishing client-to-server boundary traffic (North-South) from internal server-to-server lateral traffic (East-West)."
+            }
+        },
+        {
+            "id": "m7_h_59",
+            "raw_id": 59,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Basic security testing",
+            "is_scenario": true,
+            "scenario": "A penetration tester successfully compromises a low-privileged user account on a Windows workstation. The tester checks for misconfigured Service Permissions, unquoted service paths, and stored credentials in memory to elevate their privileges to `NT AUTHORITY\\SYSTEM`.",
+            "question": "What phase of penetration testing is being performed?",
+            "type": "single",
+            "options": [
+                "Local Privilege Escalation (Post-Exploitation)",
+                "OSINT Reconnaissance",
+                "Pre-engagement Scoping",
+                "De-escalation and Cleanup"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of post-exploitation local privilege escalation.",
+                "why_correct": "Privilege Escalation occurs after initial access is achieved. The tester exploits local misconfigurations, kernel vulnerabilities, or credential leaks to elevate from a standard user context to root or SYSTEM administrative privileges.",
+                "options_breakdown": {
+                    "Local Privilege Escalation (Post-Exploitation)": "Correct. Escalating from a low-privilege user to SYSTEM or root is Privilege Escalation.",
+                    "OSINT Reconnaissance": "Incorrect. Reconnaissance occurs before initial access to discover targets.",
+                    "Pre-engagement Scoping": "Incorrect. Scoping occurs before testing begins to establish contracts and legal boundaries.",
+                    "De-escalation and Cleanup": "Incorrect. Cleanup removes artifacts after testing is finished."
+                },
+                "key_term": "Privilege Escalation: The act of exploiting a bug, design flaw, or configuration oversight in an operating system or software application to gain elevated access to resources."
+            }
+        },
+        {
+            "id": "m7_h_60",
+            "raw_id": 60,
+            "module_id": 7,
+            "difficulty": "hard",
+            "topic": "Vulnerability assessment",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are recognized CVSS Base Metric Group criteria evaluated when calculating a vulnerability score? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Attack Vector (AV: Network, Adjacent, Local, Physical)",
+                "Attack Complexity (AC: Low, High)",
+                "Privileges Required (PR: None, Low, High)",
+                "The astrological horoscope sign of the system administrator"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks about the foundational technical criteria evaluated in CVSS Base Metrics.",
+                "why_correct": "CVSS Base Metrics evaluate Attack Vector (AV), Attack Complexity (AC), Privileges Required (PR), User Interaction (UI), Scope (S), and Impact on Confidentiality (C), Integrity (I), and Availability (A). Astrology has no role in vulnerability science.",
+                "options_breakdown": {
+                    "Attack Vector (AV: Network, Adjacent, Local, Physical)": "Correct. Attack Vector measures the contextual boundary required to exploit the vulnerability.",
+                    "Attack Complexity (AC: Low, High)": "Correct. Attack Complexity describes conditions beyond the attacker's control required to execute the exploit.",
+                    "Privileges Required (PR: None, Low, High)": "Correct. Privileges Required measures the level of access the attacker must possess prior to exploiting.",
+                    "The astrological horoscope sign of the system administrator": "Incorrect. Astrological signs have zero relevance to technical cybersecurity scoring."
+                },
+                "key_term": "CVSS Base Metrics: The fundamental technical characteristics of a vulnerability that remain constant across environments and time."
+            }
+        }
+    ]
+}

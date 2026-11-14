@@ -1,0 +1,339 @@
+{% extends "base.html" %}
+
+{% block title %}Assessment Results: Module {{ module.id }} ({{ difficulty }}) | Threat Vector{% endblock %}
+
+{% block content %}
+<div class="soc-container" style="max-width: 1040px; margin: 0 auto; padding: 2rem 1.25rem;">
+
+    <!-- Breadcrumb Nav -->
+    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; font-family: var(--font-mono);">
+        <a href="{{ url_for('index') }}" style="color: var(--text-muted); text-decoration: none;">Dashboard</a>
+        <span>&rsaquo;</span>
+        <a href="{{ url_for('knowledge_modules') }}" style="color: var(--accent-cyan); text-decoration: none;">Knowledge Check</a>
+        <span>&rsaquo;</span>
+        <a href="{{ url_for('knowledge_difficulty', module_id=module.id) }}" style="color: var(--text-muted); text-decoration: none;">Module 0{{ module.id }}</a>
+        <span>&rsaquo;</span>
+        <span style="color: var(--text-primary);">Results</span>
+    </div>
+
+    <!-- Main Results Hero Card -->
+    <div style="background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1.5px solid {% if attempt.percentage >= 90 %}rgba(16, 185, 129, 0.4){% elif attempt.percentage >= 60 %}rgba(56, 189, 248, 0.4){% else %}rgba(245, 158, 11, 0.4){% endif %}; border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); position: relative; overflow: hidden;">
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; position: relative; z-index: 1;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); background: rgba(56, 189, 248, 0.12); padding: 0.25rem 0.65rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-weight: 700;">
+                        MODULE 0{{ module.id }}
+                    </span>
+                    <span class="badge {% if difficulty == 'Easy' %}badge-green{% elif difficulty == 'Intermediate' %}badge-cyan{% else %}badge-amber{% endif %}">
+                        {{ difficulty }} Tier
+                    </span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">
+                        Attempt #{{ attempt.id }}
+                    </span>
+                </div>
+
+                <h1 style="font-size: 1.9rem; font-weight: 800; color: #FFFFFF; margin: 0 0 0.5rem 0; letter-spacing: -0.01em;">
+                    {{ module.title }}
+                </h1>
+                
+                <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6; margin: 0 0 1.25rem 0; max-width: 580px;">
+                    {{ grade_desc }}
+                </p>
+
+                <!-- Defense Score Added Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 9999px; padding: 0.45rem 1rem;">
+                    <span style="color: var(--accent-cyan); font-size: 1.1rem;">⚡</span>
+                    <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF; font-family: var(--font-mono);">
+                        +{{ attempt.score * 5 }} Points Added to Defense Score
+                    </span>
+                </div>
+            </div>
+
+            <!-- Score Visualizer Ring / Card -->
+            <div style="background: rgba(11, 15, 25, 0.85); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem 2.25rem; text-align: center; min-width: 220px;">
+                <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                    FINAL SCORE
+                </div>
+                
+                <div style="font-size: 3rem; font-weight: 800; font-family: var(--font-mono); line-height: 1; color: {% if attempt.percentage >= 90 %}var(--threat-safe){% elif attempt.percentage >= 60 %}var(--accent-cyan){% else %}var(--threat-warning){% endif %}; margin-bottom: 0.35rem;">
+                    {{ attempt.score }}<span style="font-size: 1.5rem; color: var(--text-muted); font-weight: 600;">/{{ attempt.total_questions }}</span>
+                </div>
+
+                <div style="font-size: 1.15rem; font-weight: 700; font-family: var(--font-mono); color: #FFFFFF; margin-bottom: 0.75rem;">
+                    {{ attempt.percentage }}%
+                </div>
+
+                <span class="badge {% if attempt.percentage >= 90 %}badge-green{% elif attempt.percentage >= 60 %}badge-cyan{% else %}badge-amber{% endif %}" style="font-size: 0.8rem; padding: 0.3rem 0.8rem; font-weight: 700;">
+                    {{ grade_label }}
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Action Row -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.5rem; margin-top: 1.75rem;">
+            <a href="{{ url_for('knowledge_quiz', module_id=module.id, difficulty=difficulty, restart=1) }}" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600;">
+                <span>&#8634;</span> Retake Assessment
+            </a>
+            <a href="{{ url_for('knowledge_difficulty', module_id=module.id) }}" class="btn btn-secondary" style="font-weight: 600;">
+                Choose Other Tier &rarr;
+            </a>
+            <a href="{{ url_for('knowledge_modules') }}" class="btn btn-secondary" style="font-weight: 600;">
+                All Modules
+            </a>
+            <a href="{{ url_for('profile') }}" class="btn btn-secondary" style="font-weight: 600; margin-left: auto;">
+                View Analytics &amp; Certificate 📈
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Review Section Header & Filters -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <div>
+            <h2 style="font-size: 1.35rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.25rem 0;">
+                Detailed Question-by-Question Review
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">
+                Examine technical analysis, option breakdowns, and core concepts for all 20 questions.
+            </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <button type="button" class="btn btn-secondary review-filter-btn is-active" onclick="filterReview('all', this);" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">
+                All ({{ attempt.total_questions }})
+            </button>
+            <button type="button" class="btn btn-secondary review-filter-btn" onclick="filterReview('correct', this);" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">
+                Correct ({{ attempt.score }})
+            </button>
+            <button type="button" class="btn btn-secondary review-filter-btn" onclick="filterReview('incorrect', this);" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">
+                Incorrect ({{ attempt.total_questions - attempt.score }})
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="toggleAllAccordions();" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; font-family: var(--font-mono);">
+                Toggle All
+            </button>
+        </div>
+    </div>
+
+    <!-- Question Accordion List -->
+    <div id="reviewQuestionsList" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;">
+        {% set letters = ['A', 'B', 'C', 'D'] %}
+        {% for a in attempt.answers %}
+        {% set q_num = loop.index %}
+        {% set is_corr = a.is_correct %}
+        
+        <div class="review-item-card" data-status="{% if is_corr %}correct{% else %}incorrect{% endif %}" style="background: var(--bg-surface); border: 1px solid {% if is_corr %}rgba(16, 185, 129, 0.25){% else %}rgba(239, 68, 68, 0.25){% endif %}; border-radius: var(--radius-md); overflow: hidden;">
+            
+            <!-- Accordion Header (Clickable) -->
+            <div class="review-header-bar" onclick="toggleAccordion('acc_body_{{ q_num }}', this);" style="padding: 1.1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; background: rgba(11, 15, 25, 0.5);">
+                <div style="display: flex; align-items: center; gap: 0.85rem; flex: 1; padding-right: 1rem;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; font-size: 0.95rem; font-weight: 700; flex-shrink: 0; background: {% if is_corr %}rgba(16, 185, 129, 0.15); color: var(--threat-safe); border: 1px solid rgba(16, 185, 129, 0.4);{% else %}rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.4);{% endif %}">
+                        {% if is_corr %}&#10003;{% else %}&#10007;{% endif %}
+                    </span>
+                    <span style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--accent-cyan); flex-shrink: 0;">
+                        Q{{ q_num }}
+                    </span>
+                    <span style="color: #FFFFFF; font-size: 0.92rem; font-weight: 600; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">
+                        {{ a.question }}
+                    </span>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;">
+                    {% if a.is_multi_select %}
+                    <span style="font-size: 0.72rem; color: #F59E0B; background: rgba(245, 158, 11, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-family: var(--font-mono);">Multi-Select</span>
+                    {% endif %}
+                    <span class="acc-chevron" style="color: var(--text-muted); font-size: 0.85rem; transition: transform 0.2s ease;">&#9660;</span>
+                </div>
+            </div>
+
+            <!-- Accordion Body (Collapsible) -->
+            <div id="acc_body_{{ q_num }}" class="review-body-content" style="padding: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.06); display: none;">
+
+                <!-- Scenario box (if applicable) -->
+                {% if a.is_scenario and a.scenario %}
+                <div style="background: rgba(15, 23, 42, 0.7); border-left: 3px solid var(--accent-cyan); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 1.25rem;">
+                    <div style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.35rem;">
+                        Scenario Incident Context:
+                    </div>
+                    <p style="color: #E2E8F0; font-size: 0.9rem; line-height: 1.55; margin: 0;">
+                        {{ a.scenario }}
+                    </p>
+                </div>
+                {% endif %}
+
+                <!-- Full Question Prompt -->
+                <div style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 1.25rem; line-height: 1.5;">
+                    {{ a.question }}
+                </div>
+
+                <!-- 4 Options with Visual Indicators -->
+                <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem;">
+                    {% for opt in a.options %}
+                    {% set opt_idx = loop.index0 %}
+                    {% set is_this_opt_correct = (a.correct is iterable and opt_idx in a.correct) or (a.correct == opt_idx) %}
+                    {% set is_this_opt_selected = (a.selected is iterable and opt_idx in a.selected) or (a.selected == opt_idx) %}
+
+                    <div style="display: flex; align-items: center; gap: 0.85rem; padding: 0.8rem 1rem; border-radius: 6px; background: {% if is_this_opt_correct %}rgba(16, 185, 129, 0.12){% elif is_this_opt_selected and not is_this_opt_correct %}rgba(239, 68, 68, 0.12){% else %}rgba(255, 255, 255, 0.02){% endif %}; border: 1px solid {% if is_this_opt_correct %}rgba(16, 185, 129, 0.4){% elif is_this_opt_selected and not is_this_opt_correct %}rgba(239, 68, 68, 0.4){% else %}rgba(255, 255, 255, 0.06){% endif %};">
+                        
+                        <span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 4px; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; background: {% if is_this_opt_correct %}var(--threat-safe); color: #FFFFFF;{% elif is_this_opt_selected and not is_this_opt_correct %}var(--threat-malicious); color: #FFFFFF;{% else %}rgba(255, 255, 255, 0.08); color: var(--text-muted);{% endif %}">
+                            {{ letters[opt_idx] }}
+                        </span>
+
+                        <span style="font-size: 0.92rem; color: #E2E8F0; flex: 1;">
+                            {{ opt }}
+                        </span>
+
+                        {% if is_this_opt_correct %}
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--threat-safe); font-family: var(--font-mono); background: rgba(16, 185, 129, 0.2); padding: 0.2rem 0.5rem; border-radius: 4px;">
+                            &#10003; Correct Answer
+                        </span>
+                        {% endif %}
+
+                        {% if is_this_opt_selected and not is_this_opt_correct %}
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #F87171; font-family: var(--font-mono); background: rgba(239, 68, 68, 0.2); padding: 0.2rem 0.5rem; border-radius: 4px;">
+                            &#10007; Your Selection
+                        </span>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Explanation Box -->
+                {% set exp = a.explanation %}
+                <div style="background: rgba(11, 15, 25, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                    
+                    {% if exp.general %}
+                    <div style="margin-bottom: 1rem;">
+                        <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-cyan); text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem;">
+                            General Concept Summary:
+                        </div>
+                        <p style="color: #E2E8F0; font-size: 0.9rem; line-height: 1.55; margin: 0;">
+                            {{ exp.general }}
+                        </p>
+                    </div>
+                    {% endif %}
+
+                    {% if exp.why_correct %}
+                    <div style="background: rgba(16, 185, 129, 0.06); border-left: 3px solid var(--threat-safe); padding: 0.75rem 1rem; border-radius: 0 4px 4px 0; margin-bottom: 0.85rem;">
+                        <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--threat-safe); font-weight: 700; margin-bottom: 0.25rem;">
+                            &#10003; Why Correct:
+                        </div>
+                        <p style="color: #E2E8F0; font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                            {{ exp.why_correct }}
+                        </p>
+                    </div>
+                    {% endif %}
+
+                    {% if exp.why_incorrect %}
+                    <div style="background: rgba(239, 68, 68, 0.06); border-left: 3px solid var(--threat-malicious); padding: 0.75rem 1rem; border-radius: 0 4px 4px 0; margin-bottom: 1rem;">
+                        <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #F87171; font-weight: 700; margin-bottom: 0.25rem;">
+                            &#10007; Why Other Options Are Incorrect:
+                        </div>
+                        <p style="color: #E2E8F0; font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                            {{ exp.why_incorrect }}
+                        </p>
+                    </div>
+                    {% endif %}
+
+                    <!-- Option Breakdown Subgrid -->
+                    {% if exp.options_breakdown %}
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem; margin-top: 1rem;">
+                        {% set opt_keys = [('option_a', 'A'), ('option_b', 'B'), ('option_c', 'C'), ('option_d', 'D')] %}
+                        {% for k, lbl in opt_keys %}
+                        {% if exp.options_breakdown.get(k) %}
+                        <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 4px; padding: 0.6rem 0.85rem;">
+                            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-muted); font-weight: 700; margin-bottom: 0.25rem;">
+                                Option {{ lbl }}:
+                            </div>
+                            <div style="font-size: 0.82rem; color: #CBD5E1; line-height: 1.45;">
+                                {{ exp.options_breakdown.get(k) }}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <!-- Key Terms List -->
+                    {% if exp.key_terms %}
+                    <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 0.85rem; margin-top: 1rem;">
+                        <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--threat-warning); font-weight: 700; margin-bottom: 0.5rem;">
+                            Key Terms:
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            {% for term, defn in exp.key_terms.items() %}
+                            <div style="font-size: 0.82rem; color: #CBD5E1;">
+                                <strong style="color: var(--threat-warning); font-family: var(--font-mono);">{{ term }}:</strong> {{ defn }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- Styles and Review Scripts -->
+<style>
+.review-header-bar:hover {
+    background: rgba(17, 24, 39, 0.9) !important;
+}
+.review-filter-btn.is-active {
+    background: var(--accent-cyan) !important;
+    color: #0B0F19 !important;
+    border-color: var(--accent-cyan) !important;
+    font-weight: 700 !important;
+}
+</style>
+
+<script>
+function toggleAccordion(id, headerEl) {
+    const el = document.getElementById(id);
+    const chevron = headerEl.querySelector('.acc-chevron');
+    if (el.style.display === 'none' || el.style.display === '') {
+        el.style.display = 'block';
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+    } else {
+        el.style.display = 'none';
+        if (chevron) chevron.style.transform = 'rotate(0deg)';
+    }
+}
+
+let allOpen = false;
+function toggleAllAccordions() {
+    allOpen = !allOpen;
+    document.querySelectorAll('.review-body-content').forEach(body => {
+        body.style.display = allOpen ? 'block' : 'none';
+    });
+    document.querySelectorAll('.acc-chevron').forEach(chev => {
+        chev.style.transform = allOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
+}
+
+function filterReview(status, btn) {
+    document.querySelectorAll('.review-filter-btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+
+    const items = document.querySelectorAll('.review-item-card');
+    items.forEach(item => {
+        if (status === 'all') {
+            item.style.display = 'block';
+        } else if (item.getAttribute('data-status') === status) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

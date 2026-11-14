@@ -1,0 +1,1885 @@
+{
+    "module_id": 4,
+    "title": "Cybersecurity Fundamentals",
+    "description": "Explore the basic principles of cybersecurity, understand common security terminology, and learn how information and systems are protected.",
+    "topics": [
+        "Introduction to cybersecurity",
+        "CIA triad",
+        "Assets, threats, vulnerabilities, and risks",
+        "Authentication and authorization",
+        "Multi-factor authentication",
+        "Encryption and hashing",
+        "Digital signatures",
+        "Security controls",
+        "Data protection and privacy"
+    ],
+    "questions": [
+        {
+            "id": "m4_e_01",
+            "raw_id": 1,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "CIA triad",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What do the three letters in the foundational cybersecurity 'CIA Triad' stand for?",
+            "type": "single",
+            "options": [
+                "Confidentiality, Integrity, and Availability",
+                "Central Intelligence Agency",
+                "Control, Inspection, and Authorization",
+                "Cyber, Internet, and Antivirus"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the universal foundational model of information security.",
+                "why_correct": "The CIA Triad consists of Confidentiality (preventing unauthorized access), Integrity (preventing unauthorized modification), and Availability (ensuring authorized access when needed).",
+                "options_breakdown": {
+                    "Confidentiality, Integrity, and Availability": "Correct. These three pillars form the universally recognized CIA Triad.",
+                    "Central Intelligence Agency": "Incorrect. In cybersecurity, CIA refers to the security model, not the US intelligence agency.",
+                    "Control, Inspection, and Authorization": "Incorrect. These are security tasks, not the CIA triad pillars.",
+                    "Cyber, Internet, and Antivirus": "Incorrect. These are generic computer buzzwords."
+                },
+                "key_term": "CIA Triad: A guiding security model designed to govern policies for information security within an organization."
+            }
+        },
+        {
+            "id": "m4_e_02",
+            "raw_id": 2,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "CIA triad",
+            "is_scenario": true,
+            "scenario": "An attacker hacks into a hospital database and changes a patient's blood type record from 'O-Positive' to 'AB-Negative', without deleting the file or bringing down the server.",
+            "question": "Which pillar of the CIA Triad has been directly violated?",
+            "type": "single",
+            "options": [
+                "Integrity",
+                "Availability",
+                "Confidentiality",
+                "Accounting"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identifying unauthorized alteration of data.",
+                "why_correct": "Integrity guarantees that information is accurate, trustworthy, and has not been altered or tampered with by unauthorized parties.",
+                "options_breakdown": {
+                    "Integrity": "Correct. Unauthorized modification of data violates Integrity.",
+                    "Availability": "Incorrect. The database server remained online and accessible, so availability was not breached.",
+                    "Confidentiality": "Incorrect. While confidentiality might be affected if data was read, tampering with correctness directly violates Integrity.",
+                    "Accounting": "Incorrect. Accounting tracks user actions, but Integrity describes data accuracy."
+                },
+                "key_term": "Integrity: The assurance that data has not been modified, altered, or tampered with in an unauthorized manner."
+            }
+        },
+        {
+            "id": "m4_e_03",
+            "raw_id": 3,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "CIA triad",
+            "is_scenario": true,
+            "scenario": "A distributed denial-of-service (DDoS) attack floods an online banking website with fake traffic, preventing legitimate customers from logging into their accounts.",
+            "question": "Which pillar of the CIA Triad has been compromised?",
+            "type": "single",
+            "options": [
+                "Availability",
+                "Confidentiality",
+                "Integrity",
+                "Authentication"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identifying disruption of service access.",
+                "why_correct": "Availability ensures that systems, services, and data are accessible to authorized users when needed. A DDoS attack causes an outage, violating availability.",
+                "options_breakdown": {
+                    "Availability": "Correct. Denial-of-service directly destroys service availability for legitimate users.",
+                    "Confidentiality": "Incorrect. No sensitive private data was stolen or leaked in this DDoS scenario.",
+                    "Integrity": "Incorrect. The bank's database records were not altered or modified.",
+                    "Authentication": "Incorrect. Authentication verifies identities, but the failure here is service availability."
+                },
+                "key_term": "Availability: The guarantee that information and critical systems are accessible to authorized individuals when requested."
+            }
+        },
+        {
+            "id": "m4_e_04",
+            "raw_id": 4,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Assets, threats, vulnerabilities, and risks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the definition of a 'Vulnerability' in cybersecurity terminology?",
+            "type": "single",
+            "options": [
+                "A flaw, weakness, or software bug that can be exploited by a threat actor to cause harm",
+                "A person who writes malicious software for financial gain",
+                "A high-speed fiber optic internet connection",
+                "A secure password containing uppercase and lowercase letters"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of a security vulnerability.",
+                "why_correct": "A vulnerability is a weakness or hole in hardware, software, configuration, or procedures that an attacker can exploit to gain unauthorized access.",
+                "options_breakdown": {
+                    "A flaw, weakness, or software bug that can be exploited by a threat actor to cause harm": "Correct. Vulnerabilities are weaknesses in systems or defenses.",
+                    "A person who writes malicious software for financial gain": "Incorrect. That person is a threat actor or attacker.",
+                    "A high-speed fiber optic internet connection": "Incorrect. That is a physical network transmission medium.",
+                    "A secure password containing uppercase and lowercase letters": "Incorrect. A strong password is a protective defensive control, not a vulnerability."
+                },
+                "key_term": "Vulnerability: A weakness in system design, implementation, or operation that could be exploited by an adversary."
+            }
+        },
+        {
+            "id": "m4_e_05",
+            "raw_id": 5,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Authentication and authorization",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between 'Authentication' and 'Authorization'?",
+            "type": "single",
+            "options": [
+                "Authentication verifies WHO you are; Authorization determines WHAT you are permitted to do",
+                "Authentication deletes old files; Authorization installs new software",
+                "Authentication is only used on smartphones; Authorization is only used on printers",
+                "There is zero difference; both words mean the exact same thing"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the distinction between proving identity and granting access rights.",
+                "why_correct": "Authentication (AuthN) proves your identity (e.g., username and password). Authorization (AuthZ) verifies your permissions to access specific resources or execute actions.",
+                "options_breakdown": {
+                    "Authentication verifies WHO you are; Authorization determines WHAT you are permitted to do": "Correct. Authentication establishes identity; authorization grants permissions.",
+                    "Authentication deletes old files; Authorization installs new software": "Incorrect. Neither term refers to file deletion or software setup.",
+                    "Authentication is only used on smartphones; Authorization is only used on printers": "Incorrect. Both concepts apply universally across all computers and applications.",
+                    "There is zero difference; both words mean the exact same thing": "Incorrect. They are fundamentally distinct security concepts."
+                },
+                "key_term": "Authentication vs Authorization: AuthN validates user credentials (identity), while AuthZ regulates user permissions and access rights."
+            }
+        },
+        {
+            "id": "m4_e_06",
+            "raw_id": 6,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Multi-factor authentication",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following represents the 'Something You Are' factor in Multi-Factor Authentication (MFA)?",
+            "type": "single",
+            "options": [
+                "Fingerprint or facial recognition biometrics",
+                "A 6-digit SMS text code sent to your phone",
+                "A secret alphanumeric password",
+                "A hardware USB security key"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests recognition of biometric authentication factors.",
+                "why_correct": "'Something You Are' refers to unique physical biological characteristics (biometrics) such as fingerprints, facial scans, or retina patterns.",
+                "options_breakdown": {
+                    "Fingerprint or facial recognition biometrics": "Correct. Biometrics constitute the 'Something You Are' factor.",
+                    "A 6-digit SMS text code sent to your phone": "Incorrect. A phone or SMS token is 'Something You Have'.",
+                    "A secret alphanumeric password": "Incorrect. A password or PIN is 'Something You Know'.",
+                    "A hardware USB security key": "Incorrect. A physical YubiKey or smart card is 'Something You Have'."
+                },
+                "key_term": "Something You Are: An authentication factor based on physical biometric traits of the individual."
+            }
+        },
+        {
+            "id": "m4_e_07",
+            "raw_id": 7,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Multi-factor authentication",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which three distinct authentication factors can be combined to achieve true Multi-Factor Authentication? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Something you know (e.g., password, PIN)",
+                "Something you have (e.g., hardware token, smartphone authenticator app)",
+                "Something you are (e.g., fingerprint, facial scan)",
+                "Something you want (e.g., a wish list or movie preference)"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the three classic MFA authentication factors.",
+                "why_correct": "The three classic MFA categories are knowledge (something you know), possession (something you have), and inherence (something you are). Personal preferences have no role in authentication.",
+                "options_breakdown": {
+                    "Something you know (e.g., password, PIN)": "Correct. Knowledge factors form the first traditional factor.",
+                    "Something you have (e.g., hardware token, smartphone authenticator app)": "Correct. Possession factors verify physical custody of an authenticator device.",
+                    "Something you are (e.g., fingerprint, facial scan)": "Correct. Inherence factors verify biological identity.",
+                    "Something you want (e.g., a wish list or movie preference)": "Incorrect. Personal desires are not security credentials."
+                },
+                "key_term": "Multi-Factor Authentication (MFA): An electronic authentication method requiring two or more independent credentials across different factor categories."
+            }
+        },
+        {
+            "id": "m4_e_08",
+            "raw_id": 8,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary difference between Encryption and Hashing?",
+            "type": "single",
+            "options": [
+                "Encryption is two-way (can be decrypted back to plain text using a key), while Hashing is a one-way mathematical function (cannot be decrypted)",
+                "Encryption makes files smaller, while Hashing makes files bigger",
+                "Encryption is completely free, while Hashing costs $10 per byte",
+                "Encryption only works on Mac computers, while Hashing only works on Linux"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the fundamental difference between reversible encryption and irreversible hashing.",
+                "why_correct": "Encryption transforms plaintext into ciphertext and can be reversed (decrypted) using a cryptographic key. Hashing converts input data into a fixed-length string irreversibly (one-way).",
+                "options_breakdown": {
+                    "Encryption is two-way (can be decrypted back to plain text using a key), while Hashing is a one-way mathematical function (cannot be decrypted)": "Correct. Encryption is reversible with the key; cryptographic hashing is strictly one-way.",
+                    "Encryption makes files smaller, while Hashing makes files bigger": "Incorrect. Compression makes files smaller, not encryption.",
+                    "Encryption is completely free, while Hashing costs $10 per byte": "Incorrect. Both are mathematical algorithms implemented freely in open-source software.",
+                    "Encryption only works on Mac computers, while Hashing only works on Linux": "Incorrect. Both operate across all operating systems."
+                },
+                "key_term": "Hashing: A cryptographic one-way mathematical function that maps data of arbitrary size to a fixed-size bit string."
+            }
+        },
+        {
+            "id": "m4_e_09",
+            "raw_id": 9,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In Symmetric Key Encryption, how many distinct keys are shared between the sender and receiver for encryption and decryption?",
+            "type": "single",
+            "options": [
+                "Exactly one shared secret key",
+                "Two mathematically paired public and private keys",
+                "Four different keys for each day of the week",
+                "Zero keys (no key is required)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about symmetric cryptography key structure.",
+                "why_correct": "Symmetric encryption (such as AES) uses the exact same single secret key for both encrypting the plaintext and decrypting the ciphertext.",
+                "options_breakdown": {
+                    "Exactly one shared secret key": "Correct. Symmetric algorithms use one secret key for both encryption and decryption.",
+                    "Two mathematically paired public and private keys": "Incorrect. That describes Asymmetric (Public Key) encryption (such as RSA).",
+                    "Four different keys for each day of the week": "Incorrect. Key schedules are not determined by days of the week.",
+                    "Zero keys (no key is required)": "Incorrect. Without a key, cryptographic ciphers cannot function."
+                },
+                "key_term": "Symmetric Encryption: A cryptographic algorithm where the same secret key is used to both encrypt and decrypt data."
+            }
+        },
+        {
+            "id": "m4_e_10",
+            "raw_id": 10,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In Asymmetric (Public Key) Cryptography, which key is kept strictly confidential by the owner and never shared with anyone?",
+            "type": "single",
+            "options": [
+                "The Private Key",
+                "The Public Key",
+                "The Certificate Authority's home address",
+                "The USB charging cable"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests public/private key pairs in asymmetric encryption.",
+                "why_correct": "In asymmetric systems (like RSA or ECC), the Public Key is distributed freely for others to encrypt data or verify signatures. The Private Key must remain strictly secret with the owner.",
+                "options_breakdown": {
+                    "The Private Key": "Correct. The private key must remain secretly held by the owner to decrypt messages or sign documents.",
+                    "The Public Key": "Incorrect. The public key is intended to be openly published to the entire world.",
+                    "The Certificate Authority's home address": "Incorrect. Physical addresses have no cryptographic role.",
+                    "The USB charging cable": "Incorrect. A cable is hardware, not a cryptographic key."
+                },
+                "key_term": "Private Key: The secret mathematical key in asymmetric cryptography that decrypts data or generates digital signatures."
+            }
+        },
+        {
+            "id": "m4_e_11",
+            "raw_id": 11,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Digital signatures",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What critical security property does a Digital Signature provide, ensuring that a sender cannot later deny having sent a message?",
+            "type": "single",
+            "options": [
+                "Non-Repudiation",
+                "Confidentiality",
+                "Data Compression",
+                "Battery Conservation"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the legal and technical concept of non-repudiation.",
+                "why_correct": "Non-repudiation proves the author and authenticity of a message or transaction with cryptographic certainty, legally preventing the sender from claiming they did not send it.",
+                "options_breakdown": {
+                    "Non-Repudiation": "Correct. Digital signatures provide cryptographic non-repudiation.",
+                    "Confidentiality": "Incorrect. A signature authenticates identity and integrity; it does not hide or encrypt message text.",
+                    "Data Compression": "Incorrect. Digital signatures add a signature block; they do not compress data.",
+                    "Battery Conservation": "Incorrect. Cryptographic math uses CPU cycles and does not save battery power."
+                },
+                "key_term": "Non-Repudiation: The assurance that the sender of information cannot deny having created or transmitted that information."
+            }
+        },
+        {
+            "id": "m4_e_12",
+            "raw_id": 12,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Security controls",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which category of security controls includes security guards, fences, biometric door locks, and CCTV surveillance cameras?",
+            "type": "single",
+            "options": [
+                "Physical Controls",
+                "Technical / Logical Controls",
+                "Administrative Controls",
+                "Cloud Controls"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests classification of security control types.",
+                "why_correct": "Physical security controls deter, detect, or restrict physical access to facilities, buildings, and hardware hardware assets (e.g., fences, security guards, door locks).",
+                "options_breakdown": {
+                    "Physical Controls": "Correct. Physical controls protect the physical facility and hardware equipment.",
+                    "Technical / Logical Controls": "Incorrect. Technical controls involve software, firewalls, passwords, and access control lists.",
+                    "Administrative Controls": "Incorrect. Administrative controls consist of written policies, training, and procedures.",
+                    "Cloud Controls": "Incorrect. Cloud controls are security measures deployed in hosted cloud environments."
+                },
+                "key_term": "Physical Controls: Tangible security measures implemented to protect physical spaces, equipment, and personnel."
+            }
+        },
+        {
+            "id": "m4_e_13",
+            "raw_id": 13,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Security controls",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which type of security control is designed to identify and record security incidents after they occur (such as motion detectors and audit logs)?",
+            "type": "single",
+            "options": [
+                "Detective Control",
+                "Preventive Control",
+                "Corrective Control",
+                "Compensating Control"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about control functions (Preventive vs Detective vs Corrective).",
+                "why_correct": "Detective controls detect and report an unwanted event during or after its occurrence (e.g., IDS, audit logs, smoke alarms, CCTV cameras).",
+                "options_breakdown": {
+                    "Detective Control": "Correct. Detective controls discover and alert on security violations that have occurred or are occurring.",
+                    "Preventive Control": "Incorrect. Preventive controls actively block an incident before it occurs (e.g., firewalls, door locks).",
+                    "Corrective Control": "Incorrect. Corrective controls remediate damage and restore systems after an incident (e.g., restoring backups).",
+                    "Compensating Control": "Incorrect. Compensating controls provide alternative safeguards when primary controls are infeasible."
+                },
+                "key_term": "Detective Control: A security control that identifies and alerts administrators to violations of security policy."
+            }
+        },
+        {
+            "id": "m4_e_14",
+            "raw_id": 14,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Data protection and privacy",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What does 'PII' stand for in data privacy and cybersecurity law?",
+            "type": "single",
+            "options": [
+                "Personally Identifiable Information",
+                "Public Internet Infrastructure",
+                "Private Internal Instruction",
+                "Permanent Inactive Index"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of the universal privacy acronym PII.",
+                "why_correct": "Personally Identifiable Information (PII) refers to any data that can directly or indirectly distinguish or trace an individual's identity (e.g., name, Social Security Number, phone number, biometrics).",
+                "options_breakdown": {
+                    "Personally Identifiable Information": "Correct. PII represents personal data protected under modern global privacy legislation.",
+                    "Public Internet Infrastructure": "Incorrect. This refers to physical network backbones.",
+                    "Private Internal Instruction": "Incorrect. This is not a recognized cybersecurity privacy term.",
+                    "Permanent Inactive Index": "Incorrect. This is a fabricated database phrase."
+                },
+                "key_term": "PII (Personally Identifiable Information): Any representation of information that permits the identity of an individual to whom the information applies to be reasonably inferred."
+            }
+        },
+        {
+            "id": "m4_e_15",
+            "raw_id": 15,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Assets, threats, vulnerabilities, and risks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In basic risk management, what is the fundamental conceptual relationship between Threat, Vulnerability, and Risk?",
+            "type": "single",
+            "options": [
+                "Risk exists when a Threat has the potential to exploit an existing Vulnerability on an Asset",
+                "Risk means that no computers can ever be turned on",
+                "Threats and vulnerabilities are both impossible to detect",
+                "Vulnerabilities only exist if you do not pay your monthly internet bill"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the core risk formula: Risk = Threat x Vulnerability x Asset Value.",
+                "why_correct": "A Threat is a potential danger. A Vulnerability is a weakness. Risk is the likelihood and impact of that threat exploiting the weakness against an asset.",
+                "options_breakdown": {
+                    "Risk exists when a Threat has the potential to exploit an existing Vulnerability on an Asset": "Correct. Risk is the intersection where a threat meets a vulnerability.",
+                    "Risk means that no computers can ever be turned on": "Incorrect. Risk is managed and mitigated so computers can be used safely.",
+                    "Threats and vulnerabilities are both impossible to detect": "Incorrect. Security tools and audits actively identify threats and vulnerabilities.",
+                    "Vulnerabilities only exist if you do not pay your monthly internet bill": "Incorrect. Vulnerabilities are flaws in code or architecture, unrelated to utility bills."
+                },
+                "key_term": "Risk: The potential for loss, damage, or destruction of an asset resulting from a threat exploiting a vulnerability."
+            }
+        },
+        {
+            "id": "m4_e_16",
+            "raw_id": 16,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Data protection and privacy",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What European Union privacy regulation sets strict requirements for protecting personal data and grants users the 'Right to be Forgotten'?",
+            "type": "single",
+            "options": [
+                "General Data Protection Regulation (GDPR)",
+                "Health Insurance Portability and Accountability Act (HIPAA)",
+                "Federal Information Security Modernization Act (FISMA)",
+                "Digital Millennium Copyright Act (DMCA)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests knowledge of major data protection frameworks.",
+                "why_correct": "The General Data Protection Regulation (GDPR) is a comprehensive European Union regulation governing data protection, privacy, and personal data transfers.",
+                "options_breakdown": {
+                    "General Data Protection Regulation (GDPR)": "Correct. GDPR mandates strict privacy rules and user data rights across Europe.",
+                    "Health Insurance Portability and Accountability Act (HIPAA)": "Incorrect. HIPAA is a United States federal healthcare privacy law.",
+                    "Federal Information Security Modernization Act (FISMA)": "Incorrect. FISMA regulates federal government agencies in the United States.",
+                    "Digital Millennium Copyright Act (DMCA)": "Incorrect. DMCA addresses intellectual property and digital copyright law."
+                },
+                "key_term": "GDPR: A landmark legal framework in the European Union establishing guidelines for the collection and processing of personal information."
+            }
+        },
+        {
+            "id": "m4_e_17",
+            "raw_id": 17,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Introduction to cybersecurity",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the defensive security concept of 'Defense-in-Depth'?",
+            "type": "single",
+            "options": [
+                "Deploying multiple layered security controls so that if one defensive layer fails, another layer stops the attacker",
+                "Building a computer inside an underground bunker 50 feet below ground",
+                "Using passwords that are at least 1,000 characters long",
+                "Connecting 10 firewalls in a row on the exact same ethernet cable"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the layered security principle known as Defense-in-Depth.",
+                "why_correct": "Defense-in-Depth ensures that an attacker must breach multiple independent defensive layers (e.g., perimeter firewall, endpoint antivirus, MFA, least privilege access) before reaching critical assets.",
+                "options_breakdown": {
+                    "Deploying multiple layered security controls so that if one defensive layer fails, another layer stops the attacker": "Correct. Layered defenses prevent single points of failure.",
+                    "Building a computer inside an underground bunker 50 feet below ground": "Incorrect. While physical depth exists, cybersecurity defense-in-depth refers to layered controls.",
+                    "Using passwords that are at least 1,000 characters long": "Incorrect. Impractically long passwords are not defense-in-depth.",
+                    "Connecting 10 firewalls in a row on the exact same ethernet cable": "Incorrect. Redundancy must be diversified across different defense types, not identical inline firewalls."
+                },
+                "key_term": "Defense-in-Depth: A strategy that uses multiple security mechanisms to protect an organization's assets."
+            }
+        },
+        {
+            "id": "m4_e_18",
+            "raw_id": 18,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Authentication and authorization",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the Principle of Least Privilege in information security?",
+            "type": "single",
+            "options": [
+                "Users and systems should only be granted the minimum necessary access rights required to perform their specific job functions",
+                "Every employee in a company should be given full administrator access to all computers",
+                "Users should be forbidden from drinking coffee while typing on laptops",
+                "Computers should be turned off every 15 minutes to save electricity"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the Principle of Least Privilege.",
+                "why_correct": "Least Privilege dictates that individuals and processes are granted only the access permissions essential to complete authorized tasks, minimizing the blast radius of compromised accounts.",
+                "options_breakdown": {
+                    "Users and systems should only be granted the minimum necessary access rights required to perform their specific job functions": "Correct. Least privilege limits permissions to strictly what is required for authorized tasks.",
+                    "Every employee in a company should be given full administrator access to all computers": "Incorrect. Giving everyone administrator privileges completely violates least privilege.",
+                    "Users should be forbidden from drinking coffee while typing on laptops": "Incorrect. This is a workplace food/beverage guideline, not least privilege access control.",
+                    "Computers should be turned off every 15 minutes to save electricity": "Incorrect. Power-saving habits do not define permission allocation principles."
+                },
+                "key_term": "Principle of Least Privilege: The security concept that a user or process is given no more privilege than necessary to perform its function."
+            }
+        },
+        {
+            "id": "m4_e_19",
+            "raw_id": 19,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Encryption and hashing",
+            "is_scenario": true,
+            "scenario": "A company stores user account passwords in a database. Instead of storing plaintext passwords, they compute a SHA-256 cryptographic digest of each password.",
+            "question": "What is this one-way conversion called?",
+            "type": "single",
+            "options": [
+                "Hashing",
+                "Symmetric Decryption",
+                "Defragmentation",
+                "Virtualization"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests password storage best practices using one-way cryptographic hashing.",
+                "why_correct": "Computing a SHA-256 digest is an example of Hashing. The hash cannot be reversed back to the password, but incoming login passwords can be hashed and compared to verify correctness.",
+                "options_breakdown": {
+                    "Hashing": "Correct. SHA-256 is a one-way cryptographic hashing algorithm.",
+                    "Symmetric Decryption": "Incorrect. Decryption converts ciphertext back to plaintext using a key.",
+                    "Defragmentation": "Incorrect. Defragmentation organizes storage blocks on physical drives.",
+                    "Virtualization": "Incorrect. Virtualization creates simulated software computer environments."
+                },
+                "key_term": "Password Hashing: Transforming a user's password into an unreadable, non-reversible cryptographic string using a hash algorithm."
+            }
+        },
+        {
+            "id": "m4_e_20",
+            "raw_id": 20,
+            "module_id": 4,
+            "difficulty": "easy",
+            "topic": "Security controls",
+            "is_scenario": true,
+            "scenario": "An organization's security policy requires that all employees complete an annual cybersecurity awareness training course on phishing and password hygiene.",
+            "question": "Which category of security control does mandatory security training represent?",
+            "type": "single",
+            "options": [
+                "Administrative / Managerial Control",
+                "Physical Security Control",
+                "Technical / Logical Control",
+                "Environmental Control"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identifying administrative policies and employee training controls.",
+                "why_correct": "Administrative (managerial) controls consist of written policies, procedures, background checks, and employee security training programs established by leadership.",
+                "options_breakdown": {
+                    "Administrative / Managerial Control": "Correct. Employee awareness training and company policies are administrative controls.",
+                    "Physical Security Control": "Incorrect. Physical controls involve tangible physical barriers like gates, locks, and guards.",
+                    "Technical / Logical Control": "Incorrect. Technical controls involve hardware and software mechanisms like firewalls and encryption.",
+                    "Environmental Control": "Incorrect. Environmental controls manage HVAC temperatures, humidity, and fire suppression in data centers."
+                },
+                "key_term": "Administrative Controls: Security controls that develop policies, procedures, standards, and training to manage security risk."
+            }
+        },
+        {
+            "id": "m4_i_21",
+            "raw_id": 21,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why must developers append a unique random 'Salt' to each password before computing its cryptographic hash for database storage?",
+            "type": "single",
+            "options": [
+                "To prevent attackers from using precomputed Rainbow Tables and to ensure identical passwords produce completely different hash outputs",
+                "To make passwords taste better to database administrators",
+                "To increase the physical CPU clock frequency during login",
+                "To convert binary hashes into human-readable English poetry"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the cryptographic purpose of salting passwords.",
+                "why_correct": "A Salt is random data concatenated with a password prior to hashing. It neutralizes precomputed Rainbow Table lookup attacks and ensures two users with the same password have completely different stored hashes.",
+                "options_breakdown": {
+                    "To prevent attackers from using precomputed Rainbow Tables and to ensure identical passwords produce completely different hash outputs": "Correct. Salting defeats precomputed hash dictionaries (rainbow tables) and guarantees hash uniqueness.",
+                    "To make passwords taste better to database administrators": "Incorrect. Salt is a cryptographic data string, not table seasoning.",
+                    "To increase the physical CPU clock frequency during login": "Incorrect. Cryptographic salting has no effect on CPU hardware clock frequencies.",
+                    "To convert binary hashes into human-readable English poetry": "Incorrect. Hashes are hexadecimal digests, not poetry."
+                },
+                "key_term": "Salt: Random data that is used as an additional input to a one-way function that hashes data, a password or passphrase."
+            }
+        },
+        {
+            "id": "m4_i_22",
+            "raw_id": 22,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Digital signatures",
+            "is_scenario": true,
+            "scenario": "Alice sends a digitally signed software update to Bob. How does Alice create the digital signature so that Bob can independently verify its authenticity and integrity?",
+            "question": "Alice sends a digitally signed software update to Bob. How does Alice create the digital signature so that Bob can independently verify its authenticity and integrity?",
+            "type": "single",
+            "options": [
+                "Alice hashes the software update and encrypts the hash using her own Private Key",
+                "Alice encrypts the file using Bob's Public Key",
+                "Alice posts her private key on a public Twitter account",
+                "Alice converts the software file into an analog cassette tape"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests the cryptographic mechanism of generating a digital signature.",
+                "why_correct": "To create a digital signature, the sender hashes the data and encrypts that hash with their own Private Key. The recipient decrypts the signature with the sender's Public Key and compares hashes.",
+                "options_breakdown": {
+                    "Alice hashes the software update and encrypts the hash using her own Private Key": "Correct. A digital signature is a message hash encrypted with the sender's private key.",
+                    "Alice encrypts the file using Bob's Public Key": "Incorrect. That provides confidentiality for Bob, not a digital signature proving Alice's authorship.",
+                    "Alice posts her private key on a public Twitter account": "Incorrect. Compromising her private key destroys all security and signature trust.",
+                    "Alice converts the software file into an analog cassette tape": "Incorrect. Digital signatures operate on mathematical digital hashes."
+                },
+                "key_term": "Digital Signature Generation: The process of encrypting a cryptographic hash of a message with the signer's private key."
+            }
+        },
+        {
+            "id": "m4_i_23",
+            "raw_id": 23,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Authentication and authorization",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "In Role-Based Access Control (RBAC), how are permissions assigned to individual users in an enterprise?",
+            "type": "single",
+            "options": [
+                "Permissions are assigned to defined organizational Roles, and users are assigned to those roles based on their job duties",
+                "Permissions are assigned based entirely on the user's height and eye color",
+                "Every user is randomly given root access on alternating Tuesdays",
+                "Permissions are assigned only by flipping a physical coin"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests the architecture of Role-Based Access Control (RBAC).",
+                "why_correct": "In RBAC, privileges are mapped to specific roles (e.g., 'Finance Analyst', 'SOC Analyst', 'HR Specialist'). When an employee joins or changes positions, they are simply assigned the appropriate role.",
+                "options_breakdown": {
+                    "Permissions are assigned to defined organizational Roles, and users are assigned to those roles based on their job duties": "Correct. RBAC simplifies administration by linking permissions to job roles rather than individuals.",
+                    "Permissions are assigned based entirely on the user's height and eye color": "Incorrect. Physical biometric traits do not dictate corporate access permissions.",
+                    "Every user is randomly given root access on alternating Tuesdays": "Incorrect. RBAC is a structured, permanent permission architecture.",
+                    "Permissions are assigned only by flipping a physical coin": "Incorrect. Permission allocation must be deterministic and policy-driven."
+                },
+                "key_term": "RBAC (Role-Based Access Control): An access control model where permissions are tied to organizational roles rather than individual accounts."
+            }
+        },
+        {
+            "id": "m4_i_24",
+            "raw_id": 24,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Why is Asymmetric Encryption (like RSA) typically used only during the initial handshake of a connection (like HTTPS/TLS), while Symmetric Encryption (like AES) is used for bulk data transfer?",
+            "type": "single",
+            "options": [
+                "Asymmetric encryption requires immense computational overhead (slow), while symmetric encryption is orders of magnitude faster and hardware-accelerated",
+                "Asymmetric encryption only works on files smaller than 10 bytes",
+                "Symmetric encryption was invented by Google, while asymmetric encryption is illegal in Europe",
+                "Asymmetric encryption can only run on quantum computers"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests hybrid cryptosystem design (combining asymmetric and symmetric ciphers).",
+                "why_correct": "Asymmetric cryptography involves heavy modular arithmetic on very large numbers, making it 1,000+ times slower than symmetric ciphers. Therefore, asymmetric keys are used to negotiate a temporary 'session key', and fast AES encrypts the bulk payload.",
+                "options_breakdown": {
+                    "Asymmetric encryption requires immense computational overhead (slow), while symmetric encryption is orders of magnitude faster and hardware-accelerated": "Correct. Hybrid cryptosystems combine the key exchange benefits of asymmetric ciphers with the high speed of symmetric ciphers.",
+                    "Asymmetric encryption only works on files smaller than 10 bytes": "Incorrect. While block sizes exist, asymmetric keys can encrypt larger keys and blocks.",
+                    "Symmetric encryption was invented by Google, while asymmetric encryption is illegal in Europe": "Incorrect. Both are open cryptographic standards used legally worldwide.",
+                    "Asymmetric encryption can only run on quantum computers": "Incorrect. Standard laptops and servers run asymmetric encryption daily."
+                },
+                "key_term": "Hybrid Cryptosystem: A protocol that uses asymmetric encryption for secure key exchange and symmetric encryption for fast data transmission."
+            }
+        },
+        {
+            "id": "m4_i_25",
+            "raw_id": 25,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Data protection and privacy",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following data classification tiers typically represents the highest level of confidentiality in a commercial enterprise?",
+            "type": "single",
+            "options": [
+                "Restricted / Highly Confidential (trade secrets, intellectual property)",
+                "Internal Use Only",
+                "Public (press releases, marketing brochures)",
+                "Unclassified General"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests corporate data classification tiers.",
+                "why_correct": "Commercial organizations commonly use four classification levels: Public, Internal, Confidential, and Restricted/Highly Confidential (strictly limited to authorized executives, e.g., M&A deals, trade secrets).",
+                "options_breakdown": {
+                    "Restricted / Highly Confidential (trade secrets, intellectual property)": "Correct. Restricted/Confidential is the highest security classification in corporate environments.",
+                    "Internal Use Only": "Incorrect. Internal data is for general employee use without critical damage if leaked.",
+                    "Public (press releases, marketing brochures)": "Incorrect. Public data is explicitly meant for open external distribution.",
+                    "Unclassified General": "Incorrect. This is an open or baseline government classification."
+                },
+                "key_term": "Data Classification: The process of categorizing data based on its sensitivity and the impact to an organization if disclosed, altered, or destroyed."
+            }
+        },
+        {
+            "id": "m4_i_26",
+            "raw_id": 26,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Assets, threats, vulnerabilities, and risks",
+            "is_scenario": true,
+            "scenario": "An organization evaluates the risk of a server room fire. The financial cost of installing a halon gas fire suppression system exceeds the total value of the hardware inside. The executive leadership decides to purchase an insurance policy that reimburses the company if a fire destroys the room.",
+            "question": "Which risk management strategy has the company adopted?",
+            "type": "single",
+            "options": [
+                "Risk Transference (Transfer)",
+                "Risk Mitigation (Reduction)",
+                "Risk Avoidance",
+                "Risk Acceptance"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests the four fundamental risk treatment options.",
+                "why_correct": "Risk Transference shifts the financial burden of a potential loss to a third party (such as purchasing an insurance policy or outsourcing risk via contracts).",
+                "options_breakdown": {
+                    "Risk Transference (Transfer)": "Correct. Purchasing insurance transfers the financial consequences of the risk to an insurance underwriter.",
+                    "Risk Mitigation (Reduction)": "Incorrect. Mitigation implements controls (like fire sprinklers) to lessen the risk directly.",
+                    "Risk Avoidance": "Incorrect. Avoidance would mean completely eliminating the activity (e.g., closing the server room entirely).",
+                    "Risk Acceptance": "Incorrect. Acceptance means acknowledging the risk and paying for damages out of pocket with no insurance."
+                },
+                "key_term": "Risk Transference: A risk response strategy whereby the organization shifts the impact of a risk event to a third party, typically via insurance or outsourcing."
+            }
+        },
+        {
+            "id": "m4_i_27",
+            "raw_id": 27,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Multi-factor authentication",
+            "is_scenario": true,
+            "scenario": "A company enforces MFA where users type their password and then enter a 6-digit code generated by the Google Authenticator app on their smartphone.",
+            "question": "Which two distinct authentication factors are being validated?",
+            "type": "single",
+            "options": [
+                "Something you know (password) and Something you have (authenticator app on phone)",
+                "Something you know and Something you know",
+                "Something you are and Something you are",
+                "Somewhere you are and Something you wish"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests identifying the specific factor categories in a TOTP MFA implementation.",
+                "why_correct": "The password is 'Something you know' (knowledge factor). The smartphone holding the TOTP shared secret seed is 'Something you have' (possession factor). Combining them achieves true two-factor authentication.",
+                "options_breakdown": {
+                    "Something you know (password) and Something you have (authenticator app on phone)": "Correct. This pairs a knowledge factor with a physical possession factor.",
+                    "Something you know and Something you know": "Incorrect. Entering a password and a security question (like mother's maiden name) is two knowledge factors, not multi-factor.",
+                    "Something you are and Something you are": "Incorrect. Neither passwords nor TOTP generator apps are biometric inherence factors.",
+                    "Somewhere you are and Something you wish": "Incorrect. Personal wishes are not authentication credentials."
+                },
+                "key_term": "Two-Factor Authentication (2FA): An authentication process requiring two different categories of factors (e.g., knowledge and possession)."
+            }
+        },
+        {
+            "id": "m4_i_28",
+            "raw_id": 28,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Security controls",
+            "is_scenario": true,
+            "scenario": "A company experiences a ransomware attack that encrypts its active file shares. The incident response team pulls air-gapped, immutable backups from yesterday and restores all clean files.",
+            "question": "What category and function of security control was executed by restoring the clean backups?",
+            "type": "single",
+            "options": [
+                "Technical Corrective Control",
+                "Physical Detective Control",
+                "Administrative Deterrent Control",
+                "Compensating Environmental Control"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests categorization of recovery backups.",
+                "why_correct": "Restoring system data from backups remediates damage after an incident has already taken place, classifying it as a Corrective control. Because it involves software and storage systems, it is Technical.",
+                "options_breakdown": {
+                    "Technical Corrective Control": "Correct. Backups and recovery tools are technical corrective controls that repair damage after an attack.",
+                    "Physical Detective Control": "Incorrect. Physical detective controls are CCTV cameras and motion sensors.",
+                    "Administrative Deterrent Control": "Incorrect. Deterrent administrative controls are warning banners and legal warning notices.",
+                    "Compensating Environmental Control": "Incorrect. Environmental controls manage physical facility infrastructure."
+                },
+                "key_term": "Corrective Controls: Security controls that remedy circumstances, mitigate damage, or restore operations following an incident."
+            }
+        },
+        {
+            "id": "m4_i_29",
+            "raw_id": 29,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is a 'Cryptographic Collision' in a hashing algorithm?",
+            "type": "single",
+            "options": [
+                "When two completely different input data strings produce the exact same output hash value",
+                "When two computers crash into each other in a server room",
+                "When a password contains more than 16 characters",
+                "When an encrypted message is deleted by an antivirus scan"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of hash collisions and algorithm deprecation (like MD5 and SHA-1).",
+                "why_correct": "A collision occurs when two distinct inputs yield the identical hash digest: Hash(InputA) == Hash(InputB). A cryptographically secure hash algorithm must be collision-resistant.",
+                "options_breakdown": {
+                    "When two completely different input data strings produce the exact same output hash value": "Correct. Hash collisions break cryptographic integrity and led to the retirement of MD5 and SHA-1.",
+                    "When two computers crash into each other in a server room": "Incorrect. That is a physical equipment collision.",
+                    "When a password contains more than 16 characters": "Incorrect. Passwords can be arbitrary lengths.",
+                    "When an encrypted message is deleted by an antivirus scan": "Incorrect. Antivirus quarantining is not a cryptographic collision."
+                },
+                "key_term": "Collision Resistance: A property of a cryptographic hash function where it is computationally infeasible to find two distinct inputs with the same hash."
+            }
+        },
+        {
+            "id": "m4_i_30",
+            "raw_id": 30,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Introduction to cybersecurity",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the core premise of the 'Zero Trust' cybersecurity architecture model?",
+            "type": "single",
+            "options": [
+                "'Never Trust, Always Verify' \u2014 treat all internal and external network traffic as untrusted and require continuous authentication and authorization",
+                "Trust all computers connected inside the corporate office building automatically",
+                "Refuse to hire any employees because all humans are malicious",
+                "Never update operating system software to avoid introducing bugs"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of the Zero Trust security philosophy.",
+                "why_correct": "Zero Trust eliminates the concept of an implicitly trusted perimeter. It assumes breach and requires strict identity verification, device health checks, and least privilege access for every request, even from inside the LAN.",
+                "options_breakdown": {
+                    "'Never Trust, Always Verify' \u2014 treat all internal and external network traffic as untrusted and require continuous authentication and authorization": "Correct. Zero trust eliminates implicit trust based on network location.",
+                    "Trust all computers connected inside the corporate office building automatically": "Incorrect. That describes obsolete perimeter-based 'castle-and-moat' security.",
+                    "Refuse to hire any employees because all humans are malicious": "Incorrect. Zero Trust is a technical architecture, not an anti-hiring policy.",
+                    "Never update operating system software to avoid introducing bugs": "Incorrect. Zero Trust mandates strict device compliance and software patching."
+                },
+                "key_term": "Zero Trust: A security model based on the principle of maintaining strict access controls and not trusting anyone by default, even those inside the network perimeter."
+            }
+        },
+        {
+            "id": "m4_i_31",
+            "raw_id": 31,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Data protection and privacy",
+            "is_scenario": true,
+            "scenario": "An organization is hit by a data breach where unencrypted customer credit card records were accessed. The compliance officer notes this violates PCI-DSS.",
+            "question": "What does PCI-DSS govern?",
+            "type": "single",
+            "options": [
+                "Payment Card Industry Data Security Standard (governing credit and debit cardholder data security)",
+                "Pacific Communications Internet Data Standards Society",
+                "Personal Computer Installation and Device System Settings",
+                "Police and Crime Investigation Data Sharing Service"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the PCI-DSS industry security standard.",
+                "why_correct": "PCI-DSS (Payment Card Industry Data Security Standard) is an information security standard mandated for all entities that store, process, or transmit credit cardholder data.",
+                "options_breakdown": {
+                    "Payment Card Industry Data Security Standard (governing credit and debit cardholder data security)": "Correct. PCI-DSS regulates the security of debit and credit card processing systems.",
+                    "Pacific Communications Internet Data Standards Society": "Incorrect. This is a fabricated acronym.",
+                    "Personal Computer Installation and Device System Settings": "Incorrect. This is not a security standard.",
+                    "Police and Crime Investigation Data Sharing Service": "Incorrect. Law enforcement data sharing is governed by CJIS, not PCI."
+                },
+                "key_term": "PCI-DSS: The Payment Card Industry Data Security Standard is an information security standard for organizations that handle branded credit cards."
+            }
+        },
+        {
+            "id": "m4_i_32",
+            "raw_id": 32,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Assets, threats, vulnerabilities, and risks",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between a Vulnerability Assessment and a Penetration Test?",
+            "type": "single",
+            "options": [
+                "A Vulnerability Assessment identifies and catalogs known security weaknesses; a Penetration Test actively attempts to exploit them to assess real-world impact",
+                "A Vulnerability Assessment is illegal, while a Penetration Test is required by law",
+                "A Penetration Test only checks physical door locks, while a Vulnerability Assessment checks fire sprinklers",
+                "Both are automated software tools that execute identical tasks"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the operational differences between vulnerability scanning and active penetration testing.",
+                "why_correct": "Vulnerability assessments scan systems to list potential weaknesses without weaponizing them. Penetration tests actively exploit discovered vulnerabilities to demonstrate tangible risk and access depth.",
+                "options_breakdown": {
+                    "A Vulnerability Assessment identifies and catalogs known security weaknesses; a Penetration Test actively attempts to exploit them to assess real-world impact": "Correct. Assessment identifies flaws; penetration testing actively exploits them.",
+                    "A Vulnerability Assessment is illegal, while a Penetration Test is required by law": "Incorrect. Both are standard, authorized defensive security practices when scoped properly.",
+                    "A Penetration Test only checks physical door locks, while a Vulnerability Assessment checks fire sprinklers": "Incorrect. Both focus broadly on digital networks, web apps, and system security.",
+                    "Both are automated software tools that execute identical tasks": "Incorrect. Penetration testing requires human analytical expertise and exploit validation."
+                },
+                "key_term": "Penetration Testing: An authorized simulated cyberattack on a computer system, performed to evaluate the security of the system."
+            }
+        },
+        {
+            "id": "m4_i_33",
+            "raw_id": 33,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Authentication and authorization",
+            "is_scenario": true,
+            "scenario": "A company implements Single Sign-On (SSO) so employees can log in once and access multiple cloud applications (Slack, Google Workspace, Jira) seamlessly.",
+            "question": "Which XML-based open standard is commonly used for passing authentication assertions between an Identity Provider (IdP) and Service Providers (SP)?",
+            "type": "single",
+            "options": [
+                "Security Assertion Markup Language (SAML)",
+                "Cascading Style Sheets (CSS)",
+                "File Transfer Protocol (FTP)",
+                "Simple Network Management Protocol (SNMP)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of enterprise federated identity standards (SAML).",
+                "why_correct": "SAML (Security Assertion Markup Language) is an XML-based standard for exchanging authentication and authorization data between an identity provider (like Okta or Azure AD) and cloud service providers.",
+                "options_breakdown": {
+                    "Security Assertion Markup Language (SAML)": "Correct. SAML enables cross-domain federated Single Sign-On.",
+                    "Cascading Style Sheets (CSS)": "Incorrect. CSS styles HTML web page visual presentation.",
+                    "File Transfer Protocol (FTP)": "Incorrect. FTP transfers files across networks.",
+                    "Simple Network Management Protocol (SNMP)": "Incorrect. SNMP monitors network device metrics."
+                },
+                "key_term": "SAML: An open standard for exchanging authentication and authorization data between parties, in particular, between an identity provider and a service provider."
+            }
+        },
+        {
+            "id": "m4_i_34",
+            "raw_id": 34,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following encryption algorithms are classified as Asymmetric (Public Key) algorithms? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "RSA (Rivest-Shamir-Adleman)",
+                "ECC (Elliptic Curve Cryptography)",
+                "Diffie-Hellman Key Exchange",
+                "AES-256 (Advanced Encryption Standard)"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to distinguish Asymmetric algorithms from Symmetric ciphers.",
+                "why_correct": "RSA, ECC, and Diffie-Hellman are asymmetric public-key cryptosystems based on complex mathematical problems (factoring, elliptic curves, discrete logarithms). AES is a symmetric block cipher.",
+                "options_breakdown": {
+                    "RSA (Rivest-Shamir-Adleman)": "Correct. RSA is a classic asymmetric public key cryptosystem.",
+                    "ECC (Elliptic Curve Cryptography)": "Correct. ECC provides strong asymmetric cryptography with shorter key lengths.",
+                    "Diffie-Hellman Key Exchange": "Correct. Diffie-Hellman is an asymmetric key exchange protocol.",
+                    "AES-256 (Advanced Encryption Standard)": "Incorrect. AES-256 is a symmetric block cipher using a single shared secret key."
+                },
+                "key_term": "Asymmetric Algorithms: Mathematical ciphers utilizing paired public and private keys for encryption, signatures, and key negotiation."
+            }
+        },
+        {
+            "id": "m4_i_35",
+            "raw_id": 35,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Security controls",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the purpose of a 'Compensating Control' in enterprise compliance?",
+            "type": "single",
+            "options": [
+                "An alternative safeguard implemented when a primary required security control cannot be practically or technically met",
+                "A bonus check paid to the employee who finds the most bugs",
+                "A software program that automatically doubles all user passwords",
+                "A control that shuts down all company operations whenever a bug is detected"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests understanding of compensating controls in risk and compliance.",
+                "why_correct": "When a company cannot implement a mandated security control due to technical or business constraints, it implements an alternative 'compensating control' that provides equivalent security protection.",
+                "options_breakdown": {
+                    "An alternative safeguard implemented when a primary required security control cannot be practically or technically met": "Correct. Compensating controls satisfy security intent through alternate countermeasures.",
+                    "A bonus check paid to the employee who finds the most bugs": "Incorrect. That is a bug bounty reward, not a compensating control.",
+                    "A software program that automatically doubles all user passwords": "Incorrect. This is not a real security control.",
+                    "A control that shuts down all company operations whenever a bug is detected": "Incorrect. Disrupting business operations is not the role of compensating controls."
+                },
+                "key_term": "Compensating Control: A data security measure that provides an alternative solution to a countermeasure that is deemed impossible or impractical to implement."
+            }
+        },
+        {
+            "id": "m4_i_36",
+            "raw_id": 36,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Data protection and privacy",
+            "is_scenario": true,
+            "scenario": "A healthcare organization processes Electronic Protected Health Information (ePHI). Which United States regulation mandates strict administrative, physical, and technical safeguards for patient medical records?",
+            "question": "A healthcare organization processes Electronic Protected Health Information (ePHI). Which United States regulation mandates strict administrative, physical, and technical safeguards for patient medical records?",
+            "type": "single",
+            "options": [
+                "Health Insurance Portability and Accountability Act (HIPAA)",
+                "Sarbanes-Oxley Act (SOX)",
+                "Family Educational Rights and Privacy Act (FERPA)",
+                "Federal Communications Commission Act (FCC)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests regulatory compliance for healthcare information security.",
+                "why_correct": "HIPAA establishes national standards in the United States to protect individuals' medical records and other personal health information (ePHI).",
+                "options_breakdown": {
+                    "Health Insurance Portability and Accountability Act (HIPAA)": "Correct. HIPAA governs privacy and security safeguards for patient health information.",
+                    "Sarbanes-Oxley Act (SOX)": "Incorrect. SOX regulates financial auditing and accounting reporting for publicly traded corporations.",
+                    "Family Educational Rights and Privacy Act (FERPA)": "Incorrect. FERPA protects the privacy of student educational records.",
+                    "Federal Communications Commission Act (FCC)": "Incorrect. The FCC regulates interstate and international communications via radio, television, wire, satellite, and cable."
+                },
+                "key_term": "HIPAA: A US law designed to provide privacy standards to protect patients' medical records and other health information provided to health plans, doctors, and hospitals."
+            }
+        },
+        {
+            "id": "m4_i_37",
+            "raw_id": 37,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the primary difference between a Stream Cipher and a Block Cipher?",
+            "type": "single",
+            "options": [
+                "A Block Cipher encrypts data in fixed-size chunks (e.g., 128-bit blocks), while a Stream Cipher encrypts data bit-by-bit or byte-by-byte continuously",
+                "A Block Cipher only runs on concrete floors, while a Stream Cipher only runs near rivers",
+                "A Block Cipher is analog, while a Stream Cipher is digital",
+                "Block Ciphers do not use keys, while Stream Ciphers use 10 keys simultaneously"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests symmetric cipher operating mechanics (Block vs Stream).",
+                "why_correct": "Block ciphers (like AES) group plaintext into fixed-size blocks (e.g., 128 bits) and encrypt the entire block at once. Stream ciphers (like ChaCha20) generate a keystream and XOR it bit-by-bit with plaintext in real time.",
+                "options_breakdown": {
+                    "A Block Cipher encrypts data in fixed-size chunks (e.g., 128-bit blocks), while a Stream Cipher encrypts data bit-by-bit or byte-by-byte continuously": "Correct. Block ciphers operate on chunks; stream ciphers encrypt continuous bit streams.",
+                    "A Block Cipher only runs on concrete floors, while a Stream Cipher only runs near rivers": "Incorrect. These are literal geographical jokes, not cryptographic concepts.",
+                    "A Block Cipher is analog, while a Stream Cipher is digital": "Incorrect. Both are modern digital cryptographic algorithms.",
+                    "Block Ciphers do not use keys, while Stream Ciphers use 10 keys simultaneously": "Incorrect. Both require cryptographic keys to operate."
+                },
+                "key_term": "Block Cipher: A deterministic algorithm that encrypts a fixed-size block of data at a time using a shared key."
+            }
+        },
+        {
+            "id": "m4_i_38",
+            "raw_id": 38,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Authentication and authorization",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the difference between DAC (Discretionary Access Control) and MAC (Mandatory Access Control)?",
+            "type": "single",
+            "options": [
+                "Under DAC, the resource owner decides who has access; under MAC, access is enforced centrally by the OS based on security labels and clearances",
+                "DAC is for Apple Mac computers; MAC is for Windows computers",
+                "DAC requires fingerprints; MAC requires credit cards",
+                "There is zero difference between DAC and MAC"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question tests fundamental access control models.",
+                "why_correct": "In DAC (standard Linux/Windows), the file owner sets permissions at their discretion. In MAC (e.g., SELinux or military systems), access is strictly enforced by the OS kernel according to security labels (e.g., Top Secret) and cannot be overridden by users.",
+                "options_breakdown": {
+                    "Under DAC, the resource owner decides who has access; under MAC, access is enforced centrally by the OS based on security labels and clearances": "Correct. DAC is owner-managed; MAC is centrally enforced via mandatory security labels.",
+                    "DAC is for Apple Mac computers; MAC is for Windows computers": "Incorrect. MAC here stands for Mandatory Access Control, not Apple Mac.",
+                    "DAC requires fingerprints; MAC requires credit cards": "Incorrect. These are access control authorization architectures, not payment instruments.",
+                    "There is zero difference between DAC and MAC": "Incorrect. They represent completely different authorization philosophies."
+                },
+                "key_term": "Mandatory Access Control (MAC): A security architecture where access to resources is constrained based on government/organizational security clearances and classification labels."
+            }
+        },
+        {
+            "id": "m4_i_39",
+            "raw_id": 39,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Digital signatures",
+            "is_scenario": true,
+            "scenario": "A browser connects to 'https://bank.com'. Before establishing the session, the browser checks the digital certificate presented by the website.",
+            "question": "Which entity cryptographically signs the digital certificate to vouch for the website's authenticity?",
+            "type": "single",
+            "options": [
+                "A trusted Certificate Authority (CA)",
+                "The website's web designer",
+                "The local Wi-Fi router",
+                "The user's computer monitor manufacturer"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Public Key Infrastructure (PKI) and Certificate Authorities.",
+                "why_correct": "Certificate Authorities (CAs, such as DigiCert, Let's Encrypt, or Sectigo) are trusted third-party organizations that verify an entity's identity and digitally sign their X.509 SSL/TLS certificates.",
+                "options_breakdown": {
+                    "A trusted Certificate Authority (CA)": "Correct. CAs act as trusted root signers in the global PKI trust hierarchy.",
+                    "The website's web designer": "Incorrect. Designers build site frontends; they do not issue trusted PKI certificates.",
+                    "The local Wi-Fi router": "Incorrect. Local routers forward packets and cannot issue public CA certificates.",
+                    "The user's computer monitor manufacturer": "Incorrect. Hardware monitor manufacturers have no role in web PKI."
+                },
+                "key_term": "Certificate Authority (CA): An organization that validates identities and issues digital certificates to establish trust on the internet."
+            }
+        },
+        {
+            "id": "m4_i_40",
+            "raw_id": 40,
+            "module_id": 4,
+            "difficulty": "intermediate",
+            "topic": "Introduction to cybersecurity",
+            "is_scenario": true,
+            "scenario": "A company introduces a 'Clean Desk Policy' requiring all employees to lock sensitive paper documents in file cabinets and lock their computer screens whenever leaving their desks.",
+            "question": "Which type of attack does a Clean Desk Policy primarily mitigate?",
+            "type": "single",
+            "options": [
+                "Visual snooping / Shoulder surfing and physical unauthorized document theft by visitors or insiders",
+                "Distributed Denial of Service (DDoS) internet attacks",
+                "SQL injection attacks against web servers",
+                "Cross-Site Scripting (XSS) in JavaScript"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests the defensive objective of clean desk and locked screen policies.",
+                "why_correct": "Clean Desk policies prevent physical snooping, unauthorized document removal, and opportunistic shoulder surfing by unvetted office visitors, cleaning staff, or malicious internal personnel.",
+                "options_breakdown": {
+                    "Visual snooping / Shoulder surfing and physical unauthorized document theft by visitors or insiders": "Correct. Clean desk policies prevent physical visual and paper information exposure.",
+                    "Distributed Denial of Service (DDoS) internet attacks": "Incorrect. DDoS attacks occur over networks and are unaffected by physical paper locks.",
+                    "SQL injection attacks against web servers": "Incorrect. SQL injection targets application databases over HTTP.",
+                    "Cross-Site Scripting (XSS) in JavaScript": "Incorrect. XSS is a web browser script execution vulnerability."
+                },
+                "key_term": "Clean Desk Policy: A corporate security policy specifying that all sensitive company information must be cleared from desks and locked away when workstations are unattended."
+            }
+        },
+        {
+            "id": "m4_h_41",
+            "raw_id": 41,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Encryption and hashing",
+            "is_scenario": true,
+            "scenario": "An engineer configures TLS 1.3 on an enterprise web server and ensures that only cipher suites supporting 'Perfect Forward Secrecy' (PFS) using Ephemeral Diffie-Hellman (ECDHE) are enabled.",
+            "question": "What critical security guarantee does Perfect Forward Secrecy provide if the server's long-term private key is stolen in the future?",
+            "type": "single",
+            "options": [
+                "Past recorded encrypted communications cannot be decrypted, because each session used unique, ephemeral session keys that were discarded immediately after use",
+                "It makes the server's CPU run 10 times cooler",
+                "It permanently prevents any attacker from ever guessing a password",
+                "It automatically backs up all encrypted traffic to Google Drive"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of Perfect Forward Secrecy (PFS) in modern cryptography.",
+                "why_correct": "Without PFS, an attacker who records encrypted traffic today and steals the server's private key next year could decrypt all historical traffic. PFS generates unique ephemeral keys per session that are never stored, preventing retrospective decryption.",
+                "options_breakdown": {
+                    "Past recorded encrypted communications cannot be decrypted, because each session used unique, ephemeral session keys that were discarded immediately after use": "Correct. PFS ensures past sessions remain secure even if long-term server private keys are compromised later.",
+                    "It makes the server's CPU run 10 times cooler": "Incorrect. PFS is a cryptographic property with no direct effect on physical thermal cooling.",
+                    "It permanently prevents any attacker from ever guessing a password": "Incorrect. PFS protects session key secrecy, not user password strength.",
+                    "It automatically backs up all encrypted traffic to Google Drive": "Incorrect. PFS has no relation to commercial cloud backups."
+                },
+                "key_term": "Perfect Forward Secrecy (PFS): A feature of specific key-agreement protocols that gives assurances that session keys will not be compromised even if the long-term private key of the server is compromised in the future."
+            }
+        },
+        {
+            "id": "m4_h_42",
+            "raw_id": 42,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Encryption and hashing",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What mathematical paradox explains why finding a hash collision requires only approximately 2^(n/2) operations rather than 2^n operations (where n is hash bit length)?",
+            "type": "single",
+            "options": [
+                "The Birthday Paradox (Birthday Problem)",
+                "Moore's Law",
+                "Metcalfe's Law",
+                "The Traveling Salesman Problem"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the mathematical basis of collision attacks (the Birthday Attack).",
+                "why_correct": "The Birthday Paradox demonstrates that in a group of just 23 people, there is a >50% chance two share a birthday. Similarly, finding ANY two inputs that yield the same hash requires searching only the square root of total states (2^(n/2)).",
+                "options_breakdown": {
+                    "The Birthday Paradox (Birthday Problem)": "Correct. The birthday paradox reduces the difficulty of finding any collision to approximately 2^(n/2).",
+                    "Moore's Law": "Incorrect. Moore's Law is an observation about transistor density doubling every two years.",
+                    "Metcalfe's Law": "Incorrect. Metcalfe's Law states the value of a telecommunications network is proportional to the square of connected users.",
+                    "The Traveling Salesman Problem": "Incorrect. This is an NP-hard algorithmic optimization problem finding the shortest route visiting all cities."
+                },
+                "key_term": "Birthday Attack: A cryptographic attack that exploits the mathematics behind the birthday problem in probability theory to find hash collisions."
+            }
+        },
+        {
+            "id": "m4_h_43",
+            "raw_id": 43,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Digital signatures",
+            "is_scenario": true,
+            "scenario": "A client verifies an X.509 server certificate and finds that the issuing intermediate Certificate Authority has been revoked by the root CA.",
+            "question": "Which two standardized network protocols or mechanisms allow the client to verify real-time certificate revocation status? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Online Certificate Status Protocol (OCSP)",
+                "Certificate Revocation Lists (CRL)",
+                "Simple Mail Transfer Protocol (SMTP)",
+                "Address Resolution Protocol (ARP)"
+            ],
+            "correct": [
+                0,
+                1
+            ],
+            "explanation": {
+                "asking": "This question tests methods for verifying digital certificate revocation.",
+                "why_correct": "Clients check revocation via Certificate Revocation Lists (CRLs - published lists of revoked serial numbers) or Online Certificate Status Protocol (OCSP - real-time query of revocation status).",
+                "options_breakdown": {
+                    "Online Certificate Status Protocol (OCSP)": "Correct. OCSP performs real-time HTTP queries to verify whether an individual certificate is valid or revoked.",
+                    "Certificate Revocation Lists (CRL)": "Correct. CRLs are digitally signed lists published periodically by CAs detailing revoked certificates.",
+                    "Simple Mail Transfer Protocol (SMTP)": "Incorrect. SMTP is an email transmission protocol.",
+                    "Address Resolution Protocol (ARP)": "Incorrect. ARP resolves IP addresses to local MAC addresses."
+                },
+                "key_term": "OCSP (Online Certificate Status Protocol): An automated internet protocol used for obtaining the revocation status of an X.509 digital certificate."
+            }
+        },
+        {
+            "id": "m4_h_44",
+            "raw_id": 44,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Assets, threats, vulnerabilities, and risks",
+            "is_scenario": true,
+            "scenario": "A software development team uses Microsoft's STRIDE threat modeling framework to systematically evaluate risks in a new banking application.",
+            "question": "What does the acronym STRIDE stand for?",
+            "type": "single",
+            "options": [
+                "Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege",
+                "Scanning, Tracking, Routing, Inspecting, Decoding, and Encrypting",
+                "Security, Technology, Reliability, Integrity, Data, and Execution",
+                "Storage, Transmission, Reception, Interface, Driver, and Ethernet"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of the STRIDE threat modeling methodology.",
+                "why_correct": "STRIDE classifies threats into six categories: Spoofing identity, Tampering with data, Repudiation, Information disclosure, Denial of service, and Elevation of privilege.",
+                "options_breakdown": {
+                    "Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege": "Correct. These are the six categories of the STRIDE threat modeling model.",
+                    "Scanning, Tracking, Routing, Inspecting, Decoding, and Encrypting": "Incorrect. These are generic network verbs.",
+                    "Security, Technology, Reliability, Integrity, Data, and Execution": "Incorrect. These are arbitrary management buzzwords.",
+                    "Storage, Transmission, Reception, Interface, Driver, and Ethernet": "Incorrect. These are hardware engineering terms."
+                },
+                "key_term": "STRIDE: A threat modeling methodology developed by Microsoft that categorizes computer security threats into six distinct types."
+            }
+        },
+        {
+            "id": "m4_h_45",
+            "raw_id": 45,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Encryption and hashing",
+            "is_scenario": true,
+            "scenario": "An enterprise bank requires tamper-proof physical storage for their master cryptographic root keys and TLS private keys.",
+            "question": "Which dedicated, physically hardened cryptographic hardware appliance meets FIPS 140-2 Level 3/4 standards to zeroize keys upon detected physical intrusion?",
+            "type": "single",
+            "options": [
+                "Hardware Security Module (HSM)",
+                "Standard USB thumb drive",
+                "External spinning mechanical hard drive",
+                "Network Interface Card (NIC)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests enterprise key management using Hardware Security Modules (HSMs).",
+                "why_correct": "A Hardware Security Module (HSM) is a dedicated crypto-processor designed to securely generate, store, and manage cryptographic keys. They feature physical tamper-resistance and automatically erase (zeroize) keys if physical tampering is detected.",
+                "options_breakdown": {
+                    "Hardware Security Module (HSM)": "Correct. HSMs provide tamper-resistant hardware cryptographic protection for high-value keys.",
+                    "Standard USB thumb drive": "Incorrect. Flash drives have no tamper-resistance or hardware crypto protection.",
+                    "External spinning mechanical hard drive": "Incorrect. Mechanical HDDs offer zero physical cryptographic tamper security.",
+                    "Network Interface Card (NIC)": "Incorrect. NICs process network packets, not root key protection."
+                },
+                "key_term": "HSM (Hardware Security Module): A physical computing device that safeguards and manages digital keys, performs encryption and decryption functions for digital signatures, strong authentication and other cryptographic functions."
+            }
+        },
+        {
+            "id": "m4_h_46",
+            "raw_id": 46,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Introduction to cybersecurity",
+            "is_scenario": true,
+            "scenario": "A security architect models data security across three distinct operational states: Data at Rest, Data in Transit, and Data in Use.",
+            "question": "Which emerging technology protects 'Data in Use' by executing computation inside a hardware-isolated secure CPU enclave (such as Intel SGX or AMD SEV)?",
+            "type": "single",
+            "options": [
+                "Confidential Computing",
+                "Full Disk Encryption (BitLocker)",
+                "Virtual Private Networks (IPsec)",
+                "Fiber Optic Cabling"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of data protection states and Confidential Computing.",
+                "why_correct": "While Data at Rest is protected by disk encryption and Data in Transit by TLS, Data in Use is vulnerable in system RAM during CPU processing. Confidential Computing executes code within hardware-encrypted CPU enclaves (TEE).",
+                "options_breakdown": {
+                    "Confidential Computing": "Correct. Confidential computing protects data in use by performing computation in a hardware-isolated Enclave.",
+                    "Full Disk Encryption (BitLocker)": "Incorrect. BitLocker protects Data at Rest on physical storage drives.",
+                    "Virtual Private Networks (IPsec)": "Incorrect. IPsec protects Data in Transit across network links.",
+                    "Fiber Optic Cabling": "Incorrect. Fiber cabling is physical network transmission media."
+                },
+                "key_term": "Confidential Computing: The protection of data in use by performing computation in a hardware-based, attested Trusted Execution Environment (TEE)."
+            }
+        },
+        {
+            "id": "m4_h_47",
+            "raw_id": 47,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Authentication and authorization",
+            "is_scenario": true,
+            "scenario": "An adversary captures an authenticated network token transmitted over an unencrypted Wi-Fi session and retransmits the exact same token to the server to gain unauthorized access without needing to know the user's password.",
+            "question": "What attack did the adversary perform, and which defensive mechanism effectively mitigates it?",
+            "type": "single",
+            "options": [
+                "Replay Attack; mitigated using cryptographic Nonces, timestamps, and TLS encryption",
+                "Brute-force attack; mitigated by increasing CPU clock frequency",
+                "Buffer Overflow; mitigated by turning off the computer screen",
+                "Social engineering; mitigated by buying new office furniture"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests understanding of replay attacks and replay prevention mechanisms.",
+                "why_correct": "In a Replay Attack, valid authentication transmissions are intercepted and repeated. Defenses include using TLS, including unique cryptographic Nonces (numbers used once), and enforcing short-lived timestamp expiration windows.",
+                "options_breakdown": {
+                    "Replay Attack; mitigated using cryptographic Nonces, timestamps, and TLS encryption": "Correct. Replay attacks reuse captured tokens; nonces and timestamps ensure tokens can only be used once.",
+                    "Brute-force attack; mitigated by increasing CPU clock frequency": "Incorrect. Brute force attempts to guess credentials, which was not the attack here.",
+                    "Buffer Overflow; mitigated by turning off the computer screen": "Incorrect. Buffer overflows corrupt memory, unrelated to token replay.",
+                    "Social engineering; mitigated by buying new office furniture": "Incorrect. Social engineering manipulates human trust."
+                },
+                "key_term": "Replay Attack: A network attack in which an adversary intercepts a valid transmission and retransmits it to fraudulently gain access."
+            }
+        },
+        {
+            "id": "m4_h_48",
+            "raw_id": 48,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Encryption and hashing",
+            "is_scenario": true,
+            "scenario": "An engineer examines a side-channel attack where an attacker deduces cryptographic key bits by measuring microscopic variations in the physical power consumption or execution duration of a cryptographic chip.",
+            "question": "What is this specific class of side-channel attack called?",
+            "type": "single",
+            "options": [
+                "Timing Attack / Differential Power Analysis (DPA)",
+                "Cross-Site Scripting (XSS)",
+                "SQL Injection",
+                "ARP Poisoning"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests advanced hardware side-channel attacks.",
+                "why_correct": "Timing attacks and Power Analysis (DPA/SPA) measure physical side-effects (execution time variations or electrical power fluctuations) of cipher execution rather than attacking mathematical algorithms directly. Constant-time algorithms are required to mitigate them.",
+                "options_breakdown": {
+                    "Timing Attack / Differential Power Analysis (DPA)": "Correct. DPA and timing analysis extract secret keys from physical hardware emissions.",
+                    "Cross-Site Scripting (XSS)": "Incorrect. XSS is a web browser script injection flaw.",
+                    "SQL Injection": "Incorrect. SQLi targets database backend queries.",
+                    "ARP Poisoning": "Incorrect. ARP poisoning targets local Layer 2 switch forwarding."
+                },
+                "key_term": "Side-Channel Attack: An attack based on information gained from the physical implementation of a computer system (e.g., timing, power, acoustic emissions)."
+            }
+        },
+        {
+            "id": "m4_h_49",
+            "raw_id": 49,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Data protection and privacy",
+            "is_scenario": true,
+            "scenario": "Under privacy regulations, what is the technical distinction between 'Anonymization' and 'Pseudonymization'?",
+            "question": "Under privacy regulations, what is the technical distinction between 'Anonymization' and 'Pseudonymization'?",
+            "type": "single",
+            "options": [
+                "Anonymization irreversibly destroys the link to an individual so re-identification is impossible; Pseudonymization replaces identifiers with pseudonyms but allows re-identification using a separate key",
+                "Anonymization is only used for children, while Pseudonymization is only used for adults",
+                "Pseudonymization requires burning paper records, while Anonymization requires deleting email",
+                "There is zero difference; both terms are legally identical"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests data privacy definitions under GDPR and ISO 27701.",
+                "why_correct": "Under GDPR, Anonymized data is irreversibly stripped of identifying data and falls outside privacy law. Pseudonymized data replaces identifiers with tokens (pseudonyms), but remains protected personal data because the key can re-identify individuals.",
+                "options_breakdown": {
+                    "Anonymization irreversibly destroys the link to an individual so re-identification is impossible; Pseudonymization replaces identifiers with pseudonyms but allows re-identification using a separate key": "Correct. Anonymization is permanent and irreversible; pseudonymization is reversible with the key.",
+                    "Anonymization is only used for children, while Pseudonymization is only used for adults": "Incorrect. Both techniques apply across all categories of data subjects.",
+                    "Pseudonymization requires burning paper records, while Anonymization requires deleting email": "Incorrect. Both are mathematical and technical data transformation processes.",
+                    "There is zero difference; both terms are legally identical": "Incorrect. They have fundamentally different legal obligations under GDPR."
+                },
+                "key_term": "Pseudonymization: The processing of personal data such that it can no longer be attributed to a specific data subject without the use of additional information kept separately."
+            }
+        },
+        {
+            "id": "m4_h_50",
+            "raw_id": 50,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Security controls",
+            "is_scenario": true,
+            "scenario": "An organization conducts a Business Impact Analysis (BIA) and defines an RPO (Recovery Point Objective) of 2 hours and an RTO (Recovery Time Objective) of 4 hours for its primary customer database.",
+            "question": "What do RPO and RTO represent?",
+            "type": "single",
+            "options": [
+                "RPO defines the maximum acceptable data loss measured in time (2 hours of lost data); RTO defines the maximum acceptable downtime to restore operations (4 hours to recover)",
+                "RPO is the cost of buying insurance; RTO is the cost of hiring security consultants",
+                "RPO is the physical distance between data centers; RTO is the speed of fiber optics",
+                "RPO and RTO are terms used exclusively for military artillery drills"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests Business Continuity / Disaster Recovery (BCDR) metrics.",
+                "why_correct": "Recovery Point Objective (RPO) is the maximum age of files that must be recovered from backup storage for normal operations to resume (tolerable data loss). Recovery Time Objective (RTO) is the maximum acceptable duration of system downtime.",
+                "options_breakdown": {
+                    "RPO defines the maximum acceptable data loss measured in time (2 hours of lost data); RTO defines the maximum acceptable downtime to restore operations (4 hours to recover)": "Correct. RPO defines tolerable data loss; RTO defines tolerable downtime.",
+                    "RPO is the cost of buying insurance; RTO is the cost of hiring security consultants": "Incorrect. RPO and RTO are time metrics, not currency amounts.",
+                    "RPO is the physical distance between data centers; RTO is the speed of fiber optics": "Incorrect. These are continuity metrics, not physical geographic distances.",
+                    "RPO and RTO are terms used exclusively for military artillery drills": "Incorrect. They are standard enterprise IT disaster recovery benchmarks."
+                },
+                "key_term": "RPO and RTO: Key metrics in disaster recovery planning measuring maximum acceptable data loss (RPO) and maximum acceptable downtime (RTO)."
+            }
+        },
+        {
+            "id": "m4_h_51",
+            "raw_id": 51,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Introduction to cybersecurity",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the function of an 'Air Gap' in high-security critical infrastructure systems (such as nuclear power plants or classified military networks)?",
+            "type": "single",
+            "options": [
+                "Complete physical and logical isolation from all external networks and the Internet, with zero physical or wireless connections",
+                "A high-powered fan that cools down the computer processors",
+                "An empty space between desks to prevent employees from talking to each other",
+                "A virtual private network (VPN) that connects through a cloud proxy"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks about the air gap security architecture.",
+                "why_correct": "An Air Gap is a network security measure that ensures a secure computer network is physically isolated from unsecured networks, such as the public Internet or unsecured local area networks.",
+                "options_breakdown": {
+                    "Complete physical and logical isolation from all external networks and the Internet, with zero physical or wireless connections": "Correct. An air gap guarantees zero electronic pathways between the isolated network and the outside world.",
+                    "A high-powered fan that cools down the computer processors": "Incorrect. Air gap is a network architecture, not an HVAC fan.",
+                    "An empty space between desks to prevent employees from talking to each other": "Incorrect. Air gapping applies to digital computing devices and cabling.",
+                    "A virtual private network (VPN) that connects through a cloud proxy": "Incorrect. A VPN traverses connected networks; an air-gapped system has no network connections."
+                },
+                "key_term": "Air Gap: A security measure that isolates a secure network from other networks and the Internet physically and logically."
+            }
+        },
+        {
+            "id": "m4_h_52",
+            "raw_id": 52,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Authentication and authorization",
+            "is_scenario": true,
+            "scenario": "An architect designs an authorization model where access decisions are evaluated dynamically in real time based on attributes of the user, the resource, the action, and environmental conditions (e.g., location, time of day, device health).",
+            "question": "What is this modern authorization framework called?",
+            "type": "single",
+            "options": [
+                "Attribute-Based Access Control (ABAC)",
+                "Discretionary Access Control (DAC)",
+                "Mandatory Access Control (MAC)",
+                "Role-Based Access Control (RBAC)"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of Attribute-Based Access Control (ABAC).",
+                "why_correct": "ABAC (defined in NIST SP 800-162) evaluates dynamic attributes of the subject (user), object (resource), action, and environment to provide fine-grained, context-aware authorization decisions.",
+                "options_breakdown": {
+                    "Attribute-Based Access Control (ABAC)": "Correct. ABAC grants access based on dynamic policies evaluating multiple contextual attributes.",
+                    "Discretionary Access Control (DAC)": "Incorrect. DAC relies on simple owner-defined permissions.",
+                    "Mandatory Access Control (MAC)": "Incorrect. MAC relies on rigid static security labels.",
+                    "Role-Based Access Control (RBAC)": "Incorrect. RBAC assigns access statically based on predefined job roles."
+                },
+                "key_term": "ABAC (Attribute-Based Access Control): An authorization model that evaluates attributes (user, resource, environment) to determine access privileges."
+            }
+        },
+        {
+            "id": "m4_h_53",
+            "raw_id": 53,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Encryption and hashing",
+            "is_scenario": true,
+            "scenario": "An attacker attempts to crack salted password hashes using specialized graphics processing units (GPUs) that can compute billions of SHA-256 hashes per second.",
+            "question": "Which purpose-built, memory-hard key derivation functions should be used instead of raw SHA-256 to force high memory requirements and drastically slow down GPU attacks?",
+            "type": "single",
+            "options": [
+                "Argon2, bcrypt, or PBKDF2",
+                "MD5, SHA-1, or CRC32",
+                "Base64 encoding",
+                "ROT13 substitution cipher"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests modern password hashing algorithms (Argon2, bcrypt, scrypt, PBKDF2).",
+                "why_correct": "General-purpose hash functions (like SHA-256) are designed to be fast, making them vulnerable to GPU cracking clusters. Password hashing algorithms (like Argon2id and bcrypt) are intentionally slow and memory-hard, neutralizing GPU acceleration.",
+                "options_breakdown": {
+                    "Argon2, bcrypt, or PBKDF2": "Correct. These are modern, slow, memory-hard key derivation algorithms specifically designed for password hashing.",
+                    "MD5, SHA-1, or CRC32": "Incorrect. MD5 and SHA-1 are cryptographically broken, and CRC32 is a non-cryptographic checksum.",
+                    "Base64 encoding": "Incorrect. Base64 is an encoding scheme, not encryption or hashing.",
+                    "ROT13 substitution cipher": "Incorrect. ROT13 is a trivial toy cipher offering zero security."
+                },
+                "key_term": "Argon2: The winning algorithm of the Password Hashing Competition designed to provide resistance against GPU and ASIC brute-force attacks."
+            }
+        },
+        {
+            "id": "m4_h_54",
+            "raw_id": 54,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Assets, threats, vulnerabilities, and risks",
+            "is_scenario": true,
+            "scenario": "A company identifies an asset with an Asset Value (AV) of $100,000. The Exposure Factor (EF) for a severe flood is estimated at 0.50 (50% loss), and the Annualized Rate of Occurrence (ARO) is estimated at 0.10 (once every 10 years).",
+            "question": "What is the Annualized Loss Expectancy (ALE) for this flood risk?",
+            "type": "single",
+            "options": [
+                "$5,000 per year",
+                "$50,000 per year",
+                "$100,000 per year",
+                "$500 per year"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests quantitative risk calculations: SLE = AV * EF, and ALE = SLE * ARO.",
+                "why_correct": "Single Loss Expectancy (SLE) = Asset Value ($100,000) * Exposure Factor (0.50) = $50,000. Annualized Loss Expectancy (ALE) = SLE ($50,000) * ARO (0.10) = $5,000/year.",
+                "options_breakdown": {
+                    "$5,000 per year": "Correct. SLE = $100,000 * 0.50 = $50,000. ALE = $50,000 * 0.10 = $5,000.",
+                    "$50,000 per year": "Incorrect. $50,000 is the Single Loss Expectancy (SLE), not the annualized figure.",
+                    "$100,000 per year": "Incorrect. $100,000 is the total unmitigated asset value.",
+                    "$500 per year": "Incorrect. This represents a calculation error by a factor of 10."
+                },
+                "key_term": "ALE (Annualized Loss Expectancy): The expected monetary loss that can be anticipated for an asset, or that could be lost from a specific risk over the course of one year (ALE = SLE * ARO)."
+            }
+        },
+        {
+            "id": "m4_h_55",
+            "raw_id": 55,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Security controls",
+            "is_scenario": true,
+            "scenario": "A software security architect implements a security control that ensures all outgoing credit card numbers displayed to customer service agents are masked (e.g., 'XXXX-XXXX-XXXX-1234').",
+            "question": "What type of data obfuscation technique is being applied?",
+            "type": "single",
+            "options": [
+                "Data Masking / Redaction",
+                "Symmetric Decryption",
+                "Physical Air Gapping",
+                "Clock Synchronization"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests data obfuscation and privacy preservation techniques.",
+                "why_correct": "Data masking (redaction/tokenization) obscures sensitive data elements on display or in test environments so unauthorized viewers cannot read them, while maintaining operational context.",
+                "options_breakdown": {
+                    "Data Masking / Redaction": "Correct. Data masking hides sensitive portions of confidential data from unauthorized viewers.",
+                    "Symmetric Decryption": "Incorrect. Decryption reveals plaintext, whereas masking hides it.",
+                    "Physical Air Gapping": "Incorrect. Air gapping isolates physical networks.",
+                    "Clock Synchronization": "Incorrect. Clock synchronization aligns system timestamps."
+                },
+                "key_term": "Data Masking: The process of hiding original data with random characters or other data to protect sensitive information."
+            }
+        },
+        {
+            "id": "m4_h_56",
+            "raw_id": 56,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Digital signatures",
+            "is_scenario": true,
+            "scenario": "What security risk is introduced if a website uses a 'Self-Signed' TLS certificate rather than a certificate signed by a publicly trusted Certificate Authority?",
+            "question": "What security risk is introduced if a website uses a 'Self-Signed' TLS certificate rather than a certificate signed by a publicly trusted Certificate Authority?",
+            "type": "single",
+            "options": [
+                "Web browsers will display security warning errors because there is no trusted third-party chain verifying the website's authenticity, making users vulnerable to Man-in-the-Middle attacks",
+                "The server's physical motherboard will automatically catch fire",
+                "The website cannot be accessed by any computer running Microsoft Windows",
+                "All text on the website is permanently deleted"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests the security implications of self-signed certificates.",
+                "why_correct": "While a self-signed certificate provides encryption, it lacks third-party identity verification. Any attacker performing a Man-in-the-Middle attack can generate their own self-signed certificate, making it impossible for clients to distinguish the real server from an imposter.",
+                "options_breakdown": {
+                    "Web browsers will display security warning errors because there is no trusted third-party chain verifying the website's authenticity, making users vulnerable to Man-in-the-Middle attacks": "Correct. Self-signed certificates cannot prove identity, destroying trust and exposing users to MitM interception.",
+                    "The server's physical motherboard will automatically catch fire": "Incorrect. Digital certificates have no physical thermal impact on hardware.",
+                    "The website cannot be accessed by any computer running Microsoft Windows": "Incorrect. Windows computers can connect after bypassing browser security warnings.",
+                    "All text on the website is permanently deleted": "Incorrect. Certificates do not delete web server application code."
+                },
+                "key_term": "Self-Signed Certificate: A digital certificate that is signed by the same entity whose identity it certifies, lacking a chain of trust to a recognized CA."
+            }
+        },
+        {
+            "id": "m4_h_57",
+            "raw_id": 57,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Data protection and privacy",
+            "is_scenario": true,
+            "scenario": "An organization conducts a 'Data Protection Impact Assessment' (DPIA) before deploying a new AI facial recognition surveillance system in its corporate offices.",
+            "question": "What is the primary purpose of conducting a DPIA under GDPR Article 35?",
+            "type": "single",
+            "options": [
+                "To systematically identify and minimize the data privacy risks associated with high-risk personal data processing activities",
+                "To calculate how much profit the AI system will generate in sales",
+                "To order new computer monitors for the security guards",
+                "To replace human employees with autonomous mechanical robots"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests compliance with GDPR Article 35 (Data Protection Impact Assessment).",
+                "why_correct": "A DPIA is a formal process designed to identify, assess, and mitigate risks to the rights and freedoms of individuals resulting from high-risk personal data processing operations.",
+                "options_breakdown": {
+                    "To systematically identify and minimize the data privacy risks associated with high-risk personal data processing activities": "Correct. DPIAs evaluate privacy risks and mandate countermeasures for high-risk processing.",
+                    "To calculate how much profit the AI system will generate in sales": "Incorrect. A DPIA is a risk and compliance evaluation, not a commercial revenue forecast.",
+                    "To order new computer monitors for the security guards": "Incorrect. Hardware procurement is outside DPIA compliance requirements.",
+                    "To replace human employees with autonomous mechanical robots": "Incorrect. DPIA addresses privacy protection, not workforce automation."
+                },
+                "key_term": "DPIA (Data Protection Impact Assessment): A process to help identify and minimize the data protection risks of a project or system."
+            }
+        },
+        {
+            "id": "m4_h_58",
+            "raw_id": 58,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Introduction to cybersecurity",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "What is the security concept of the 'Attack Surface' of an organization?",
+            "type": "single",
+            "options": [
+                "The total sum of all vulnerabilities, entry points, and exposed software interfaces across an organization that an adversary could potentially exploit",
+                "The physical square footage of the corporate headquarters building",
+                "The total number of employees working in the sales department",
+                "The physical weight of all server racks in a data center"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This question asks for the definition of Attack Surface in cybersecurity.",
+                "why_correct": "An Attack Surface encompasses all points where an unauthorized user (the attacker) can try to enter data to or extract data from an environment (e.g., open ports, web applications, unpatched endpoints, human employees).",
+                "options_breakdown": {
+                    "The total sum of all vulnerabilities, entry points, and exposed software interfaces across an organization that an adversary could potentially exploit": "Correct. The attack surface represents the aggregate exposed footprint vulnerable to attack.",
+                    "The physical square footage of the corporate headquarters building": "Incorrect. Physical building area is real estate footage, not cyber attack surface.",
+                    "The total number of employees working in the sales department": "Incorrect. While employees are a human factor, the attack surface includes all systems, code, and ports.",
+                    "The physical weight of all server racks in a data center": "Incorrect. Physical weight has no bearing on cybersecurity vulnerability exposure."
+                },
+                "key_term": "Attack Surface: The total number of all possible points (the 'attack vectors') where an unauthorized user can try to enter data to or extract data from an environment."
+            }
+        },
+        {
+            "id": "m4_h_59",
+            "raw_id": 59,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Encryption and hashing",
+            "is_scenario": true,
+            "scenario": "A software engineer discovers that their application uses Electronic Codebook (ECB) block cipher mode for AES.",
+            "question": "Why is ECB mode critically insecure for encrypting structured data or images, even though AES itself is a strong algorithm?",
+            "type": "single",
+            "options": [
+                "Identical plaintext blocks encrypt to identical ciphertext blocks, preserving visual and structural patterns of the underlying data",
+                "ECB mode automatically leaks the private key on the internet",
+                "ECB mode uninstalls the operating system",
+                "ECB mode only works on Sundays"
+            ],
+            "correct": [
+                0
+            ],
+            "explanation": {
+                "asking": "This scenario tests knowledge of cipher block modes (ECB vs CBC/GCM).",
+                "why_correct": "In ECB mode, each plaintext block is encrypted independently without feedback or initialization vectors (IVs). Identical 16-byte plaintext blocks produce identical ciphertext blocks, visibly revealing the underlying data structure (famous ECB Penguin demonstration).",
+                "options_breakdown": {
+                    "Identical plaintext blocks encrypt to identical ciphertext blocks, preserving visual and structural patterns of the underlying data": "Correct. ECB lacks diffusion across blocks, leaking structural patterns.",
+                    "ECB mode automatically leaks the private key on the internet": "Incorrect. ECB does not broadcast keys; its flaw is deterministic block mapping.",
+                    "ECB mode uninstalls the operating system": "Incorrect. Cipher modes process data and cannot uninstall operating systems.",
+                    "ECB mode only works on Sundays": "Incorrect. Algorithms execute regardless of the day of the week."
+                },
+                "key_term": "ECB (Electronic Codebook): An insecure block cipher mode where each block of plaintext is encrypted independently without an initialization vector."
+            }
+        },
+        {
+            "id": "m4_h_60",
+            "raw_id": 60,
+            "module_id": 4,
+            "difficulty": "hard",
+            "topic": "Security controls",
+            "is_scenario": false,
+            "scenario": null,
+            "question": "Which of the following are recognized categories of security controls defined by standard cybersecurity frameworks (such as NIST SP 800-53)? (Select all that apply)",
+            "type": "multiple",
+            "options": [
+                "Technical / Logical Controls (e.g., firewalls, encryption, access control lists)",
+                "Administrative / Management Controls (e.g., security policies, risk assessments, awareness training)",
+                "Physical Controls (e.g., security guards, biometric locks, fences)",
+                "Emotional Controls (e.g., hoping attackers choose not to attack today)"
+            ],
+            "correct": [
+                0,
+                1,
+                2
+            ],
+            "explanation": {
+                "asking": "This question asks you to identify the three standard security control classes.",
+                "why_correct": "Standard security frameworks categorize controls into Technical/Logical, Administrative/Management, and Physical controls. Relying on hopes or emotions is not a security control.",
+                "options_breakdown": {
+                    "Technical / Logical Controls (e.g., firewalls, encryption, access control lists)": "Correct. Technical controls use software and hardware systems to enforce security.",
+                    "Administrative / Management Controls (e.g., security policies, risk assessments, awareness training)": "Correct. Administrative controls govern human behavior and organisational policy.",
+                    "Physical Controls (e.g., security guards, biometric locks, fences)": "Correct. Physical controls protect the physical facility and hardware infrastructure.",
+                    "Emotional Controls (e.g., hoping attackers choose not to attack today)": "Incorrect. Wishing or hoping is not an engineering security control."
+                },
+                "key_term": "Security Control Categories: The three primary classifications of security safeguards: Administrative, Technical, and Physical."
+            }
+        }
+    ]
+}
